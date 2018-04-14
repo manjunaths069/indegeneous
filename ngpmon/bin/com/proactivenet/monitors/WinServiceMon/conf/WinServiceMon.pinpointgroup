@@ -1,0 +1,5 @@
+System,NTServiceInfo
+ProcAvailability,NTServiceInfo,AVAILABILITY
+ProcCpu,NTServiceInfo,SERVICE_CPU
+ProcMem,NTServiceInfo,SERVICE_VSZ
+Process,NTServiceInfo

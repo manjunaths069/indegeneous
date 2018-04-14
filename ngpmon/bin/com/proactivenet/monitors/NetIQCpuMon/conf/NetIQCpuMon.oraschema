@@ -1,0 +1,202 @@
+#!/bin/csh -f 
+source /usr/pronto/bin/.tmcsh
+cd $DB
+
+#Prune Period value will be passed as an arg, store it in a variable
+#If nothing is passed, default it to 192 (8 days)
+if ( $#argv == 0 ) then
+    set PRUNE_PERIOD=192
+else
+    set PRUNE_PERIOD=$1
+endif
+
+#Check if its a Clean or an Upgrade Installation
+
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+SELECT * FROM TAB B WHERE B.TNAME = 'NQ_CPU_STATS';
+EOF
+
+if ( $status == 101 ) then
+
+#Clean Installation for Monitor = Adapter for NetIQ AppManager CPU
+#Schema & PruneCntl Statements for Monitor = Adapter for NetIQ AppManager CPU ,moTypeId = 44062
+
+echo Creating tables NQ_CPU_STATS, NQ_CPU_RT, NQ_CPU_BL
+echo Creating Prune Control entries for NQ_CPU_STATS  AND  entries for NQ_CPU_RT
+/usr/pronto/bin/sqli<< EOF 
+CREATE TABLE NQ_CPU_STATS (
+ITEMID numeric(12),
+TIMERECORDED numeric(12),
+DATA_AVAIL numeric(12),
+W_USER_TIME numeric(12),
+W_PROC_TIME numeric(12),
+W_APC_BPASS numeric(12),
+W_DPC_BPASS numeric(12),
+W_DPC_RATE numeric(12),
+W_DPC_TIME numeric(12),
+W_DPC_QUED numeric(12),
+W_INT_TIME numeric(12),
+W_INTRUPTS numeric(12),
+U_SYS_TIME numeric(12),
+U_WAIT_TIME numeric(12),
+U_IDLE_TIME numeric(12),
+U_CON_SWTCH numeric(12),
+U_SYS_CALLS numeric(12),
+W_PRV_TIME numeric(12),
+PRIMARY KEY ("ITEMID", "TIMERECORDED")
+);
+EOF
+
+#If the STATS table creation failed exit with errorcode
+if ( $status == 1 ) then
+    exit 117
+endif
+
+/usr/pronto/bin/sqli<< EOF 
+
+create        index NQ_CPU_STATS_N3 on NQ_CPU_STATS (TIMERECORDED);
+
+CREATE TABLE NQ_CPU_RT (
+ITEMID numeric(12), 
+FROMTIME numeric(12), 
+TOTIME numeric(12), 
+DATA_AVAIL_HIGH numeric(12), 
+DATA_AVAIL_AVG  numeric(12), 
+DATA_AVAIL_LOW  numeric(12), 
+W_USER_TIME_HIGH numeric(12), 
+W_USER_TIME_AVG  numeric(12), 
+W_USER_TIME_LOW  numeric(12), 
+W_PROC_TIME_HIGH numeric(12), 
+W_PROC_TIME_AVG  numeric(12), 
+W_PROC_TIME_LOW  numeric(12), 
+W_APC_BPASS_HIGH numeric(12), 
+W_APC_BPASS_AVG  numeric(12), 
+W_APC_BPASS_LOW  numeric(12), 
+W_DPC_BPASS_HIGH numeric(12), 
+W_DPC_BPASS_AVG  numeric(12), 
+W_DPC_BPASS_LOW  numeric(12), 
+W_DPC_RATE_HIGH numeric(12), 
+W_DPC_RATE_AVG  numeric(12), 
+W_DPC_RATE_LOW  numeric(12), 
+W_DPC_TIME_HIGH numeric(12), 
+W_DPC_TIME_AVG  numeric(12), 
+W_DPC_TIME_LOW  numeric(12), 
+W_DPC_QUED_HIGH numeric(12), 
+W_DPC_QUED_AVG  numeric(12), 
+W_DPC_QUED_LOW  numeric(12), 
+W_INT_TIME_HIGH numeric(12), 
+W_INT_TIME_AVG  numeric(12), 
+W_INT_TIME_LOW  numeric(12), 
+W_INTRUPTS_HIGH numeric(12), 
+W_INTRUPTS_AVG  numeric(12), 
+W_INTRUPTS_LOW  numeric(12), 
+U_SYS_TIME_HIGH numeric(12), 
+U_SYS_TIME_AVG  numeric(12), 
+U_SYS_TIME_LOW  numeric(12), 
+U_WAIT_TIME_HIGH numeric(12), 
+U_WAIT_TIME_AVG  numeric(12), 
+U_WAIT_TIME_LOW  numeric(12), 
+U_IDLE_TIME_HIGH numeric(12), 
+U_IDLE_TIME_AVG  numeric(12), 
+U_IDLE_TIME_LOW  numeric(12), 
+U_CON_SWTCH_HIGH numeric(12), 
+U_CON_SWTCH_AVG  numeric(12), 
+U_CON_SWTCH_LOW  numeric(12), 
+U_SYS_CALLS_HIGH numeric(12), 
+U_SYS_CALLS_AVG  numeric(12), 
+U_SYS_CALLS_LOW  numeric(12), 
+W_PRV_TIME_HIGH numeric(12), 
+W_PRV_TIME_AVG  numeric(12), 
+W_PRV_TIME_LOW  numeric(12), 
+NUMPOINTS numeric(12), 
+NUMSECS   numeric(12), 
+PRIMARY KEY ("ITEMID", "FROMTIME")
+);
+create        index NQ_CPU_RT_N3 on NQ_CPU_RT (FROMTIME,TOTIME);
+
+
+
+CREATE TABLE NQ_CPU_BL (
+ITEMID   numeric(12),
+TIMESLOT numeric(12),
+STARTTIME numeric(12),
+DURATION numeric(12),
+DATA_AVAIL_HIGH numeric(12),
+DATA_AVAIL_AVG  numeric(12),
+DATA_AVAIL_LOW  numeric(12),
+W_USER_TIME_HIGH numeric(12),
+W_USER_TIME_AVG  numeric(12),
+W_USER_TIME_LOW  numeric(12),
+W_PROC_TIME_HIGH numeric(12),
+W_PROC_TIME_AVG  numeric(12),
+W_PROC_TIME_LOW  numeric(12),
+W_APC_BPASS_HIGH numeric(12),
+W_APC_BPASS_AVG  numeric(12),
+W_APC_BPASS_LOW  numeric(12),
+W_DPC_BPASS_HIGH numeric(12),
+W_DPC_BPASS_AVG  numeric(12),
+W_DPC_BPASS_LOW  numeric(12),
+W_DPC_RATE_HIGH numeric(12),
+W_DPC_RATE_AVG  numeric(12),
+W_DPC_RATE_LOW  numeric(12),
+W_DPC_TIME_HIGH numeric(12),
+W_DPC_TIME_AVG  numeric(12),
+W_DPC_TIME_LOW  numeric(12),
+W_DPC_QUED_HIGH numeric(12),
+W_DPC_QUED_AVG  numeric(12),
+W_DPC_QUED_LOW  numeric(12),
+W_INT_TIME_HIGH numeric(12),
+W_INT_TIME_AVG  numeric(12),
+W_INT_TIME_LOW  numeric(12),
+W_INTRUPTS_HIGH numeric(12),
+W_INTRUPTS_AVG  numeric(12),
+W_INTRUPTS_LOW  numeric(12),
+U_SYS_TIME_HIGH numeric(12),
+U_SYS_TIME_AVG  numeric(12),
+U_SYS_TIME_LOW  numeric(12),
+U_WAIT_TIME_HIGH numeric(12),
+U_WAIT_TIME_AVG  numeric(12),
+U_WAIT_TIME_LOW  numeric(12),
+U_IDLE_TIME_HIGH numeric(12),
+U_IDLE_TIME_AVG  numeric(12),
+U_IDLE_TIME_LOW  numeric(12),
+U_CON_SWTCH_HIGH numeric(12),
+U_CON_SWTCH_AVG  numeric(12),
+U_CON_SWTCH_LOW  numeric(12),
+U_SYS_CALLS_HIGH numeric(12),
+U_SYS_CALLS_AVG  numeric(12),
+U_SYS_CALLS_LOW  numeric(12),
+W_PRV_TIME_HIGH numeric(12),
+W_PRV_TIME_AVG  numeric(12),
+W_PRV_TIME_LOW  numeric(12),
+NUMPOINTS numeric(12),
+NUMWEEKS numeric(12),
+PRIMARY KEY ("ITEMID", "STARTTIME", "DURATION")
+);
+
+
+
+create index NQ_CPU_BL_N2 on NQ_CPU_BL ( STARTTIME, DURATION );
+
+
+
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_CPU_STATS', 'TIMERECORDED', $PRUNE_PERIOD);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_CPU_RT', 'FROMTIME', 2160);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_CPU_BL', 'STARTTIME', 2160);
+EOF
+
+else
+
+#Upgrade Installation for Monitor = Adapter for NetIQ AppManager CPU
+
+#/usr/pronto/bin/sqli -c << EOF > /dev/null
+#SELECT * FROM COL A, TAB B WHERE A.TNAME = 'TABLENAME' AND B.TNAME = 'TABLENAME' AND A.CNAME = 'COLUMNNAME';
+#EOF
+#if ( $status == 101 ) then
+
+#   alter table add column statement here
+echo Upgrade installation
+
+#endif
+
+endif

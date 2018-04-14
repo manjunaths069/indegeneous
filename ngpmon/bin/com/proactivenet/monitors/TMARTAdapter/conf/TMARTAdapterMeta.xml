@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- TMARTAdapterMeta.xml -->
+
+<MetaData>
+	<ManagedObject>
+    <ParentBasicInfo MoTypeId="42808" UniqueName="TMARTAdapter" GUIDisplayName="Adapter for BMC TM ART Transaction" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserReportable="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.TMARTAdapter.TMARTAdapter" OS="Any" IsSchedulable="N" IsStatic="Y" HasMoreInfo="N" SupportFlashCheck="N"/>
+    <BasicInfo MoTypeId="42809" UniqueName="TMARTAdapterInfo" GUIDisplayName="Adapter for BMC TM ART Transaction (Deprecated)" HasCustomizedGUI="Y" MoTypeType="APPS" ParentMoType="42808"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.TMARTAdapter.TMARTAdapter" OS="Any" HasArrayAttribute="Y" HasMoreInfo="Y" SupportFlashCheck="Y"/>
+	</ManagedObject>
+	<Attributes>
+		<Application>
+      <ParentAppsInput AttrId="42808999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="Adapter for BMC TM ART Transaction" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809002" UsrAttrId="2" GUIDisplayName="Target Device" UniqueName="DNSIP" GUIDisplaySequenceNumber="3" GUIDisplayable="Y" UseAsInstanceName="Y" DisplayType="String" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="0.0.0.0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809003" UsrAttrId="3" UniqueName="URL" GUIDisplayName="URL" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="String" DefaultValue="/patrol/servlet/" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809004" UsrAttrId="4" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="19120" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809005" UsrAttrId="5" UniqueName="USER_NAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="6" IsDefaultValueSet="N" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIInputOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809006" UsrAttrId="6" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="N" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="Password" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809007" UsrAttrId="7" UniqueName="USE_HTTPS" GUIDisplayName="Use Https" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809008" UsrAttrId="8" UniqueName="PROJECT_NAME" GUIDisplayName="Project Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N" GUIInputOnCreate="Y"/>
+      <AppsInput AttrId="42809009" UsrAttrId="9" UniqueName="TRANSACTION_NAME" GUIDisplayName="Transaction Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N" GUIInputOnCreate="Y"/>
+      <AppsInput AttrId="42809010" UsrAttrId="10" UniqueName="LOCATION_NAME" GUIDisplayName="Location Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" UseAsInstanceName="N" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N" GUIInputOnCreate="Y"/>
+      <!-- Control Attributes -->
+	  <AppsInput AttrId="42809995" UsrAttrId="995" GUIDisplayName="Collect Data" UniqueName="COLLECTDATA" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="1" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Boolean" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42809998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" GUIDisplaySequenceNumber="1" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="900" IsInputAttribute="Y" DisplayType="Integer"/>
+      <AppsInput AttrId="42809011" UsrAttrId="11" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" GUIDisplaySequenceNumber="2" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="60" IsInputAttribute="Y" DisplayType="Integer"/>
+      			<!--
+				<AppsInput AttrId="42809014" UsrAttrId="14"
+				GUIDisplayName="Retry Count" UniqueName="RETRY_COUNT"
+				MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="3"
+				ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="5"
+				GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N"
+				GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y"
+				GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y"
+				IsDefaultValueSet="Y" GUIHasListOfChoice="N"
+				UseNormalDistribution="N" />
+				
+				<AppsInput AttrId="42809015" UsrAttrId="15"
+				GUIDisplayName="Retry Delay" UniqueName="RETRY_DELAY"
+				MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="20"
+				ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="6"
+				GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N"
+				GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y"
+				GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y"
+				IsDefaultValueSet="Y" GUIHasListOfChoice="N"
+				UseNormalDistribution="N" />
+			-->
+	  <!-- Custom timers input-->
+	  <AppsInput AttrId="42809021" UsrAttrId="21" UniqueName="TIMER_INPUT_01" GUIDisplayName="TIMER_INPUT_01" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809022" UsrAttrId="22" UniqueName="TIMER_INPUT_02" GUIDisplayName="TIMER_INPUT_02" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809023" UsrAttrId="23" UniqueName="TIMER_INPUT_03" GUIDisplayName="TIMER_INPUT_03" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809024" UsrAttrId="24" UniqueName="TIMER_INPUT_04" GUIDisplayName="TIMER_INPUT_04" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809025" UsrAttrId="25" UniqueName="TIMER_INPUT_05" GUIDisplayName="TIMER_INPUT_05" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809026" UsrAttrId="26" UniqueName="TIMER_INPUT_06" GUIDisplayName="TIMER_INPUT_06" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809027" UsrAttrId="27" UniqueName="TIMER_INPUT_07" GUIDisplayName="TIMER_INPUT_07" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809028" UsrAttrId="28" UniqueName="TIMER_INPUT_08" GUIDisplayName="TIMER_INPUT_08" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809029" UsrAttrId="29" UniqueName="TIMER_INPUT_09" GUIDisplayName="TIMER_INPUT_09" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809030" UsrAttrId="30" UniqueName="TIMER_INPUT_10" GUIDisplayName="TIMER_INPUT_10" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809031" UsrAttrId="31" UniqueName="TIMER_INPUT_11" GUIDisplayName="TIMER_INPUT_11" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809032" UsrAttrId="32" UniqueName="TIMER_INPUT_12" GUIDisplayName="TIMER_INPUT_12" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809033" UsrAttrId="33" UniqueName="TIMER_INPUT_13" GUIDisplayName="TIMER_INPUT_13" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809034" UsrAttrId="34" UniqueName="TIMER_INPUT_14" GUIDisplayName="TIMER_INPUT_14" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809035" UsrAttrId="35" UniqueName="TIMER_INPUT_15" GUIDisplayName="TIMER_INPUT_05" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809036" UsrAttrId="36" UniqueName="TIMER_INPUT_16" GUIDisplayName="TIMER_INPUT_16" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809037" UsrAttrId="37" UniqueName="TIMER_INPUT_17" GUIDisplayName="TIMER_INPUT_17" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809038" UsrAttrId="38" UniqueName="TIMER_INPUT_18" GUIDisplayName="TIMER_INPUT_18" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809039" UsrAttrId="39" UniqueName="TIMER_INPUT_19" GUIDisplayName="TIMER_INPUT_19" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42809040" UsrAttrId="40" UniqueName="TIMER_INPUT_20" GUIDisplayName="TIMER_INPUT_20" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+<AppsInput AttrId="42809980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42809981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42809982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="42809468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="15" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42809993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="11" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+      <AppsConfig AttrId="42809100" UsrAttrId="100" UniqueName="ARRAY_SIZE" GUIDisplayName="Total Custom Timers" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <!-- App Config For Custom Timers Availability -->
+	  <AppsConfig AttrId="42809101" UsrAttrId="101" UniqueName="TIMER_CONF_AVAIL01" GUIDisplayName="Availability1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809102" UsrAttrId="102" UniqueName="TIMER_CONF_AVAIL02" GUIDisplayName="Availability2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809103" UsrAttrId="103" UniqueName="TIMER_CONF_AVAIL03" GUIDisplayName="Availability3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809104" UsrAttrId="104" UniqueName="TIMER_CONF_AVAIL04" GUIDisplayName="Availability4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809105" UsrAttrId="105" UniqueName="TIMER_CONF_AVAIL05" GUIDisplayName="Availability5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809106" UsrAttrId="106" UniqueName="TIMER_CONF_AVAIL06" GUIDisplayName="Availability6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809107" UsrAttrId="107" UniqueName="TIMER_CONF_AVAIL07" GUIDisplayName="Availability7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809108" UsrAttrId="108" UniqueName="TIMER_CONF_AVAIL08" GUIDisplayName="Availability8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809109" UsrAttrId="109" UniqueName="TIMER_CONF_AVAIL09" GUIDisplayName="Availability9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809110" UsrAttrId="110" UniqueName="TIMER_CONF_AVAIL10" GUIDisplayName="Availability10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809111" UsrAttrId="111" UniqueName="TIMER_CONF_AVAIL11" GUIDisplayName="Availability11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809112" UsrAttrId="112" UniqueName="TIMER_CONF_AVAIL12" GUIDisplayName="Availability12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809113" UsrAttrId="113" UniqueName="TIMER_CONF_AVAIL13" GUIDisplayName="Availability13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809114" UsrAttrId="114" UniqueName="TIMER_CONF_AVAIL14" GUIDisplayName="Availability14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809115" UsrAttrId="115" UniqueName="TIMER_CONF_AVAIL15" GUIDisplayName="Availability15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809116" UsrAttrId="116" UniqueName="TIMER_CONF_AVAIL16" GUIDisplayName="Availability16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809117" UsrAttrId="117" UniqueName="TIMER_CONF_AVAIL17" GUIDisplayName="Availability17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809118" UsrAttrId="118" UniqueName="TIMER_CONF_AVAIL18" GUIDisplayName="Availability18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809119" UsrAttrId="119" UniqueName="TIMER_CONF_AVAIL19" GUIDisplayName="Availability19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809120" UsrAttrId="120" UniqueName="TIMER_CONF_AVAIL20" GUIDisplayName="Availability20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <!-- App Config For Custom Timer Response Time -->
+	  <AppsConfig AttrId="42809121" UsrAttrId="121" UniqueName="TIMER_CONF_RES01" GUIDisplayName="Response Time1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809122" UsrAttrId="122" UniqueName="TIMER_CONF_RES02" GUIDisplayName="Response Time2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809123" UsrAttrId="123" UniqueName="TIMER_CONF_RES03" GUIDisplayName="Response Time3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809124" UsrAttrId="124" UniqueName="TIMER_CONF_RES04" GUIDisplayName="Response Time4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809125" UsrAttrId="125" UniqueName="TIMER_CONF_RES05" GUIDisplayName="Response Time5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809126" UsrAttrId="126" UniqueName="TIMER_CONF_RES06" GUIDisplayName="Response Time6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809127" UsrAttrId="127" UniqueName="TIMER_CONF_RES07" GUIDisplayName="Response Time7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809128" UsrAttrId="128" UniqueName="TIMER_CONF_RES08" GUIDisplayName="Response Time8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809129" UsrAttrId="129" UniqueName="TIMER_CONF_RES09" GUIDisplayName="Response Time9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809130" UsrAttrId="130" UniqueName="TIMER_CONF_RES10" GUIDisplayName="Response Time10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809131" UsrAttrId="131" UniqueName="TIMER_CONF_RES11" GUIDisplayName="Response Time11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809132" UsrAttrId="132" UniqueName="TIMER_CONF_RES12" GUIDisplayName="Response Time12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809133" UsrAttrId="133" UniqueName="TIMER_CONF_RES13" GUIDisplayName="Response Time13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809134" UsrAttrId="134" UniqueName="TIMER_CONF_RES14" GUIDisplayName="Response Time14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809135" UsrAttrId="135" UniqueName="TIMER_CONF_RES15" GUIDisplayName="Response Time15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809136" UsrAttrId="136" UniqueName="TIMER_CONF_RES16" GUIDisplayName="Response Time16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809137" UsrAttrId="137" UniqueName="TIMER_CONF_RES17" GUIDisplayName="Response Time17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809138" UsrAttrId="138" UniqueName="TIMER_CONF_RES18" GUIDisplayName="Response Time18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809139" UsrAttrId="139" UniqueName="TIMER_CONF_RES19" GUIDisplayName="Response Time19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+      <AppsConfig AttrId="42809140" UsrAttrId="140" UniqueName="TIMER_CONF_RES20" GUIDisplayName="Response Time20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="ANY"/>
+	  <!-- Default App Stats Attributes -->
+		<AppsStats>
+        <CoreAppsStats AttrId="42809301" UsrAttrId="301" UniqueName="STATS_AVAILABILITY" GUIDisplayName="Availability" TableName="TMARTAdapter" ColumnName="STATS_AVAILABILITY" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="N" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809302" UsrAttrId="302" UniqueName="STATS_RESPONSETIME" GUIDisplayName="Response Time" TableName="TMARTAdapter" ColumnName="STATS_RESPONSETIME" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="N" GUIGraphedByDefault="Y"/>
+			</AppsStats>
+			<!--Stats attribute For Data Availability -->
+			<AppsStats>
+        <CoreAppsStats AttrId="42809303" UsrAttrId="303" UniqueName="STATS_DATA_AVAILABILITY" GUIDisplayName="Data Availability" TableName="TMARTAdapter" ColumnName="STATS_DATA_AVAILABIL" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="Y" GUIStringLength="0" MoReferenceType="0" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="N" GUIGraphedByDefault="N" DefaultValue=""/>
+			</AppsStats>
+
+
+			<!-- First 20 Custom timers availability -->
+			<AppsStats>
+        <CoreAppsStats AttrId="42809310" UsrAttrId="310" UniqueName="TIMER_STAT_AVAIL01" GUIDisplayName="Timer 1 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL01" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809311" UsrAttrId="311" UniqueName="TIMER_STAT_AVAIL02" GUIDisplayName="Timer 2 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL02" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809312" UsrAttrId="312" UniqueName="TIMER_STAT_AVAIL03" GUIDisplayName="Timer 3 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL03" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809313" UsrAttrId="313" UniqueName="TIMER_STAT_AVAIL04" GUIDisplayName="Timer 4 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL04" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809314" UsrAttrId="314" UniqueName="TIMER_STAT_AVAIL05" GUIDisplayName="Timer 5 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL05" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809315" UsrAttrId="315" UniqueName="TIMER_STAT_AVAIL06" GUIDisplayName="Timer 6 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL06" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809316" UsrAttrId="316" UniqueName="TIMER_STAT_AVAIL07" GUIDisplayName="Timer 7 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL07" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809317" UsrAttrId="317" UniqueName="TIMER_STAT_AVAIL08" GUIDisplayName="Timer 8 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL08" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809318" UsrAttrId="318" UniqueName="TIMER_STAT_AVAIL09" GUIDisplayName="Timer 9 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL09" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809319" UsrAttrId="319" UniqueName="TIMER_STAT_AVAIL10" GUIDisplayName="Timer 10 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL10" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809320" UsrAttrId="320" UniqueName="TIMER_STAT_AVAIL11" GUIDisplayName="Timer 11 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL11" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809321" UsrAttrId="321" UniqueName="TIMER_STAT_AVAIL12" GUIDisplayName="Timer 12 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL12" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809322" UsrAttrId="322" UniqueName="TIMER_STAT_AVAIL13" GUIDisplayName="Timer 13 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL13" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809323" UsrAttrId="323" UniqueName="TIMER_STAT_AVAIL14" GUIDisplayName="Timer 14 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL14" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809324" UsrAttrId="324" UniqueName="TIMER_STAT_AVAIL15" GUIDisplayName="Timer 15 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL15" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809325" UsrAttrId="325" UniqueName="TIMER_STAT_AVAIL16" GUIDisplayName="Timer 16 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL16" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809326" UsrAttrId="326" UniqueName="TIMER_STAT_AVAIL17" GUIDisplayName="Timer 17 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL17" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809327" UsrAttrId="327" UniqueName="TIMER_STAT_AVAIL18" GUIDisplayName="Timer 18 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL18" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809328" UsrAttrId="328" UniqueName="TIMER_STAT_AVAIL19" GUIDisplayName="Timer 19 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL19" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809329" UsrAttrId="329" UniqueName="TIMER_STAT_AVAIL20" GUIDisplayName="Timer 20 Availability" TableName="TMARTAdapter" ColumnName="TIMER_STAT_AVAIL20" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+
+			<!-- First 20 Custom timers response times -->
+			<AppsStats>
+        <CoreAppsStats AttrId="42809330" UsrAttrId="330" UniqueName="TIMER_STAT_RES01" GUIDisplayName="Timer 1 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES01" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809331" UsrAttrId="331" UniqueName="TIMER_STAT_RES02" GUIDisplayName="Timer 2 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES02" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809332" UsrAttrId="332" UniqueName="TIMER_STAT_RES03" GUIDisplayName="Timer 3 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES03" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809333" UsrAttrId="333" UniqueName="TIMER_STAT_RES04" GUIDisplayName="Timer 4 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES04" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809334" UsrAttrId="334" UniqueName="TIMER_STAT_RES05" GUIDisplayName="Timer 5 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES05" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809335" UsrAttrId="335" UniqueName="TIMER_STAT_RES06" GUIDisplayName="Timer 6 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES06" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809336" UsrAttrId="336" UniqueName="TIMER_STAT_RES07" GUIDisplayName="Timer 7 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES07" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809337" UsrAttrId="337" UniqueName="TIMER_STAT_RES08" GUIDisplayName="Timer 8 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES08" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809338" UsrAttrId="338" UniqueName="TIMER_STAT_RES09" GUIDisplayName="Timer 9 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES09" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809339" UsrAttrId="339" UniqueName="TIMER_STAT_RES10" GUIDisplayName="Timer 10 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES10" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809340" UsrAttrId="340" UniqueName="TIMER_STAT_RES11" GUIDisplayName="Timer 11 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES11" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809341" UsrAttrId="341" UniqueName="TIMER_STAT_RES12" GUIDisplayName="Timer 12 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES12" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809342" UsrAttrId="342" UniqueName="TIMER_STAT_RES13" GUIDisplayName="Timer 13 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES13" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809343" UsrAttrId="343" UniqueName="TIMER_STAT_RES14" GUIDisplayName="Timer 14 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES14" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809344" UsrAttrId="344" UniqueName="TIMER_STAT_RES15" GUIDisplayName="Timer 15 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES15" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809345" UsrAttrId="345" UniqueName="TIMER_STAT_RES16" GUIDisplayName="Timer 16 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES16" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809346" UsrAttrId="346" UniqueName="TIMER_STAT_RES17" GUIDisplayName="Timer 17 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES17" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809347" UsrAttrId="347" UniqueName="TIMER_STAT_RES18" GUIDisplayName="Timer 18 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES18" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809348" UsrAttrId="348" UniqueName="TIMER_STAT_RES19" GUIDisplayName="Timer 19 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES19" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+			<AppsStats>
+        <CoreAppsStats AttrId="42809349" UsrAttrId="349" UniqueName="TIMER_STAT_RES20" GUIDisplayName="Timer 20 Response time" TableName="TMARTAdapter" ColumnName="TIMER_STAT_RES20" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N"/>
+			</AppsStats>
+		</Application>
+	</Attributes>
+</MetaData>

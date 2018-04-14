@@ -1,0 +1,4 @@
+System       ,HPOVApplicationMon  
+ProcCpu,HPOVApplicationMon,STATS08
+ProcMem,HPOVApplicationMon,STATS13
+Process,HPOVApplicationMon

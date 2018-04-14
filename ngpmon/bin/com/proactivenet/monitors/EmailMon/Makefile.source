@@ -1,0 +1,2 @@
+#SOURCE.java = EmailMon.java SMTPPOP.java SMTP.java POP.java DeleteAllMsgs.java EmailMonData.java CheckLogin.java
+SUBDIRS = src

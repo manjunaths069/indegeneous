@@ -1,0 +1,11 @@
+System       ,HPUX System Info
+DiskPerformance,HPUX System Info,I_O_WAIT
+DiskPerformance,HPUX System Info,SCAN_RATE
+DiskPerformance,HPUX System Info,SWAP_USED_PERCENT
+SystemCpu,HPUX System Info,TOTAL_CPU
+SystemCpu,HPUX System Info,USER_CPU
+SystemCpu,HPUX System Info,KERNEL_CPU
+ProcTotal,HPUX System Info,PROCESSES_TOTAL
+SystemMem,HPUX System Info,MEM_USED_PERCENT
+SystemMem,HPUX System Info,SWAP_USED_PERCENT
+SystemInfo,HPUX System Info

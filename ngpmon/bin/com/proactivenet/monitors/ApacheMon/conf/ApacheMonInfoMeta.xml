@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ApacheMonInfoMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="27450" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="ApacheMon" GUIDisplayName="Apache Web Server Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.ApacheMon.ApacheMon" Version="2.0" OS="Any" MustRunOnAgent="Y" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="27451" MoTypeType="APPS" ParentMoType="27450" UniqueName="ApacheMonInfo" GUIDisplayName="Apache Web Server"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.ApacheMon.ApacheMon" Version="2.0" OS="Any" MustRunOnAgent="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="274500" UsrAttrId="1" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Apache Web Server Monitor"/>
+      <AppsInput AttrId="274519" UsrAttrId="19" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="274514" UsrAttrId="22" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="2" GUIInputOnCreate="N" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="274525" UsrAttrId="25" UniqueName="PROTOCOL" GUIDisplayName="Protocol" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" MoReferenceType="31220" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="274503" UsrAttrId="4" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="80"/>
+      <AppsInput AttrId="274527" UsrAttrId="27" GUIDisplayName="User Name" UniqueName="USER_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="55" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="274528" UsrAttrId="28" GUIDisplayName="Password" UniqueName="PASSWORD" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="56" GUIDisplayable="N" DisplayType="Password" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="274518" UsrAttrId="18" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="20"/>
+      <AppsInput AttrId="274517" UsrAttrId="17" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="274502" UsrAttrId="3" UniqueName="ACCESSLOG_PATH" GUIDisplayName="Access Log Path" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" IsDefaultValueSet="Y" DisplayType="String"/>
+      <AppsInput AttrId="274501" UsrAttrId="2" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="274516" UsrAttrId="16" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="20"/>
+      <AppsInput AttrId="274515" UsrAttrId="15" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="274522" UsrAttrId="993" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIEditable="N" GUIDisplayable="N" GUIInputOnCreate="N" IsDefaultValueSet="N" GUIRequiredOnCreate="N" DisplayType="IPAddress" DefaultValue="0" IsInputAttribute="Y" UseAsInstanceName="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="274558" UsrAttrId="58" UniqueName="DNSIP" GUIDisplayName="Target Device" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" UseAsInstanceName="Y" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="String" DefaultValue="0.0.0.0"/>
+      <AppsInput AttrId="274526" UsrAttrId="26" UniqueName="STATUS_PAGE" GUIDisplayName="Status Page" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="server-status"/>
+      <AppsInput AttrId="27451980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="57" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27451981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="58" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27451982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="59" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27451468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="60" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="274523" UsrAttrId="23" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="274550" UsrAttrId="50" UniqueName="START_TIME" GUIDisplayName="Server Start Time" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="274551" UsrAttrId="52" UniqueName="TOTAL_REQUESTS" GUIDisplayName="Total Requests" TableName="APACHEWEB" ColumnName="TOTALREQUESTS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274553" UsrAttrId="54" UniqueName="PER_BUSY_CONNECTIONS" GUIDisplayName="Percent Busy Connections" TableName="APACHEWEB" ColumnName="PERBUSYCONNECTIONS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274554" UsrAttrId="55" UniqueName="IDLE_CONNECTIONS" GUIDisplayName="Idle Connections" TableName="APACHEWEB" ColumnName="IDLECONNECTIONS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274509" UsrAttrId="10" UniqueName="NOT_FOUND_ERRORS" GUIDisplayName="Not Found Errors" TableName="APACHEWEB" ColumnName="NOTFOUNDERRS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274511" UsrAttrId="12" UniqueName="SERVER_SIDE_ERRORS" GUIDisplayName="Server Side Errors" TableName="APACHEWEB" ColumnName="SRVSIDEERRS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274506" UsrAttrId="7" UniqueName="MAXIMUM_CONNECTIONS" GUIDisplayName="Maximum Connections" TableName="APACHEWEB" ColumnName="MAXCONN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274508" UsrAttrId="9" UniqueName="POST_REQUESTS" GUIDisplayName="Post Requests" TableName="APACHEWEB" ColumnName="POSTREQ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274505" UsrAttrId="6" UniqueName="CURRENT_CONNECTIONS" GUIDisplayName="Active Connections" TableName="APACHEWEB" ColumnName="CURRCONN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274504" UsrAttrId="5" UniqueName="BYTES_TOTAL" GUIDisplayName="Bandwidth Usage" TableName="APACHEWEB" ColumnName="BYTESTOTAL" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274507" UsrAttrId="8" UniqueName="GET_REQUESTS" GUIDisplayName="Get Requests" TableName="APACHEWEB" ColumnName="GETREQ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274513" UsrAttrId="14" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="APACHEWEB" ColumnName="AVAILABILITY" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274512" UsrAttrId="13" UniqueName="TOTAL_ERRORS" GUIDisplayName="Errors" TableName="APACHEWEB" ColumnName="TOTALERRS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="274510" UsrAttrId="11" UniqueName="CLIENT_SIDE_ERRORS" GUIDisplayName="Client Side Errors" TableName="APACHEWEB" ColumnName="CLNSIDEERRS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

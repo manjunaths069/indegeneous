@@ -1,0 +1,1 @@
+SUBDIRS = scc svdata sventities svmonconfctrl vision webservice webserviceExceptions

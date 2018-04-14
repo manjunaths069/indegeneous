@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT MetaData (ManagedObject, Attributes)>
+
+<!ELEMENT ManagedObject (ChildBasicInfo, ChildAppsInfo?,ParentBasicInfo?,ParentAppsInfo?)>
+<!ELEMENT ChildBasicInfo EMPTY>
+<!ATTLIST ChildBasicInfo
+	MoTypeId CDATA #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	ParentMoType CDATA #IMPLIED
+	MoTypeType (SNMP | APPS | PERS) #REQUIRED
+	EndUserCreatable (Y | N) "Y"
+	GUIDisplayable	(Y | N)	"Y"
+	EndUserDeletable (Y | N) "Y"
+	IsAutoCreated (Y | N) "N"
+	OneInstancePerParent (Y | N) "N"
+	EndUserReportable (Y | N) "Y"
+	HasCustomizedGUI (Y | N) "N"
+>
+
+<!ELEMENT ParentBasicInfo EMPTY>
+<!ATTLIST ParentBasicInfo
+	MoTypeId CDATA #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	ParentMoType CDATA #IMPLIED
+	MoTypeType (SNMP | APPS | PERS) #REQUIRED
+	EndUserCreatable (Y | N) "Y"
+	GUIDisplayable	(Y | N)	"Y"
+	EndUserDeletable (Y | N) "Y"
+	IsAutoCreated (Y | N) "N"
+	OneInstancePerParent (Y | N) "N"
+	EndUserReportable (Y | N) "Y"
+	HasCustomizedGUI (Y | N) "N"
+>
+<!ELEMENT ChildAppsInfo EMPTY>
+<!ATTLIST ChildAppsInfo
+	OS CDATA "Any"
+    OSName CDATA "Any"
+	Version CDATA "1.0"
+	ClassName CDATA #REQUIRED
+	GUIMonitorGroup CDATA "OTHER" 
+	VendorName CDATA "ProactiveNet Inc." 
+	BuildDescription CDATA "This_Is_A_Sample_Build_Description" 
+	MinVersion CDATA "4.1.2" 
+	MinBuild CDATA "32" 
+	IsSchedulable (Y | N)  "Y"
+	MustRunOnAgent (Y | N)  "N"
+	IsStatic (Y | N)  "N"
+	IsNewFrameWork (Y | N)  "N"
+	HasMoreInfo (Y | N)  "Y"
+	SupportFlashCheck (Y | N)  "Y"
+>
+<!ELEMENT ParentAppsInfo EMPTY>
+<!ATTLIST ParentAppsInfo
+	OS CDATA "Any"
+	OSName CDATA "Any"
+	Version CDATA "1.0"
+	ClassName CDATA #REQUIRED
+	GUIMonitorGroup CDATA "OTHER" 
+	VendorName CDATA "ProactiveNet Inc." 
+	BuildDescription CDATA "This_Is_A_Sample_Build_Description" 
+	MinVersion CDATA "4.1.2" 
+	MinBuild CDATA "32" 
+	IsSchedulable (Y | N)  "Y"
+	MustRunOnAgent (Y | N)  "N"
+	IsStatic (Y | N)  "N"
+	IsNewFrameWork (Y | N)  "N"
+	HasMoreInfo (Y | N)  "Y"
+	SupportFlashCheck (Y | N)  "Y"
+>
+<!ELEMENT Attributes (Persistent+ | Snmp | Application)>
+
+<!ELEMENT Persistent EMPTY>
+<!ATTLIST Persistent
+	AttrId CDATA #REQUIRED
+	DisplayType (Boolean | Integer | Float | String | IPAddress | DateTime | MOReference | EmailAddress | Attribute | MOType | Group | MOReferenceAny | UnsignedInteger | MoReferenceAny) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	GUIStringLength CDATA "0"
+	MoReferenceType CDATA "0"
+	AttrReferenceType (ANY | CFG | CTL | STS) "ANY"	
+	UpperLimit CDATA "0"
+	LowerLimit CDATA "0"
+	DefaultValue CDATA ""
+	EndUserReportable (Y | N) "N"
+	GUIRequiredOnCreate (Y | N) "Y"
+	GUIEditable (Y | N) "Y"
+	UseAsForcedDBKey (Y | N) "N"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "Y"
+	HasLowerLimit (Y | N) "N"
+	HasUpperLimit (Y | N) "N"
+	IsArrayOfObjects (Y | N) "N"
+	IsDefaultValueSet (Y | N) "N"
+>
+
+<!ELEMENT Snmp (SnmpInput*, SnmpConfig*, SnmpStats*)>
+<!ELEMENT SnmpInput EMPTY>
+<!ATTLIST SnmpInput
+	AttrId CDATA #REQUIRED
+	GUIInputType (CFG | CTL) #REQUIRED
+	DisplayType (Boolean | Integer | Float | String | IPAddress | MOReference | Password) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	MoReferenceType CDATA "0"
+	AttrReferenceType (ANY | CFG | CTL | STS) "ANY"	
+	ScaleFactor CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	DefaultValue CDATA ""
+	GUIRequiredOnCreate (Y | N) "Y"
+	GUIEditable (Y | N) "Y"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "Y"
+	IsDefaultValueSet (Y | N) "N"
+>
+<!ELEMENT SnmpConfig EMPTY>
+<!ATTLIST SnmpConfig
+	AttrId CDATA #REQUIRED
+	GUIInputType (CFG | CTL) #REQUIRED
+	DisplayType (Boolean | Integer | String | IPAddress | DateTime | MOReference | Password) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	ColumnName CDATA #REQUIRED
+	TableName CDATA #REQUIRED
+	UnitOfMeasurement CDATA ""
+	GUIStringLength CDATA "0"
+	MoReferenceType CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	DefaultValue CDATA ""
+	EndUserReportable (Y | N) "Y"
+	UseAsSecondDBKey (Y | N) "N"
+	GUIRequiredOnCreate (Y | N) "N"
+	GUIEditable (Y | N) "N"
+	IsAutoCreated (Y | N) "N"
+	IsGeneratedDBKey (Y | N) "N"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "N"
+	UseAsPrimaryDBKey (Y | N) "N"
+	IsDefaultValueSet (Y | N) "N"
+>
+<!ELEMENT SnmpStats (CoreSnmpStats, PinPoint?, Threshold*, SigThreshold*)>
+<!ELEMENT CoreSnmpStats EMPTY>
+<!ATTLIST CoreSnmpStats
+	AttrId CDATA #REQUIRED
+	DisplayType (Integer | Float) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	ColumnName CDATA #REQUIRED
+	TableName CDATA #REQUIRED
+	UnitOfMeasurement CDATA ""
+	ScaleFactor CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	EndUserReportable (Y | N) "N"
+	IsAutoCreated (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "N"
+	GUIGraphedByDefault (Y | N) "N"
+>
+<!ELEMENT PinPoint EMPTY>
+<!ATTLIST PinPoint
+	PinpointType (Availability | ResponseTime | System | OTHER) "OTHER"
+	PinpointAbsoluteRank (0 | 1 | 2 | 3 | 4 | 5) "3"
+	PinpointAboveBaselineRank (0 | 1 | 2 | 3 | 4 | 5) "3"
+	PinpointBelowBaselineRank (0 | 1 | 2 | 3 | 4 | 5) "3"
+>
+<!ELEMENT Threshold EMPTY>
+<!ATTLIST Threshold
+	ThresholdSeverity (NORMAL | MAJOR | MINOR | CRITICAL | UNSET) #REQUIRED
+	ThresholdValue CDATA #REQUIRED
+	ThresholdType CDATA #REQUIRED
+	ThresholdDuration CDATA #REQUIRED
+>
+
+<!ELEMENT SigThreshold EMPTY>
+<!ATTLIST SigThreshold
+	SigThresholdSeverity (NORMAL | MAJOR | MINOR | CRITICAL | UNSET) #REQUIRED
+	SigThresholdDuration CDATA #REQUIRED
+	SigThresholdType CDATA #REQUIRED
+    baselineThreshold CDATA #REQUIRED
+    SigThresholdAbsPadFactor CDATA #REQUIRED
+    SigThresholdPctPadFactor CDATA #REQUIRED
+    SigThresholdSuppressFlag ( Y | N ) "N"
+>
+
+<!ELEMENT Application (ParentAppsInput*,AppsInput*,AppsConfig*, AppsStats*, Bundle?)>
+<!ELEMENT ParentAppsInput EMPTY>
+<!ATTLIST ParentAppsInput
+	AttrId CDATA #REQUIRED
+	GUIInputType (CFG | CTL) #REQUIRED
+	UsrAttrId CDATA #IMPLIED 
+	DisplayType (Boolean | Integer | Float | String | IPAddress | MOReference | Password | Group | FilePathName) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	GUIStringLength CDATA "0"
+	MoReferenceType CDATA "0"
+	AttrReferenceType (ANY | CFG | CTL | STS) "ANY"	
+	ScaleFactor CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	DefaultValue CDATA ""
+	GUIRequiredOnCreate (Y | N) "Y"
+	GUIEditable (Y | N) "Y"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "Y"
+	IsDefaultValueSet (Y | N) "N"
+	UseAsInstanceName (Y | N) "N"
+	GUIHasListOfChoice (Y | N) "N"
+>
+<!ELEMENT AppsInput EMPTY>
+<!ATTLIST AppsInput
+	AttrId CDATA #REQUIRED
+	GUIInputType (CFG | CTL) #REQUIRED
+	UsrAttrId CDATA #IMPLIED 
+	DisplayType (Boolean | Integer | Float | String | IPAddress | MOReference | Password | Group | FilePathName) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	GUIStringLength CDATA "0"
+	MoReferenceType CDATA "0"
+	AttrReferenceType (ANY | CFG | CTL | STS) "ANY"	
+	ScaleFactor CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	DefaultValue CDATA ""
+	GUIRequiredOnCreate (Y | N) "Y"
+	GUIEditable (Y | N) "Y"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	GUIInputOnCreate (Y | N) "Y"
+	IsDefaultValueSet (Y | N) "N"
+	UseAsInstanceName (Y | N) "N"
+	GUIHasListOfChoice (Y | N) "N"
+>
+
+<!ELEMENT AppsConfig EMPTY>
+<!ATTLIST AppsConfig
+	AttrId CDATA #REQUIRED
+	UsrAttrId CDATA #REQUIRED
+	DisplayType (Boolean | Integer | Float | String | MOReference) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	UnitOfMeasurement CDATA ""
+	GUIStringLength CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	IsAutoCreated (Y | N) "Y"
+	UseAsMODisplayName (Y | N) "N"
+	GUIDisplayable (Y | N) "Y"
+	UseAsInstanceName (Y | N) "N"
+>
+<!ELEMENT AppsStats (CoreAppsStats, PinPoint?, Threshold*, SigThreshold*)>
+<!ELEMENT CoreAppsStats EMPTY>
+<!ATTLIST CoreAppsStats
+	AttrId CDATA #REQUIRED
+	UsrAttrId CDATA #IMPLIED
+	DisplayType (Integer | Float) #REQUIRED
+	GUIDisplayName CDATA #REQUIRED
+	UniqueName CDATA #REQUIRED
+	ColumnName CDATA #REQUIRED
+	TableName CDATA #REQUIRED
+	UnitOfMeasurement CDATA ""
+	GUIStringLength CDATA "0"
+	ScaleFactor CDATA "0"
+	GUIDisplaySequenceNumber CDATA "0"
+	GUIDisplayable (Y | N) "Y"
+	UseNormalDistribution (Y | N) "Y"
+	GUIGraphedByDefault (Y | N) "Y"
+>
+<!ELEMENT Bundle (File*, Permissions*)>
+<!ELEMENT File EMPTY>
+<!ATTLIST File
+	Name CDATA #REQUIRED
+>
+<!ELEMENT Permissions EMPTY>
+<!ATTLIST Permissions
+	Filename CDATA #REQUIRED
+	Value CDATA #REQUIRED
+>

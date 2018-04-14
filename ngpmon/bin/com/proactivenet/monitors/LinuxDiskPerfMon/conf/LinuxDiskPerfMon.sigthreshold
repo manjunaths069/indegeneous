@@ -1,0 +1,27 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+#
+#
+#
+LinuxDiskPerf	AVAILABILITY	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	AVAILABILITY	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+LinuxDiskPerf	DISK_READS_PER_SECON	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_READS_PER_SECON	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_WRITES_PER_SECO	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_WRITES_PER_SECO	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_READ_BLOCKS_PER	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_READ_BLOCKS_PER	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_WRITE_BLOCKS_PE	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+LinuxDiskPerf	DISK_WRITE_BLOCKS_PE	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+#LinuxDiskPerf	DISK_TRANSFERS_PER_S	Normal	10	below	0.0	0.0	0.0	-1	1
+#LinuxDiskPerf	DISK_TRANSFERS_PER_S	Normal	10	above	0.0	0.0	0.0	-1	1

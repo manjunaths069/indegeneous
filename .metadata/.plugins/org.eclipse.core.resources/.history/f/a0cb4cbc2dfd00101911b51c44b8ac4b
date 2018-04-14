@@ -1,0 +1,29 @@
+interface test
+{
+	public void myTest(); 
+	class my
+	{
+		int myTest=-1;
+		void myTestFunc()
+		{
+			System.out.println("Hi");
+		}
+		
+	}
+}
+
+public class TestStudent implements test {
+    public static void main(String[] args) {
+        Address addr = new Address("One Java Place", "HomeTown", "State", "12345");        
+        Student cust = new Student(1, "Java", "Duke", addr);
+        
+        System.out.println(cust);
+        
+        test.my m = new test.my();
+        m.myTestFunc();
+    }
+    public void myTest()
+    {
+    	System.out.println("Inteface method");
+    }
+}

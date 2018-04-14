@@ -1,0 +1,7 @@
+#Attribute Group	,Monitor Name	,Attribute Name			,Rank	,Above Normal	,Below Normal
+System	                ,LinuxDiskPerf	     ,DISK_TRANSFERS_PER_S	   ,2	,2		,2	
+System                  ,LinuxDiskPerf       ,DISK_READS_PER_SECON         ,2	,2		,2
+System                  ,LinuxDiskPerf       ,DISK_WRITES_PER_SECO         ,2	,2		,2
+System                  ,LinuxDiskPerf       ,DISK_READ_BLOCKS_PER         ,2	,2		,2
+System                  ,LinuxDiskPerf       ,DISK_WRITE_BLOCKS_PE         ,2	,2		,2
+Availability            ,LinuxDiskPerf       ,AVAILABILITY                 ,5	,1		,5

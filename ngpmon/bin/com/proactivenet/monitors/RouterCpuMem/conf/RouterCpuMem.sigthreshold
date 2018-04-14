@@ -1,0 +1,38 @@
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#
+#       The columns are Monitor type, Attribute name, Severity,
+#       Duration, above|below, BaselineThreshold, Sensitivity,
+#       Absolute PadFactor, Percentage PadFactor, Suppress Flag.
+#
+#       Monitor and Attribute names can contain spaces (just don't put
+#       spaces before or after the name unless the name contains the spaces).
+#       Monitor and Attribute names can be either the unique name or
+#       the display name as long as they are unique.
+#       BaselineThreshold can be "No Threshold" or -2 for no BaselineThreshold.
+#       Sensitivity can be -2 for default Sensitivity.
+#       Suppress Flag is 1 for suppress, or "suppress" and "nosuppress" can
+#       be used.
+#
+# "Monitor Type" "Attribute Name" Severity Duration "above|below" BaselineThreshold Sensitivity AbsPad MulPad "Suppress Flag"
+#       We are suppressing In/Out Pkts/sec and
+#       In/Out Broadcast Pkts/sec because it is very difficult
+#       to capture significatn abnormalities without taking
+#       the speed into account.
+#       Abnormalities on In and Out Utilization which
+#       do take into account the interface speed, should
+#       be sufficient.
+#
+#       07312001 PROBLEM!! You cannot have both below and above settings for normal (event only) severity!!
+#       08022001 TBD - Should suppress all above baseline availability
+#                TBD - Maybe duration on availability should be set to 0-10
+#                      instead of 30?
+#       10112002 Changed all duration to 10 minutes
+#
+
+# SNMP
+DistRtrCpu	LOAD	NORMAL	10	below	0	40	10	-1	0
+DistRtrCpu	LOAD	NORMAL	10	above	0	50	5	-1	0
+DistRtrMem	USED	NORMAL	10	below	0	40	10	-1	0
+DistRtrMem	USED	NORMAL	10	above	0	50	4	-1	0
+

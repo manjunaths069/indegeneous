@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="1" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Sender"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="2" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Server"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="3" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Receiver"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="4" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Requester"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="5" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "All"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="6" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Client Connection"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="7" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Server Connection"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "7"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="8" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Cluster Receiver"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "8"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="9" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Cluster Sender"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "9"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="1" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Sender"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="2" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Server"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="3" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Receiver"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="4" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Requester"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="5" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "All"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="6" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Client Connection"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="7" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Server Connection"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "7"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="8" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Cluster Receiver"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "8"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30056"     moInstId="9" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300560" AttrVal = "Cluster Sender"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300561" AttrVal = "9"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

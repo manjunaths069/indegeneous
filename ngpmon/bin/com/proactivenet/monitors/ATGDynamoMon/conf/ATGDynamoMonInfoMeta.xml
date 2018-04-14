@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ATGDynamoMonInfoMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="27100" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="ATGDynamo" GUIDisplayName="ATG Dynamo Info" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.ATGDynamoMon.ATGDynamoMon" Version="2.0" HasMoreInfo="N" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="27101" MoTypeType="APPS" ParentMoType="27100" UniqueName="ATGDynamoMonInfo" GUIDisplayName="ATG Dynamo"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.ATGDynamoMon.ATGDynamoMon" Version="2.0"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="271000" UsrAttrId="1" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="ATG Server Information Monitor"/>
+      <AppsInput AttrId="271028" UsrAttrId="28" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="271023" UsrAttrId="23" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="271012" UsrAttrId="4" UniqueName="URLNAMEFORMEMORY" GUIDisplayName="Url Name For Memory" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="50" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="/nucleus/VMSystem/?op=showMemoryInfo"/>
+      <AppsInput AttrId="271014" UsrAttrId="6" UniqueName="USER_NAME" GUIDisplayName="User" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="52" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="271026" UsrAttrId="26" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="271011" UsrAttrId="3" UniqueName="URLNAME" GUIDisplayName="Url Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="49" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="/atg/dynamo/admin/en/performance.jhtml"/>
+      <AppsInput AttrId="271010" UsrAttrId="2" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="ATG Dynamo"/>
+      <AppsInput AttrId="271060" UsrAttrId="60" UniqueName="DBPOOLNAME" GUIDisplayName="DB Pool Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="54" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" GUIHasListOfChoice="Y" DefaultValue="None"/>
+      <AppsInput AttrId="271024" UsrAttrId="24" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="271029" UsrAttrId="29" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll TimeOut" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="271031" UsrAttrId="993" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" GUIInputOnCreate="N" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="271062" UsrAttrId="62" UniqueName="DNSIP" GUIDisplayName="Target Device" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="String" DefaultValue="0.0.0.0"/>
+      <AppsInput AttrId="271053" UsrAttrId="53" UniqueName="ACTSESINTV" GUIDisplayName="Active Session Count Interval(in secs)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="240"/>
+      <AppsInput AttrId="271013" UsrAttrId="5" UniqueName="ADMIN_PORT" GUIDisplayName="Admin Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="8830"/>
+      <AppsInput AttrId="271015" UsrAttrId="7" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="53" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password"/>
+      <AppsInput AttrId="27101980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="55" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27101981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="56" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27101982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="57" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="27101468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="58" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="271037" UsrAttrId="37" UniqueName="Database Maximum Con" GUIDisplayName="Database Maximum Connections" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="270025" UsrAttrId="25" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="271039" UsrAttrId="39" UniqueName="Database Max Free Co" GUIDisplayName="Database Max Free Connections" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="271038" UsrAttrId="38" UniqueName="Database Minimum Con" GUIDisplayName="Database Minimum Connections" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="271033" UsrAttrId="33" UniqueName="DRP Enabled" GUIDisplayName="DRP Enabled" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="271034" UsrAttrId="34" UniqueName="Database Pool Name" GUIDisplayName="Database Pool Name" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="271016" UsrAttrId="8" UniqueName="Total Memory" GUIDisplayName="Total Memory" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="271019" UsrAttrId="11" UniqueName="Request Per Minute" GUIDisplayName="Request Per Minute" TableName="ATGAPPSRV" ColumnName="REQPERMIN" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271036" UsrAttrId="36" UniqueName="Requests Served" GUIDisplayName="Requests Served" TableName="ATGAPPSRV" ColumnName="REQSERVED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271043" UsrAttrId="43" UniqueName="Average Request Hand" GUIDisplayName="Average Request Handling Time" TableName="ATGAPPSRV" ColumnName="ACGREQHATIME" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271040" UsrAttrId="40" UniqueName="Average DRP Request " GUIDisplayName="Average DRP Request Handling Time" TableName="ATGAPPSRV" ColumnName="AVDRPREQHANTIME" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271051" UsrAttrId="51" UniqueName="Valid Session Count" GUIDisplayName="Valid Session Count" TableName="ATGAPPSRV" ColumnName="ACTSESCOUNT" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271020" UsrAttrId="12" UniqueName="Outstanding DRP Requ" GUIDisplayName="Outstanding DRP Request" TableName="ATGAPPSRV" ColumnName="ODRPREQ" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271022" UsrAttrId="14" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="ATGAPPSRV" ColumnName="AVAILABILITY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271018" UsrAttrId="10" UniqueName="Free Memory" GUIDisplayName="Free Memory" TableName="ATGAPPSRV" ColumnName="FREEMEM" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271050" UsrAttrId="50" UniqueName="Total Request Handli" GUIDisplayName="Total Request Handling Time" TableName="ATGAPPSRV" ColumnName="TOTREQHTIME" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271049" UsrAttrId="49" UniqueName="Total DRP Request Ha" GUIDisplayName="Total DRP Request Handling Time" TableName="ATGAPPSRV" ColumnName="TOTDRPREQHTIME" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271045" UsrAttrId="45" UniqueName="Handled Request Coun" GUIDisplayName="Handled Request Count Per Minute" TableName="ATGAPPSRV" ColumnName="HANREQCONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271048" UsrAttrId="48" UniqueName="Sent DRP Packet Coun" GUIDisplayName="Sent DRP Packet Count Per Minute" TableName="ATGAPPSRV" ColumnName="SNTDRPPACCONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271061" UsrAttrId="61" UniqueName="Number of DB Pool Re" GUIDisplayName="Number of DB Pool Resources Used" TableName="ATGAPPSRV" ColumnName="DBPOOLUSED" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271046" UsrAttrId="46" UniqueName="Handler Count" GUIDisplayName="Handler Count" TableName="ATGAPPSRV" ColumnName="HANDLERCONT" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271042" UsrAttrId="42" UniqueName="Average Sent DRP Pac" GUIDisplayName="Average Sent DRP Packet Count" TableName="ATGAPPSRV" ColumnName="AVGSTDRPPACONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271052" UsrAttrId="52" UniqueName="Current Session Coun" GUIDisplayName="Current Session Count" TableName="ATGAPPSRV" ColumnName="CURSESCOUNT" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271047" UsrAttrId="47" UniqueName="Received DRP Packet " GUIDisplayName="Received DRP Packet Count Per Minute" TableName="ATGAPPSRV" ColumnName="RCDDRPPACCONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271021" UsrAttrId="13" UniqueName="DRP Threads Waiting" GUIDisplayName="DRP Threads Waiting More Than 5 Seconds" TableName="ATGAPPSRV" ColumnName="DRPTHDWAITING" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271017" UsrAttrId="9" UniqueName="Average Latency" GUIDisplayName="Average Latency" TableName="ATGAPPSRV" ColumnName="AVGLATENCY" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271035" UsrAttrId="35" UniqueName="Active Session Count" GUIDisplayName="Active Session Count" TableName="ATGAPPSRV" ColumnName="ACTIVESESCOUNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271044" UsrAttrId="44" UniqueName="Handled DRP Request " GUIDisplayName="Handled DRP Request Count Per Minute" TableName="ATGAPPSRV" ColumnName="HANDPRREQCONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="271041" UsrAttrId="41" UniqueName="Average Received DRP" GUIDisplayName="Average Received DRP Packet Count" TableName="ATGAPPSRV" ColumnName="AVGRCDRPPACONT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

@@ -1,0 +1,4 @@
+WebServer    ,TomcatServlet
+
+WebServerAvailability,TomcatServlet,SERV_AVAILABILITY
+WebServerAvailability,TomcatServlet,MBEAN_AVAILABILITY

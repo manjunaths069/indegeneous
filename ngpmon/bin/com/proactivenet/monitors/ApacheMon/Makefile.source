@@ -1,0 +1,2 @@
+#SOURCE.java = ABC.java 
+SUBDIRS = util src

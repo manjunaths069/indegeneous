@@ -1,0 +1,7 @@
+SOURCE.cc = CpuMonInfo.cc javaCom.cc 
+
+OTHERFILES= CpuMon.h CpuMonInfo.h
+
+TARGET_LIB_SHARED = libcpumon.so
+
+libcpumon_OBJS =  ${SOURCE.cc:%.cc=%.o}

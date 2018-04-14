@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<MetaData>    
+<ManagedObject>
+<ParentBasicInfo MoTypeId="500024" UniqueName="1VamJMXMon" GUIDisplayName="VamJMXMon Info" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" EndUserReportable="N" HasCustomizedGUI="N"/>
+<ParentAppsInfo ClassName="com.proactivenet.monitors.VamJMXMon.VamJMXMon" Version="1.0" OS="Any" GUIMonitorGroup="OTHER" IsSchedulable="N" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="N"/>
+<BasicInfo MoTypeId="500025" UniqueName="JMX" GUIDisplayName="Adapter for JMX" OneInstancePerParent="N" MoTypeType="APPS" ParentMoType="500024" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" EndUserReportable="N" HasCustomizedGUI="N"/>
+<AppsInfo ClassName="com.proactivenet.monitors.VamJMXMon.VamJMXMon" Version="" OS="Any" GUIMonitorGroup="OTHER" IsSchedulable="Y" MustRunOnAgent="N" IsStatic="N" IsNewFrameWork="N" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="Y"/>
+</ManagedObject>    
+<Attributes>
+<Application>
+<ParentAppsInput AttrId="500024999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="Instance Name" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="Adapter for JMX" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="N" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+<AppsInput
+            AttrId="500025006"
+            UsrAttrId="6"
+            UniqueName="TREE"
+            GUIDisplayName="Tree"
+            GUIInputType="CFG"
+            ScaleFactor="1000"
+            GUIDisplaySequenceNumber="52"
+            UseAsInstanceName="Y"
+            IsDefaultValueSet="Y"
+            GUIRequiredOnCreate="N"
+            DisplayType="String"
+            GUIHasListOfChoice="N"
+      />
+<AppsInput
+                  AttrId="500025007"
+                  UsrAttrId="7"
+                  UniqueName="TEST"
+                  GUIDisplayName="Test"
+                  GUIInputType="CFG"
+                  ScaleFactor="1000"
+                  GUIDisplaySequenceNumber="53"
+                  UseAsInstanceName="Y"
+                  IsDefaultValueSet="Y"
+                  GUIRequiredOnCreate="N"
+                  DisplayType="String"
+                  GUIHasListOfChoice="N"
+      />
+</Application>
+</Attributes>
+</MetaData>

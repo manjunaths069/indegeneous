@@ -1,0 +1,20 @@
+#!/bin/ksh
+#
+# IM Server Monitor
+# Args
+#   1 Application name
+#   2 Engine ID
+#   3 Content Type (PRODUCT, DEFAULT etc)
+#   4 Cache Type (e.g REQ/$5)
+#   5 $BV1TO1_VAR
+#   6 Host name
+. $5/etc/bv1to1.conf.sh
+$BV1TO1/bin/bvconf monitor \
+       -A $1 \
+       -p bvsmgr \
+       -n 1 \
+       -E $2 \
+       -h $6 \
+       -C \
+       -m BV_CACHE_STAT \
+       -L $4-$3-SIZE:V,$4-$3-HIT:V,$4-$3-MISS:V,$4-$3-SWAP:V,$4-$3-MAX

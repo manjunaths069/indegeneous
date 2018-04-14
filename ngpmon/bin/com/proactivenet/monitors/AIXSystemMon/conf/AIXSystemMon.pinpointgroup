@@ -1,0 +1,11 @@
+System       ,AIXSystem
+DiskPerformance,AIXSystem,IO_WAIT
+DiskPerformance,AIXSystem,SCAN_RATE
+DiskPerformance,AIXSystem,VMEM_USD
+SystemCpu,AIXSystem,TOL_CPU
+SystemCpu,AIXSystem,USR_CPU
+SystemCpu,AIXSystem,KER_CPU
+ProcTotal,AIXSystem,NO_PROCESSES
+SystemMem,AIXSystem,RMEM_USD
+SystemMem,AIXSystem,VMEM_USD
+SystemInfo,AIXSystem

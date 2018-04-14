@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+
+<PRE_POST   Type = "Post Install">
+
+	<updateMO Action = "delete">
+		<MoInfo moTypeId ="30080"     moInstId="30" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo>
+		<AttrInfo   AttrID = "300800" AttrVal = "v1"> </AttrInfo>
+		<AttrInfo   AttrID = "300801" AttrVal = "1"> </AttrInfo>
+  	</updateMO>
+
+	<updateMO 	Action = "delete"> 
+		<MoInfo	moTypeId ="30080"     moInstId="31" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+		<AttrInfo	AttrID = "300800" AttrVal = "v2c"> </AttrInfo> 
+		<AttrInfo	AttrID = "300801" AttrVal = "2"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "delete"> 
+		<MoInfo	moTypeId ="30080"     moInstId="32" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+		<AttrInfo	AttrID = "300800" AttrVal = "v3"> </AttrInfo> 
+		<AttrInfo	AttrID = "300801" AttrVal = "3"> </AttrInfo> 
+	</updateMO> 
+
+
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30080"     moInstId="30" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+		<AttrInfo	AttrID = "300800" AttrVal = "v1"> </AttrInfo> 
+		<AttrInfo	AttrID = "300801" AttrVal = "1"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30080"     moInstId="31" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+		<AttrInfo	AttrID = "300800" AttrVal = "v2c"> </AttrInfo> 
+		<AttrInfo	AttrID = "300801" AttrVal = "2"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30080"     moInstId="32" parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+		<AttrInfo	AttrID = "300800" AttrVal = "v3"> </AttrInfo> 
+		<AttrInfo	AttrID = "300801" AttrVal = "3"> </AttrInfo> 
+	</updateMO> 
+
+
+
+
+
+
+
+	<updateMO 	Action = "delete"> 
+		<MoInfo	moTypeId ="30065"  moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300650" AttrVal = "MD5"> </AttrInfo> 
+		<AttrInfo	AttrID = "300651" AttrVal = "1"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "delete"> 
+		<MoInfo	moTypeId ="30065"  moInstId="2" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300650" AttrVal = "SHA"> </AttrInfo> 
+		<AttrInfo	AttrID = "300651" AttrVal = "2"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "delete"> 
+		<MoInfo	moTypeId ="30066"  moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300660" AttrVal = "CBC-DES"> </AttrInfo> 
+		<AttrInfo	AttrID = "300661" AttrVal = "1"> </AttrInfo> 
+	</updateMO> 
+
+
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30065"  moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300650" AttrVal = "MD5"> </AttrInfo> 
+		<AttrInfo	AttrID = "300651" AttrVal = "1"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30065"  moInstId="2" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300650" AttrVal = "SHA"> </AttrInfo> 
+		<AttrInfo	AttrID = "300651" AttrVal = "2"> </AttrInfo> 
+	</updateMO> 
+
+	<updateMO 	Action = "insert"> 
+		<MoInfo	moTypeId ="30066"  moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+		<AttrInfo	AttrID = "300660" AttrVal = "CBC-DES"> </AttrInfo> 
+		<AttrInfo	AttrID = "300661" AttrVal = "1"> </AttrInfo> 
+	</updateMO> 
+
+</PRE_POST> 
+

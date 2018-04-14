@@ -1,0 +1,19 @@
+
+public class TestDiamond implements test1,test2{
+
+	public void doTest()
+	{
+		System.out.println("Hi Just Test");
+				
+	}
+}
+
+interface test1
+{
+	 public void doTest();
+}
+
+interface test2
+{
+	 public void doTest();
+}

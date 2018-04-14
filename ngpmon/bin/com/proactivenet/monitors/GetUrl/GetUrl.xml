@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData [
+<!ELEMENT MetaData (DDMetaData+)>
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+<!ELEMENT MetaInfo EMPTY>
+<!ATTLIST MetaInfo 
+    UniqueDisplayName CDATA #REQUIRED
+    GUIDisplayName CDATA #REQUIRED
+    LongName CDATA #REQUIRED
+    ActionType ( 0 | 1 ) "0"
+    ActionCmd CDATA #REQUIRED
+    ShowOutput  ( 0 | 1) "1"
+    OutputType  ( 0 | 1) "1"
+    SourceOfAgent ( 0 | 1 | 2) "0"
+    AgentOSList CDATA "All"
+    AgentVersion CDATA "5.1"
+    DiagnosticsVersion CDATA "1.0"
+    MaxDataLength CDATA "100000"
+    MonitorTimeout CDATA "300000" 
+    UseInstanceConfig (0 | 1) "1"
+>
+
+
+<!ELEMENT GUIDeviceInfo EMPTY>
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+<!ELEMENT ImplInfo EMPTY >
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+<!ELEMENT ParameterInfo EMPTY >
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+<!ELEMENT AgentInfo EMPTY >
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+]>
+
+<MetaData>
+<DDMetaData>
+        <!-- Get URL --> 
+        <MetaInfo UniqueDisplayName = "GetUrl" GUIDisplayName = "Get URL" LongName="Get URL" ActionCmd = "GetUrl" />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "20031" />
+        <ImplInfo Impl = "GetUrl" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "$device" />
+        <ParameterInfo Parameter = "$srcip" />
+    </DDMetaData>
+</MetaData>    
+
+
+

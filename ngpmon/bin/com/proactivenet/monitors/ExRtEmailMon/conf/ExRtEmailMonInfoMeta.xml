@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ExRtEmailMonInfoMeta.xml -->
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42761" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="ExRtEmailMon" GUIDisplayName="MS Exchange Round-trip Email Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.ExRtEmailMon.ExRtEmailMon" Version="1.0" OS="Windows" IsStatic="Y" SupportFlashCheck="Y" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="42762" MoTypeType="APPS" ParentMoType="42761" UniqueName="ExRtEmailMonInfo" GUIDisplayName="MS Exchange Round-trip Email"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.ExRtEmailMon.ExRtEmailMon" Version="1.0" OS="Windows" SupportFlashCheck="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42761999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="MS Exchange Round-trip Email Monitor"/>
+      <AppsInput AttrId="42762999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" UseAsMODisplayName="Y" DisplayType="String"/>
+      <AppsInput AttrId="42762995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42762997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="42762998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="42762994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference" UseAsInstanceName="Y"/>
+      <AppsInput AttrId="42762010" UsrAttrId="10" UniqueName="SOURCE_PROFILE" GUIDisplayName="Source (Exchange Server) Profile" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="6" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="42762011" UsrAttrId="11" UniqueName="RECIPIENT_EMAIL" GUIDisplayName="Recipient's Email Address" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="7" DisplayType="String" UseAsInstanceName="Y"/>
+      <AppsInput AttrId="42762015" UsrAttrId="15" UniqueName="DESTINATION_PROFILE" GUIDisplayName="Destination (Exchange Server) Profile" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="11" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="42762016" UsrAttrId="16" UniqueName="MESSAGE_SIZE_IN_KB" GUIDisplayName="Message size in KB" GUIInputType="CFG" ScaleFactor="1" GUIDisplaySequenceNumber="12" DisplayType="Integer" IsDefaultValueSet="Y" DefaultValue="1"/>
+      <AppsInput AttrId="42762980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42762981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42762982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42762468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="16" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42762993" UsrAttrId="993" UniqueName="MON_VERSION" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762021" UsrAttrId="21" UniqueName="Availability" GUIDisplayName="Availability" TableName="EXRTEMAIL" ColumnName="AVAIL" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762022" UsrAttrId="22" UniqueName="SourceAvailability" GUIDisplayName="Source availability" TableName="EXRTEMAIL" ColumnName="SRC_AVAIL" ScaleFactor="1" UseNormalDistribution="N" GUIGraphedByDefault="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762023" UsrAttrId="23" UniqueName="DestAvailability" GUIDisplayName="Destination availability" TableName="EXRTEMAIL" ColumnName="DEST_AVAIL" ScaleFactor="1" UseNormalDistribution="N" GUIGraphedByDefault="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762024" UsrAttrId="24" UniqueName="SourceResponseTime" GUIDisplayName="Source Response Time" TableName="EXRTEMAIL" ColumnName="SRC_RESP_TIME" ScaleFactor="1" UseNormalDistribution="N" GUIGraphedByDefault="N" DisplayType="Integer" UnitOfMeasurement="ms"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762025" UsrAttrId="25" UniqueName="DestResponseTime" GUIDisplayName="Destination Response Time" TableName="EXRTEMAIL" ColumnName="DEST_RESP_TIME" ScaleFactor="1" UseNormalDistribution="N" GUIGraphedByDefault="N" DisplayType="Integer" UnitOfMeasurement="ms"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42762026" UsrAttrId="26" UniqueName="TotalResponseTime" GUIDisplayName="Total Response Time" TableName="EXRTEMAIL" ColumnName="TOTAL_RESP_TIME" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

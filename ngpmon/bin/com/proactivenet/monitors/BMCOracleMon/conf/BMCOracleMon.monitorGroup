@@ -1,0 +1,5 @@
+# File        : BMCOracleMon.monitorGroup
+# Description : MonitorGroup for BMC Oracle Monitor
+# Date        : Tue Jan 31 2003
+
+Oracle|BMCOracle

@@ -1,0 +1,2 @@
+SUBDIRS = types
+SOURCE.java = *.java

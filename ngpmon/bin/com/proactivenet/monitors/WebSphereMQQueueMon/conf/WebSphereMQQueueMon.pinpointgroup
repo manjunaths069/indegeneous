@@ -1,0 +1,3 @@
+WebSphereMQ,WebSphereMQQueueInfo
+AppServerAvailability    ,WebSphereMQQueueInfo,AVAILABILITY
+AppServer,WebSphereMQQueueInfo

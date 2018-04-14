@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- MSExchangeInfoMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="36000" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="MSExchangeMon" GUIDisplayName="MSExchange Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.MSExchangeMon.MSExchangeMon" HasMoreInfo="N" OS="Windows" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="36001" MoTypeType="APPS" ParentMoType="36000" UniqueName="MSExchangeInfo" GUIDisplayName="MSExchange"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.MSExchangeMon.MSExchangeMon" Version="2.0" OS="Windows"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="36000999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="MSExchange Monitor"/>
+      <AppsInput AttrId="36001995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36001994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="36001011" UsrAttrId="11" UniqueName="IS_STATS" GUIDisplayName="Information Store (IS)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001014" UsrAttrId="14" UniqueName="MTACON_STATS" GUIDisplayName="MTA Connections (MTACON)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="18" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="36001015" UsrAttrId="15" UniqueName="ISMBX_STATS" GUIDisplayName="IS Mailbox (ISMBX)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="19" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001012" UsrAttrId="12" UniqueName="ISPUB_STATS" GUIDisplayName="IS Public (ISPUB)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="16" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36001018" UsrAttrId="18" UniqueName="IMC_STATS" GUIDisplayName="Internet Mail Connector (IMC)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="22" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="36001998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="36001991" UsrAttrId="991" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="36001992" UsrAttrId="992" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="36001017" UsrAttrId="17" UniqueName="SRS_STATS" GUIDisplayName="Site Replication Service (SRS)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="21" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001007" UsrAttrId="7" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="36001013" UsrAttrId="13" UniqueName="MTA_STATS" GUIDisplayName="Message Transfer Agent (MTA)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="17" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001010" UsrAttrId="10" UniqueName="ES_STATS" GUIDisplayName="Event Store (ES)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001022" UsrAttrId="22" UniqueName="PROFILE" GUIDisplayName="Profile Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" UseAsInstanceName="N" DefaultValue="" IsDefaultValueSet="Y" GUIInputOnCreate="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="36001016" UsrAttrId="16" UniqueName="ISPVT_STATS" GUIDisplayName="IS Private (ISPVT)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="20" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="36001023" UsrAttrId="23" UniqueName="POP3_STATS" GUIDisplayName="POP3 Object (POP3)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="23" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36001024" UsrAttrId="24" UniqueName="NNTP_STATS" GUIDisplayName="NNTP Object (NNTP)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="24" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36001025" UsrAttrId="25" UniqueName="SMTP_STATS" GUIDisplayName="SMTP Object (SMTP)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="25" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36001021" UsrAttrId="21" UniqueName="VERSION" GUIDisplayName="MS Exchange" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" MoReferenceType="36750" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="36001980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="26" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36001981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="27" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36001982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="28" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36001468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="29" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="36001091" UsrAttrId="91" UniqueName="TOT_MAIL_BOX" GUIDisplayName="Total Number of Mail boxes" DisplayType="String" ScaleFactor="1000" IsInputAttribute="N" AttrReferenceType="Unknown" DefaultValue=""/>
+      <AppsConfig AttrId="36001092" UsrAttrId="92" UniqueName="MB_OVER_LMT" GUIDisplayName="Mail boxes over storage Limit" DisplayType="String" ScaleFactor="1000" IsInputAttribute="N" AttrReferenceType="Unknown" DefaultValue=""/>
+      <AppsConfig AttrId="36001993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" IsInputAttribute="N" AttrReferenceType="Unknown" DefaultValue=""/>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001261" UsrAttrId="261" UniqueName="POP3_TOT_CON" GUIDisplayName="POP3- Connection Total" TableName="MSEXCHANGE" ColumnName="POP3_TOT_CON" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001208" UsrAttrId="208" UniqueName="IS_TOTAL_CONNECTIONS" GUIDisplayName="IS-Total Connections" TableName="MSEXCHANGE" ColumnName="IS_TOTAL_CONNE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001211" UsrAttrId="211" UniqueName="IS_RPC_WRITE_BYTE" GUIDisplayName="IS-Write Bytes RPC Clients" TableName="MSEXCHANGE" ColumnName="IS_RPC_WRT_BYT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001217" UsrAttrId="217" UniqueName="ISPUB_SEND_QUEUE" GUIDisplayName="ISPUB-Send Queue Size" TableName="MSEXCHANGE" ColumnName="ISPUB_SEN_QUEU" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001238" UsrAttrId="238" UniqueName="ISMBX_AVG_LOC_DELV_T" GUIDisplayName="ISMBX-Avg Local Delivery time" TableName="MSEXCHANGE" ColumnName="ISMBX_AVG_LOCD" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001241" UsrAttrId="241" UniqueName="ISPVT_MSG_DELV" GUIDisplayName="ISPVT-Messages Delivered" TableName="MSEXCHANGE" ColumnName="ISPVT_MSG_DELV" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001232" UsrAttrId="232" UniqueName="ISMBX_LOGONS" GUIDisplayName="ISMBX-Client Logons" TableName="MSEXCHANGE" ColumnName="ISMBX_LOGONS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001235" UsrAttrId="235" UniqueName="ISMBX_MSG_SENT" GUIDisplayName="ISMBX-Messages Sent" TableName="MSEXCHANGE" ColumnName="ISMBX_MSG_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001230" UsrAttrId="230" UniqueName="MTACON_OUT_MSG_CONTE" GUIDisplayName="MTACON-Outbound Message Content" TableName="MSEXCHANGE" ColumnName="MTACON_OMSG_CO" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001252" UsrAttrId="252" UniqueName="IMC_NDR_IN" GUIDisplayName="IMC-NDRs Total Inbound" TableName="MSEXCHANGE" ColumnName="IMC_NDR_IN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001262" UsrAttrId="262" UniqueName="POP3_AUTH_FAIL" GUIDisplayName="POP3-AUTH failures" TableName="MSEXCHANGE" ColumnName="POP3_AUTH_FAIL" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001210" UsrAttrId="210" UniqueName="IS_USERS" GUIDisplayName="IS-Users" TableName="MSEXCHANGE" ColumnName="IS_USERS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001258" UsrAttrId="258" UniqueName="OWA_MSG_SENT" GUIDisplayName="OWA- Messages Sent" TableName="MSEXCHANGE" ColumnName="OWA_MSG_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001264" UsrAttrId="264" UniqueName="POP3_CON_REJ" GUIDisplayName="POP3-Connections Rejected" TableName="MSEXCHANGE" ColumnName="POP3_CON_REJ" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001224" UsrAttrId="224" UniqueName="MTA_WORK_QUEUE" GUIDisplayName="MTA-Work Queue Size" TableName="MSEXCHANGE" ColumnName="MTA_WORK_QUEUE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001202" UsrAttrId="202" UniqueName="ES_AVG_SCRIPT" GUIDisplayName="ES-Avg Script Time" TableName="MSEXCHANGE" ColumnName="ES_AVG_SCRIPT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001268" UsrAttrId="268" UniqueName="POP3_QUEUE_IN" GUIDisplayName="POP3-Incoming Queue Size" TableName="MSEXCHANGE" ColumnName="POP3_QUEUE_IN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001213" UsrAttrId="213" UniqueName="ISPUB_AVG_LOC_DELV_T" GUIDisplayName="ISPUB-Avg Local Delivery Time" TableName="MSEXCHANGE" ColumnName="ISPUB_AVG_LODE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001228" UsrAttrId="228" UniqueName="MTACON_MSG_REC" GUIDisplayName="MTACON-Messages Received" TableName="MSEXCHANGE" ColumnName="MTACON_MSG_REC" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001205" UsrAttrId="205" UniqueName="ES_NOTIFY_TIME " GUIDisplayName="ES-Notify Time" TableName="MSEXCHANGE" ColumnName="ES_NOTIFY_TIME" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001236" UsrAttrId="236" UniqueName="ISMBX_PEAK_LOGON" GUIDisplayName="ISMBX-Peak Client Logons" TableName="MSEXCHANGE" ColumnName="ISMBX_PEAK_LOG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001269" UsrAttrId="269" UniqueName="POP3_QUEUE_OUT" GUIDisplayName="POP3-Outgoing Queue Size" TableName="MSEXCHANGE" ColumnName="POP3_QUEUE_OUT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001259" UsrAttrId="259" UniqueName="NNTP_CON" GUIDisplayName="NNTP-Current connections" TableName="MSEXCHANGE" ColumnName="NNTP_CON" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001245" UsrAttrId="245" UniqueName="SRS_ACCESS_DENIAL" GUIDisplayName="SRS-Access Denials" TableName="MSEXCHANGE" ColumnName="SRS_ACCESS_DEN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001216" UsrAttrId="216" UniqueName="ISPUB_REC_QUEUE" GUIDisplayName="ISPUB-Receive Queue Size" TableName="MSEXCHANGE" ColumnName="ISPUB_REC_QUEU" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001243" UsrAttrId="243" UniqueName="ISPVT_PEAK_LOGON" GUIDisplayName="ISPVT-Peak Client Logons" TableName="MSEXCHANGE" ColumnName="ISPVT_PEAK_LOG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001203" UsrAttrId="203" UniqueName="ES_HANDLER " GUIDisplayName="ES-Handler Time" TableName="MSEXCHANGE" ColumnName="ES_HANDLER" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001215" UsrAttrId="215" UniqueName="ISPUB_MSG_SENT" GUIDisplayName="ISPUB-Messages Sent" TableName="MSEXCHANGE" ColumnName="ISPUB_MSG_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per min" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001248" UsrAttrId="248" UniqueName="SRS_PENDING_REPLIC" GUIDisplayName="SRS-Pending Replication Synchronizations" TableName="MSEXCHANGE" ColumnName="SRS_PEND_REP" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001255" UsrAttrId="255" UniqueName="IMC_REC_QUEUE" GUIDisplayName="IMC-Receive Queue Size" TableName="MSEXCHANGE" ColumnName="IMC_REC_QUEUE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001231" UsrAttrId="231" UniqueName="ISMBX_AVG_DELV_TIME" GUIDisplayName="ISMBX-Avg Delivery Time" TableName="MSEXCHANGE" ColumnName="ISMBX_AVG_DELV" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001220" UsrAttrId="220" UniqueName="MTA_DATA_REC" GUIDisplayName="MTA-Data Received" TableName="MSEXCHANGE" ColumnName="MTA_DATA_REC" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001249" UsrAttrId="249" UniqueName="SRS_REPLIC_UPDATE" GUIDisplayName="SRS-Replication Updates" TableName="MSEXCHANGE" ColumnName="SRS_REPLIC_UPD" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001267" UsrAttrId="267" UniqueName="POP3_BYTE_SENT" GUIDisplayName="POP3-Bytes Send" TableName="MSEXCHANGE" ColumnName="POP3_BYTE_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001250" UsrAttrId="250" UniqueName="SRS_IN_INTER_REPLIC" GUIDisplayName="SRS-Incoming Inter-Site Replication Updates" TableName="MSEXCHANGE" ColumnName="SRS_IINTER_REP" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001214" UsrAttrId="214" UniqueName="ISPUB_MSG_OPEN" GUIDisplayName="ISPUB-Message Opens" TableName="MSEXCHANGE" ColumnName="ISPUB_MSG_OPEN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001226" UsrAttrId="226" UniqueName="MTACON_IN_MSG_REJ" GUIDisplayName="MTACON-Inbound Messages Rejected" TableName="MSEXCHANGE" ColumnName="MTACON_IMSG_RE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001234" UsrAttrId="234" UniqueName="ISMBX_MSG_DELV" GUIDisplayName="ISMBX-Messages Delivered" TableName="MSEXCHANGE" ColumnName="ISMBX_MSG_DELV" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001239" UsrAttrId="239" UniqueName="ISPVT_AVG_DELV_TIME" GUIDisplayName="ISPVT-Avg Delivery Time" TableName="MSEXCHANGE" ColumnName="ISPVT_AVG_DELV" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001265" UsrAttrId="265" UniqueName="POP3_INVALID_COMMAND" GUIDisplayName="POP3-Invalid Commands" TableName="MSEXCHANGE" ColumnName="POP3_INV_COMM" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001242" UsrAttrId="242" UniqueName="ISPVT_MSG_SENT" GUIDisplayName="ISPVT-Messages Sent" TableName="MSEXCHANGE" ColumnName="ISPVT_MSG_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001212" UsrAttrId="212" UniqueName="ISPUB_AVG_DELV_TIME" GUIDisplayName="ISPUB-Avg Delivery Time" TableName="MSEXCHANGE" ColumnName="ISPUB_AVG_DELV" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001204" UsrAttrId="204" UniqueName="ES_NOTIFY_QUEUE " GUIDisplayName="ES-Notify Queue Size" TableName="MSEXCHANGE" ColumnName="ES_NOTIFY_QUEU" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001247" UsrAttrId="247" UniqueName="SRS_REPLIC_OUT" GUIDisplayName="SRS-Objects replicated Out" TableName="MSEXCHANGE" ColumnName="SRS_REPLIC_OUT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001219" UsrAttrId="219" UniqueName="MTA_DISK_FILE" GUIDisplayName="MTA-Disk File Opens" TableName="MSEXCHANGE" ColumnName="MTA_DISK_FILE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001223" UsrAttrId="223" UniqueName="MTA_TOT_LOOP" GUIDisplayName="MTA-Total Loops Detected" TableName="MSEXCHANGE" ColumnName="MTA_TOT_LOOP" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001233" UsrAttrId="233" UniqueName="ISMBX_HTTP" GUIDisplayName="ISMBX-HTTP/DAV Pending Notifications" TableName="MSEXCHANGE" ColumnName="ISMBX_HTTP" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001237" UsrAttrId="237" UniqueName="ISMBX_MSG_SENT_REC" GUIDisplayName="ISMBX-Messages Sent/Received" TableName="MSEXCHANGE" ColumnName="ISMBX_MSG_SERE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per min" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001257" UsrAttrId="257" UniqueName="IMC_SMTP_OUT" GUIDisplayName="IMC-SMTP Connections Outbound" TableName="MSEXCHANGE" ColumnName="IMC_SMTP_OUT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001206" UsrAttrId="206" UniqueName="IS_ACTIVE_USERS" GUIDisplayName="IS-Active Anonymous Users" TableName="MSEXCHANGE" ColumnName="IS_ACTIVE_USER" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001266" UsrAttrId="266" UniqueName="POP3_BYTE_REC" GUIDisplayName="POP3-Bytes Received" TableName="MSEXCHANGE" ColumnName="POP3_BYTE_REC" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001260" UsrAttrId="260" UniqueName="POP3_CURRENT_CON" GUIDisplayName="POP3-Current Connection" TableName="MSEXCHANGE" ColumnName="POP3_CUR_CON" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001209" UsrAttrId="209" UniqueName="IS_DB_HIT" GUIDisplayName="IS-Database Session Hit Rate" TableName="MSEXCHANGE" ColumnName="IS_DB_HIT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001229" UsrAttrId="229" UniqueName="MTACON_MSG_SENT" GUIDisplayName="MTACON-Messages Sent" TableName="MSEXCHANGE" ColumnName="MTACON_MSG_SEN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001207" UsrAttrId="207" UniqueName="IS_CONNECTIONS" GUIDisplayName="IS-Active Connections" TableName="MSEXCHANGE" ColumnName="IS_CONNECTIONS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001225" UsrAttrId="225" UniqueName="MTACON_IN_MSG_CONTEN" GUIDisplayName="MTACON-Inbound Message Content" TableName="MSEXCHANGE" ColumnName="MTACON_IMSG_CO" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001201" UsrAttrId="201" UniqueName="ES_AVG_EVENT" GUIDisplayName="ES-Avg Event Time" TableName="MSEXCHANGE" ColumnName="ES_AVG_EVENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001222" UsrAttrId="222" UniqueName="MTA_MSG_PROCE" GUIDisplayName="MTA-Messages Processed" TableName="MSEXCHANGE" ColumnName="MTA_MSG_PROCE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001218" UsrAttrId="218" UniqueName="MTA_ADMINS" GUIDisplayName="MTA-Admin Connections" TableName="MSEXCHANGE" ColumnName="MTA_ADMINS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001227" UsrAttrId="227" UniqueName="MTACON_QUEUE" GUIDisplayName="MTACON-Queue Size" TableName="MSEXCHANGE" ColumnName="MTACON_QUEUE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001221" UsrAttrId="221" UniqueName="MTA_DATA_SENT" GUIDisplayName="MTA-Data Sent" TableName="MSEXCHANGE" ColumnName="MTA_DATA_SENT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001244" UsrAttrId="244" UniqueName="ISPVT_MSG_SENT_REC" GUIDisplayName="ISPVT-Messages sent/Received" TableName="MSEXCHANGE" ColumnName="ISPVT_MSG_SERE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per min" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001240" UsrAttrId="240" UniqueName="ISPVT_LOGONS" GUIDisplayName="ISPVT-Client Logons" TableName="MSEXCHANGE" ColumnName="ISPVT_LOGONS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001253" UsrAttrId="253" UniqueName="IMC_NDR_OUT" GUIDisplayName="IMC-NDRs Total Outbound" TableName="MSEXCHANGE" ColumnName="IMC_NDR_OUT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001251" UsrAttrId="251" UniqueName="SRS_OUT_INTER_REPLIC" GUIDisplayName="SRS-Outgoing Inter-Site Replication Messages" TableName="MSEXCHANGE" ColumnName="SRS_OINTER_REP" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001263" UsrAttrId="263" UniqueName="POP3_CON_FAIL" GUIDisplayName="POP3- Connections Failed" TableName="MSEXCHANGE" ColumnName="POP3_CON_FAIL" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001246" UsrAttrId="246" UniqueName="SRS_LDAP_SEARCH" GUIDisplayName="SRS-LDAP Searches" TableName="MSEXCHANGE" ColumnName="SRS_LDAP_SEARC" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001256" UsrAttrId="256" UniqueName="IMC_SMTP_IN" GUIDisplayName="IMC-SMTP Connections Inbound" TableName="MSEXCHANGE" ColumnName="IMC_SMTP_IN" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001270" UsrAttrId="270" UniqueName="DS_CA_HITS" GUIDisplayName="DS Access Cache Hits" TableName="MSEXCHANGE" ColumnName="DS_CA_HITS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001271" UsrAttrId="271" UniqueName="IMC_IN_MSG" GUIDisplayName="Inbound Messages" TableName="MSEXCHANGE" ColumnName="IMC_IN_MSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001272" UsrAttrId="272" UniqueName="IMC_OUT_MSG" GUIDisplayName="Outbound Messages" TableName="MSEXCHANGE" ColumnName="IMC_OUT_MSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001254" UsrAttrId="254" UniqueName="IMC_SEND_QUEUE" GUIDisplayName="IMC-Send Queue Size" TableName="MSEXCHANGE" ColumnName="IMC_SEND_QUEUE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001273" UsrAttrId="273" UniqueName="SMTP_VIR_SERV_STAT" GUIDisplayName="SMTP Virtual Server Status" TableName="MSEXCHANGE" ColumnName="SMTP_VIR_STAT" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36001274" UsrAttrId="274" UniqueName="NT_SESSION" GUIDisplayName="Network Sessions" TableName="MSEXCHANGE" ColumnName="NT_SESSIONS" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

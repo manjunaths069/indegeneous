@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	<ATTRSET platform="unix" attrType="config">
+		<ATTRINFO attrName="BOOT_TIME" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/sysBootTime"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="SWAP_TOTAL" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="SWAP" appInstance="Summary" appParam="SWPTotSwapSize"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="OS_NAME_1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/osName"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="OS_VER_1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/osVersion"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+
+	<ATTRSET platform="windows" attrType="config">
+		<ATTRINFO attrName="BOOT_TIME" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/sysBootTime"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="OS_NAME_1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/osName"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="OS_VER_1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="" appInstance="" appParam="/osVersion"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+
+	<ATTRSET platform="unix" attrType="stats">
+		<ATTRINFO attrName="TOT_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="CPU" appInstance="CPU" appParam="CPUCpuUtil"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="USR_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="CPU" appInstance="CPU" appParam="CPUUserTime"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROCESSES" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="PROCESS" appInstance="PROCESS" appParam="PROCNumProcs"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="SWAP_USED" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="SWAP" appInstance="Summary" appParam="SWPTotSwapUsedPercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="MEM_AVAIL" dataType="float" computation="kbToMb">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMFreeMem"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+                <ATTRINFO attrName="PAGES_IN" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMPageIn"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+                <ATTRINFO attrName="PAGES_OUT" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMPageOut"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+                <ATTRINFO attrName="PAGE_FAULTS" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMPFault"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+
+                <ATTRINFO attrName="PAGES_SCANNED" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMPageScanned"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+
+		<ATTRINFO attrName="AGT_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="MEMORY" appInstance="MEMORY" appParam="MEMFreeMem"/>
+				<ATTRMAP appType="CPU" appInstance="CPU" appParam="CPUSysTime"/>
+				<ATTRMAP appType="SWAP" appInstance="Summary" appParam="SWPTotSwapUsedPercent"/>
+				<ATTRMAP appType="PROCESS" appInstance="PROCESS" appParam="PROCNumProcs"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="KERNEL_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="CPU" appInstance="CPU" appParam="CPUSysTime"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="IO_WAIT" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="CPU" appInstance="CPU" appParam="CPUWio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+
+
+	<ATTRSET platform="windows" attrType="stats">
+		<ATTRINFO attrName="TOT_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_CPU" appInstance="CPU__Total" appParam="CPUprcrProcessorTimePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="USR_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_CPU" appInstance="CPU__Total" appParam="CPUprcrUserTimePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROCESSES" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_SYSTEM" appInstance="NT_SYSTEM" appParam="SYSobjProcesses"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="SWAP_USED" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PAGEFILE" appInstance="_Total" appParam="PAGEpgUsagePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="MEM_AVAIL" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemAvailableBytes"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+                <ATTRINFO attrName="PAGES_IN" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemPagesInputPerSec"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+                <ATTRINFO attrName="PAGES_OUT" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                               <ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemPagesOutputPerSec"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+                <ATTRINFO attrName="PAGE_FAULTS" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemPageFaultsPerSec"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+                <ATTRINFO attrName="HARD_PAGEFAULTS" dataType="float" computation="asis">
+                        <ATTRDEPENDSON>
+                                <ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemPagesPerSec"/>
+                        </ATTRDEPENDSON>
+                </ATTRINFO>
+
+
+		<ATTRINFO attrName="AGT_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_MEMORY" appInstance="NT_MEMORY" appParam="MEMmemAvailableBytes"/>
+				<ATTRMAP appType="NT_SYSTEM" appInstance="NT_SYSTEM" appParam="SYSobjProcesses"/>
+				<ATTRMAP appType="NT_CPU" appInstance="CPU__Total" appParam="CPUprcrInterruptsPerSec"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="INTERRUPTS" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_CPU" appInstance="CPU__Total" appParam="CPUprcrInterruptsPerSec"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

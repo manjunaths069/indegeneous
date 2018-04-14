@@ -1,0 +1,17 @@
+#Attribute Group     ,Monitor Name          ,AttributeName 		,Rank, Above Normal, Below Normal
+Availability         ,KeynoteDPTxnMonInfo   ,SERVICE_AVAILABILITY   	,5	,1	,5
+Availability         ,KeynoteDPTxnMonInfo   ,TRANSACTION_AVAILABI   ,5	,1	,5
+ResponseTime         ,KeynoteDPTxnMonInfo   ,INITIAL_CONNECT 		,5
+ResponseTime         ,KeynoteDPTxnMonInfo   ,MEASUREMENT_TOTAL 		,5
+                     ,KeynoteDPTxnMonInfo   ,FIRST_BYTE      		,5
+                     ,KeynoteDPTxnMonInfo   ,MEASUREMENT_TOTAL_MI 	,3
+                     ,KeynoteDPTxnMonInfo   ,MEASUREMENT_TOTAL_MA 	,3
+                     ,KeynoteDPTxnMonInfo   ,MEASUREMENT_TOTAL_ST 	,3
+                     ,KeynoteDPTxnMonInfo   ,MEASUREMENT_ERROR 		,3
+                     ,KeynoteDPTxnMonInfo   ,DNS_LOOKUP 		,3
+                     ,KeynoteDPTxnMonInfo   ,INITIAL_CONNECT_MIN 	,3
+                     ,KeynoteDPTxnMonInfo   ,INITIAL_CONNECT_MAX 	,3
+                     ,KeynoteDPTxnMonInfo   ,INITIAL_CONNECT_STD 	,3
+                     ,KeynoteDPTxnMonInfo   ,CONTENT 			,3
+
+

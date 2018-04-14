@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE MetaData [
+
+<!ELEMENT MetaData (DDMetaData+)>
+
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+
+<!ELEMENT MetaInfo EMPTY>
+
+<!ATTLIST MetaInfo 
+
+    UniqueDisplayName CDATA #REQUIRED
+
+    GUIDisplayName CDATA #REQUIRED
+
+    LongName CDATA #REQUIRED
+
+    ActionType ( 0 | 1 ) "0"
+
+    ActionCmd CDATA #REQUIRED
+
+    ShowOutput  ( 0 | 1) "1"
+
+    OutputType  ( 0 | 1) "1"
+
+    SourceOfAgent ( 0 | 1 | 2) "0"
+
+    AgentOSList CDATA ""
+
+    AgentVersion CDATA "5.0"
+
+    DiagnosticsVersion CDATA "1.0"
+
+    MaxDataLength CDATA "40120"
+
+    MonitorTimeout CDATA "300000"
+
+    UseInstanceConfig (0 | 1) "1"
+
+>
+
+
+
+
+
+<!ELEMENT GUIDeviceInfo EMPTY>
+
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+
+
+<!ELEMENT ImplInfo EMPTY >
+
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+
+
+<!ELEMENT ParameterInfo EMPTY >
+
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+
+
+<!ELEMENT AgentInfo EMPTY >
+
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+
+]>
+
+
+
+<MetaData>
+
+<DDMetaData>
+
+        <!-- Windows System and Process Monitors --> 
+
+        <MetaInfo UniqueDisplayName = "TopVMsByBalloonSize" GUIDisplayName = "Top 10 VMs (in the ESX Server) by Balloon memory" LongName="Top 10 VMs (in the ESX Server) by Balloon memory" AgentOSList = "None" ActionCmd = "top" />
+
+        <GUIDeviceInfo GUIDevice = "0" />
+
+        <GUIMOTypeIdInfo GUIMOTypeId = "42962" />
+
+        <ImplInfo Impl = "TopVMsInHost" />
+
+
+
+        <!-- change the following to match to a specific need -->
+
+        <ParameterInfo Parameter = "BalloonSize" />
+
+        <ParameterInfo Parameter = "10" />
+
+        <ParameterInfo Parameter = "$device" />
+
+        <ParameterInfo Parameter = "$ip" />        
+
+    </DDMetaData>
+
+
+
+<DDMetaData>
+
+        <!-- Windows System and Process Monitors --> 
+
+        <MetaInfo UniqueDisplayName = "TopVMsByCPUUsage" GUIDisplayName = "Top 10 VMs (in the ESX Server) by CPU Usage" LongName="Top 10 VMs (in the ESX Server) by CPU Usage" AgentOSList = "None" ActionCmd = "top" />
+
+        <GUIDeviceInfo GUIDevice = "0" />
+
+        <GUIMOTypeIdInfo GUIMOTypeId = "42962" />
+
+        <ImplInfo Impl = "TopVMsInHost" />
+
+
+
+        <!-- change the following to match to a specific need -->
+
+        <ParameterInfo Parameter = "CPUUsage" />
+
+        <ParameterInfo Parameter = "10" />
+
+        <ParameterInfo Parameter = "$device" />
+
+        <ParameterInfo Parameter = "$ip" />        
+
+    </DDMetaData>
+
+
+
+<DDMetaData>
+
+        <!-- Windows System and Process Monitors --> 
+
+        <MetaInfo UniqueDisplayName = "TopVMsByMemoryUsage" GUIDisplayName = "Top 10 VMs (in the ESX Server) by Memory Usage" LongName="Top 10 VMs (in the ESX Server) by Memory Usage" AgentOSList = "None" ActionCmd = "top" />
+
+        <GUIDeviceInfo GUIDevice = "0" />
+
+        <GUIMOTypeIdInfo GUIMOTypeId = "42962" />
+
+        <ImplInfo Impl = "TopVMsInHost" />
+
+
+
+        <!-- change the following to match to a specific need -->
+
+        <ParameterInfo Parameter = "MemoryUsage" />
+
+        <ParameterInfo Parameter = "10" />
+
+        <ParameterInfo Parameter = "$device" />
+
+        <ParameterInfo Parameter = "$ip" />        
+
+    </DDMetaData>
+
+<DDMetaData>
+
+        <!-- TopVMsInHost Monitors --> 
+
+        <MetaInfo UniqueDisplayName = "TopVMsByNetworkUsage" GUIDisplayName = "Top 10 VMs (in the ESX Server) by Network Usage" LongName="Top 10 VMs (in the ESX Server) by Network Usage" AgentOSList = "None" ActionCmd = "top" />
+
+        <GUIDeviceInfo GUIDevice = "0" />
+
+        <GUIMOTypeIdInfo GUIMOTypeId = "42962" />
+
+        <ImplInfo Impl = "TopVMsInHost" />
+
+        <!-- change the following to match to a specific need -->
+
+        <ParameterInfo Parameter = "NetworkUsage" />
+
+        <ParameterInfo Parameter = "10" />
+
+        <ParameterInfo Parameter = "$device" />
+
+        <ParameterInfo Parameter = "$ip" />        
+
+    </DDMetaData>
+
+</MetaData>    
+

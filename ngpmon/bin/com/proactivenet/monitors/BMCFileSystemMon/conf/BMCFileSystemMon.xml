@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+          computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | complementOf100) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+          type (parameter | variable) "parameter">
+]>
+<BMCDATA>
+
+    <ATTRSET platform="unix" attrType="config">
+        <ATTRINFO attrName="BMC_FILESYS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="/fsDevice" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="BMC_MOUNT" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="/fullName" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="BMC_SIZE" dataType="float" computation="kbToMb">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="/fsSize" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="BMC_TOT_INODES" dataType="int" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="/inodeTotal" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+    </ATTRSET>
+
+
+    <ATTRSET platform="windows" attrType="config">
+        <ATTRINFO attrName="BMC_SIZE" dataType="float" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="NT_LOGICAL_DISKS" appInstance="" appParam="/TotalSpace" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+    </ATTRSET>
+
+
+
+
+
+
+	<ATTRSET platform="unix" attrType="stats">
+    
+        <ATTRINFO attrName="BMC_DSK_USD_PER" dataType="float" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="FSCapacity"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="BMC_INODE_USD_PER" dataType="float" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="FSInodeUsedPercent"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="FileSys_AVAIL" dataType="int" computation="availability">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="FILESYSTEM" appInstance="" appParam="FSUsedSpace" availabilityRule="default"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+	</ATTRSET>
+
+
+	<ATTRSET platform="windows" attrType="stats">
+
+        <ATTRINFO attrName="BMC_DSK_USD_PER" dataType="float" computation="complementOf100">
+			<ATTRDEPENDSON> 
+                <ATTRMAP appType="NT_LOGICAL_DISKS" appInstance="" appParam="LDldFreeSpacePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+        <ATTRINFO attrName="FileSys_AVAIL" dataType="int" computation="availability">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="NT_LOGICAL_DISKS" appInstance="" appParam="LDldFreeSpacePercent" availabilityRule="default"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

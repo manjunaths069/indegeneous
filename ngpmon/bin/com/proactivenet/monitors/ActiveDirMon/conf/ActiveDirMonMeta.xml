@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ActiveDirMonMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="35000" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="ActiveDirectory" GUIDisplayName="Active Directory Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="ActiveDirMon" Version="1.0 " OS="Windows" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="35001" MoTypeType="APPS" ParentMoType="35000" UniqueName="ActiveDirMon" GUIDisplayName="Active Directory"/>
+    <AppsInfo ClassName="ActiveDirMon" Version="2.0" OS="Windows"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="35000999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Active Directory"/>
+      <AppsInput AttrId="35001013" UsrAttrId="13" UniqueName="DNS" GUIDisplayName="Domain Name System (DNS)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="35001995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="35001012" UsrAttrId="12" UniqueName="SAM" GUIDisplayName="Security Access Manager (SAM)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="35001994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="35001010" UsrAttrId="10" UniqueName="ADDRESS_BOOK" GUIDisplayName="Address Book (AB)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="35001014" UsrAttrId="14" UniqueName="REPLICATION" GUIDisplayName="Replication (REPL)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0"/>
+      <AppsInput AttrId="35001999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="35001024" UsrAttrId="24" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="35001998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="35001003" UsrAttrId="3" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="35001011" UsrAttrId="11" UniqueName="LDAP" GUIDisplayName="Lightweight Directory Access Protocol (LDAP)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="35001980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="35001981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="16" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="35001982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="17" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="35001468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="18" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001135" UsrAttrId="135" UniqueName="DNS_DYNAMIC_UPDATE_N" GUIDisplayName="DNS Dynamic Update No Operations" TableName="ACTIVEDIR" ColumnName="DYNAMICUPDTNOP" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001131" UsrAttrId="131" UniqueName="DNS_WINS_LOOKUP_RECE" GUIDisplayName="DNS WINS Lookup Received" TableName="ACTIVEDIR" ColumnName="WINSLOOKUPRCVD" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001116" UsrAttrId="116" UniqueName="LDAP_WRITES" GUIDisplayName="LDAP Writes" TableName="ACTIVEDIR" ColumnName="LDAPWRITES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001114" UsrAttrId="114" UniqueName="LDAP_SEARCHES" GUIDisplayName="LDAP Searches" TableName="ACTIVEDIR" ColumnName="LDAPSEARCHES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001123" UsrAttrId="123" UniqueName="SAM_MACH_USER_CREATI" GUIDisplayName="SAM Successful Object Creations" TableName="ACTIVEDIR" ColumnName="SAMSCSCREATION" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001137" UsrAttrId="137" UniqueName="DNS_TCP_QUERY_RECEIV" GUIDisplayName="DNS TCP Queries Received" TableName="ACTIVEDIR" ColumnName="TCPQUERYRCVD" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001125" UsrAttrId="125" UniqueName="SAM_NTLM_AUTHENTICAT" GUIDisplayName="SAM NTLM Authentications" TableName="ACTIVEDIR" ColumnName="NTLMAUTH" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001143" UsrAttrId="143" UniqueName="REPL_PENDING_SYNC" GUIDisplayName="REPL Pending Synchronizations" TableName="ACTIVEDIR" ColumnName="DRAPENDINGSYNC" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001030" UsrAttrId="30" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="ACTIVEDIR" ColumnName="AVAILABILITY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001141" UsrAttrId="141" UniqueName="REPL_INBOUND_OBJECTS" GUIDisplayName="REPL Inbound Objects" TableName="ACTIVEDIR" ColumnName="DRAINBOUNDOBJ" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001111" UsrAttrId="111" UniqueName="LDAP_ACTIVE_THREADS" GUIDisplayName="LDAP Active Threads" TableName="ACTIVEDIR" ColumnName="LDAPACTIVETHRD" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001113" UsrAttrId="113" UniqueName="LDAP_CLIENT_SESSIONS" GUIDisplayName="LDAP Client Sessions" TableName="ACTIVEDIR" ColumnName="LDAPCLINTSESNS" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001106" UsrAttrId="106" UniqueName="AB_SEARCHES" GUIDisplayName="AB Searches" TableName="ACTIVEDIR" ColumnName="ABSEARCHES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001124" UsrAttrId="124" UniqueName="SAM_PASSWORD_CHANGES" GUIDisplayName="SAM Password Changes" TableName="ACTIVEDIR" ColumnName="SAMPSWRDCHANGE" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001134" UsrAttrId="134" UniqueName="DNS_WINS_REVERSE_RES" GUIDisplayName="DNS WINS Reverse Responses Sent" TableName="ACTIVEDIR" ColumnName="WINSREVRESPSNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001138" UsrAttrId="138" UniqueName="DNS_TCP_RESPONSE_SEN" GUIDisplayName="DNS TCP Responses Sent" TableName="ACTIVEDIR" ColumnName="TCPRESPSENT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001142" UsrAttrId="142" UniqueName="REPL_OUTBOUND_OBJECT" GUIDisplayName="REPL Outbound Objects" TableName="ACTIVEDIR" ColumnName="DRAOUTBOUNDOBJ" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001132" UsrAttrId="132" UniqueName="DNS_WINS_RESPONSE_SE" GUIDisplayName="DNS WINS Responses Sent" TableName="ACTIVEDIR" ColumnName="WINSRESPSENT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001121" UsrAttrId="121" UniqueName="SAM_INFO_QUERIES" GUIDisplayName="SAM Query Displays" TableName="ACTIVEDIR" ColumnName="SAMDISPINFOQRY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001112" UsrAttrId="112" UniqueName="LDAP_BIND_TIME" GUIDisplayName="LDAP Bind Time" TableName="ACTIVEDIR" ColumnName="LDAPBINDTIME" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001115" UsrAttrId="115" UniqueName="LDAP_SUCCESS_BINDS" GUIDisplayName="LDAP Binds" TableName="ACTIVEDIR" ColumnName="LDAPSUCESBINDS" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001133" UsrAttrId="133" UniqueName="DNS_WINS_REVERSE_LOO" GUIDisplayName="DNS WINS Reverse Lookup Received" TableName="ACTIVEDIR" ColumnName="WINSREVLKUPRCD" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001126" UsrAttrId="126" UniqueName="SAM_KERBEROS_AUTHENT" GUIDisplayName="SAM Kerberos Authentications" TableName="ACTIVEDIR" ColumnName="KERBEROSAUTH" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001146" UsrAttrId="146" UniqueName="REPL_SYNC_FAILURES" GUIDisplayName="REPL Failed Synchronizations Requests" TableName="ACTIVEDIR" ColumnName="DRASYNCFAILURE" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001122" UsrAttrId="122" UniqueName="SAM_MACH_USER_CR_ATT" GUIDisplayName="SAM Create Objects Attempts" TableName="ACTIVEDIR" ColumnName="SAMCREATNATMPT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001102" UsrAttrId="102" UniqueName="AB_BROWSES" GUIDisplayName="AB Browses" TableName="ACTIVEDIR" ColumnName="ABBROWSES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001103" UsrAttrId="103" UniqueName="AB_CLIENT_SESSIONS" GUIDisplayName="AB Client Sessions" TableName="ACTIVEDIR" ColumnName="ABCLIENT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001144" UsrAttrId="144" UniqueName="REPL_SYNC_REQUEST_MA" GUIDisplayName="REPL Synchronizations Requests" TableName="ACTIVEDIR" ColumnName="DRASYNCRQMADE" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001145" UsrAttrId="145" UniqueName="REPL_SYNC_REQ_SUCS" GUIDisplayName="REPL Successful Synchronizations Requests" TableName="ACTIVEDIR" ColumnName="DRASYNCRQSUCES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001101" UsrAttrId="101" UniqueName="AB_ANR" GUIDisplayName="AB Ambiguous Name Resolution" TableName="ACTIVEDIR" ColumnName="ABANR" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001104" UsrAttrId="104" UniqueName="AB_MATCHES" GUIDisplayName="AB Matches" TableName="ACTIVEDIR" ColumnName="ABMATCHES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001105" UsrAttrId="105" UniqueName="AB_PROPERTY_READS" GUIDisplayName="AB Property Reads" TableName="ACTIVEDIR" ColumnName="ABPROPERTY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001136" UsrAttrId="136" UniqueName="DNS_DYNAMIC_UPDATE_R" GUIDisplayName="DNS Dynamic Updates Received" TableName="ACTIVEDIR" ColumnName="DYNAMICUPDTRCV" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001147" UsrAttrId="147" UniqueName="LDAP_RRATE" GUIDisplayName="LDAP Read Rate" TableName="ACTIVEDIR" ColumnName="LDAPRRATE" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001148" UsrAttrId="148" UniqueName="LDAP_CACHE_HRATE" GUIDisplayName="LDAP Cache Hit Rate" TableName="ACTIVEDIR" ColumnName="LDAPCHRATE" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001149" UsrAttrId="149" UniqueName="SAM_KDCR" GUIDisplayName="SAM- KDCRequests" TableName="ACTIVEDIR" ColumnName="SAMKDCR" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001150" UsrAttrId="150" UniqueName="REPL_INBOUND_STAT" GUIDisplayName="REPL-InboundStat" TableName="ACTIVEDIR" ColumnName="REPLINBST" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001151" UsrAttrId="151" UniqueName="REPL_OUTBOUND_STAT" GUIDisplayName="REPL-OutboundStat" TableName="ACTIVEDIR" ColumnName="REPLOUTBST" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001152" UsrAttrId="152" UniqueName="DC_ADVERTISED" GUIDisplayName="DC Advertised" TableName="ACTIVEDIR" ColumnName="DCADVER" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="35001153" UsrAttrId="153" UniqueName="GC_STATUS" GUIDisplayName="Global Catalog Availability" TableName="ACTIVEDIR" ColumnName="GCSTATUS" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

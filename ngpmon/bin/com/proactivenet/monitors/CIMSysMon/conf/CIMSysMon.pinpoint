@@ -1,0 +1,12 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+System              ,CIMSystemInfo         ,SYS_LOAD            ,5
+System              ,CIMSystemInfo         ,SWAP_USED_PERCENT   ,5
+System              ,CIMSystemInfo         ,PROCESSES_TOTAL     ,2
+System              ,CIMSystemInfo         ,MEM_USED_PERCENT    ,2
+Availability	    ,CIMSystemInfo	   ,AVAILABILITY	,5	,1	,5
+System              ,CIMSystemInfo         ,USER_CPU            ,5
+System              ,CIMSystemInfo         ,KERNEL_CPU          ,5
+System              ,CIMSystemInfo         ,TOTAL_CPU           ,5
+System              ,CIMSystemInfo         ,I_O_WAIT            ,3
+System              ,CIMSystemInfo         ,INTERRUPT           ,1
+

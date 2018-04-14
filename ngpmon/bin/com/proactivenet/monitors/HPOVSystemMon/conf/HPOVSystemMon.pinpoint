@@ -1,0 +1,6 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+System              ,HPOVSystemMon         ,STATS13   ,5, 4, 2
+System              ,HPOVSystemMon         ,STATS10   ,4, 3, 3
+System              ,HPOVSystemMon         ,STATS22   ,5, 3, 3
+System              ,HPOVSystemMon         ,STATS01   ,5, 4, 3
+

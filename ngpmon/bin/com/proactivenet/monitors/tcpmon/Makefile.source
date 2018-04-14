@@ -1,0 +1,2 @@
+#SOURCE.java = tcpmon.java
+SUBDIRS = lib src

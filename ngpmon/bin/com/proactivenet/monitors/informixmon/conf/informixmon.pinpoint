@@ -1,0 +1,4 @@
+ResponseTime        ,InformixQuery       ,Response Time       ,5
+Availability        ,InformixQuery       ,AVAILABILITY        ,5
+ResponseTime        ,InformixQuery       ,Connect Time        ,5
+

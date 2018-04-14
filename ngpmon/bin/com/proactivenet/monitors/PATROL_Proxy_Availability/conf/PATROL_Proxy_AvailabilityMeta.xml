@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<!-- PATROL_Proxy_AvailabilityMeta.xml -->
+
+
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42825" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="P_PATROL_Proxy_Availability" GUIDisplayName="PPATROL Proxy Availability" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.MF3PatrolAdapter.BMCAdapterMon" IsAdapterFrameWork="Y" IsStatic="Y" SupportFlashCheck="N" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="42826" MoTypeType="APPS" ParentMoType="42825" UniqueName="PATROLProxyAvailability" GUIDisplayName="Integration Service"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.MF3PatrolAdapter.BMCAdapterMon" IsAutoSyncEnabled="Y" IsAdapterFrameWork="Y" IsStatic="Y" SupportFlashCheck="N" AdapterType="60002" IsNewFrameWork="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42825999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="PATROL Proxy Availability"/>
+      <AppsInput AttrId="42826011" UsrAttrId="11" UniqueName="APP_INSTANCE_NAME" GUIDisplayName="App Instance Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="Target Availability"/>
+      <AppsInput AttrId="42826999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="$(LEVEL_1)|$(LEVEL_N)"/>
+      <AppsInput AttrId="42826008" UsrAttrId="8" UniqueName="USERNAME" GUIDisplayName="User Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="admin"/>
+      <AppsInput AttrId="42826994" UsrAttrId="994" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42826012" UsrAttrId="12" UniqueName="PARENT_PATH" GUIDisplayName="Parent Path" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42826050" UsrAttrId="50" UniqueName="PARENT_ADAPTER" GUIDisplayName="Adapter" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" MoReferenceType="60002" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1"/>
+      <AppsInput AttrId="42826998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIEditable="N" GUIInputType="CTL" ScaleFactor="1" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="900"/>
+      <AppsInput AttrId="42826001" UsrAttrId="1" UniqueName="PARENT_ID" GUIDisplayName="Parent ID" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="1"/>
+      <AppsInput AttrId="42826003" UsrAttrId="3" UniqueName="APP_PATH" GUIDisplayName="Application Path" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42826004" UsrAttrId="4" UniqueName="DNSIP" GUIDisplayName="PATROL Proxy Agent Hostname/IP" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42826007" UsrAttrId="7" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" MoReferenceType="10000" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1"/>
+      <AppsInput AttrId="42826006" UsrAttrId="6" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="6" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" DefaultValue="admin"/>
+      <AppsInput AttrId="42826009" UsrAttrId="9" UniqueName="PATROL_AGENT_NAME" GUIDisplayName="Patrol Agent" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42826010" UsrAttrId="10" UniqueName="APP_DEF_NAME" GUIDisplayName="Application Class Definition Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="PATROL_PROXY_AVAILABILITY"/>
+      <AppsInput AttrId="42826005" UsrAttrId="5" UniqueName="PORT" GUIDisplayName="PATROL Proxy Agent Port" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="3182"/>
+      <AppsInput AttrId="42826002" UsrAttrId="2" UniqueName="THIRD_PARTY_UID" GUIDisplayName="3rd Party UID" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="/PATROL_PROXY_AVAILABILITY"/>
+      <AppsInput AttrId="42826997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIEditable="N" GUIInputType="CTL" ScaleFactor="1" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42826013" UsrAttrId="13" UniqueName="INST_PATH" GUIDisplayName="Instance Path" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42826014" UsrAttrId="14" UniqueName="ADAPTER_ID" GUIDisplayName="Adapter ID" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsAutoDiscoverable="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42826980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42826981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42826982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42826468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="10" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42826200" UsrAttrId="200" UniqueName="PATROL_Proxy_Availability" GUIDisplayName="Target Availability" TableName="PATROLProxyAvailability" ColumnName="PATROL_Proxy_Availability" ScaleFactor="1" AttrReferenceType="Unknown" DisplayType="Integer" CustomField3="1" UnitOfMeasurement="%" GUIGraphedByDefault="Y" CustomField1="PATROL_Proxy_Availability"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

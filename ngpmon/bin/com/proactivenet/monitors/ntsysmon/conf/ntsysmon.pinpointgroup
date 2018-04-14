@@ -1,0 +1,15 @@
+System       ,NTSystemInfo
+
+DiskPerformance,NTSystemInfo,SWAP_USED_PERCENT
+
+SystemCpu,NTSystemInfo,CPU_SYSTEM_TIME
+SystemCpu,NTSystemInfo,CPU_USER_TIME
+SystemCpu,NTSystemInfo,CPU_TIME
+
+ProcTotal,NTSystemInfo,PROCESS_TOTAL
+
+SystemMem,NTSystemInfo,REAL_MEM
+SystemMem,NTSystemInfo,SWAP_USED_PERCENT
+
+SystemInfo,NTSystemInfo 
+

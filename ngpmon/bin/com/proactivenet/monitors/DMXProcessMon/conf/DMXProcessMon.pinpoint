@@ -1,0 +1,5 @@
+# File 		: DMXPrcess.pinpoint
+# Description	: Pinpoint File for DMXProcess
+
+System	,DMXProcess	,DMX_PROC_AVAIL	,5	,1	,3
+System	,DMXProcess	,DMX_PROC_USD	,5	,4	,3

@@ -1,0 +1,4 @@
+WebRespTime,httpmon,Total Response Time
+WebRespTime,httpmon,AVAILABILITY
+
+WebConnTime,httpmon,Connect Time

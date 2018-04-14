@@ -1,0 +1,15 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+System              ,X86 System Info         ,SYS_LOAD            ,5, 5, 2
+System              ,X86 System Info         ,SWAP_USED_PERCENT   ,5, 4, 2
+System              ,X86 System Info         ,PROCESSES_TOTAL     ,2, 3, 3
+System              ,X86 System Info         ,SCAN_RATE           ,5, 4, 3
+System              ,X86 System Info         ,AVE_WAITING         ,3, 3, 3
+System              ,X86 System Info         ,MEM_USED_PERCENT    ,2, 3, 3
+System              ,X86 System Info         ,AVE_RUNQUE          ,3, 3, 3
+System              ,X86 System Info         ,AVE_SWPQUE          ,3, 3, 3
+System              ,X86 System Info         ,USER_CPU            ,5, 3, 3
+System              ,X86 System Info         ,KERNEL_CPU          ,5, 3, 3
+System              ,X86 System Info         ,TOTAL_CPU           ,5, 4, 3
+System              ,X86 System Info         ,I_O_WAIT            ,3, 3, 3
+System              ,X86 System Info         ,INTERRUPT           ,1, 4, 2
+

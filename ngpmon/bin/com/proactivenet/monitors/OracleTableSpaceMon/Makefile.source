@@ -1,0 +1,3 @@
+SUBDIRS = util src 
+#SOURCE.java = SybaseASASample.java SybaseASAParameters.java sybaseASAsvrmon.java SybaseASASql.java TimeSybaseASAJDBCConnector.java
+

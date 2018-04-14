@@ -1,0 +1,5 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+System               ,CAFileSystemMonInfo      ,SPACE_USED ,3 , 4, 3
+Availability         ,CAFileSystemMonInfo      ,AVAILABILITY ,5, 1, 5
+System               ,CAFileSystemMonInfo      ,INODE_USED,3 , 4 , 1
+Availability         ,CAFileSystemMonInfo      ,FS_STATUS ,5, 1, 3

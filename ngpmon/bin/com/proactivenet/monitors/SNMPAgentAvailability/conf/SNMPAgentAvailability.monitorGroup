@@ -1,0 +1,5 @@
+# File        : SNMPAgentAvailability.monitorGroup
+# Description : MonitorGroup for SNMP Agent Availability
+# Date        : Tue Dec 13 2006
+
+Network|SNMPAgentAvailability

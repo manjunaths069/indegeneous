@@ -1,0 +1,2 @@
+SOURCE.java = OracleDDBase.java Logc.java
+SUBDIRS = src 

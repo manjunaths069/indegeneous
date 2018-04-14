@@ -1,0 +1,5 @@
+TARGET_EXE = getMemoryData
+
+SOURCE.cc = getMemoryData.cc
+
+getMemoryData_OBJS = ${SOURCE.cc:%.cc=%.o}

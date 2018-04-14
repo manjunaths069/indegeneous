@@ -1,0 +1,4 @@
+# File        : DMXFileSystemMon.monitorGroup
+# Description : MonitorGroup for Tivoli File System Monitor
+
+System|DMXAdapter|Adapter for Tivoli|DMXFileSystem

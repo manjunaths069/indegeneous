@@ -1,0 +1,13 @@
+System,VMwareClusterSysMon,AVAILABILITY
+System,VMwareClusterSysMon,MEM_USED_PERCENT
+System,VMwareClusterSysMon,CPU_USAGE
+System,VMwareClusterSysMon,EFFECTIVE_CPU
+System,VMwareClusterSysMon,MEMORY_SWAP
+SystemInfo,VMwareClusterSysMon,AVAILABILITY
+SystemInfo,VMwareClusterSysMon,MEM_USED_PERCENT
+SystemInfo,VMwareClusterSysMon,CPU_USAGE
+SystemInfo,VMwareClusterSysMon,EFFECTIVE_CPU
+SystemInfo,VMwareClusterSysMon,MEMORY_SWAP
+SystemMem,VMwareClusterSysMon,MEM_USED_PERCENT
+SystemMem,VMwareClusterSysMon,MEMORY_SWAP
+         

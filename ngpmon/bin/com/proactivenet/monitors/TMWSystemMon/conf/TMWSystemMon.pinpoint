@@ -1,0 +1,8 @@
+# File        : TMWSystemMon.pinpoint
+# Description : Pinpoint File for TMWSystemMon
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+System	,TMWSystem	,USRCPU	,5	,3	,3
+System	,TMWSystem	,TOTCPU	,5	,4	,3
+System	,TMWSystem	,SYSCPU	,5	,3	,3
+
+

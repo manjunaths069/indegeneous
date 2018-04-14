@@ -1,0 +1,4 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+System               ,HPUXFileSystem           ,PERCENT_DISK_USED ,5 , 4, 3
+Availability         ,HPUXFileSystem           ,AVAILABILITY ,5, 1, 5
+System               ,HPUXFileSystem           ,PERCENT_INODES_USED ,3 , 4 , 1

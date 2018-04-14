@@ -1,0 +1,22 @@
+#!/bin/sh
+
+PROACTIVE_INSTALL_DIR=$1
+
+LD_LIBRARY_PATH=$PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon:$PROACTIVE_INSTALL_DIR/pronto/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+
+OPSECDIR=$PROACTIVE_INSTALL_DIR/pronto/usr_config
+export OPSECDIR
+
+#ldd $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient
+
+if [ ! -f $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug ] ; then 
+	echo "DEFAULT=log&error&warning"  > $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug
+	echo DEBUGFILE=$PROACTIVE_INSTALL_DIR/pronto/logs/leaclient.log >> $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug 
+	echo LOGFILE=$PROACTIVE_INSTALL_DIR/pronto/tmp/leaclient.debug >> $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug
+	echo RECORDS=100000 >> $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug 
+	echo RECORDSIZE=360 >> $PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient_debug
+fi 
+ 
+$PROACTIVE_INSTALL_DIR/monitors/monitors/ckpmon/leaclient $PROACTIVE_INSTALL_DIR $2 $3 
+

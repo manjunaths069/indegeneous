@@ -1,0 +1,30 @@
+/**
+ * Linked list implementation of the list
+ *    using a header node.
+ * Access to the list is via LinkedListIterator.
+ * @author ************
+ * @see LinkedListIterator
+ */
+public class LinkedList {
+
+}
+
+
+//Basic node stored in a linked list
+//Note that this class is not accessible outside
+//of package weiss.nonstandard
+
+class ListNode {
+ // Constructors
+ public ListNode( Object theElement ) {
+     this( theElement, null );
+ }
+ 
+ public ListNode( Object theElement, ListNode n ) {
+     element = theElement;
+     next    = n;
+ }
+ 
+ public Object   element;
+ public ListNode next;
+}

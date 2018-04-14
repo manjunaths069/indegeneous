@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'AGENTCONN_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = Agent Connection
+REM Schema & PruneCntl Statements for Monitor = Agent Connection ,moTypeId = 27011
+
+echo Creating tables AGENTCONN_STATS, AGENTCONN_RT, AGENTCONN_BL
+echo Creating Prune Control entries for AGENTCONN_STATS  AND  entries for AGENTCONN_RT
+sqli "CREATE TABLE AGENTCONN_STATS (ITEMID int,TIMERECORDED int,CONN int,TOTALAGENTS int,NOTCONN int,DISCONN int,STATUSCHGS int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index AGENTCONN_STATS_N3 on AGENTCONN_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE AGENTCONN_RT (ITEMID int, FROMTIME int, TOTIME int, CONN_HIGH int, CONN_AVG  int, CONN_LOW  int, TOTALAGENTS_HIGH int, TOTALAGENTS_AVG  int, TOTALAGENTS_LOW  int, NOTCONN_HIGH int, NOTCONN_AVG  int, NOTCONN_LOW  int, DISCONN_HIGH int, DISCONN_AVG  int, DISCONN_LOW  int, STATUSCHGS_HIGH int, STATUSCHGS_AVG  int, STATUSCHGS_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index AGENTCONN_RT_N3 on AGENTCONN_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE AGENTCONN_BL (ITEMID   int,TIMESLOT int,CONN_HIGH int,CONN_AVG  int,CONN_LOW  int,TOTALAGENTS_HIGH int,TOTALAGENTS_AVG  int,TOTALAGENTS_LOW  int,NOTCONN_HIGH int,NOTCONN_AVG  int,NOTCONN_LOW  int,DISCONN_HIGH int,DISCONN_AVG  int,DISCONN_LOW  int,STATUSCHGS_HIGH int,STATUSCHGS_AVG  int,STATUSCHGS_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('AGENTCONN_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('AGENTCONN_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = Agent Connection
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

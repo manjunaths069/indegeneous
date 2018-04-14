@@ -1,0 +1,23 @@
+# File        : BMCProcessMon.threshold
+# Description : Threshold File for BMCProcessMon
+# Date        : Tue Jan 28 2003
+
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The columns are Monitor type, Attribute name, Severity,
+#       Duration, above|below, Threshold
+#       Monitor and Attribute names can contain spaces (just don't put
+#       spaces before or after the name unless the name contains the spaces).
+#       Monitor and Attribute names can be either the unique name or
+#       the display name as long as they are unique.
+#
+#	Two columns have been added to each threshold entry, namely
+#	Outside Baseline Flag and Outside Baseline Type. The values
+#	for these can be 0 or 1 and Hourly, Daily or Weekly respectively.
+#
+
+BMCProcess	PROC_TOT_CPU	MINOR	15	above	75	1	Auto
+BMCProcess	PROC_AVAIL	CRITICAL	0	below	100	0	Auto
+
+

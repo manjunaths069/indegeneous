@@ -1,0 +1,2 @@
+userhome1;192.168.3.174;A:1:Logical:GroupA:true:true;
+

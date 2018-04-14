@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- LinuxFileSystemMonInMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="28150" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="LinuxFileSystemMon" GUIDisplayName="Linux File System Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.LinuxFileSystemMon.LinuxFileSystemMon" Version="2.1" OS="Linux" MustRunOnAgent="Y" HasMoreInfo="N" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="28151" MoTypeType="APPS" ParentMoType="28150" UniqueName="LinuxFileSystemMonIn" GUIDisplayName="Linux File System"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.LinuxFileSystemMon.LinuxFileSystemMon" Version="2.1" OS="Linux" MustRunOnAgent="Y" HasMoreInfo="N"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="281500" UsrAttrId="1" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Linux File System Monitor"/>
+      <AppsInput AttrId="281506" UsrAttrId="7" UniqueName="DIR" GUIDisplayName="Partition / Directory" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="281530" UsrAttrId="30" UniqueName="CHKAVAIL" GUIDisplayName="Check Availability" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="52" UseAsInstanceName="N" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="281501" UsrAttrId="2" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="281522" UsrAttrId="-6" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="281520" UsrAttrId="-1" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="281517" UsrAttrId="-3" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="2" GUIInputOnCreate="N" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="281518" UsrAttrId="-4" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="28151980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28151981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="54" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28151982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="55" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28151468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="56" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="281515" UsrAttrId="16" UniqueName="TOTAL_INODES" GUIDisplayName="Total I-Nodes" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="281525" UsrAttrId="25" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="281528" UsrAttrId="28" UniqueName="DISK_FILESYSTEM" GUIDisplayName="File System" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="281509" UsrAttrId="10" UniqueName="DISK_SIZE" GUIDisplayName="Size" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="281511" UsrAttrId="12" UniqueName="DISK_USED_PERCENT" GUIDisplayName="Disk Used" TableName="LNXFILESYS" ColumnName="USEDPCT" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="281516" UsrAttrId="17" UniqueName="I_NODE_USED_PERCENT" GUIDisplayName="I-Node Used" TableName="LNXFILESYS" ColumnName="INODEUSEDPCT" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="281512" UsrAttrId="13" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="LNXFILESYS" ColumnName="AVAILABILITY" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="2815132" UsrAttrId="15" UniqueName="DISK_FREE" GUIDisplayName="Disk Free" TableName="LNXFILESYS" ColumnName="DSKFREE" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

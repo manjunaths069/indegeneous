@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<!-- BMCAdapterMeta.xml -->
+
+<MetaData>
+	<ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="42818" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="PatrolProcessAdapter" GUIDisplayName="BMC Patrol Adapter for Process" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.MF3PatrolAdapter.BMCAdapterMon" IsStatic="Y" OS="Windows" IsAdapterFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="42819" MoTypeType="APPS" ParentMoType="42818" UniqueName="PatrolProcessMon" GUIDisplayName="BMCPatrol Adapter for Process "/>
+    <AppsInfo ClassName="com.proactivenet.monitors.MF3PatrolAdapter.BMCAdapterMon" OS="Windows" IsAutoSyncEnabled="Y" AdapterType="60002"/>
+	</ManagedObject>
+	<Attributes>
+		<Application>
+      <ParentAppsInput AttrId="42818999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue=""/>
+      <AppsInput AttrId="42819999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" DisplayType="String" DefaultValue="" IsAutoDiscoverable="N" GUIRequiredOnCreate="N" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="42819001" UsrAttrId="001" UniqueName="APP_INSTANCE_NAME" GUIDisplayName="App Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="20" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y"/>
+      <AppsInput AttrId="42819002" UsrAttrId="002" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" MoReferenceType="10000" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1"/>
+      <AppsInput AttrId="42819003" UsrAttrId="003" UniqueName="TARGETIP" GUIDisplayName="Patrol Agent Hostname/IP" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" GUIDisplayable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N"/>
+      <AppsInput AttrId="42819004" UsrAttrId="004" UniqueName="PORT" GUIDisplayName="BMC Patrol Agent Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="3182"/>
+      <AppsInput AttrId="42819005" UsrAttrId="005" UniqueName="USERNAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42819006" UsrAttrId="006" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" DefaultValue=""/>
+      <AppsInput AttrId="42819007" UsrAttrId="007" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42819008" UsrAttrId="008" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="900"/>
+      <AppsInput AttrId="42819009" UsrAttrId="009" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42819010" UsrAttrId="010" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIEditable="N" GUIInputType="CTL" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="42819011" UsrAttrId="011" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIEditable="N" GUIInputType="CTL" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <!-- Hidden Inputs -->
+	  <AppsInput AttrId="42819012" UsrAttrId="012" UniqueName="PATROL_AGENT_NAME" GUIDisplayName="Patrol Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="db2.proactivenet.co.in" GUIDisplayable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="Y" GUIEditable="N" IsAutoDiscoverable="Y"/>
+      <AppsInput AttrId="42819013" UsrAttrId="013" UniqueName="APP_PATH" GUIDisplayName="Application Path" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" GUIDisplayable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" GUIEditable="N"/>
+      <AppsInput AttrId="42819014" UsrAttrId="014" UniqueName="APP_DEF_NAME" GUIDisplayName="Application Class Definition Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="NT_PROCESS" GUIDisplayable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="Y" GUIEditable="N"/>
+      <AppsInput AttrId="42819015" UsrAttrId="015" UniqueName="PARENT_ADAPTER" GUIDisplayName="PARENT ADAPTER" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" MoReferenceType="60002" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1"/>
+      <AppsInput AttrId="60002034" UsrAttrId="034" UniqueName="DNSIP" GUIDisplayName="Patrol Agent IP/Host Name/DNSIP" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String"/>
+<AppsInput AttrId="42819980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42819981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42819982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="42819468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="21" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsStats>
+        <CoreAppsStats AttrId="42819016" UsrAttrId="016" UniqueName="PROC_PROCESSOR_TIME" GUIDisplayName="PROCProcessorTimePercent" TableName="PatrolProcessMon" ColumnName="PROC_PROCESSOR_TIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" CustomField1="PROCProcessorTimePercent" CustomField3="1"/>
+           		</AppsStats>
+           			<AppsStats>
+        <CoreAppsStats AttrId="42819017" UsrAttrId="017" UniqueName="PROC_THREAD_COUNT" GUIDisplayName="PROCThreadCount" TableName="PatrolProcessMon" ColumnName="PROC_THREAD_COUNT" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCThreadCount" CustomField3="1"/>
+           		</AppsStats>
+           		<AppsStats>
+        <CoreAppsStats AttrId="42819018" UsrAttrId="018" UniqueName="PROC_PAGE_FILE_BYTES" GUIDisplayName="PROCPageFileBytes" TableName="PatrolProcessMon" ColumnName="PROC_PAGE_FILE_BYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" CustomField1="PROCPageFileBytes" CustomField3="1"/>
+                   	</AppsStats>
+                   	<AppsStats>
+        <CoreAppsStats AttrId="42819019" UsrAttrId="019" UniqueName="PROC_STATUS" GUIDisplayName="PROCStatus" TableName="PatrolProcessMon" ColumnName="PROC_STATUS" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" CustomField1="PROCStatus" CustomField3="1"/>
+           		</AppsStats>
+           		<AppsStats>
+        <CoreAppsStats AttrId="42819020" UsrAttrId="020" UniqueName="PROC_HANDLE_CNT" GUIDisplayName="PROCHandleCount" TableName="PatrolProcessMon" ColumnName="PROC_HANDLE_CNT" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCHandleCount" CustomField3="1"/>
+            		</AppsStats>
+            		<AppsStats>
+        <CoreAppsStats AttrId="42819021" UsrAttrId="021" UniqueName="PROC_IO_DATABYTES" GUIDisplayName="PROCIODataBytesPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IO_DATABYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="Y" CustomField1="PROCIODataBytesPerSec" CustomField3="1"/>
+              		</AppsStats>
+              		<AppsStats>
+        <CoreAppsStats AttrId="42819022" UsrAttrId="022" UniqueName="PROC_IODATA_OPERS" GUIDisplayName="PROCIODataOpersPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IODATA_OPERS" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCIODataOpersPerSec" CustomField3="1"/>
+              		</AppsStats>
+              		<AppsStats>
+        <CoreAppsStats AttrId="42819023" UsrAttrId="023" UniqueName="PROC_IOREAD_BYTES" GUIDisplayName="PROCIOReadBytesPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IOREAD_BYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" CustomField1="PROCIOReadBytesPerSec" CustomField3="1"/>
+              		</AppsStats>
+              		<AppsStats>
+        <CoreAppsStats AttrId="42819024" UsrAttrId="024" UniqueName="PROC_IOREAD_OPERS" GUIDisplayName="PROCIOReadOpersPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IOREAD_OPERS" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCIOReadOpersPerSec" CustomField3="1"/>
+                    	</AppsStats>
+                    	<AppsStats>
+        <CoreAppsStats AttrId="42819025" UsrAttrId="025" UniqueName="PROC_IO_WRITE_BYTES" GUIDisplayName="PROCIOWriteBytesPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IO_WRITE_BYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" CustomField1="PROCIOWriteBytesPerSec" CustomField3="1"/>
+                    	</AppsStats>
+                    	<AppsStats>
+        <CoreAppsStats AttrId="42819026" UsrAttrId="026" UniqueName="PROC_IO_WRITE_OPERS" GUIDisplayName="PROCIOWriteOpersPerSec" TableName="PatrolProcessMon" ColumnName="PROC_IO_WRITE_OPERS" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCIOWriteOpersPerSec" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819027" UsrAttrId="027" UniqueName="PROC_PAGE_FAULT" GUIDisplayName="PROCPageFaultsPerSec" TableName="PatrolProcessMon" ColumnName="PROC_PAGE_FAULT" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" CustomField1="PROCPageFaultsPerSec" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819028" UsrAttrId="028" UniqueName="PROC_PRIV_TIME" GUIDisplayName="PROCPrivTimePercent" TableName="PatrolProcessMon" ColumnName="PROC_PRIV_TIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" CustomField1="PROCPrivTimePercent" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819029" UsrAttrId="029" UniqueName="PROC_PRIVATE_BYTES" GUIDisplayName="PROCPrivateBytes" TableName="PatrolProcessMon" ColumnName="PROC_PRIVATE_BYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" CustomField1="PROCPrivateBytes" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819030" UsrAttrId="030" UniqueName="PROC_USER_TIME" GUIDisplayName="PROCUserTimePercent" TableName="PatrolProcessMon" ColumnName="PROC_USER_TIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" CustomField1="PROCUserTimePercent" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819031" UsrAttrId="031" UniqueName="PROC_VIRTUAL_BYTES" GUIDisplayName="PROCVirtualBytes" TableName="PatrolProcessMon" ColumnName="PROC_VIRTUAL_BYTES" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" CustomField1="PROCVirtualBytes" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819032" UsrAttrId="032" UniqueName="PROC_WORKING_SET" GUIDisplayName="PROCWorkingSet" TableName="PatrolProcessMon" ColumnName="PROC_WORKING_SET" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" CustomField1="PROCWorkingSet" CustomField3="1"/>
+                            </AppsStats>
+                            <AppsStats>
+        <CoreAppsStats AttrId="42819033" UsrAttrId="033" UniqueName="TEST_DATA_AVAIL" GUIDisplayName="Data Availability" TableName="PatrolProcessMon" ColumnName="TEST_DATA_AVAIL" ScaleFactor="1000" AttrReferenceType="Unknown" Computation="Raw" DisplayType="Integer" CustomField1=" " UnitOfMeasurement="%" CustomField2=" " GUIGraphedByDefault="N" CustomField3="1"/>
+	    		</AppsStats>     
+		</Application>
+	</Attributes>
+</MetaData>

@@ -1,0 +1,2 @@
+
+class Recursion { public static void main (String argS[]) { Factorial f =new Factorial(); System.out.println(" 6! = " + (f.fact(6))); } } 

@@ -1,0 +1,7 @@
+SOURCE.cc =DiskPerf.cc 
+
+OTHERFILES= DiskPerfInfo.h 
+
+TARGET_LIB_SHARED = libdiskperfmon.so
+
+libdiskperfmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

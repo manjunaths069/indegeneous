@@ -1,0 +1,2 @@
+#SOURCE.java = imap4mon.java 
+SUBDIRS = src

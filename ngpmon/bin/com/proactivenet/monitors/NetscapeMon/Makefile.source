@@ -1,0 +1,2 @@
+#SOURCE.java = NetscapeMon.java  NetscapeMonData.java NetscapeLogParser.java NetscapeURLParser.java
+SUBDIRS = util src

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ExchangeSMTPQueueMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="36002" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="MSExchangeQueueMon" GUIDisplayName="MSExchange SMTP Queues" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.MSExchangeQueueMon.MSExchangeQueueMon" HasMoreInfo="N" OS="Windows" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="36003" MoTypeType="APPS" ParentMoType="36002" UniqueName="ExchangeSMTPQueue" GUIDisplayName="MSExchange SMTP Queue"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.MSExchangeQueueMon.MSExchangeQueueMon" Version="2.0" OS="Windows"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="36002999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="36003995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="36003994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="36003018" UsrAttrId="18" UniqueName="USER_NAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="36003005" UsrAttrId="5" UniqueName="EXCH_SERVERS" GUIDisplayName="Servers" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="6" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="36003999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="36003998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="36003997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="36003007" UsrAttrId="7" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="36003019" UsrAttrId="19" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Password"/>
+      <AppsInput AttrId="36003980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36003981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36003982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="36003468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="10" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003313" UsrAttrId="313" UniqueName="SREM_DEL_MSG" GUIDisplayName="SMTP-Remote Delivery Messages" TableName="EXCHANGESMTPQUEUE" ColumnName="SREMDELMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003302" UsrAttrId="302" UniqueName="XPEND_RMSG_SIZE" GUIDisplayName="X400-Pending Reroute Messages Size" TableName="EXCHANGESMTPQUEUE" ColumnName="XPENDRMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003312" UsrAttrId="312" UniqueName="SREM_DEL_Q" GUIDisplayName="SMTP-Total Remote Delivery Queue" TableName="EXCHANGESMTPQUEUE" ColumnName="SREMDELQ" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003303" UsrAttrId="303" UniqueName="XREM_DEL_Q" GUIDisplayName="X400-Total Remote Delivery Queue" TableName="EXCHANGESMTPQUEUE" ColumnName="XREMDELQ" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003304" UsrAttrId="304" UniqueName="XREM_DEL_MSG" GUIDisplayName="X400-Remote Delivery Messages" TableName="EXCHANGESMTPQUEUE" ColumnName="XREMDELMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003311" UsrAttrId="311" UniqueName="SDIRW_MSG_SIZE" GUIDisplayName="SMTP-Waiting Messages Routed Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SDIRWMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003307" UsrAttrId="307" UniqueName="SLOC_MSG_SIZE" GUIDisplayName="SMTP-Local Delivery Messages Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SLOCMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003305" UsrAttrId="305" UniqueName="XREM_DEL_MSG_SIZE" GUIDisplayName="X400-Remote Delivery Messages Size" TableName="EXCHANGESMTPQUEUE" ColumnName="XREMDELMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003306" UsrAttrId="306" UniqueName="SLOC_MSG" GUIDisplayName="SMTP-Local Delivery Messages" TableName="EXCHANGESMTPQUEUE" ColumnName="SLOCMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003308" UsrAttrId="308" UniqueName="SDIRL_MSG" GUIDisplayName="SMTP-Directory Lookup Messages" TableName="EXCHANGESMTPQUEUE" ColumnName="SDIRLMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003301" UsrAttrId="301" UniqueName="XPEND_RMSG_CON" GUIDisplayName="X400-Pending Reroute Messages" TableName="EXCHANGESMTPQUEUE" ColumnName="XPENDRMSGCON" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003310" UsrAttrId="310" UniqueName="SDIRW_MSG" GUIDisplayName="SMTP-Waiting Messages Routed" TableName="EXCHANGESMTPQUEUE" ColumnName="SDIRWMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003300" UsrAttrId="300" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="EXCHANGESMTPQUEUE" ColumnName="AVAILABILITY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003309" UsrAttrId="309" UniqueName="SDIRL_MSG_SIZE" GUIDisplayName="SMTP-Directory Lookup Messages Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SDIRLMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003314" UsrAttrId="314" UniqueName="SREM_DEL_MSG_SIZE" GUIDisplayName="SMTP-Remote Delivery Messages Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SREMDELMSGSIZE" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="KB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003315" UsrAttrId="315" UniqueName="XREM_AVG_MSG" GUIDisplayName="X400 - Remote Delivery Average Message Size" TableName="EXCHANGESMTPQUEUE" ColumnName="XREDELAVMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003316" UsrAttrId="316" UniqueName="SREM_AVG_MSG" GUIDisplayName="SMTP - Remote Delivery Average Message Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SREDELAVMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003317" UsrAttrId="317" UniqueName="XREM_LAR_MSG" GUIDisplayName="X400-Remote Delivery Largest Message Size" TableName="EXCHANGESMTPQUEUE" ColumnName="XREDELLAMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="36003318" UsrAttrId="318" UniqueName="SREM_LAR_MSG" GUIDisplayName="SMTP-Remote Delivery Largest Message Size" TableName="EXCHANGESMTPQUEUE" ColumnName="SREDELLAMSG" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

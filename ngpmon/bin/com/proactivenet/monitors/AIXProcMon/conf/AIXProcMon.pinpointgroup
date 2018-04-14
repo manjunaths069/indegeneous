@@ -1,0 +1,6 @@
+System       ,AIX Process Info
+ProcAvailability,AIX Process Info,AVAILABILITY
+ProcCpu,AIX Process Info,PROC_CPU
+ProcMem,AIX Process Info,PROC_RSSZ
+ProcMem,AIX Process Info,PROC_VSZ
+Process,AIX Process Info

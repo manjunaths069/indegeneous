@@ -1,0 +1,20 @@
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+

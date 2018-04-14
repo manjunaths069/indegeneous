@@ -1,0 +1,5 @@
+# File        : _aixservcpupool.monitorGroup
+# Description : MonitorGroup for aggregatemon
+# Date        : Thu Nov 27 12:28:20 IST 2003
+
+System|AIX|AIX|_aixservcpupool

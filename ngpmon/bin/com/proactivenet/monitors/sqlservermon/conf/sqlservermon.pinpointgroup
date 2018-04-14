@@ -1,0 +1,8 @@
+Database     ,MSSQLServerQuery
+
+DatabaseRespTime,MSSQLServerQuery,Response Time
+DatabaseRespTime,MSSQLServerQuery,AVAILABILITY
+
+DatabaseConnectTime,MSSQLServerQuery,Connect Time
+
+DatabaseAvailability,MSSQLServerQuery,AVAILABILITY

@@ -1,0 +1,20 @@
+#Attribute Group     ,Monitor Name          ,AttributeName 		,Rank, Above Normal, Below Normal
+Availability         ,KeynoteDPUrlMonInfo   ,SERVICE_AVAILABILITY   	,5	,1	,5
+Availability         ,KeynoteDPUrlMonInfo   ,SERVER_AVAILABILITY   	,5	,1	,5
+ResponseTime         ,KeynoteDPUrlMonInfo   ,INITIAL_CONNECT 		,5
+ResponseTime         ,KeynoteDPUrlMonInfo   ,MEASUREMENT_TOTAL 		,5
+                     ,KeynoteDPUrlMonInfo   ,FIRST_BYTE      		,5
+                     ,KeynoteDPUrlMonInfo   ,BASE_PAGE_DOWNLOAD 	,5
+                     ,KeynoteDPUrlMonInfo   ,MEASUREMENT_TOTAL_MI 	,3
+                     ,KeynoteDPUrlMonInfo   ,MEASUREMENT_TOTAL_MA 	,3
+                     ,KeynoteDPUrlMonInfo   ,MEASUREMENT_TOTAL_ST 	,3
+                     ,KeynoteDPUrlMonInfo   ,MEASUREMENT_ERROR 		,3
+                     ,KeynoteDPUrlMonInfo   ,DNS_LOOKUP 		,3
+                     ,KeynoteDPUrlMonInfo   ,INITIAL_CONNECT_MIN 	,3
+                     ,KeynoteDPUrlMonInfo   ,INITIAL_CONNECT_MAX 	,3
+                     ,KeynoteDPUrlMonInfo   ,INITIAL_CONNECT_STD 	,3
+                     ,KeynoteDPUrlMonInfo   ,REDIRECTION 		,3
+                     ,KeynoteDPUrlMonInfo   ,CONTENT 			,3
+                     ,KeynoteDPUrlMonInfo   ,CONTENT_ERROR 		,3
+                     ,KeynoteDPUrlMonInfo   ,NBYTES 			,3
+

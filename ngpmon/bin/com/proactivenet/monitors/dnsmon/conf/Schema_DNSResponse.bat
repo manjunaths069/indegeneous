@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'DNSRESP_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = DNS
+REM Schema & PruneCntl Statements for Monitor = DNS ,moTypeId = 20011
+
+echo Creating tables DNSRESP_STATS, DNSRESP_RT, DNSRESP_BL
+echo Creating Prune Control entries for DNSRESP_STATS  AND  entries for DNSRESP_RT
+sqli "CREATE TABLE DNSRESP_STATS (ITEMID int,TIMERECORDED int,RESPTIME int,AVAILABILITY int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index DNSRESP_STATS_N3 on DNSRESP_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE DNSRESP_RT (ITEMID int, FROMTIME int, TOTIME int, RESPTIME_HIGH int, RESPTIME_AVG  int, RESPTIME_LOW  int, AVAILABILITY_HIGH int, AVAILABILITY_AVG  int, AVAILABILITY_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index DNSRESP_RT_N3 on DNSRESP_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE DNSRESP_BL (ITEMID   int,TIMESLOT int,RESPTIME_HIGH int,RESPTIME_AVG  int,RESPTIME_LOW  int,AVAILABILITY_HIGH int,AVAILABILITY_AVG  int,AVAILABILITY_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DNSRESP_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DNSRESP_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = DNS
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

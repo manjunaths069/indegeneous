@@ -1,0 +1,26 @@
+
+class exam
+{
+
+ protected String test="Difficult";
+ 
+}
+
+public class ex1 extends exam
+{
+
+private String test="easy";
+
+void print()
+{
+   System.out.println(test);
+}
+
+
+public static void main(String args[])
+{
+	ex1 e = new ex1();
+	e.print();
+
+}
+}

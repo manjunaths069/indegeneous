@@ -1,0 +1,7 @@
+NTServiceInfo	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NTServiceInfo	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+NTServiceInfo	SERVICE_CPU	NORMAL	-1	below	0	50	10	-1	0	Auto
+NTServiceInfo	SERVICE_CPU	NORMAL	-1	above	0	50	10	-1	0	Auto
+NTServiceInfo	SERVICE_VSZ	NORMAL	-1	above	0	50	15	-1	0	Auto
+NTServiceInfo	TOTAL_THREADS	NORMAL	-1	below	0	40	20	-1	0	Auto
+NTServiceInfo	TOTAL_THREADS	NORMAL	-1	above	0	50	20	-1	0	Auto

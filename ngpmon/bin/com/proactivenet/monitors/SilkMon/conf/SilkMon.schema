@@ -1,0 +1,104 @@
+#!/bin/csh -f 
+source /usr/pronto/bin/.tmcsh
+cd $DB
+
+#Prune Period value will be passed as an arg, store it in a variable
+#If nothing is passed, default it to 192 (8 days)
+if ( $#argv == 0 ) then
+    set PRUNE_PERIOD=192
+else
+    set PRUNE_PERIOD=$1
+endif
+
+#Check if its a Clean or an Upgrade Installation
+
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'SILK_STATS';
+EOF
+
+if ( $status == 101 ) then
+
+#Clean Installation for Monitor = Adapter for Silk
+#Schema & PruneCntl Statements for Monitor = Adapter for Silk ,moTypeId = 43751
+
+echo Creating tables SILK_STATS, SILK_RT, SILK_BL
+echo Creating Prune Control entries for SILK_STATS  AND  entries for SILK_RT
+/usr/pronto/bin/sqli<< EOF 
+CREATE TABLE SILK_STATS (
+ITEMID int,
+TIMERECORDED int,
+TRAN_AVAIL int,
+RESP_TIME int,
+PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10
+);
+EOF
+
+#If the STATS table creation failed exit with errorcode
+if ( $status == 1 ) then
+    exit 117
+endif
+
+/usr/pronto/bin/sqli<< EOF 
+
+create        index SILK_STATS_N3 on SILK_STATS (TIMERECORDED);
+
+CREATE TABLE SILK_RT (
+ITEMID int, 
+FROMTIME int, 
+TOTIME int, 
+TRAN_AVAIL_HIGH int, 
+TRAN_AVAIL_AVG  int, 
+TRAN_AVAIL_LOW  int, 
+RESP_TIME_HIGH int, 
+RESP_TIME_AVG  int, 
+RESP_TIME_LOW  int, 
+NUMPOINTS int, 
+NUMSECS   int, 
+PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10
+);
+create        index SILK_RT_N3 on SILK_RT (FROMTIME,TOTIME);
+
+
+
+CREATE TABLE SILK_BL (
+ITEMID   int,
+TIMESLOT int,
+STARTTIME int,
+DURATION int,
+TRAN_AVAIL_HIGH int,
+TRAN_AVAIL_AVG  int,
+TRAN_AVAIL_LOW  int,
+RESP_TIME_HIGH int,
+RESP_TIME_AVG  int,
+RESP_TIME_LOW  int,
+NUMPOINTS int,
+NUMWEEKS int,
+PRIMARY KEY ("ITEMID", "STARTTIME", "DURATION") WITH HASH SIZE 10
+);
+
+
+
+create index SILK_BL_N2 on SILK_BL ( STARTTIME, DURATION );
+
+
+
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('SILK_STATS', 'TIMERECORDED', $PRUNE_PERIOD);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('SILK_RT', 'FROMTIME', 2160);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('SILK_BL', 'STARTTIME', 2160);
+EOF
+
+else
+
+#Upgrade Installation for Monitor = Adapter for Silk
+
+#/usr/pronto/bin/sqli -c << EOF > /dev/null
+#SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+#EOF
+#if ( $status == 101 ) then
+
+#   alter table add column statement here
+echo Upgrade installation
+
+#endif
+
+endif

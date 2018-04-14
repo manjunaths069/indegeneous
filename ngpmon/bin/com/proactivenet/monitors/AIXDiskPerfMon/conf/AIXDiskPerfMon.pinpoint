@@ -1,0 +1,7 @@
+#Attribute Group	,Monitor Name	    ,Attribute Name		,Rank	,Above Normal	,Below Normal
+System                  ,AIXDiskPerf       ,DISK_TRANSFER       ,2	,2	,2
+System                  ,AIXDiskPerf       ,DISK_KBYTES_TRANSFER       ,2	,2	,2
+System                  ,AIXDiskPerf       ,DISK_BUSY_PERCENT          ,5	,4	,3
+System                  ,AIXDiskPerf       ,DISK_KB_READ          ,3	,4	,3
+System                  ,AIXDiskPerf       ,DISK_KB_WRITE         ,3	,4	,3
+Availability            ,AIXDiskPerf       ,AVAILABILITY               ,5	,1 	,5

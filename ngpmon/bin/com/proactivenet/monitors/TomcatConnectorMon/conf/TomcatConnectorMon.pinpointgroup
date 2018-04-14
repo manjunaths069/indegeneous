@@ -1,0 +1,4 @@
+WebServer    ,TomcatConn
+
+WebServerAvailability,TomcatConn,SERV_AVAILABILITY
+WebServerAvailability,TomcatConn,MBEAN_AVAILABILITY

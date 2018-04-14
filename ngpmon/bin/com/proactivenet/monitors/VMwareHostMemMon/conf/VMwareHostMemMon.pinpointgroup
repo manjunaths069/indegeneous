@@ -1,0 +1,11 @@
+SystemMem,VMwareHostMemMon,MEM_USED_PERCENT
+SystemMem,VMwareHostMemMon,MEMORY_SWAP_USED         
+SystemMem,VMwareHostMemMon,MEMORY_ACTIVE  
+SystemMem,VMwareHostMemMon,MEMORY_GRANTED  
+SystemMem,VMwareHostMemMon,MEMORY_SHARED_COMMON
+VirtualSystem,VMwareHostMemMon,AVAILABILITY
+VirtualSystem,VMwareHostMemMon,MEM_USED_PERCENT
+VirtualSystem,VMwareHostMemMon,MEMORY_ACTIVE
+VirtualSystem,VMwareHostMemMon,MEMORY_GRANTED
+VirtualSystem,VMwareHostMemMon,MEMORY_SHARED_COMMON
+VirtualSystem,VMwareHostMemMon,MEMORY_SWAP_USED

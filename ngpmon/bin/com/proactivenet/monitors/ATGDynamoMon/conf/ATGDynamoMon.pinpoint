@@ -1,0 +1,7 @@
+                    ,ATGDynamoMonInfo    ,Average Latency     ,3
+                    ,ATGDynamoMonInfo    ,Free Memory         ,4
+                    ,ATGDynamoMonInfo    ,Request Per Minute  ,4
+                    ,ATGDynamoMonInfo    ,Outstanding DRP Requ,4
+                    ,ATGDynamoMonInfo    ,DRP Threads Waiting ,3
+Availability        ,ATGDynamoMonInfo    ,AVAILABILITY        ,5	,1	,5
+

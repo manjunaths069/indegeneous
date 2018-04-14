@@ -1,0 +1,18 @@
+#!/bin/ksh
+#
+# IM Server Monitor
+# Args
+#   1 Application name
+#   2 Engine ID
+#   3 $BV1TO1_VAR
+#   4 Host name
+#
+# To check if running:
+#	bvping -o bvsmgr/$3/$1/BV_SessionManager$$2 -l
+#
+. $3/etc/bv1to1.conf.sh
+$BV1TO1/bin/bvping \
+       -A $1 \
+       -p bvsmgr \
+       -E $2 \
+       -h $4 \

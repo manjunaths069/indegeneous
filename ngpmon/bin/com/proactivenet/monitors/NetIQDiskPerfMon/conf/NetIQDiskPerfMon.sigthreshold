@@ -1,0 +1,42 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NetIQDiskPerf	AVAILABILITY	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	AVAILABILITY	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+NetIQDiskPerf	SRVC_TIME	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	SRVC_TIME	Normal	-1	above	0.0	50.0	8.0	-1	0	Auto
+NetIQDiskPerf	TRN_WAIT_Q	Normal	-1	below	0.0	0.0	20.0	-1	1	Auto
+NetIQDiskPerf	TRN_WAIT_Q	Normal	-1	above	0.0	50.0	8.0	-1	0	Auto
+NetIQDiskPerf	DISK_BUSY	Normal	-1	below	0.0	50.0	20.0	-1	0	Auto
+NetIQDiskPerf	DISK_BUSY	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+NetIQDiskPerf	READ_BYTES	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	READ_BYTES	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	READS	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	READS	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	WRITE_BYTES	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	WRITE_BYTES	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	WRITES	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	WRITES	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+NetIQDiskPerf	DISK_READS	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NetIQDiskPerf	DISK_READS	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NetIQDiskPerf	DISK_WRITES	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NetIQDiskPerf	DISK_WRITES	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NetIQDiskPerf	DISK_READ_TIME	NORMAL	-1	below	0	50	10	-1	1	Auto
+NetIQDiskPerf	DISK_READ_TIME	NORMAL	-1	above	0	50	8	-1	1	Auto
+NetIQDiskPerf	DISK_WRITE_TIME	NORMAL	-1	below	0	50	10	-1	1	Auto
+NetIQDiskPerf	DISK_WRITE_TIME	NORMAL	-1	above	0	50	8	-1	1	Auto
+NetIQDiskPerf	DISK_Q_LEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NetIQDiskPerf	DISK_Q_LEN	NORMAL	-1	above	0	50	8	-1	0	Auto
+NetIQDiskPerf	DISK_READ_QLEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NetIQDiskPerf	DISK_READ_QLEN	NORMAL	-1	above	0	50	-1	-1	1	Auto
+NetIQDiskPerf	DISK_WRITE_QLEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NetIQDiskPerf	DISK_WRITE_QLEN	NORMAL	-1	above	0	50	-1	-1	1	Auto

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- JVMMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42773" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="P_JVM" GUIDisplayName="PJVM" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.JVM.JVM" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="42774" MoTypeType="APPS" ParentMoType="42773" UniqueName="JVM" GUIDisplayName="JVM"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.JVM.JVM" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42773999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="JVM Monitor"/>
+      <AppsInput AttrId="42774999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="42774002" UsrAttrId="2" UniqueName="PORT" GUIDisplayName="Port" UseAsInstanceName="Y" GUIInputType="CFG" GUIDisplaySequenceNumber="52" ScaleFactor="1000" IsDefaultValueSet="Y" DefaultValue="1099" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer"/>
+      <AppsInput AttrId="42774003" UsrAttrId="3" UniqueName="URL_PATH" GUIDisplayName="JNDI Name" GUIDisplaySequenceNumber="53" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" UseAsInstanceName="Y" DisplayType="String" DefaultValue="jmxrmi"/>
+      <AppsInput AttrId="42774004" UsrAttrId="4" UniqueName="PRINCIPLE" GUIDisplaySequenceNumber="54" GUIDisplayName="Principal" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" GUIDisplayable="N" GUIEditable="Y" GUIRequiredOnCreate="N"/>
+      <AppsInput AttrId="42774005" UsrAttrId="5" UniqueName="PASSWORD" GUIDisplayName="Crendentials" GUIInputType="CFG" GUIDisplaySequenceNumber="55" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" GUIDisplayable="N" GUIEditable="Y" GUIRequiredOnCreate="N"/>
+      <AppsInput AttrId="42774070" UsrAttrId="70" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" UseAsInstanceName="Y" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0" GUIEditable="N" GUIDisplayable="N" GUIInputOnCreate="N" IsInputAttribute="Y" UseAsMODisplayName="N"/>
+      <AppsInput AttrId="42774110" UsrAttrId="110" UniqueName="DNSIP" GUIDisplayName="Target Device" GUIInputType="CFG" UseAsInstanceName="Y" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="0.0.0.0" GUIEditable="Y" GUIDisplayable="Y"/>
+      <AppsInput AttrId="42774998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="42774995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42774997" UsrAttrId="997" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="42774010" UsrAttrId="10" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42774996" UsrAttrId="996" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42774994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="42774980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="56" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42774981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="57" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42774982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="58" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42774468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="59" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42774993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774058" UsrAttrId="58" UniqueName="MAX_HEAP_MEM" GUIDisplayName="Max Heap Memory" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774059" UsrAttrId="59" UniqueName="TOTAL_PHY_MEM" GUIDisplayName="Total Physical Memory" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774060" UsrAttrId="60" UniqueName="TOTAL_SWAP_SPACE" GUIDisplayName="Total Swap Space" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774061" UsrAttrId="61" UniqueName="JVM_VENDOR" GUIDisplayName="JVM Vendor" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774062" UsrAttrId="62" UniqueName="JVM_UPTIME" GUIDisplayName="JVM Uptime" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774063" UsrAttrId="63" UniqueName="OPERATING_SYS" GUIDisplayName="Operating System" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774064" UsrAttrId="64" UniqueName="JVM_NAME" GUIDisplayName="JVM Name" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774065" UsrAttrId="65" UniqueName="MAX_EDEN_SPACE" GUIDisplayName="Eden Space - Max" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774066" UsrAttrId="66" UniqueName="MAX_SURVIVOR_SPACE" GUIDisplayName="Survivor Space - Max" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774067" UsrAttrId="67" UniqueName="MAX_TENURED_GEN" GUIDisplayName="Tenured Generation - Max" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774068" UsrAttrId="68" UniqueName="MAX_CODE_CACHE" GUIDisplayName="Code Cache - Max" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774069" UsrAttrId="69" UniqueName="MAX_PERM_GEN" GUIDisplayName="PermGen - Max" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42774071" UsrAttrId="71" UniqueName="GC_ALGO" GUIDisplayName="GC Algorithm" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774030" UsrAttrId="30" UniqueName="TOTAL_CUR_CLASS_COUNT" GUIDisplayName="Total Current Class count" TableName="JVM" ColumnName="TOTAL_CUR_CLASS_COUN" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774031" UsrAttrId="31" UniqueName="GC_COLL_COUNT" GUIDisplayName="Garbage Collection Count" TableName="JVM" ColumnName="GC_COLL_COUNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774032" UsrAttrId="32" UniqueName="HEAP_SPACE_USED" GUIDisplayName="Heap Space Used" TableName="JVM" ColumnName="HEAP_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774033" UsrAttrId="33" UniqueName="PCT_HEAP_SPACE_USED" GUIDisplayName="% Heap Space Used" TableName="JVM" ColumnName="PCT_HEAP_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774034" UsrAttrId="34" UniqueName="NON_HEAP_SPACE_USED" GUIDisplayName="Non-Heap Space Used" TableName="JVM" ColumnName="NON_HEAP_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774035" UsrAttrId="35" UniqueName="PCT_NON_HEAP_SPACE_USED" GUIDisplayName="% Non-Heap Space Used" TableName="JVM" ColumnName="PCT_NON_HEAP_SPACE_U" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774036" UsrAttrId="36" UniqueName="TOT_STARTED_TH_COUNT" GUIDisplayName="Total Started Thread Count" TableName="JVM" ColumnName="TOT_STARTED_TH_COUNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774037" UsrAttrId="37" UniqueName="THREAD_COUNT" GUIDisplayName="Thread Count" TableName="JVM" ColumnName="THREAD_COUNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774038" UsrAttrId="38" UniqueName="DAEMON_THREAD_COUNT" GUIDisplayName="Daemon Thread Count" TableName="JVM" ColumnName="DAEMON_THREAD_COUNT" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774039" UsrAttrId="39" UniqueName="TOTAL_COMP_TIME" GUIDisplayName="Total Compilation Time" TableName="JVM" ColumnName="TOTAL_COMP_TIME" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774040" UsrAttrId="40" UniqueName="EDEN_SPACE_USED" GUIDisplayName="Heap - Eden Used" TableName="JVM" ColumnName="EDEN_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774041" UsrAttrId="41" UniqueName="PCT_EDEN_SPACE_USED" GUIDisplayName="Heap - % Eden Used" TableName="JVM" ColumnName="PCT_EDEN_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774042" UsrAttrId="42" UniqueName="SURVIVOR_SPACE_USED" GUIDisplayName="Heap - Survivor Used" TableName="JVM" ColumnName="SURVIVOR_SPACE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774043" UsrAttrId="43" UniqueName="PCT_SURVIVOR_SPACE_USED" GUIDisplayName="Heap - % Survivor Used" TableName="JVM" ColumnName="PCT_SURVIVOR_SPACE_U" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774044" UsrAttrId="44" UniqueName="TENURED_GEN_USED" GUIDisplayName="Heap - Tenured Used" TableName="JVM" ColumnName="TENURED_GEN_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774045" UsrAttrId="45" UniqueName="PCT_TENURED_GEN_USED" GUIDisplayName="Heap - % Tenured Used" TableName="JVM" ColumnName="PCT_TENURED_GEN_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774046" UsrAttrId="46" UniqueName="CODE_CACHE_USED" GUIDisplayName="Non Heap - Code Cache Used" TableName="JVM" ColumnName="CODE_CACHE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774047" UsrAttrId="47" UniqueName="PCT_CODE_CACHE_USED" GUIDisplayName="Non Heap - % Code Cache Used" TableName="JVM" ColumnName="PCT_CODE_CACHE_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774048" UsrAttrId="48" UniqueName="PERM_GEN_USED" GUIDisplayName="Non Heap - PermGen Used" TableName="JVM" ColumnName="PERM_GEN_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774049" UsrAttrId="49" UniqueName="PCT_PERM_GEN_USED" GUIDisplayName="Non Heap - % PermGen Used" TableName="JVM" ColumnName="PCT_PERM_GEN_USED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774050" UsrAttrId="50" UniqueName="PROC_CPU_TIME" GUIDisplayName="Process CPU time" TableName="JVM" ColumnName="PROC_CPU_TIME" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42774051" UsrAttrId="51" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="JVM" ColumnName="AVAILABILITY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

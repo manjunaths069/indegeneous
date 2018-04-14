@@ -1,0 +1,8 @@
+#Attribute Type      ,Monitor Name        ,AttributeName ,Rank,Above Normal, Below Normal
+System              ,HPOVDiskMon            ,STATS04     ,2, 2, 2
+System              ,HPOVDiskMon            ,STATS06     ,2, 2, 2
+System              ,HPOVDiskMon            ,STATS03     ,2, 2, 2
+System              ,HPOVDiskMon            ,STATS05     ,2, 2, 2
+System              ,HPOVDiskMon            ,STATS08     ,3, 4, 3
+System              ,HPOVDiskMon            ,STATS09     ,5, 4, 2
+System              ,HPOVDiskMon            ,STATS07     ,5, 4, 3

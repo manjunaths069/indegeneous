@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | userdefined) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+    <ATTRSET platform="unix" attrType="config"> 
+   	  
+   	  <ATTRINFO attrName="VMwareDRS" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/drs" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="VMwareHA" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/ha" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="CPUResources" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/cpuRes" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="TotalMemory" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/totalMem" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="VirtualMachines" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/vmNum" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="TotalMigrations" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/totalMig" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="NumOfHosts" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/hostNum" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="AutomationLevel" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/autoLevel" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="MigRecommendations" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/migRecomm" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="MigThreshold" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/migThreshold" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="CurrFailoverCap" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/currentFailoverCap" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="ConfigFailoverCap" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/configFailoverCap" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+   	</ATTRSET>
+    
+    <ATTRSET platform="windows" attrType="config">
+ 	  
+ 	  <ATTRINFO attrName="VMwareDRS" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/drs" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	  
+   	  <ATTRINFO attrName="VMwareHA" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/ha" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="CPUResources" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/cpuRes" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="TotalMemory" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/totalMem" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="VirtualMachines" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/vmNum" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="TotalMigrations" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/totalMig" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="NumOfHosts" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/hostNum" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="AutomationLevel" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/autoLevel" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="MigRecommendations" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/migRecomm" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="MigThreshold" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/migThreshold" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="CurrFailoverCap" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/currentFailoverCap" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+   	  <ATTRINFO attrName="ConfigFailoverCap" dataType="String" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="/configFailoverCap" type="variable"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+   	</ATTRSET>
+   	
+	<ATTRSET platform="unix" attrType="stats">
+				
+ 	  <ATTRINFO attrName="Status" dataType="int" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Status"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	
+	  <ATTRINFO attrName="CPU_Utilization"  computation="asis">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Total_CPU_Utilization"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	  
+	  <ATTRINFO attrName="Memory_Utilization"  computation="asis">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Total_Memory_Utilization"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	
+	  <ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Status"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+						
+	  <ATTRINFO attrName="Status" dataType="int" computation="asis">
+		  <ATTRDEPENDSON> 
+    		  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Status"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	
+	  <ATTRINFO attrName="CPU_Utilization"  computation="asis">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Total_CPU_Utilization"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+
+	  <ATTRINFO attrName="Memory_Utilization"  computation="asis">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Total_Memory_Utilization"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+	
+	  <ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+		  <ATTRDEPENDSON> 
+			  <ATTRMAP appType="VSM_CLUSTER" appInstance="" appParam="Status"/>
+		  </ATTRDEPENDSON> 
+	  </ATTRINFO>
+ 	</ATTRSET>
+
+</BMCDATA>
+

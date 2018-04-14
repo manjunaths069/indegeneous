@@ -1,0 +1,10 @@
+#Attribute Group	,Monitor Name	,Attribute Name		,Rank	,Above Normal	,Below Normal
+System	,Linux System Info	,SYS_LOAD	,5	,5	,3
+System	,Linux System Info	,SWAP_USED_PERCENT	,5	,4	,2
+System	,Linux System Info	,MEM_USED_PERCENT	,4	,3	,3
+System	,Linux System Info	,PROCESSES_TOTAL	,2	,3	,3
+System	,Linux System Info	,USER_CPU	,5	,3	,3
+System	,Linux System Info	,KERNEL_CPU	,5	,3	,3
+System	,Linux System Info	,TOTAL_CPU	,5	,4	,3
+System	,Linux System Info	,INTERRUPT	,1	,4	,2
+System	,Linux System Info	,IO_WAIT	,3	,3	,3

@@ -1,0 +1,7 @@
+System       ,HPOVSystemMon  
+DiskPerformance,HPOVSystemMon,STATS13
+SystemCpu,HPOVSystemMon,STATS01
+SystemCpu,HPOVSystemMon,STATS22
+SystemMem,HPOVSystemMon,STATS10
+SystemMem,HPOVSystemMon,STATS13
+SystemInfo,HPOVSystemMon

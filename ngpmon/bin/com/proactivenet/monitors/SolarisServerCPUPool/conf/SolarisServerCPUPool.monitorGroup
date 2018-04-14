@@ -1,0 +1,4 @@
+# File        : _SolSrvPool.monitorGroup
+# Description : MonitorGroup for aggregatemon
+# Date        : Thu Nov 20 10:31:45 IST 2003
+System|Solaris|Solaris|_SolSrvPool

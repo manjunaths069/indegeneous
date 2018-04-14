@@ -1,0 +1,7 @@
+SOURCE.cc = SolTop10.cc
+
+OTHERFILES= SolTop10.h TopStruct.h
+
+TARGET_LIB_SHARED = libprocmondet.so
+
+libprocmondet_OBJS =  ${SOURCE.cc:%.cc=%.o}

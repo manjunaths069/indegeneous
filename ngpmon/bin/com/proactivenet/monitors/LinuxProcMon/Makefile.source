@@ -1,0 +1,2 @@
+#SOURCE.java =  LinuxProcMon.java LinuxProcSampler.java ProcSampler.java SampleTypes.java LinuxProcMonAttributeChoice.java
+SUBDIRS = src

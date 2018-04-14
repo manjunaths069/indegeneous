@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="41032" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="WebSphere356Mon" GUIDisplayName="WebSphere 3.5.6 Monitor" OneInstancePerParent="Y" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" HasCustomizedGUI="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.WebSphere356Mon.WebSphere356Mon" HasMoreInfo="N" OS="Windows" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N" Version="1.0" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" MustRunOnAgent="N" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="41033" MoTypeType="APPS" ParentMoType="41032" UniqueName="WebSphere356 Info" GUIDisplayName="WebSphere 3.5.6" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.WebSphere356Mon.WebSphere356Mon" OS="Windows" Version="1.0" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" IsSchedulable="Y" MustRunOnAgent="N" IsStatic="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="41032999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="WebSphere 3.5.6 Monitor" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033001" UsrAttrId="1" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="900" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033002" UsrAttrId="2" UniqueName="NODE_NAME" GUIDisplayName="Node Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033003" UsrAttrId="3" UniqueName="APP_SERVER_NAME" GUIDisplayName="Application Server Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033006" UsrAttrId="6" UniqueName="IMPACT" GUIDisplayName="Data Collection Impact" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" MoReferenceType="30054" GUIRequiredOnCreate="N" DisplayType="MOReference" DefaultValue="3" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033007" UsrAttrId="7" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033008" UsrAttrId="8" UniqueName="RETRY_COUNT" GUIDisplayName="Retry Count" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="3" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033009" UsrAttrId="9" UniqueName="RETRY_DELAY" GUIDisplayName="Retry Delay" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="20" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033010" UsrAttrId="10" UniqueName="EJB_STATS" GUIDisplayName="Enterprise Beans Statistics" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033011" UsrAttrId="11" UniqueName="DBCONNPOOL_STATS" GUIDisplayName="DB Connection Pool Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033013" UsrAttrId="13" UniqueName="JVM_STATS" GUIDisplayName="JVM Runtime Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033015" UsrAttrId="15" UniqueName="SRVLTSESSION_STATS" GUIDisplayName="Servlet Session Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033016" UsrAttrId="16" UniqueName="THRPOOL_STATS" GUIDisplayName="Thread Pool Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="16" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033017" UsrAttrId="17" UniqueName="TRAN_STATS" GUIDisplayName="Transaction Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="17" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033018" UsrAttrId="18" UniqueName="WEBAPP_STATS" GUIDisplayName="Web Application Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="18" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="WebSphere 3.5.6" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="41033980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="19" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="41033981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="20" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="41033982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="21" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="41033468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="22" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="41033993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033025" UsrAttrId="25" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="WEBSPHERE356" ColumnName="AVAILABILITY" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIGraphedByDefault="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033026" UsrAttrId="26" UniqueName="EJB_CREATES" GUIDisplayName="EJB Creates" TableName="WEBSPHERE356" ColumnName="EJB_CREATES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033027" UsrAttrId="27" UniqueName="EJB_REMOVES" GUIDisplayName="EJB Removes" TableName="WEBSPHERE356" ColumnName="EJB_REMOVES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033028" UsrAttrId="28" UniqueName="EJB_ACTIVATES" GUIDisplayName="EJB Activates" TableName="WEBSPHERE356" ColumnName="EJB_ACTIVATES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033029" UsrAttrId="29" UniqueName="EJB_PASSIVATES" GUIDisplayName="EJB Passivates" TableName="WEBSPHERE356" ColumnName="EJB_PASSIVATES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033030" UsrAttrId="30" UniqueName="EJB_INSTANTIATES" GUIDisplayName="EJB Instantiates" TableName="WEBSPHERE356" ColumnName="EJB_INSTS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033031" UsrAttrId="31" UniqueName="EJB_DESTROYS" GUIDisplayName="EJB Destroys" TableName="WEBSPHERE356" ColumnName="EJB_DESTROYS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033032" UsrAttrId="32" UniqueName="EJB_LOADS" GUIDisplayName="EJB Loads" TableName="WEBSPHERE356" ColumnName="EJB_LOADS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033033" UsrAttrId="33" UniqueName="EJB_STORES" GUIDisplayName="EJB Stores" TableName="WEBSPHERE356" ColumnName="EJB_STORES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033034" UsrAttrId="34" UniqueName="EJB_CONCRACTIVE" GUIDisplayName="EJB Concurrent Actives" TableName="WEBSPHERE356" ColumnName="EJB_CONCRACTIVE" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033035" UsrAttrId="35" UniqueName="EJB_CONCRLIVE" GUIDisplayName="EJB Concurrent Lives" TableName="WEBSPHERE356" ColumnName="EJB_CONCRLIVE" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033036" UsrAttrId="36" UniqueName="EJB_METHCALLS" GUIDisplayName="EJB Total Method Calls" TableName="WEBSPHERE356" ColumnName="EJB_METHCALLS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033037" UsrAttrId="37" UniqueName="EJB_METHCALRESP" GUIDisplayName="EJB Avg Method Response Time" TableName="WEBSPHERE356" ColumnName="EJB_METHCALRESP" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033040" UsrAttrId="40" UniqueName="EJB_ACTIVEMETHS" GUIDisplayName="EJB Active Methods" TableName="WEBSPHERE356" ColumnName="EJB_ACTIVEMETHS" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033041" UsrAttrId="41" UniqueName="EJB_GETSFRMPOOL" GUIDisplayName="EJB Gets from Pool" TableName="WEBSPHERE356" ColumnName="EJB_GETSFRMPOOL" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033042" UsrAttrId="42" UniqueName="EJB_GETSFOUND" GUIDisplayName="EJB Gets Found" TableName="WEBSPHERE356" ColumnName="EJB_GETSFOUND" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033043" UsrAttrId="43" UniqueName="EJB_RETUNTOPOOL" GUIDisplayName="EJB Returns to Pool" TableName="WEBSPHERE356" ColumnName="EJB_RETUNTOPOOL" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033044" UsrAttrId="44" UniqueName="EJB_RETDISCARD" GUIDisplayName="EJB Returns Discarded" TableName="WEBSPHERE356" ColumnName="EJB_RETDISCARD" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033045" UsrAttrId="45" UniqueName="EJB_DRAINFRMPOL" GUIDisplayName="EJB Drains from Pool" TableName="WEBSPHERE356" ColumnName="EJB_DRAINFRMPOL" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033046" UsrAttrId="46" UniqueName="EJB_DRAINSZ" GUIDisplayName="EJB Avg Drain Size" TableName="WEBSPHERE356" ColumnName="EJB_DRAINSZ" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033047" UsrAttrId="47" UniqueName="EJB_POOLSZ" GUIDisplayName="EJB Pool Size" TableName="WEBSPHERE356" ColumnName="EJB_POOLSZ" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033048" UsrAttrId="48" UniqueName="DB_CONNCREATES" GUIDisplayName="DB Connection Creates" TableName="WEBSPHERE356" ColumnName="DB_CONNCREATES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033049" UsrAttrId="49" UniqueName="DB_CONNDESTROY" GUIDisplayName="DB Connection Destroys" TableName="WEBSPHERE356" ColumnName="DB_CONNDESTROYS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033051" UsrAttrId="51" UniqueName="DB_CONNALLOCATE" GUIDisplayName="DB Connection Allocates" TableName="WEBSPHERE356" ColumnName="DB_CONNALLOCATE" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033052" UsrAttrId="52" UniqueName="DB_CONNPOOLSZ" GUIDisplayName="DB Connection Pool Size" TableName="WEBSPHERE356" ColumnName="DB_CONNPOOLSZ" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033053" UsrAttrId="53" UniqueName="DB_CONCURRWAIT" GUIDisplayName="DB Connection Concurrent Waiters" TableName="WEBSPHERE356" ColumnName="DB_CONCURRWAIT" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033054" UsrAttrId="54" UniqueName="DB_WAITTIME" GUIDisplayName="DB Connection Avg Wait Time" TableName="WEBSPHERE356" ColumnName="DB_WAITTIME" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033055" UsrAttrId="55" UniqueName="DB_CONNFAULTS" GUIDisplayName="DB Connection Faults" TableName="WEBSPHERE356" ColumnName="DB_CONNFAULTS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033056" UsrAttrId="56" UniqueName="DB_PERCENTUSED" GUIDisplayName="DB Connection Percent Used" TableName="WEBSPHERE356" ColumnName="DB_PERCENTUSED" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033057" UsrAttrId="57" UniqueName="DB_PERCENTMAXED" GUIDisplayName="DB Connection Percent Maxed" TableName="WEBSPHERE356" ColumnName="DB_PERCENTMAXED" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033061" UsrAttrId="61" UniqueName="JVM_TOTMEM" GUIDisplayName="JVM Total Memory" TableName="WEBSPHERE356" ColumnName="JVM_TOTMEM" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033062" UsrAttrId="62" UniqueName="JVM_FREEMEM" GUIDisplayName="JVM Free Memory" TableName="WEBSPHERE356" ColumnName="JVM_FREEMEM" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033063" UsrAttrId="63" UniqueName="JVM_USEDMEM" GUIDisplayName="JVM Memory Used" TableName="WEBSPHERE356" ColumnName="JVM_USEDMEM" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033074" UsrAttrId="74" UniqueName="SERVLET_SESCREATE" GUIDisplayName="Servlet Sessions Created" TableName="WEBSPHERE356" ColumnName="SVLT_SESCREATE" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033075" UsrAttrId="75" UniqueName="SVLT_SESINVALID" GUIDisplayName="Servlet Sessions Invalidated" TableName="WEBSPHERE356" ColumnName="SVLT_SESINVALID" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033076" UsrAttrId="76" UniqueName="SVLT_SESLIFETIM" GUIDisplayName="Servlet Session Lifetime" TableName="WEBSPHERE356" ColumnName="SVLT_SESLIFETIM" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033077" UsrAttrId="77" UniqueName="SVLT_SESACTIVE" GUIDisplayName="Servlet Sessions Active" TableName="WEBSPHERE356" ColumnName="SVLT_SESACTIVE" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033078" UsrAttrId="78" UniqueName="SVLT_SESLIVE" GUIDisplayName="Servlet Sessions Live" TableName="WEBSPHERE356" ColumnName="SVLT_SESLIVE" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033079" UsrAttrId="79" UniqueName="THR_CREATES" GUIDisplayName="Thread Creates" TableName="WEBSPHERE356" ColumnName="THR_CREATES" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033080" UsrAttrId="80" UniqueName="THR_DESTROYS" GUIDisplayName="Thread Destroys" TableName="WEBSPHERE356" ColumnName="THR_DESTROYS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033081" UsrAttrId="81" UniqueName="THR_ACTIVE" GUIDisplayName="Threads Active" TableName="WEBSPHERE356" ColumnName="THR_ACTIVE" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033082" UsrAttrId="82" UniqueName="THR_POOLSZ" GUIDisplayName="Thread Pool Size" TableName="WEBSPHERE356" ColumnName="THR_POOLSZ" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033083" UsrAttrId="83" UniqueName="THR_POOLMAXED" GUIDisplayName="Thread Pool Percent Maxed" TableName="WEBSPHERE356" ColumnName="THR_POOLMAXED" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033087" UsrAttrId="87" UniqueName="TRN_ACTIVE_G" GUIDisplayName="Transactions Active Global" TableName="WEBSPHERE356" ColumnName="TRN_ACTIVE_G" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033089" UsrAttrId="89" UniqueName="TRN_DURATION_G" GUIDisplayName="Transaction Duration Global" TableName="WEBSPHERE356" ColumnName="TRN_DUR_G" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033097" UsrAttrId="97" UniqueName="TRN_COMMITTED_G" GUIDisplayName="Transactions Committed Global" TableName="WEBSPHERE356" ColumnName="TRN_COMMITTED_G" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033099" UsrAttrId="99" UniqueName="TRN_ROLLBACK_G" GUIDisplayName="Transactions RolledBack Global" TableName="WEBSPHERE356" ColumnName="TRN_ROLLBACK_G" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033103" UsrAttrId="103" UniqueName="WEBAPP_SVLTLOAD" GUIDisplayName="Web App Servlets Loaded" TableName="WEBSPHERE356" ColumnName="WEBAPP_SVLTLOAD" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033104" UsrAttrId="104" UniqueName="WEBAPP_SVLTRELD" GUIDisplayName="Web App Servlet Reloads" TableName="WEBSPHERE356" ColumnName="WEBAPP_SVLTRELD" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033105" UsrAttrId="105" UniqueName="WEBAPP_REQUESTS" GUIDisplayName="Web App Requests" TableName="WEBSPHERE356" ColumnName="WEBAPP_REQUESTS" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033106" UsrAttrId="106" UniqueName="WEBAPP_CONREQ" GUIDisplayName="Web App Concurrent Requests" TableName="WEBSPHERE356" ColumnName="WEBAPP_CONREQ" ScaleFactor="1" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033107" UsrAttrId="107" UniqueName="WEBAPP_RESPTIME" GUIDisplayName="Web App Response Time" TableName="WEBSPHERE356" ColumnName="WEBAPP_RESPTIME" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="41033108" UsrAttrId="108" UniqueName="WEBAPP_ERROR" GUIDisplayName="Web App Errors" TableName="WEBSPHERE356" ColumnName="WEBAPP_ERROR" ScaleFactor="100" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<MetaData>
+<ManagedObject>
+    <ParentBasicInfo MoTypeId="42989" UniqueName="VMwareHostDiskTotMonP" GUIDisplayName="Host Disk (Total)" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.VMwareAdapter.VMwareAdapter" IsAdapterFrameWork="Y" Version="1.0" OS="SunOS:Windows" GUIMonitorGroup="OTHER" IsSchedulable="N" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="Y"/>
+    <BasicInfo HasCustomizedGUI="N" MoTypeId="42990" UniqueName="VMwareHostDiskTotMon" GUIDisplayName="Host Disk (Total)" MoTypeType="APPS" ParentMoType="42989"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.VMwareAdapter.VMwareAdapter" IsAdapterFrameWork="Y" Version="1.0" OS="SunOS:Windows" MustRunOnAgent="N" IsNewFrameWork="Y" HasMoreInfo="Y" AdapterType="60007" SupportFlashCheck="Y" IsAutoSyncEnabled="Y"/>
+</ManagedObject>
+ <Attributes>
+  <Application>
+      <ParentAppsInput AttrId="42989999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="Host Disk (Total) " ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42990999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42990994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="N" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="N" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42990004" UsrAttrId="4" UniqueName="USERNAME" GUIDisplayName="VMware UserName" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" GUIRequiredOnCreate="N" UseAsInstanceName="N" GUIEditable="N"/>
+      <AppsInput AttrId="42990005" UsrAttrId="5" UniqueName="PASSWORD" GUIDisplayName="VMware Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" DisplayType="Password" DefaultValue="" GUIDisplayable="N" GUIRequiredOnCreate="N" UseAsInstanceName="N" GUIEditable="Y"/>
+        	<!--<AppsInput AttrId="42990008" 
+  		UsrAttrId="8" 
+  		UniqueName="INSTANCE_DETAILS" 
+  		GUIDisplayName="Instance" 
+  		GUIInputType="CFG" 
+  		ScaleFactor="1000" 
+  		GUIDisplaySequenceNumber="12" 
+  		IsDefaultValueSet="Y" 
+  		DisplayType="String" 
+  		DefaultValue="" 
+  		UseAsInstanceName="Y" 
+  		GUIRequiredOnCreate="N"  
+  		IsAutoDiscoverable="Y" 
+  		GUIEditable="N" 
+  		/>-->
+	  <AppsInput AttrId="42990020" UsrAttrId="20" UniqueName="DNSIP" GUIDisplayName="VC/ESX Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" IsInputAttribute="Y" GUIEditable="N"/>
+         	<!--<AppsInput AttrId="42990021" 
+		UsrAttrId="21" 
+		UniqueName="DISK_INSTANCE" 
+		GUIDisplayName="Disk Instance Name" 
+		GUIInputType="CFG" 
+		ScaleFactor="1000" 
+		GUIDisplaySequenceNumber="4" 
+		IsDefaultValueSet="Y" 
+		DisplayType="String" 
+		DefaultValue="" 
+		IsInputAttribute="Y" 
+		GUIEditable="N" 
+   		/>-->
+	  <AppsInput AttrId="42990083" UsrAttrId="83" UniqueName="FAILOVER_CRED_STRING" GUIDisplayName="Hidden Failover Credential String" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIInputOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=" " GUIDisplayable="N" GUIRequiredOnCreate="N" GUIEditable="N"/>
+      <AppsInput AttrId="42990084" UsrAttrId="84" UniqueName="ENABLE_VMWARE_FAILOVER" GUIDisplayName="Enable Failover(if target is VC)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <!-- Hidden Input -->
+	  <AppsInput AttrId="42990009" UsrAttrId="9" UniqueName="CLASSNAME" GUIDisplayName="Class" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="HOST" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42990050" UsrAttrId="50" UniqueName="MONTYPE" GUIDisplayName="Monitor Type(VMware)" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="DISKTOTAL" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42990051" UsrAttrId="51" UniqueName="PARENT_ID" GUIDisplayName="Parent ID" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="42976"/>
+	<AppsInput AttrId="42990010" UsrAttrId="10" UniqueName="MAN_OBJ_MOR" GUIDisplayName="Managed Object" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" />
+	<AppsInput AttrId="42990011" UsrAttrId="11" UniqueName="INSTANCE" GUIDisplayName="Instance" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42990052" UsrAttrId="52" UniqueName="VMWARE_DEVICE_NAME" GUIDisplayName="Device Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="DEVICENAME" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+	<AppsInput AttrId="42990053" UsrAttrId="53" UniqueName="APP_PATH" GUIDisplayName="App Path" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="DEVICENAME" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+	<AppsInput AttrId="42990054" UsrAttrId="54" UniqueName="INST_UNIQUE_NAME" GUIDisplayName="Instance Unique Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="#null#" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+	<AppsInput AttrId="42990055" UsrAttrId="55" UniqueName="PAR_ESX_NAME" GUIDisplayName="ESX Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" />
+
+	
+	<!---Control Attributes -->	
+         
+	<AppsInput AttrId="42990995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" GUIEditable="Y" GUIDisplayable="Y"/>	
+	<AppsInput AttrId="42990012" UsrAttrId="12" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300" GUIEditable="N" GUIDisplayable="N"/>	
+	<AppsInput AttrId="42990013" UsrAttrId="13" UniqueName="STSPOLLTIMEOUT"  GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="60" GUIEditable="N" GUIDisplayable="N"/>	
+	<AppsInput AttrId="42990014" UsrAttrId="14" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="86400" GUIEditable="N" GUIDisplayable="N"/>	
+	<AppsInput AttrId="42990015" UsrAttrId="15" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30" GUIEditable="N" GUIDisplayable="N"/>	   		
+	<AppsInput AttrId="42990018" UsrAttrId="18" UniqueName="PARENT_ADAPTER" GUIDisplayName="Adapter" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" MoReferenceType="60007" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1" GUIEditable="N" GUIDisplayable="Y"/>
+	      
+	
+	<!-- Config Attributes 	-->	
+		    
+<AppsInput AttrId="42990980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42990981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42990982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="42990468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="14" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+	<AppsConfig AttrId="42990031" UsrAttrId="31" UniqueName="VC_NAME" GUIDisplayName="VC Name" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1" CustomField3="1.0" CustomField1="VC_NAME" />	
+	<AppsConfig AttrId="42990032" UsrAttrId="32" UniqueName="VC_IP" GUIDisplayName="IP Address of VC" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1" CustomField3="1.0" CustomField1="VC_IP" />
+	<AppsConfig AttrId="42992033" UsrAttrId="33" UniqueName="ESX_NAME" GUIDisplayName="ESX Name" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1" CustomField3="1.0" CustomField1="ESX_NAME" />
+	<AppsConfig AttrId="42992034" UsrAttrId="34" UniqueName="ESX_IP" GUIDisplayName="IP Address of ESX" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1" CustomField3="1.0" CustomField1="ESX_IP" />
+	
+	<!-- Stats Attributes -->	   
+ 
+		<AppsStats>
+        <CoreAppsStats AttrId="42990070" UsrAttrId="70" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="VMwareHostDiskTotMon" ColumnName="AVAILABILITY" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" CustomField3="1.0" UseNormalDistribution="Y" GUIGraphedByDefault="N" GUIDisplayable="Y" CustomField1="-200"/>
+		</AppsStats>
+		<AppsStats>
+        <CoreAppsStats AttrId="42990071" UsrAttrId="71" UniqueName="DISK_USAGE" GUIDisplayName="Disk Usage" TableName="VMwareHostDiskTotMon" ColumnName="DISK_USAGE" ScaleFactor="1" CustomField3="1.0" UseNormalDistribution="N" DisplayType="Float" UnitOfMeasurement="KBps" GUIGraphedByDefault="Y" GUIDisplayable="Y" CustomField1="disk.usage.average"/>
+		</AppsStats>
+  </Application>
+ </Attributes>
+</MetaData>

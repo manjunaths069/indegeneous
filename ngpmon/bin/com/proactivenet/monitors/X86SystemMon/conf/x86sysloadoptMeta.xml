@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="N" MoTypeId="31212" MoTypeType="PERS" EndUserReportable="N" UniqueName="x86sysloadopt" GUIDisplayName="x86sysloadopt" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="312121" GUIDisplayable="N" UniqueName="SYSLOADOPT" GUIDisplayName="SYSLOAD Name" IsDefaultValueSet="Y" DisplayType="String" EndUserReportable="Y" UseAsMODisplayName="Y" DefaultValue="5" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+<Persistent AttrId="312122" GUIDisplayable="N" UniqueName="SYSLOADOPT1" GUIDisplayName="SYSLOAD Name" IsDefaultValueSet="Y" DisplayType="Integer" EndUserReportable="Y" UseAsMODisplayName="Y" DefaultValue="5" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+</Attributes>
+</MetaData>

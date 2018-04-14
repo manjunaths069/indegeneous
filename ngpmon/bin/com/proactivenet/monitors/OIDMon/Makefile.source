@@ -1,0 +1,2 @@
+#SOURCE.java = OIDMon.java
+SUBDIRS = util src 

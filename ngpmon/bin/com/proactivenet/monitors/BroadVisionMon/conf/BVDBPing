@@ -1,0 +1,23 @@
+#!/bin/ksh
+#
+# IM DataBase Monitor
+# Args
+#   1 Application name
+#   2 Instace ID
+#   3 Group
+#   4 Accessor
+#   5 BV1TO1_VAR
+#   6 Host name
+#
+. $5/etc/bv1to1.conf.sh
+GROUP=$3
+if [ "$3" = "-" ]
+then 
+	GROUP=""
+fi
+$BV1TO1/bin/bvping \
+       -A $1 \
+       -p $4 \
+       -i $2 \
+       -g "$GROUP" \
+	   -h $6

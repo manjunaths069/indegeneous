@@ -1,0 +1,7 @@
+TARGET_EXE = leaclient
+
+SOURCE_LEA.cc = LeaFiltSession.cc LeaSession.cc LeaClient.cc Instance.cc
+
+leaclient_OBJS =  ${SOURCE_LEA.cc:%.cc=%.o}
+leaclient_LD_LIBS = $(CKP_LEA_LIBS)
+

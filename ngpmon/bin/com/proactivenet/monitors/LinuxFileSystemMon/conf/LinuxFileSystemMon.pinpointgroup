@@ -1,0 +1,6 @@
+System       ,LinuxFileSystemMonIn
+
+DiskUsed,LinuxFileSystemMonIn,DISK_USED_PERCENT
+DiskUsed,LinuxFileSystemMonIn,I_NODE_USED_PERCENT
+
+DiskAvailability,LinuxFileSystemMonIn,AVAILABILITY

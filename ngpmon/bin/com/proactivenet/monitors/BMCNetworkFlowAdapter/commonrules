@@ -1,0 +1,102 @@
+
+# Setting the list of object files after the user may have changed the list of sources to compile
+COBJS=$(CSOURCEFILES:%.c=%.o)
+CPPOBJS=$(CPPSOURCEFILES:%.cpp=%.o)
+OBJS:=${COBJS} ${CPPOBJS}
+
+ifeq (${OSNAME},WINDOWS)
+	ifeq (${DEBUG},1)
+		CFLAGS+=/D "DEBUG" /Od /Zi /ZI /Yd
+		LDFLAGS+=/debugtype:both /DEBUG /pdbtype:sept
+	else
+		CFLAGS+=/D "NDEBUG" /O2
+		LDFLAGS+=/RELEASE
+	endif
+else
+	ifeq (${DEBUG},1)
+		CFLAGS+=${DEBUG_FLAGS}
+		LDFLAGS+=${DEBUG_FLAGS}
+	else
+		CFLAGS+=${RELEASE_FLAGS}
+		LDFLAGS+=${RELEASE_FLAGS}
+	endif	
+endif
+
+all: subdirs ${TARGET_PATH} $(foreach target, ${TARGET}, ${TARGET_PATH}/$(target))
+.PRECIOUS: ${KERNELDIR}${OBJTYPE}/%.o \
+	${KERNELDIR}${OBJTYPE}/%.a \
+	${KERNELDIR}${OBJTYPE}/%
+
+.PHONY: subdirs ${SUBDIRS} clean 
+	echo TARGET_PATH==${TARGET_PATH}
+
+subdirs: ${SUBDIRS}
+
+${SUBDIRS}:
+	@${MAKE} -C $@
+
+SUBDIRS_CLEAN=$(foreach dir, ${SUBDIRS}, $(dir)-clean)
+
+${SUBDIRS_CLEAN}:
+	@${MAKE} -C $(@:-clean=) clean
+
+${TARGET_PATH}:
+	${MKDIR} -p ${TARGET_PATH}
+
+%.cpp:
+%.c:
+VPATH = ${TARGET_PATH}
+%.o: %.cpp
+ifeq (${OSNAME},WINDOWS)
+	$(CXX) /nologo $(CPPFLAGS) $(CFLAGS) -c $< /Fo${TARGET_PATH}/$@
+else
+	$(CXX) $(CPPFLAGS) $(CFLAGS) -c $< -o ${TARGET_PATH}/$@
+endif
+
+
+%.o: %.c
+ifeq (${OSNAME},WINDOWS)
+	$(CXX) /nologo $(CPPFLAGS) $(CFLAGS) -c $< /Fo${TARGET_PATH}/$@
+else
+	$(CXX) $(CPPFLAGS) $(CFLAGS) -c $< -o ${TARGET_PATH}/$@
+endif
+
+${TARGET_PATH}/%.lib: ${OBJS}
+ifeq (${OSNAME},WINDOWS)
+	${LD} /LIB /nologo /OUT:$@ ${LDFLAGS} /LIBPATH:${TARGET_PATH} $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj)) ${LDLIBS}
+endif
+
+${TARGET_PATH}/%.dll: ${OBJS}
+ifeq (${OSNAME},WINDOWS)
+	${LD} /DLL /nologo /OUT:$@ ${LDFLAGS} -L${TARGET_PATH} $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj)) ${LDLIBS}
+endif
+
+${TARGET_PATH}/%.a: ${OBJS}
+ifeq (${OSNAME},HPUX)
+	/usr/bin/ar ${ARFLAGS} $@ $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj))
+else
+	${AR} ${ARFLAGS} $@ $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj))
+endif
+
+${TARGET_PATH}/%: ${OBJS}
+ifeq (${OSNAME},WINDOWS)
+	$(LD) /OUT:$@.exe /nologo ${LDFLAGS} /LIBPATH:${TARGET_PATH} $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj)) ${LDLIBS}
+else
+	$(CXX) -o $@ ${LDFLAGS} -L${TARGET_PATH} $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj)) ${LDLIBS}
+endif
+
+clean: ${SUBDIRS_CLEAN}
+	@${RM} $(foreach obj, ${OBJS}, ${TARGET_PATH}/$(obj))
+	@${RM} $(foreach target, ${TARGET}, ${TARGET_PATH}/$(target))
+ifeq (${OSNAME},WINDOWS)
+	@${RM} $(foreach target.exe, ${TARGET}, ${TARGET_PATH}/$(target.exe))
+endif
+
+debug:
+	${MAKE} DEBUG=1
+
+versions:
+	@echo $(shell date +%y%j%k%M)
+
+help:
+	@cat ${DEPTH}/make_help.txt | more

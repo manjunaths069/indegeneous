@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+
+<PRE_POST   Type = "Post Install">
+  <updateMO 	Action = "delete"> 
+    <MoInfo	moTypeId ="30082"     moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300820" AttrVal = "SINGLEURL"/>
+    <AttrInfo	AttrID = "300821" AttrVal = "1"/>
+  </updateMO> 
+
+  <updateMO 	Action = "delete"> 
+    <MoInfo	moTypeId ="30082"     moInstId="2" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300820" AttrVal = "SINGLEURLBENCHMARK"/>
+    <AttrInfo	AttrID = "300821" AttrVal = "2"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "delete"> 
+    <MoInfo	moTypeId ="30082"     moInstId="3" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300820" AttrVal = "SINGLEURLANDBENCHMARK"/>
+    <AttrInfo	AttrID = "300821" AttrVal = "3"/>
+  </updateMO> 
+
+  <updateMO 	Action = "insert"> 
+    <MoInfo	moTypeId ="30082"     moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300820" AttrVal = "SINGLEURL"/> 
+    <AttrInfo	AttrID = "300821" AttrVal = "1"/>
+  </updateMO> 
+
+ 
+
+</PRE_POST> 
+
+

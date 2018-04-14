@@ -1,0 +1,4 @@
+#Attribute classification for Pinpointing
+#Attribute_Group	Rank	Above_Normal	Below_Normal
+Availability	,OracleTableSpaceMon	,AVAILABILITY	,5	,1	,5
+	,OracleTableSpaceMon	,PERCENT_USED_SPACE	,5	,4	,3

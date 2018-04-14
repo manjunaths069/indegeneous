@@ -1,0 +1,7 @@
+System              ,NTProcessInfo       ,PROC_VSZ            ,3
+System              ,NTProcessInfo       ,PROC_CPU            ,4
+Availability        ,NTProcessInfo       ,AVAILABILITY        ,5 ,1 ,5
+System              ,NTProcessInfo       ,PROCESS_INSTANCES   ,5
+System              ,NTProcessInfo       ,TOTAL_THREADS       ,1
+System              ,NTProcessInfo       ,NEW_INSTANCES       ,1
+System              ,NTProcessInfo       ,HANDLE_COUNT        ,1

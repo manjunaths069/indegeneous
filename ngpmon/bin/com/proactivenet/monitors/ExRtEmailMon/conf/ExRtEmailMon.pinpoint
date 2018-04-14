@@ -1,0 +1,5 @@
+#Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+Availability         ,ExRtEmailMonInfo    ,Availability   ,5	,1	,5
+Availability         ,ExRtEmailMonInfo    ,SourceAvailability   ,5	,1	,5
+Availability         ,ExRtEmailMonInfo    ,DestAvailability   ,5	,1	,5
+ResponseTime         ,ExRtEmailMonInfo    ,TotalResponseTime ,3	,3	,1

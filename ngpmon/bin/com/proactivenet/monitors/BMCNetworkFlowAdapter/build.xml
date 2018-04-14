@@ -1,0 +1,49 @@
+<project name="BMCNetworkFlowAdapter" default="compile" basedir=".">
+
+    <!-- Name of project and version -->
+    <property name="proj.name"      value="BMCNetworkFlowAdapter"/>
+    <property name="proj.shortname" value="BMCNetworkFlowAdapter"/>
+    <property name="version"        value="1.0"/>
+
+    <!-- Global properties for this build -->
+    <!-- property name="src.java.dir"           value="src/java"/-->
+	<property name="src.java.dir"           value="src"/>
+    <!--property name="lib.dir"                value="lib"/-->
+    <property name="build.dir"              value="build"/>
+
+    <!-- Classpath declaration -->
+    <!--path id="project.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+            <include name="**/*.zip"/>
+        </fileset>
+    </path-->
+
+
+
+    <!-- Clean up -->
+    <target name="clean" description="Clean the build directory">
+        <delete dir="${build.dir}"/>
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+    <!-- Compile Java source -->
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.java.dir}"
+               destdir="${build.dir}"/>
+    </target>
+
+
+    <!-- Run HelloWorld -->
+    <target name="run" depends="compile"
+        description="Build and run BMCNetworkFlowAdapter">
+        <java fork="true" 
+              classname="com.proactivenet.monitors.BMCNetworkFlowAdapter.NetFlowListenerJNI">
+            <classpath path="${build.dir}"/>
+        	<jvmarg value="-Djava.library.path=C:/work/ProactiveNet_NGP_Project/CPP_Projects/jni/Debug"/>
+        </java>
+    </target>
+
+
+</project>

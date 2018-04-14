@@ -1,0 +1,4 @@
+
+#SOURCE.java = nfsmon.java 
+
+SUBDIRS = lib src

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- GenMonBaseMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+
+
+<ParentBasicInfo
+      MoTypeId="500026"
+      MoTypeType="APPS"
+      ParentMoType="1"
+      EndUserReportable="N"
+      UniqueName="1GenMonBase"
+      GUIDisplayName="Generic Monitor Base Info"
+      OneInstancePerParent="Y"
+    />
+<ParentAppsInfo
+      ClassName="com.proactivenet.monitors.GenMonBase.Wizard"
+      HasMoreInfo="N"
+      OS="Any"
+      IsStatic="Y"
+      IsNewFrameWork="Y"
+      IsSchedulable="N"
+    />
+
+<BasicInfo
+      HasCustomizedGUI="Y"
+      MoTypeId="500027"
+      MoTypeType="APPS"
+      ParentMoType="500026"
+      UniqueName="GenMonBase"
+      GUIDisplayName="Generic Monitor Base"
+    />
+    <AppsInfo
+      ClassName="com.proactivenet.monitors.GenMonBase.Wizard"
+      HasMoreInfo="N"
+      OS="Any"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Application>
+
+
+<ParentAppsInput
+        AttrId="500026999"
+        UsrAttrId="999"
+        UniqueName="Instance Name"
+        GUIDisplayName="Instance Name"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        UseAsMODisplayName="Y"
+        DefaultValue="Generic Monitor"
+      />
+
+<AppsInput
+        AttrId="500027004"
+        UsrAttrId="4"
+        UniqueName="WMI"
+        GUIDisplayName="WMI Attribute Choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="52"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        GUIRequiredOnCreate="N"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />
+      <AppsInput
+        AttrId="500027005"
+        UsrAttrId="5"
+        UniqueName="PDH"
+        GUIDisplayName="PDH Attribute Choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="53"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />
+      <AppsInput
+        AttrId="500027006"
+        UsrAttrId="6"
+        UniqueName="Perf Info"
+        GUIDisplayName="Perf Info Attribute Choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplayable="N"
+        GUIDisplaySequenceNumber="54"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+      />
+      <AppsInput
+        AttrId="500027003"
+        UsrAttrId="3"
+        UniqueName="Event Log"
+        GUIDisplayName="Event Log Attribute Choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="51"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />
+      <AppsInput
+        AttrId="500027007"
+        UsrAttrId="7"
+        UniqueName="Test"
+        GUIDisplayName="Test Button"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="51"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />
+      <AppsInput
+        AttrId="500027008"
+        UsrAttrId="8"
+        UniqueName="Comp"
+        GUIDisplayName="Composite attribute choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="51"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />
+      <AppsInput
+        AttrId="500027009"
+        UsrAttrId="9"
+        UniqueName="File"
+        GUIDisplayName="Generic Log File Attribute Choice"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="51"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        GUIHasListOfChoice="Y"
+      />      
+    </Application>
+  </Attributes>
+</MetaData>
+
+

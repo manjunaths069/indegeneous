@@ -1,0 +1,8 @@
+#Attribute Group	,Monitor Name	    ,Attribute Name		,Rank	,Above Normal	,Below Normal
+System                  ,HPUXDiskPerf       ,DISK_SEEK_PER_SECOND       ,2	,2	,2
+System                  ,HPUXDiskPerf       ,DISK_KBYTES_TRANSFER       ,2	,2	,2
+System                  ,HPUXDiskPerf       ,DISK_BUSY_PERCENT          ,5	,4	,3
+System                  ,HPUXDiskPerf       ,DISK_QUEUE_LENGTH          ,3	,4	,3
+System                  ,HPUXDiskPerf       ,DISK_AVG_WAIT_TIME         ,3	,4	,3
+System                  ,HPUXDiskPerf       ,DISK_AVG_SERVE_TIME        ,5	,4	,2
+Availability            ,HPUXDiskPerf       ,AVAILABILITY               ,5	,1 	,5

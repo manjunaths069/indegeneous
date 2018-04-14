@@ -1,0 +1,35 @@
+#!/bin/csh -f
+
+if ( -e /usr/pronto/bin/.tmcsh ) then
+	source /usr/pronto/bin/.tmcsh
+endif
+/usr/pw/pronto/bin/updateMO  '-action'  'delete'  '-moTypeId'  '36750'  '-moInstId'  '1'  '-parentMOTypeId'  '0'  '-parentMOInstId'  '0'  '-attrs'  '367500'  '5.5' '367501'  '1'
+/usr/pw/pronto/bin/updateMO  '-action'  'delete'  '-moTypeId'  '36750'  '-moInstId'  '2'  '-parentMOTypeId'  '0'  '-parentMOInstId'  '0'  '-attrs'  '367500'  '2000' '367501'  '2'
+/usr/pw/pronto/bin/updateMO  '-action'  'insert'  '-moTypeId'  '36750'  '-moInstId'  '1'  '-parentMOTypeId'  '0'  '-parentMOInstId'  '0'  '-attrs'  '367500'  '5.5'  '367501' '1'
+/usr/pw/pronto/bin/updateMO  '-action'  'insert'  '-moTypeId'  '36750'  '-moInstId'  '2'  '-parentMOTypeId'  '0'  '-parentMOInstId'  '0'  '-attrs'  '367500'  '2000'  '367501' '2'
+/usr/pw/pronto/bin/updateMO  '-action'  'insert'  '-moTypeId'  '36750'  '-moInstId'  '3'  '-parentMOTypeId'  '0'  '-parentMOInstId'  '0'  '-attrs'  '367500'  '2003'  '367501' '3'
+
+#For MSExchange Additional attributes
+#Modified by Ajo on 29/06/2005
+#During upgradation it will adds Config Poll Interval and time out in PARAM_CNTL also modifies the corresponding entries in FUMCTIONPOLL_CNTL
+
+set itemid=`/usr/pw/pronto/bin/sqli << EOF \
+select itemid from PARAM_CNTL where attrid=36001999 \
+EOF`
+
+foreach item ( $itemid )
+   echo "Itemid is : " $item
+	sqli << EOF
+	insert into PARAM_CNTL values ($item,36001992,992,86400)
+EOF
+
+	sqli << EOF
+	insert into PARAM_CNTL values ($item,36001991,991,30)
+EOF
+	
+	sqli << EOF
+	update functionpoll_cntl set CONFPOLLPERIOD=86400, CONFTIMEOUT=30 where ITEMID=$item
+EOF
+end
+
+#End Modifications made by ajo

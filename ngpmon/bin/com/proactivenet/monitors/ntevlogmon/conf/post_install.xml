@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="4" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "All"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Application"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Security"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="3" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "System"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="5" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Directory Service"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="6" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "DNS Server"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="7" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "File Replication Service"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "7"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="4" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "All"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Application"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Security"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29600"     moInstId="3" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "System"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+<updateMO       Action = "insert">
+<MoInfo	moTypeId ="29600"     moInstId="5" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "Directory Service"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+<updateMO       Action = "insert">
+<MoInfo	moTypeId ="29600"     moInstId="6" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "DNS Server"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+<updateMO       Action = "insert">
+<MoInfo	moTypeId ="29600"     moInstId="7" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "296001" AttrVal = "File Replication Service"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "296002" AttrVal = "7"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "ERROR"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "WARNING"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="3" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "INFORMATION"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="4" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "AUDIT_SUCCESS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="5" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "AUDIT_FAILURE"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="6" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "ALL"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "ERROR"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "WARNING"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="3" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "INFORMATION"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "3"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="4" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "AUDIT_SUCCESS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "4"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="5" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "AUDIT_FAILURE"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="29700"     moInstId="6" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "297001" AttrVal = "ALL"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "297002" AttrVal = "6"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

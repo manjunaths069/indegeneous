@@ -1,0 +1,3 @@
+ResponseTime        ,SybaseQuery         ,Response Time       ,5
+Availability        ,SybaseQuery         ,AVAILABILITY        ,5	,1	,5
+ResponseTime        ,SybaseQuery         ,Connect Time        ,5

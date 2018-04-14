@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30052"     moInstId="30" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300520" AttrVal = "1"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300521" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30052"     moInstId="31" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300520" AttrVal = "5"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300521" AttrVal = "5"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30052"     moInstId="33" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300520" AttrVal = "15"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300521" AttrVal = "15"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30053"     moInstId="1" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300530" AttrVal = "RMI"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300531" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30053"     moInstId="5" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300530" AttrVal = "HTTP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300531" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

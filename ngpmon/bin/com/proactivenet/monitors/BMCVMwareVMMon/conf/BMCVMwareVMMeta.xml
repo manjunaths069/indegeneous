@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<!-- BMCVMwareVMMeta.xml -->
+
+
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="42803" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="BMCVMwareVMMon" GUIDisplayName="BMC VMware VM Monitor(Deprecated)" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.BMCVMwareVMMon.BMCVMwareVMMon" HasMoreInfo="N" OS="Windows" OSName="Any" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="42804" MoTypeType="APPS" ParentMoType="42803" UniqueName="BMCVMwareVM" GUIDisplayName="Adapter for BMC PATROL VMware Virtual Machine(Deprecated) "/>
+    <AppsInfo ClassName="com.proactivenet.monitors.BMCVMwareVMMon.BMCVMwareVMMon" OS="Windows" OSName="Any"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42803999" UsrAttrId="999" UniqueName="Instance Name" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="BMC VMware Virtual Machine"/>
+      <AppsInput AttrId="42804999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="42804015" UsrAttrId="15" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42804016" UsrAttrId="16" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="42804017" UsrAttrId="17" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42804997" UsrAttrId="997" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="42804996" UsrAttrId="996" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42804005" UsrAttrId="5" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="3181"/>
+      <AppsInput AttrId="42804006" UsrAttrId="6" UniqueName="USER_NAME" GUIDisplayName="User Name" GUIDisplaySequenceNumber="6" GUIInputType="CFG" DisplayType="String" ScaleFactor="1000"/>
+      <AppsInput AttrId="42804004" UsrAttrId="4" UniqueName="OPERATING_SYS" GUIDisplayName="Target OS" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" MoReferenceType="30075" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="42804050" UsrAttrId="50" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0" GUIDisplayable="N" GUIInputOnCreate="N" GUIEditable="N" IsInputAttribute="Y"/>
+      <AppsInput AttrId="42804018" UsrAttrId="18" UniqueName="DNSIP" GUIDisplayName="Target Device" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="String" DefaultValue="0.0.0.0"/>
+      <AppsInput AttrId="42804011" UsrAttrId="11" UniqueName="DUMMY1" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="Integer" DefaultValue="1"/>
+      <AppsInput AttrId="42804007" UsrAttrId="7" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Password"/>
+      <AppsInput AttrId="42804008" UsrAttrId="8" UniqueName="INPUTFILE" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="BMCVMwareVMMon/BMCVMwareVMMon.xml"/>
+      <AppsInput AttrId="42804010" UsrAttrId="10" UniqueName="VM" GUIDisplayName="VM Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="42804980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42804981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42804982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42804468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="12" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42804021" UsrAttrId="21" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804022" UsrAttrId="22" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="Y" ScaleFactor="1000" GUIDisplaySequenceNumber="2" GUIInputOnCreate="Y" MoReferenceType="10000" GUIRequiredOnCreate="Y" DisplayType="MOReference"/>
+      <AppsConfig AttrId="42804023" UsrAttrId="23" UniqueName="PATH" GUIDisplayName="Current Path" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804024" UsrAttrId="24" UniqueName="EVENTCOLLECTOR" GUIDisplayName="Event Collectore ID" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804025" UsrAttrId="25" UniqueName="GUESTOS" GUIDisplayName="Guest OS" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804027" UsrAttrId="27" UniqueName="HOST" GUIDisplayName="Host Id " DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804028" UsrAttrId="28" UniqueName="PHYSICALHOST" GUIDisplayName="ESX/GSX Server Name" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804029" UsrAttrId="29" UniqueName="IPADDRESS" GUIDisplayName="IP Address" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804030" UsrAttrId="30" UniqueName="HOSTNAME" GUIDisplayName="DNS Name" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804031" UsrAttrId="31" UniqueName="MEMORYMAX" GUIDisplayName="Memory Max(MB)" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804032" UsrAttrId="32" UniqueName="MEMORYMIN" GUIDisplayName="Memory Min(MB)" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804033" UsrAttrId="33" UniqueName="MEMORY" GUIDisplayName="Memory Size(MB)" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804034" UsrAttrId="34" UniqueName="CPUNUM" GUIDisplayName="Number of CPU" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804035" UsrAttrId="35" UniqueName="SHARES" GUIDisplayName="Memory Shares Mode" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804036" UsrAttrId="36" UniqueName="UUID" GUIDisplayName="Uuid" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42804037" UsrAttrId="37" UniqueName="FILE" GUIDisplayName="VM Disk File" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42804039" UsrAttrId="37" UniqueName="Status" GUIDisplayName="Status" TableName="BMCVMwareVM" ColumnName="Status" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42804040" UsrAttrId="38" UniqueName="DATA_AVAIL" GUIDisplayName="Data Availability" TableName="BMCVMwareVM" ColumnName="DATA_AVAIL" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

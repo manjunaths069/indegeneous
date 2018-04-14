@@ -1,0 +1,5 @@
+#Attribute classification for Pinpointing
+#Attribute_Group	Rank	Above_Normal	Below_Normal
+ 	,SystemWaitMonitor	,Waits	,3	,3	,3
+ 	,SystemWaitMonitor	,P_Time_Waited	,3	,3	,3
+ 	,SystemWaitMonitor	,Time_Waited	,3	,3	,3

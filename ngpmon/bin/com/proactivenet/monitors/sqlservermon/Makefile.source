@@ -1,0 +1,3 @@
+SUBDIRS = src
+#SOURCE.java = sqlservermon.java MSServerSql.java TimeMSQLJDBCConnector.java
+

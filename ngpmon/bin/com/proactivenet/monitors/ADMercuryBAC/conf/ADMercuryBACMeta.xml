@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">  
+<!-- MercuryBACMeta.xml -->
+
+<MetaData>
+	<ManagedObject>
+		<ParentBasicInfo MoTypeId="42810" UniqueName="ADMercuryBACP" GUIDisplayName="Auto Mercury BAC Parent" OneInstancePerParent="Y"	MoTypeType="APPS" ParentMoType="1" EndUserReportable="Y" />
+		<ParentAppsInfo ClassName="com.proactivenet.monitors.ADMercuryBAC.ADMercuryBAC" OS="Any" IsSchedulable="N" IsStatic="Y" />
+		<BasicInfo MoTypeId="42811" UniqueName="ADMercuryBAC" GUIDisplayName="Adapter for Auto BAC TOPAZ" HasCustomizedGUI="Y" MoTypeType="APPS" ParentMoType="42810" />
+		<AppsInfo ClassName="com.proactivenet.monitors.ADMercuryBAC.ADMercuryBAC" HasArrayAttribute="Y" OS="Any" IsAutoSyncEnabled="Y"/>
+	  </ManagedObject>
+	<Attributes>
+		<Application>
+		<!-- Input Attributes -->	
+			<ParentAppsInput AttrId="42810999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="Mercury BAC Monitor" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>	
+			<AppsInput AttrId="42811002" UsrAttrId="2" GUIDisplayName="Target Device" UniqueName="DNSIP" GUIDisplaySequenceNumber="3" GUIDisplayable="Y" UseAsInstanceName="Y" DisplayType="String"  GUIInputType="CFG" IsInputAttribute="Y"  IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y"  DefaultValue="0.0.0.0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811004" UsrAttrId="4" UniqueName="AD_PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="80" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+                        <AppsInput AttrId="42811005" UsrAttrId="5" UniqueName="AD_URL" GUIDisplayName="URL" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="/topaz/gdeopenapi/services/GdeWsOpenAPI" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811006" UsrAttrId="6" UniqueName="AD_USER_NAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="6" IsDefaultValueSet="N" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811007" UsrAttrId="7" UniqueName="AD_PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="N" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+                       <AppsInput AttrId="42811008" UsrAttrId="8" UniqueName="AD_PROFILE_NAME" GUIDisplayName="Profile" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String"  GUIRequiredOnCreate="N" IsAutoDiscoverable="Y"/>
+                       <AppsInput AttrId="42811009" UsrAttrId="9" UniqueName="AD_SCRIPT_NAME" GUIDisplayName="Script" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String"  GUIRequiredOnCreate="N" IsAutoDiscoverable="Y"/>
+                       <AppsInput AttrId="42811010" UsrAttrId="10" UniqueName="AD_HOST_NAME" GUIDisplayName="Location" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String"  GUIRequiredOnCreate="N" IsAutoDiscoverable="Y"/>
+
+		<!-- Control Attributes -->
+			<AppsInput AttrId="42811995" UsrAttrId="995" GUIDisplayName="Collect Data" UniqueName="COLLECTDATA" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="1" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Boolean" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" GUIDisplaySequenceNumber="1" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="900" IsInputAttribute="Y" DisplayType="Integer" />
+			<AppsInput AttrId="42811011" UsrAttrId="11" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" GUIDisplaySequenceNumber="2" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="60" IsInputAttribute="Y" DisplayType="Integer" />
+			<AppsInput AttrId="42811012" UsrAttrId="12" GUIDisplayName="Retry Count" UniqueName="RETRY_COUNT" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="3" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="3" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="42811013" UsrAttrId="13" GUIDisplayName="Retry Delay" UniqueName="RETRY_DELAY" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="20" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="4" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+		<!-- Param Inputs -->
+			<AppsInput AttrId="42811021" UsrAttrId="21" UniqueName="AD_INPUT_PARAM_01" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811022" UsrAttrId="22" UniqueName="AD_INPUT_PARAM_02" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811023" UsrAttrId="23" UniqueName="AD_INPUT_PARAM_03" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811024" UsrAttrId="24" UniqueName="AD_INPUT_PARAM_04" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811025" UsrAttrId="25" UniqueName="AD_INPUT_PARAM_05" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811026" UsrAttrId="26" UniqueName="AD_INPUT_PARAM_06" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811027" UsrAttrId="27" UniqueName="AD_INPUT_PARAM_07" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811028" UsrAttrId="28" UniqueName="AD_INPUT_PARAM_08" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811029" UsrAttrId="29" UniqueName="AD_INPUT_PARAM_09" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811030" UsrAttrId="30" UniqueName="AD_INPUT_PARAM_10" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811031" UsrAttrId="31" UniqueName="AD_INPUT_PARAM_11" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811032" UsrAttrId="32" UniqueName="AD_INPUT_PARAM_12" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811033" UsrAttrId="33" UniqueName="AD_INPUT_PARAM_13" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811034" UsrAttrId="34" UniqueName="AD_INPUT_PARAM_14" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811035" UsrAttrId="35" UniqueName="AD_INPUT_PARAM_15" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811036" UsrAttrId="36" UniqueName="AD_INPUT_PARAM_16" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811037" UsrAttrId="37" UniqueName="AD_INPUT_PARAM_17" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811038" UsrAttrId="38" UniqueName="AD_INPUT_PARAM_18" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811039" UsrAttrId="39" UniqueName="AD_INPUT_PARAM_19" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+			<AppsInput AttrId="42811040" UsrAttrId="40" UniqueName="AD_INPUT_PARAM_20" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" IsAutoDiscoverable="Y" UseAsInstanceName="N"/>
+<AppsInput AttrId="42811980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42811981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42811982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="42811468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="16" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsConfig AttrId="42811993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="11" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+                        <AppsConfig AttrId="42811016" UsrAttrId="16" UniqueName="AD_STATUS_DIS" GUIDisplayName="Status Legend" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="12" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+                       
+		<!-- Param Inputs Number of Sub transactions -->
+			<AppsConfig AttrId="42811041" UsrAttrId="41" UniqueName="AD_ARRAY_SIZE" GUIDisplayName="Total Transactions" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config -->
+		<!-- App Config For Transaction Availability -->
+			<AppsConfig AttrId="42811101" UsrAttrId="101" UniqueName="AD_AR_CONF_AVAIL01" GUIDisplayName="Status1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811102" UsrAttrId="102" UniqueName="AD_AR_CONF_AVAIL02" GUIDisplayName="Status2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811103" UsrAttrId="103" UniqueName="AD_AR_CONF_AVAIL03" GUIDisplayName="Status3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811104" UsrAttrId="104" UniqueName="AD_AR_CONF_AVAIL04" GUIDisplayName="Status4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811105" UsrAttrId="105" UniqueName="AD_AR_CONF_AVAIL05" GUIDisplayName="Status5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811106" UsrAttrId="106" UniqueName="AD_AR_CONF_AVAIL06" GUIDisplayName="Status6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811107" UsrAttrId="107" UniqueName="AD_AR_CONF_AVAIL07" GUIDisplayName="Status7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811108" UsrAttrId="108" UniqueName="AD_AR_CONF_AVAIL08" GUIDisplayName="Status8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811109" UsrAttrId="109" UniqueName="AD_AR_CONF_AVAIL09" GUIDisplayName="Status9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811110" UsrAttrId="110" UniqueName="AD_AR_CONF_AVAIL10" GUIDisplayName="Status10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811111" UsrAttrId="111" UniqueName="AD_AR_CONF_AVAIL11" GUIDisplayName="Status11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811112" UsrAttrId="112" UniqueName="AD_AR_CONF_AVAIL12" GUIDisplayName="Status12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811113" UsrAttrId="113" UniqueName="AD_AR_CONF_AVAIL13" GUIDisplayName="Status13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811114" UsrAttrId="114" UniqueName="AD_AR_CONF_AVAIL14" GUIDisplayName="Status14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811115" UsrAttrId="115" UniqueName="AD_AR_CONF_AVAIL15" GUIDisplayName="Status15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811116" UsrAttrId="116" UniqueName="AD_AR_CONF_AVAIL16" GUIDisplayName="Status16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811117" UsrAttrId="117" UniqueName="AD_AR_CONF_AVAIL17" GUIDisplayName="Status17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811118" UsrAttrId="118" UniqueName="AD_AR_CONF_AVAIL18" GUIDisplayName="Status18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811119" UsrAttrId="119" UniqueName="AD_AR_CONF_AVAIL19" GUIDisplayName="Status19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811120" UsrAttrId="120" UniqueName="AD_AR_CONF_AVAIL20" GUIDisplayName="Status20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config For Transaction Response Time -->
+			<AppsConfig AttrId="42811121" UsrAttrId="121" UniqueName="AD_AR_CONF_RES01" GUIDisplayName="Response Time1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811122" UsrAttrId="122" UniqueName="AD_AR_CONF_RES02" GUIDisplayName="Response Time2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811123" UsrAttrId="123" UniqueName="AD_AR_CONF_RES03" GUIDisplayName="Response Time3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811124" UsrAttrId="124" UniqueName="AD_AR_CONF_RES04" GUIDisplayName="Response Time4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811125" UsrAttrId="125" UniqueName="AD_AR_CONF_RES05" GUIDisplayName="Response Time5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811126" UsrAttrId="126" UniqueName="AD_AR_CONF_RES06" GUIDisplayName="Response Time6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811127" UsrAttrId="127" UniqueName="AD_AR_CONF_RES07" GUIDisplayName="Response Time7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811128" UsrAttrId="128" UniqueName="AD_AR_CONF_RES08" GUIDisplayName="Response Time8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811129" UsrAttrId="129" UniqueName="AD_AR_CONF_RES09" GUIDisplayName="Response Time9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811130" UsrAttrId="130" UniqueName="AD_AR_CONF_RES10" GUIDisplayName="Response Time10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811131" UsrAttrId="131" UniqueName="AD_AR_CONF_RES11" GUIDisplayName="Response Time11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811132" UsrAttrId="132" UniqueName="AD_AR_CONF_RES12" GUIDisplayName="Response Time12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811133" UsrAttrId="133" UniqueName="AD_AR_CONF_RES13" GUIDisplayName="Response Time13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811134" UsrAttrId="134" UniqueName="AD_AR_CONF_RES14" GUIDisplayName="Response Time14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811135" UsrAttrId="135" UniqueName="AD_AR_CONF_RES15" GUIDisplayName="Response Time15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811136" UsrAttrId="136" UniqueName="AD_AR_CONF_RES16" GUIDisplayName="Response Time16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811137" UsrAttrId="137" UniqueName="AD_AR_CONF_RES17" GUIDisplayName="Response Time17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811138" UsrAttrId="138" UniqueName="AD_AR_CONF_RES18" GUIDisplayName="Response Time18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811139" UsrAttrId="139" UniqueName="AD_AR_CONF_RES19" GUIDisplayName="Response Time19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811140" UsrAttrId="140" UniqueName="AD_AR_CONF_RES20" GUIDisplayName="Response Time20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config For Transaction Connect Time -->
+			<AppsConfig AttrId="42811141" UsrAttrId="141" UniqueName="AD_AR_CONF_CON01" GUIDisplayName="Connect Time1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811142" UsrAttrId="142" UniqueName="AD_AR_CONF_CON02" GUIDisplayName="Connect Time2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811143" UsrAttrId="143" UniqueName="AD_AR_CONF_CON03" GUIDisplayName="Connect Time3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811144" UsrAttrId="144" UniqueName="AD_AR_CONF_CON04" GUIDisplayName="Connect Time4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811145" UsrAttrId="145" UniqueName="AD_AR_CONF_CON05" GUIDisplayName="Connect Time5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811146" UsrAttrId="146" UniqueName="AD_AR_CONF_CON06" GUIDisplayName="Connect Time6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811147" UsrAttrId="147" UniqueName="AD_AR_CONF_CON07" GUIDisplayName="Connect Time7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811148" UsrAttrId="148" UniqueName="AD_AR_CONF_CON08" GUIDisplayName="Connect Time8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811149" UsrAttrId="149" UniqueName="AD_AR_CONF_CON09" GUIDisplayName="Connect Time9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811150" UsrAttrId="150" UniqueName="AD_AR_CONF_CON10" GUIDisplayName="Connect Time10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811151" UsrAttrId="151" UniqueName="AD_AR_CONF_CON11" GUIDisplayName="Connect Time11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811152" UsrAttrId="152" UniqueName="AD_AR_CONF_CON12" GUIDisplayName="Connect Time12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811153" UsrAttrId="153" UniqueName="AD_AR_CONF_CON13" GUIDisplayName="Connect Time13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811154" UsrAttrId="154" UniqueName="AD_AR_CONF_CON14" GUIDisplayName="Connect Time14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811155" UsrAttrId="155" UniqueName="AD_AR_CONF_CON15" GUIDisplayName="Connect Time15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811156" UsrAttrId="156" UniqueName="AD_AR_CONF_CON16" GUIDisplayName="Connect Time16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811157" UsrAttrId="157" UniqueName="AD_AR_CONF_CON17" GUIDisplayName="Connect Time17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811158" UsrAttrId="158" UniqueName="AD_AR_CONF_CON18" GUIDisplayName="Connect Time18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811159" UsrAttrId="159" UniqueName="AD_AR_CONF_CON19" GUIDisplayName="Connect Time19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811160" UsrAttrId="160" UniqueName="AD_AR_CONF_CON20" GUIDisplayName="Connect Time20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config For Transaction DNS Time -->
+			<AppsConfig AttrId="42811161" UsrAttrId="161" UniqueName="AD_AR_CONF_DNS01" GUIDisplayName="DNS Time1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811162" UsrAttrId="162" UniqueName="AD_AR_CONF_DNS02" GUIDisplayName="DNS Time2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811163" UsrAttrId="163" UniqueName="AD_AR_CONF_DNS03" GUIDisplayName="DNS Time3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811164" UsrAttrId="164" UniqueName="AD_AR_CONF_DNS04" GUIDisplayName="DNS Time4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811165" UsrAttrId="165" UniqueName="AD_AR_CONF_DNS05" GUIDisplayName="DNS Time5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811166" UsrAttrId="166" UniqueName="AD_AR_CONF_DNS06" GUIDisplayName="DNS Time6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811167" UsrAttrId="167" UniqueName="AD_AR_CONF_DNS07" GUIDisplayName="DNS Time7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811168" UsrAttrId="168" UniqueName="AD_AR_CONF_DNS08" GUIDisplayName="DNS Time8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811169" UsrAttrId="169" UniqueName="AD_AR_CONF_DNS09" GUIDisplayName="DNS Time9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811170" UsrAttrId="170" UniqueName="AD_AR_CONF_DNS10" GUIDisplayName="DNS Time10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811171" UsrAttrId="171" UniqueName="AD_AR_CONF_DNS11" GUIDisplayName="DNS Time11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811172" UsrAttrId="172" UniqueName="AD_AR_CONF_DNS12" GUIDisplayName="DNS Time12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811173" UsrAttrId="173" UniqueName="AD_AR_CONF_DNS13" GUIDisplayName="DNS Time13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811174" UsrAttrId="174" UniqueName="AD_AR_CONF_DNS14" GUIDisplayName="DNS Time14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811175" UsrAttrId="175" UniqueName="AD_AR_CONF_DNS15" GUIDisplayName="DNS Time15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811176" UsrAttrId="176" UniqueName="AD_AR_CONF_DNS16" GUIDisplayName="DNS Time16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811177" UsrAttrId="177" UniqueName="AD_AR_CONF_DNS17" GUIDisplayName="DNS Time17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811178" UsrAttrId="178" UniqueName="AD_AR_CONF_DNS18" GUIDisplayName="DNS Time18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811179" UsrAttrId="179" UniqueName="AD_AR_CONF_DNS19" GUIDisplayName="DNS Time19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811180" UsrAttrId="180" UniqueName="AD_AR_CONF_DNS20" GUIDisplayName="DNS Time20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config For Transaction First Buffer Time -->
+			<AppsConfig AttrId="42811181" UsrAttrId="181" UniqueName="AD_AR_CONF_FIB01" GUIDisplayName="First Buffer Time1" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811182" UsrAttrId="182" UniqueName="AD_AR_CONF_FIB02" GUIDisplayName="First Buffer Time2" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811183" UsrAttrId="183" UniqueName="AD_AR_CONF_FIB03" GUIDisplayName="First Buffer Time3" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811184" UsrAttrId="184" UniqueName="AD_AR_CONF_FIB04" GUIDisplayName="First Buffer Time4" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811185" UsrAttrId="185" UniqueName="AD_AR_CONF_FIB05" GUIDisplayName="First Buffer Time5" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811186" UsrAttrId="186" UniqueName="AD_AR_CONF_FIB06" GUIDisplayName="First Buffer Time6" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811187" UsrAttrId="187" UniqueName="AD_AR_CONF_FIB07" GUIDisplayName="First Buffer Time7" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811188" UsrAttrId="188" UniqueName="AD_AR_CONF_FIB08" GUIDisplayName="First Buffer Time8" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811189" UsrAttrId="189" UniqueName="AD_AR_CONF_FIB09" GUIDisplayName="First Buffer Time9" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811190" UsrAttrId="190" UniqueName="AD_AR_CONF_FIB10" GUIDisplayName="First Buffer Time10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811191" UsrAttrId="191" UniqueName="AD_AR_CONF_FIB11" GUIDisplayName="First Buffer Time11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811192" UsrAttrId="192" UniqueName="AD_AR_CONF_FIB12" GUIDisplayName="First Buffer Time12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811193" UsrAttrId="193" UniqueName="AD_AR_CONF_FIB13" GUIDisplayName="First Buffer Time13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811194" UsrAttrId="194" UniqueName="AD_AR_CONF_FIB14" GUIDisplayName="First Buffer Time14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811195" UsrAttrId="195" UniqueName="AD_AR_CONF_FIB15" GUIDisplayName="First Buffer Time15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811196" UsrAttrId="196" UniqueName="AD_AR_CONF_FIB16" GUIDisplayName="First Buffer Time16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811197" UsrAttrId="197" UniqueName="AD_AR_CONF_FIB17" GUIDisplayName="First Buffer Time17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811198" UsrAttrId="198" UniqueName="AD_AR_CONF_FIB18" GUIDisplayName="First Buffer Time18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811199" UsrAttrId="199" UniqueName="AD_AR_CONF_FIB19" GUIDisplayName="First Buffer Time19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811200" UsrAttrId="200" UniqueName="AD_AR_CONF_FIB20" GUIDisplayName="First Buffer Time20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+		<!-- App Config For Transaction Total Bytes Read -->
+			<AppsConfig AttrId="42811201" UsrAttrId="201" UniqueName="AD_AR_CONF_TBY01" GUIDisplayName="Bytes Read01" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811202" UsrAttrId="202" UniqueName="AD_AR_CONF_TBY02" GUIDisplayName="Bytes Read02" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811203" UsrAttrId="203" UniqueName="AD_AR_CONF_TBY03" GUIDisplayName="Bytes Read03" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811204" UsrAttrId="204" UniqueName="AD_AR_CONF_TBY04" GUIDisplayName="Bytes Read04" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811205" UsrAttrId="205" UniqueName="AD_AR_CONF_TBY05" GUIDisplayName="Bytes Read05" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811206" UsrAttrId="206" UniqueName="AD_AR_CONF_TBY06" GUIDisplayName="Bytes Read06" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811207" UsrAttrId="207" UniqueName="AD_AR_CONF_TBY07" GUIDisplayName="Bytes Read07" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811208" UsrAttrId="208" UniqueName="AD_AR_CONF_TBY08" GUIDisplayName="Bytes Read08" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811209" UsrAttrId="209" UniqueName="AD_AR_CONF_TBY09" GUIDisplayName="Bytes Read09" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811210" UsrAttrId="210" UniqueName="AD_AR_CONF_TBY10" GUIDisplayName="Bytes Read10" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811211" UsrAttrId="211" UniqueName="AD_AR_CONF_TBY11" GUIDisplayName="Bytes Read11" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811212" UsrAttrId="212" UniqueName="AD_AR_CONF_TBY12" GUIDisplayName="Bytes Read12" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811213" UsrAttrId="213" UniqueName="AD_AR_CONF_TBY13" GUIDisplayName="Bytes Read13" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811214" UsrAttrId="214" UniqueName="AD_AR_CONF_TBY14" GUIDisplayName="Bytes Read14" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811215" UsrAttrId="215" UniqueName="AD_AR_CONF_TBY15" GUIDisplayName="Bytes Read15" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811216" UsrAttrId="216" UniqueName="AD_AR_CONF_TBY16" GUIDisplayName="Bytes Read16" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811217" UsrAttrId="217" UniqueName="AD_AR_CONF_TBY17" GUIDisplayName="Bytes Read17" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811218" UsrAttrId="218" UniqueName="AD_AR_CONF_TBY18" GUIDisplayName="Bytes Read18" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811219" UsrAttrId="219" UniqueName="AD_AR_CONF_TBY19" GUIDisplayName="Bytes Read19" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+			<AppsConfig AttrId="42811220" UsrAttrId="220" UniqueName="AD_AR_CONF_TBY20" GUIDisplayName="Bytes Read20" GUIDisplayable="N" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown" />
+	<!-- App Stats For Transaction Availability -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811301" UsrAttrId="301" UniqueName="AD_AR_STAT_AVAIL01" GUIDisplayName="Status1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811302" UsrAttrId="302" UniqueName="AD_AR_STAT_AVAIL02" GUIDisplayName="Status2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811303" UsrAttrId="303" UniqueName="AD_AR_STAT_AVAIL03" GUIDisplayName="Status3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811304" UsrAttrId="304" UniqueName="AD_AR_STAT_AVAIL04" GUIDisplayName="Status4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811305" UsrAttrId="305" UniqueName="AD_AR_STAT_AVAIL05" GUIDisplayName="Status5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811306" UsrAttrId="306" UniqueName="AD_AR_STAT_AVAIL06" GUIDisplayName="Status6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811307" UsrAttrId="307" UniqueName="AD_AR_STAT_AVAIL07" GUIDisplayName="Status7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811308" UsrAttrId="308" UniqueName="AD_AR_STAT_AVAIL08" GUIDisplayName="Status8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811309" UsrAttrId="309" UniqueName="AD_AR_STAT_AVAIL09" GUIDisplayName="Status9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811310" UsrAttrId="310" UniqueName="AD_AR_STAT_AVAIL10" GUIDisplayName="Status10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811311" UsrAttrId="311" UniqueName="AD_AR_STAT_AVAIL11" GUIDisplayName="Status11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811312" UsrAttrId="312" UniqueName="AD_AR_STAT_AVAIL12" GUIDisplayName="Status12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811313" UsrAttrId="313" UniqueName="AD_AR_STAT_AVAIL13" GUIDisplayName="Status13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811314" UsrAttrId="314" UniqueName="AD_AR_STAT_AVAIL14" GUIDisplayName="Status14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811315" UsrAttrId="315" UniqueName="AD_AR_STAT_AVAIL15" GUIDisplayName="Status15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811316" UsrAttrId="316" UniqueName="AD_AR_STAT_AVAIL16" GUIDisplayName="Status16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811317" UsrAttrId="317" UniqueName="AD_AR_STAT_AVAIL17" GUIDisplayName="Status17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811318" UsrAttrId="318" UniqueName="AD_AR_STAT_AVAIL18" GUIDisplayName="Status18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811319" UsrAttrId="319" UniqueName="AD_AR_STAT_AVAIL19" GUIDisplayName="Status19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811320" UsrAttrId="320" UniqueName="AD_AR_STAT_AVAIL20" GUIDisplayName="Status20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_AVAI20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+	<!-- App Stats For Transaction Response Time -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811321" UsrAttrId="321" UniqueName="AD_AR_STAT_RES01" GUIDisplayName="Total Response Time1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811322" UsrAttrId="322" UniqueName="AD_AR_STAT_RES02" GUIDisplayName="Total Response Time2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811323" UsrAttrId="323" UniqueName="AD_AR_STAT_RES03" GUIDisplayName="Total Response Time3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811324" UsrAttrId="324" UniqueName="AD_AR_STAT_RES04" GUIDisplayName="Total Response Time4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811325" UsrAttrId="325" UniqueName="AD_AR_STAT_RES05" GUIDisplayName="Total Response Time5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811326" UsrAttrId="326" UniqueName="AD_AR_STAT_RES06" GUIDisplayName="Total Response Time6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811327" UsrAttrId="327" UniqueName="AD_AR_STAT_RES07" GUIDisplayName="Total Response Time7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811328" UsrAttrId="328" UniqueName="AD_AR_STAT_RES08" GUIDisplayName="Total Response Time8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811329" UsrAttrId="329" UniqueName="AD_AR_STAT_RES09" GUIDisplayName="Total Response Time9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811330" UsrAttrId="330" UniqueName="AD_AR_STAT_RES10" GUIDisplayName="Total Response Time10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811331" UsrAttrId="331" UniqueName="AD_AR_STAT_RES11" GUIDisplayName="Total Response Time11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811332" UsrAttrId="332" UniqueName="AD_AR_STAT_RES12" GUIDisplayName="Total Response Time12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811333" UsrAttrId="333" UniqueName="AD_AR_STAT_RES13" GUIDisplayName="Total Response Time13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811334" UsrAttrId="334" UniqueName="AD_AR_STAT_RES14" GUIDisplayName="Total Response Time14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811335" UsrAttrId="335" UniqueName="AD_AR_STAT_RES15" GUIDisplayName="Total Response Time15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811336" UsrAttrId="336" UniqueName="AD_AR_STAT_RES16" GUIDisplayName="Total Response Time16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811337" UsrAttrId="337" UniqueName="AD_AR_STAT_RES17" GUIDisplayName="Total Response Time17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811338" UsrAttrId="338" UniqueName="AD_AR_STAT_RES18" GUIDisplayName="Total Response Time18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811339" UsrAttrId="339" UniqueName="AD_AR_STAT_RES19" GUIDisplayName="Total Response Time19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811340" UsrAttrId="340" UniqueName="AD_AR_STAT_RES20" GUIDisplayName="Total Response Time20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_RES20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+	<!-- App Stats For Transaction Connect Time -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811341" UsrAttrId="341" UniqueName="AD_AR_STAT_CON01" GUIDisplayName="Connect Time1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811342" UsrAttrId="342" UniqueName="AD_AR_STAT_CON02" GUIDisplayName="Connect Time2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811343" UsrAttrId="343" UniqueName="AD_AR_STAT_CON03" GUIDisplayName="Connect Time3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811344" UsrAttrId="344" UniqueName="AD_AR_STAT_CON04" GUIDisplayName="Connect Time4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811345" UsrAttrId="345" UniqueName="AD_AR_STAT_CON05" GUIDisplayName="Connect Time5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811346" UsrAttrId="346" UniqueName="AD_AR_STAT_CON06" GUIDisplayName="Connect Time6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811347" UsrAttrId="347" UniqueName="AD_AR_STAT_CON07" GUIDisplayName="Connect Time7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811348" UsrAttrId="348" UniqueName="AD_AR_STAT_CON08" GUIDisplayName="Connect Time8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811349" UsrAttrId="349" UniqueName="AD_AR_STAT_CON09" GUIDisplayName="Connect Time9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811350" UsrAttrId="350" UniqueName="AD_AR_STAT_CON10" GUIDisplayName="Connect Time10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811351" UsrAttrId="351" UniqueName="AD_AR_STAT_CON11" GUIDisplayName="Connect Time11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811352" UsrAttrId="352" UniqueName="AD_AR_STAT_CON12" GUIDisplayName="Connect Time12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811353" UsrAttrId="353" UniqueName="AD_AR_STAT_CON13" GUIDisplayName="Connect Time13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811354" UsrAttrId="354" UniqueName="AD_AR_STAT_CON14" GUIDisplayName="Connect Time14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811355" UsrAttrId="355" UniqueName="AD_AR_STAT_CON15" GUIDisplayName="Connect Time15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811356" UsrAttrId="356" UniqueName="AD_AR_STAT_CON16" GUIDisplayName="Connect Time16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811357" UsrAttrId="357" UniqueName="AD_AR_STAT_CON17" GUIDisplayName="Connect Time17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811358" UsrAttrId="358" UniqueName="AD_AR_STAT_CON18" GUIDisplayName="Connect Time18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811359" UsrAttrId="359" UniqueName="AD_AR_STAT_CON19" GUIDisplayName="Connect Time19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811360" UsrAttrId="360" UniqueName="AD_AR_STAT_CON20" GUIDisplayName="Connect Time20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_CON20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+
+	<!-- App Stats For Transaction DNS Time -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811361" UsrAttrId="361" UniqueName="AD_AR_STAT_DNS01" GUIDisplayName="DNS Time1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811362" UsrAttrId="362" UniqueName="AD_AR_STAT_DNS02" GUIDisplayName="DNS Time2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811363" UsrAttrId="363" UniqueName="AD_AR_STAT_DNS03" GUIDisplayName="DNS Time3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811364" UsrAttrId="364" UniqueName="AD_AR_STAT_DNS04" GUIDisplayName="DNS Time4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811365" UsrAttrId="365" UniqueName="AD_AR_STAT_DNS05" GUIDisplayName="DNS Time5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811366" UsrAttrId="366" UniqueName="AD_AR_STAT_DNS06" GUIDisplayName="DNS Time6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811367" UsrAttrId="367" UniqueName="AD_AR_STAT_DNS07" GUIDisplayName="DNS Time7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811368" UsrAttrId="368" UniqueName="AD_AR_STAT_DNS08" GUIDisplayName="DNS Time8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811369" UsrAttrId="369" UniqueName="AD_AR_STAT_DNS09" GUIDisplayName="DNS Time9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811370" UsrAttrId="370" UniqueName="AD_AR_STAT_DNS10" GUIDisplayName="DNS Time10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811371" UsrAttrId="371" UniqueName="AD_AR_STAT_DNS11" GUIDisplayName="DNS Time11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811372" UsrAttrId="372" UniqueName="AD_AR_STAT_DNS12" GUIDisplayName="DNS Time12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811373" UsrAttrId="373" UniqueName="AD_AR_STAT_DNS13" GUIDisplayName="DNS Time13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811374" UsrAttrId="374" UniqueName="AD_AR_STAT_DNS14" GUIDisplayName="DNS Time14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811375" UsrAttrId="375" UniqueName="AD_AR_STAT_DNS15" GUIDisplayName="DNS Time15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811376" UsrAttrId="376" UniqueName="AD_AR_STAT_DNS16" GUIDisplayName="DNS Time16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811377" UsrAttrId="377" UniqueName="AD_AR_STAT_DNS17" GUIDisplayName="DNS Time17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811378" UsrAttrId="378" UniqueName="AD_AR_STAT_DNS18" GUIDisplayName="DNS Time18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811379" UsrAttrId="379" UniqueName="AD_AR_STAT_DNS19" GUIDisplayName="DNS Time19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811380" UsrAttrId="380" UniqueName="AD_AR_STAT_DNS20" GUIDisplayName="DNS Time20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_DNS20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+	
+	<!-- App Stats For Transaction First Buffer Time -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811381" UsrAttrId="381" UniqueName="AD_AR_STAT_FIB01" GUIDisplayName="First Buffer Time1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811382" UsrAttrId="382" UniqueName="AD_AR_STAT_FIB02" GUIDisplayName="First Buffer Time2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811383" UsrAttrId="383" UniqueName="AD_AR_STAT_FIB03" GUIDisplayName="First Buffer Time3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811384" UsrAttrId="384" UniqueName="AD_AR_STAT_FIB04" GUIDisplayName="First Buffer Time4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811385" UsrAttrId="385" UniqueName="AD_AR_STAT_FIB05" GUIDisplayName="First Buffer Time5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811386" UsrAttrId="386" UniqueName="AD_AR_STAT_FIB06" GUIDisplayName="First Buffer Time6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811387" UsrAttrId="387" UniqueName="AD_AR_STAT_FIB07" GUIDisplayName="First Buffer Time7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811388" UsrAttrId="388" UniqueName="AD_AR_STAT_FIB08" GUIDisplayName="First Buffer Time8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811389" UsrAttrId="389" UniqueName="AD_AR_STAT_FIB09" GUIDisplayName="First Buffer Time9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811390" UsrAttrId="390" UniqueName="AD_AR_STAT_FIB10" GUIDisplayName="First Buffer Time10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811391" UsrAttrId="391" UniqueName="AD_AR_STAT_FIB11" GUIDisplayName="First Buffer Time11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811392" UsrAttrId="392" UniqueName="AD_AR_STAT_FIB12" GUIDisplayName="First Buffer Time12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811393" UsrAttrId="393" UniqueName="AD_AR_STAT_FIB13" GUIDisplayName="First Buffer Time13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811394" UsrAttrId="394" UniqueName="AD_AR_STAT_FIB14" GUIDisplayName="First Buffer Time14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811395" UsrAttrId="395" UniqueName="AD_AR_STAT_FIB15" GUIDisplayName="First Buffer Time15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811396" UsrAttrId="396" UniqueName="AD_AR_STAT_FIB16" GUIDisplayName="First Buffer Time16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811397" UsrAttrId="397" UniqueName="AD_AR_STAT_FIB17" GUIDisplayName="First Buffer Time17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811398" UsrAttrId="398" UniqueName="AD_AR_STAT_FIB18" GUIDisplayName="First Buffer Time18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811399" UsrAttrId="399" UniqueName="AD_AR_STAT_FIB19" GUIDisplayName="First Buffer Time19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811400" UsrAttrId="400" UniqueName="AD_AR_STAT_FIB20" GUIDisplayName="First Buffer Time20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_FIB20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+	<!-- App Stats For Transaction Total Bytes Read -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811401" UsrAttrId="401" UniqueName="AD_AR_STAT_TBY01" GUIDisplayName="Bytes Read1" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR1" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811402" UsrAttrId="402" UniqueName="AD_AR_STAT_TBY02" GUIDisplayName="Bytes Read2" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR2" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811403" UsrAttrId="403" UniqueName="AD_AR_STAT_TBY03" GUIDisplayName="Bytes Read3" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR3" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811404" UsrAttrId="404" UniqueName="AD_AR_STAT_TBY04" GUIDisplayName="Bytes Read4" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR4" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811405" UsrAttrId="405" UniqueName="AD_AR_STAT_TBY05" GUIDisplayName="Bytes Read5" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR5" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811406" UsrAttrId="406" UniqueName="AD_AR_STAT_TBY06" GUIDisplayName="Bytes Read6" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR6" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811407" UsrAttrId="407" UniqueName="AD_AR_STAT_TBY07" GUIDisplayName="Bytes Read7" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR7" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811408" UsrAttrId="408" UniqueName="AD_AR_STAT_TBY08" GUIDisplayName="Bytes Read8" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR8" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811409" UsrAttrId="409" UniqueName="AD_AR_STAT_TBY09" GUIDisplayName="Bytes Read9" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR9" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811410" UsrAttrId="410" UniqueName="AD_AR_STAT_TBY10" GUIDisplayName="Bytes Read10" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR10" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811411" UsrAttrId="411" UniqueName="AD_AR_STAT_TBY11" GUIDisplayName="Bytes Read11" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR11" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811412" UsrAttrId="412" UniqueName="AD_AR_STAT_TBY12" GUIDisplayName="Bytes Read12" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR12" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811413" UsrAttrId="413" UniqueName="AD_AR_STAT_TBY13" GUIDisplayName="Bytes Read13" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR13" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811414" UsrAttrId="414" UniqueName="AD_AR_STAT_TBY14" GUIDisplayName="Bytes Read14" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR14" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811415" UsrAttrId="415" UniqueName="AD_AR_STAT_TBY15" GUIDisplayName="Bytes Read15" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR15" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811416" UsrAttrId="416" UniqueName="AD_AR_STAT_TBY16" GUIDisplayName="Bytes Read16" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR16" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811417" UsrAttrId="417" UniqueName="AD_AR_STAT_TBY17" GUIDisplayName="Bytes Read17" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR17" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811418" UsrAttrId="418" UniqueName="AD_AR_STAT_TBY18" GUIDisplayName="Bytes Read18" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR18" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811419" UsrAttrId="419" UniqueName="AD_AR_STAT_TBY19" GUIDisplayName="Bytes Read19" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR19" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+		<AppsStats>
+			<CoreAppsStats AttrId="42811420" UsrAttrId="420" UniqueName="AD_AR_STAT_TBY20" GUIDisplayName="Bytes Read20" TableName="ADMERCURYBAC" ColumnName="AR_STATS_TBR20" ScaleFactor="1000" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="MB" IsArrayAttribute="Y" GUIGraphedByDefault="N" />
+		</AppsStats>
+	
+	<!--Stats attribute For Data Availability -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811421" UsrAttrId="421" UniqueName="AD_STAT_DAVAIL" GUIDisplayName="Data Availability" TableName="ADMERCURYBAC" ColumnName="DATA_AVAIL" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="Y" GUIStringLength="0" MoReferenceType="0" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="N" GUIGraphedByDefault="Y" DefaultValue="" />
+		</AppsStats>
+	<!--Stats attribute For Availability -->
+		<AppsStats>
+			<CoreAppsStats AttrId="42811422" UsrAttrId="422" UniqueName="AD_STAT_AVAIL" GUIDisplayName="Availability" TableName="ADMERCURYBAC" ColumnName="TOT_AVAIL" ScaleFactor="1000" AttrReferenceType="ANY" UseNormalDistribution="Y" GUIStringLength="0" MoReferenceType="0" DisplayType="Integer" UnitOfMeasurement="%" IsArrayAttribute="N" GUIGraphedByDefault="N" DefaultValue="" />
+		</AppsStats>
+		</Application>
+	</Attributes>	
+</MetaData>	

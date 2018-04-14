@@ -1,0 +1,153 @@
+KERNEL=$(shell uname -s)
+KERNEL_VERSION=$(shell uname -r)
+MKDIR=$(shell which mkdir)
+
+KERNELDIR=${KERNEL}
+ifeq (${KERNEL}, HP-UX)
+	KERNEL:=HPUX
+endif
+
+ARFLAGS=-rcvs
+dynamic=
+static=
+INCLUDES=-I.
+
+DEFINES=-DKERNEL='"${KERNEL}"' -DKERNEL_VERSION='"${KERNEL_VERSION}"'
+
+ifeq (${KERNEL}, Linux)
+	KERNEL:=LINUX
+	CXX:=$(shell which g++)
+	LD:=${CXX}
+	ifeq ($(shell uname -m), x86_64)
+		PROCESSOR:=X64
+		OBJTYPE:=64
+		BYTES_PER_PTR:=8
+		DEFINES+=-DLINUX64
+	else
+		OBJTYPE:=32
+		BYTES_PER_PTR:=4
+	endif
+	OSNAME:=LINUX
+	DEFINES+=-DLINUX -DUNIX -D_REENTRANT 
+	dynamic=
+	static=
+	DEBUG_FLAGS:=-DDEBUG -O0 -g3 -Wall
+	RELEASE_FLAGS:=-DRELEASE -O2
+	ifneq (${JAVA_HOME},)
+		INCLUDES+=-I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux
+	endif
+endif
+
+ifeq (${KERNEL}, HPUX)
+	CXX:=$(shell which aCC)
+	LD:=${CXX}
+	CPPFLAGS=+Z -ext +W740,741,749,829
+	LDFLAGS=-n -Wl,-E +Z -ext
+	ifeq ($(shell uname -m), ia64)
+		PROCESSOR:=IA64
+		OSNAME:=HPUX
+		ifeq (${OBJTYPE},32)
+			CPPFLAGS+=-AA +DD32
+			LDFLAGS+=-AA +DD32
+			DEFINES+=-DHPUX -DUNIX -DRW_MULTI_THREAD -DRWSTD_MULTI_THREAD -D_THREAD_SAFE -D_RWSTD_MULTI_THREAD -D_RW_MULTI_THREAD
+		else
+			OBJTYPE:=64
+			CPPFLAGS+=-AA +DD64
+			LDFLAGS+=-AA +DD64
+			DEFINES+=-DHPUX -DUNIX -D_XOPEN_SOURCE_EXTENDED -D_LP64 -DRW_MULTI_THREAD -DRWSTD_MULTI_THREAD
+		endif
+	else
+		OSNAME:=HPUX
+		PROCESSOR:=PA-RISC
+		ifeq (${OBJTYPE},64)
+			CPPFLAGS+=+DA2.0W
+			LDFLAGS+=+DA2.0W
+			DEFINES+=-DHPUX -DUNIX -DRW_MULTI_THREAD -DRWSTD_MULTI_THREAD -D_THREAD_SAFE -D_RWSTD_MULTI_THREAD -D_RW_MULTI_THREAD \
+				-D_POSIX_C_SOURCE=199506L -D_XOPEN_SOURCE_EXTENDED -D_LP64
+		else
+			CPPFLAGS+=+DA1.1
+			LDFLAGS+=+DA1.1
+			DEFINES+=-DHPUX -DUNIX -DRW_MULTI_THREAD -DRWSTD_MULTI_THREAD -D_THREAD_SAFE -D_RWSTD_MULTI_THREAD -D_RW_MULTI_THREAD
+		endif
+	endif
+endif
+
+ifeq (${KERNEL}, SunOS)
+	CXX:=$(shell which CC)
+	LD:=${CXX}
+	PROCESSOR:=$(shell uname -p)
+	DEFINES+=-DSOLARIS -D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT
+	CPPFLAGS:=-KPIC -mt -compat=5 -w
+	LDFLAGS:= -KPIC -mt
+	ifeq (${PROCESSOR}, i386)
+		PROCESSOR:=X86
+		OSNAME:=SOLARISX86
+		DEFINES+=-DSOLARISX86
+	else
+		OSNAME:=SOLARIS
+		LDFLAGS+=-KPIC -mt
+	endif
+
+	ifeq (${OBJTYPE}, 64)
+		LDFLAGS+=-64
+	else
+		OBJTYPE:=32
+	endif
+
+	dynamic=-Bdynamic
+	static=-Bstatic
+	ifneq (${JAVA_HOME},)
+		INCLUDES+=-I${JAVA_HOME}/include -I${JAVA_HOME}/include/solaris
+	endif
+	DEBUG_FLAGS:=-DDEBUG -O0 +w -xs -g
+	RELEASE_FLAGS:=-DRELEASE -O2
+endif
+
+ifeq (${KERNEL}, AIX)
+	KERNEL_VERSION:=$(shell uname -v)$(shell uname -r)
+	CXX:=$(shell which xlC_r)
+	LD:=${CXX}
+	PROCESSOR=$(shell uname -p)
+	DEFINES+=-DAIX -Daix -D_THREAD_SAFE -DRWSTD_MULTI_THREAD -DUNIX -DRW_MULTI_THREAD -DMALLOCMULTIHEAP=1
+	CPPFLAGS=-fPIC -qthreaded -qeh -qstaticinline
+	OSNAME=AIX
+	dynamic=-bdynamic
+	static=-bstatic
+	ifneq (${OBJTYPE},)
+		ARFLAGS+=-X ${OBJTYPE}
+	endif
+endif
+
+# this is done so Windows 2000, xp & 2003 are all identified as cygwin
+ifeq ($(findstring CYGWIN_NT,${KERNEL}),CYGWIN_NT)
+	CL:=$(shell which CL.EXE)
+	CXX:=$(shell cygpath -m ${CL})
+	LD:=$(shell cygpath -m ${MSDEV_ROOT}/bin/link.exe)
+	OSNAME:=WINDOWS
+	KERNELDIR:=../${OSNAME}
+	CPPFLAGS:=/D ${OSNAME} 
+	LDFLAGS:=/machine:I386
+	DEFINES:=/D "_WINDOWS" /W3 /GX /D "WIN32" /D "__WIN32__" /D "_WIN32" /D "NOMINMAX" /YX
+endif
+
+ifneq (${PROCESSOR},)
+	DEFINES+=-D$(shell echo ${OSNAME}-${PROCESSOR} | sed 's/-/_/g')
+endif
+
+CFLAGS=${DEFINES} ${INCLUDES} 
+
+CPPSOURCEFILES=$(shell ls *.cpp 2> /dev/null)
+CSOURCEFILES=$(shell ls *.c  2> /dev/null)
+
+ifeq (${TARGET_PATH},)
+	ifeq (${PROCESSOR},)
+    		TARGET_PATH:=${KERNELDIR}${OBJTYPE}
+	else
+		TARGET_PATH:=${KERNELDIR}-${PROCESSOR}-${OBJTYPE}
+	endif
+	ifneq (${DEPTH},)
+		TARGET_PATH:=${DEPTH}/${TARGET_PATH}
+	endif
+endif
+
+DIST_PATH=$(DEPTH)/dist

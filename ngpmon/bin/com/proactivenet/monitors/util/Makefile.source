@@ -1,0 +1,6 @@
+
+SUBDIRS = logFileUtil webutil/htmlparser webutil js WebSphereTopUtil
+SOURCE.java = ProcessCommand.java Field.java LongField.java  \
+			ntperfinfo.java PdhPerfInfo.java PNNTUtil.java \
+			Base64Converter.java FetchValues.java UrlCat.java \
+			DllHelper.java SSLWrapper.java JSSEWrapper.java OracleDDBase.java

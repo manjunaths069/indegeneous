@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- TivoliEventRecvMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="31240" MoTypeType="APPS" ParentMoType="1" UniqueName="TivoliERMon" GUIDisplayName="TivoliEventReceiver Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.TivoliEventReceiverMon.TivoliEventReceiverMon" HasMoreInfo="N" OS="SunOS" IsStatic="Y" SupportFlashCheck="N" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="31241" MoTypeType="APPS" ParentMoType="31240" UniqueName="TivoliEventRecv" GUIDisplayName="Event Receiver for Tivoli"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.TivoliEventReceiverMon.TivoliEventReceiverMon" OS="SunOS:Linux:HP-UX:AIX"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="31240999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" UseAsMODisplayName="Y" DisplayType="String" ScaleFactor="1000" DefaultValue="TivoliEventReceiver Monitor"/>
+      <AppsInput AttrId="31241999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Event Receiver for Tivoli"/>
+      <AppsInput AttrId="31241002" UsrAttrId="2" UniqueName="FILTERFILE" GUIDisplayName="Filter File" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="63" IsDefaultValueSet="N" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31241995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="31241004" UsrAttrId="4" UniqueName="DEVASSOC" GUIDisplayName="Device Associated" GUIInputType="CTL" ScaleFactor="1000" GUIDisplaySequenceNumber="60" GUIRequiredOnCreate="N" DisplayType="Boolean"/>
+      <AppsInput AttrId="31241994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="31241001" UsrAttrId="1" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="62" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="5151"/>
+      <AppsInput AttrId="31241003" UsrAttrId="3" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIDisplaySequenceNumber="61" GUIInputType="CFG" DisplayType="IPAddress" ScaleFactor="1000"/>
+      <AppsInput AttrId="31241998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="900"/>
+      <AppsInput AttrId="31241980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="64" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31241981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="65" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31241982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="66" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31241468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="67" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="31241993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="31241100" UsrAttrId="100" UniqueName="NUMEVENTS" GUIDisplayName="Events Received" TableName="TIVOLI_EVENT_REC" ColumnName="EVENT_COUNT" ScaleFactor="1" DisplayType="Integer" UnitOfMeasurement="#"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

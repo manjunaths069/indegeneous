@@ -1,0 +1,10 @@
+Availability        ,ApacheMonInfo       ,AVAILABILITY        ,5 ,1 ,5
+                    ,ntsqlservermon      ,Locks Held          ,3
+                    ,ntsqlservermon      ,Cache Hit Ratio     ,3
+                    ,ntsqlservermon      ,Log Space Available ,4
+                    ,ntsqlservermon      ,User Connections    ,4
+                    ,ntsqlservermon      ,Total Server Memory ,4
+                    ,ntsqlservermon      ,Connection Memory   ,3
+                    ,ntsqlservermon      ,Lock Memory         ,3
+                    ,ntsqlservermon      ,Average Wait Time   ,3
+                    ,ntsqlservermon      ,DeadLocks/Sec       ,4

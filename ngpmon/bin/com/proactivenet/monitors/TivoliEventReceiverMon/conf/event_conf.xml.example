@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PronetTivoliEventConf [   
+
+<!ELEMENT PronetTivoliEventConf (TivoliRule+)>
+
+<!ELEMENT TivoliRule (Severity?, Origin?, Format*)>
+<!ATTLIST TivoliRule action             (exclude | format)              #REQUIRED
+                     source             CDATA                           "All"
+                     eventclass         CDATA                           "All"
+                     severity_mapping   (normal|minor|major|critical)   #IMPLIED
+>
+
+<!ELEMENT Severity ANY>
+
+<!ELEMENT Origin ANY>
+
+<!ELEMENT Format ANY>
+<!ATTLIST Format type           (text | derived)    #REQUIRED
+                 msg_prefix     CDATA               "Tivoli Event"
+                 event_param    CDATA               #IMPLIED
+                 include        (namevalue | value) "namevalue"
+                 param_prefixby CDATA               #IMPLIED
+                 param_suffixby CDATA               #IMPLIED
+>                   
+]>
+
+
+<!-- SAMPLE IMPLEMENTATION -->
+<!-- The severities supported are FATAL, CRITICAL, MINOR, WARNING, HARMLESS, UNKNOWN -->
+<!-- Origins should be specified in IPAddress/Hostname format -->
+
+<PronetTivoliEventConf>
+
+<!-- EXCLUDE RULES -->
+
+<!-- A Rule that excludes all Events having WARNING, HARMLESS or UNKNOWN Severity -->
+
+    <TivoliRule action="exclude" source="All" eventclass="All">
+         <Severity>WARNING HARMLESS UNKNOWN</Severity>
+    </TivoliRule>
+    
+<!-- A Rule that excludes all High_SysCPUUsage Event matching any of the 
+     severity and origin specified -->
+
+    <TivoliRule action="exclude" source="TMNT" eventclass="High_SysCPUUsage">
+        <Severity>MINOR HARMLESS</Severity>
+        <Origin>192.168.3.120 ghatkopar</Origin>
+    </TivoliRule>
+
+<!-- FORMAT RULES -->   
+
+<!-- The default formatting rule applicable for all Events 
+     from the Event Sources TMNT and NT --> 
+
+    <TivoliRule action="format" source="TMNT" eventclass="All">
+         <Format type="text" msg_prefix="Tivoli Event "/>
+    </TivoliRule>
+
+    <TivoliRule action="format" source="NT" eventclass="All">
+         <Format type="text" msg_prefix="Tivoli Event "/>
+    </TivoliRule>   
+    
+<!-- A formatting rule for All Events having CRITICAL or FATAL Severity.
+     As no source is mentioned it defaults to "All" --> 
+
+    <TivoliRule action="format" eventclass="All" severity_mapping="critical">
+         <Severity> CRITICAL FATAL </Severity>
+         <Origin>vaigai 192.168.3.140</Origin>
+         <Format type="text" msg_prefix="Tivoli Critical Event "/>
+    </TivoliRule>
+
+<!-- A sample rule that shows how the formatting attributes can be used -->
+
+    <TivoliRule action="format" source="TMNT" eventclass="High_SysCPUUsage" severity_mapping="major">
+         <Severity>CRITICAL FATAL</Severity>
+         <Format type="text" msg_prefix="Tivoli Critical Event FOR TMNT"/>
+         <Format type="derived" event_param="profilename" include="namevalue"/>
+         <Format type="derived" event_param="persyscpuusag" include="value" param_prefixby=" System CPU details" param_suffixby="in percentage"/>
+    </TivoliRule>
+</PronetTivoliEventConf>

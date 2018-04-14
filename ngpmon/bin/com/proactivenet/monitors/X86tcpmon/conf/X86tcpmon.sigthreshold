@@ -1,0 +1,55 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+#
+# Rules applied below:
+#
+# 0) Any time an attribute is suppressed, also set sensitivity=0. Vice versa applies also.
+#    This is important since GUI only  shows sensitivity  - the convention will be that sensitivity=0
+#       implies suppressed
+#
+# 1) Any ERROR attributes should have "below"  thresholds suppressed.
+#       For example, we do NOT want to generate an event if tcpRetransBytes falls below baseline.
+#       Generally this will not happen, but even if it does we do not want to identify as a root cause
+#       for a problem.
+#       NOTE: This is not the case with all attributes ( mainly only for ERROR condition attributes ).
+#       For example, knowing that "In Bytes" has dropped below baseline is useful in some cases and may
+#       actually indicate a problem.
+#
+# 2) Padding is set to 1 Unit for ERROR conditions and 5-15 Units for other attributes. This is strictly
+#       based off of observations on a loaded system, and knowing what the attributes represent.
+#       The ERROR condition attributes have lower padding since we don't want to miss any events on
+#       those attributes, where the other ones we are trying to filter events out.
+#
+#
+X86SolarisTCPMon	tcpCurrEstab	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+X86SolarisTCPMon	tcpHalfOpenDrop	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInBytes	Normal	-1	below	0.0	50.0	40.0	-1	0	Auto
+X86SolarisTCPMon	tcpInBytes	Normal	-1	above	0.0	50.0	15.0	-1	0	Auto
+X86SolarisTCPMon	tcpInDataDupBytes	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInDataDupSegs	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInDataInorderByte	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+X86SolarisTCPMon	tcpInDataInorderSegs	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+X86SolarisTCPMon	tcpInDataPartDupByte	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInDataPartDupSegs	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInSegs	Normal	-1	above	0.0	50.0	50.0	-1	0	Auto
+X86SolarisTCPMon	tcpInDataUnorderByte	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpInDataUnorderSegs	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpListenDrop	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpListenDropQ0	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpOutBytes	Normal	-1	below	0.0	50.0	40.0	-1	0	Auto
+X86SolarisTCPMon	tcpOutBytes	Normal	-1	above	0.0	50.0	15.0	-1	0	Auto
+X86SolarisTCPMon	tcpOutDataBytes	Normal	-1	above	0.0	50.0	100.0	-1	1	Auto
+X86SolarisTCPMon	tcpOutDataSegs	Normal	-1	above	0.0	50.0	200.0	-1	1	Auto
+X86SolarisTCPMon	tcpOutSegs	Normal	-1	above	0.0	50.0	50.0	-1	0	Auto
+X86SolarisTCPMon	tcpRetransBytes	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86SolarisTCPMon	tcpRetransSegs	Normal	-1	above	0.0	50.0	-1	-1	0	Auto

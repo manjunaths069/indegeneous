@@ -1,0 +1,2 @@
+home1;192.168.3.86;A:1:Logical:GroupA:false:false/B:2:Logical:GroupB:false:false/C:3:Logical:GroupC:true:true;
+

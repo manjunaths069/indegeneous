@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="Y" MoTypeId="27060" MoTypeType="PERS" EndUserReportable="Y" UniqueName="encodingopt" GUIDisplayName="encodingopt" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="270601" GUIDisplayable="Y" UniqueName="ENCODINGOPT" GUIDisplayName="Log File Encoding" IsDefaultValueSet="N" DisplayType="String" EndUserReportable="Y" UseAsMODisplayName="Y" DefaultValue="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="N" GUIEditable="N" UseAsForcedDBKey="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+<Persistent AttrId="270602" GUIDisplayable="Y" UniqueName="ENCODINGOPT1" GUIDisplayName="Log File Encoding" IsDefaultValueSet="N" DisplayType="Integer" EndUserReportable="Y"  DefaultValue="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="N" GUIEditable="N" UseAsForcedDBKey="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+</Attributes>
+</MetaData>

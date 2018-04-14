@@ -1,0 +1,4 @@
+NokiaIPSOSystem	MEM_USED	Normal	30	above	0.0	50.0	10.0	-1	0
+NokiaIPSOSystem	SWAP_USED	Normal	30	above	0.0	50.0	5.0	-1	0
+NokiaIPSOSystem	PROCESSES	Normal	30	below	0.0	50.0	40.0	-1	0
+NokiaIPSOSystem	PROCESSES	Normal	30	above	0.0	50.0	15.0	-1	0

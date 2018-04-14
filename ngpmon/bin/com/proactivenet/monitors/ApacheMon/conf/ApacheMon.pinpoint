@@ -1,0 +1,10 @@
+                    ,ApacheMonInfo       ,BYTES_TOTAL         ,3
+                    ,ApacheMonInfo       ,CURRENT_CONNECTIONS ,3
+                    ,ApacheMonInfo       ,MAXIMUM_CONNECTIONS ,1
+                    ,ApacheMonInfo       ,GET_REQUESTS        ,2
+                    ,ApacheMonInfo       ,POST_REQUESTS       ,2
+                    ,ApacheMonInfo       ,NOT_FOUND_ERRORS    ,2
+                    ,ApacheMonInfo       ,CLIENT_SIDE_ERRORS  ,3
+                    ,ApacheMonInfo       ,SERVER_SIDE_ERRORS  ,3
+                    ,ApacheMonInfo       ,TOTAL_ERRORS        ,3
+Availability        ,ApacheMonInfo       ,AVAILABILITY        ,5	,1	,5

@@ -1,0 +1,4 @@
+# File        : DMXProcessMon.monitorGroup
+# Description : MonitorGroup for Tivoli Process  Monitor
+
+System|DMXAdapter|Adapter for Tivoli|DMXProcess

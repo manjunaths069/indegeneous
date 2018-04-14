@@ -1,0 +1,5 @@
+                    ,RtEmailResponse     ,SMTPTIME            ,2
+                    ,RtEmailResponse     ,POPTIME             ,2
+                    ,RtEmailResponse     ,TOTALTIME           ,2
+Availability        ,RtEmailResponse     ,AVAILABILITY        ,5	,1	,5
+

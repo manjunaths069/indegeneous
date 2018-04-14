@@ -1,0 +1,5 @@
+# File        : RouterCpuMem.monitorGroup
+# Description : MonitorGroup for Router CPU MEMORY 
+# Date        : Tue Jan 09 2007
+
+Network|DistRtrCpuMem

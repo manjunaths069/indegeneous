@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- JVMMonMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42766" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="GenericJVMMon" GUIDisplayName="Generic JVM Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.VamJMXMon.VamJMXMon" IsStatic="Y" OS="SunOS:Windows:Linux:HP-UX:AIX" IsNewFrameWork="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="42767" MoTypeType="APPS" ParentMoType="42766" UniqueName="GenericJVM" GUIDisplayName="Generic JVM"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.VamJMXMon.VamJMXMon" IsStatic="Y" IsNewFrameWork="Y" OS="SunOS:Windows:Linux:HP-UX:AIX"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42766999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Generic JVM"/>
+      <AppsInput AttrId="42767999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="42767005" UsrAttrId="5" UniqueName="INITIAL_CTXT" GUIDisplayName="Initial Context" GUIRequiredOnCreate="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="55" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767009" UsrAttrId="9" UniqueName="ATTRIBUTE_STRING" GUIDisplayName="Attribute String" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="java.lang:type=ClassLoading+TotalLoadedClassCount,UnloadedClassCount,CollectionCount,used,committed,used,committed,DaemonThreadCount,ThreadCount,TotalCompilationTime,max,TotalPhysicalMemorySize,TotalSwapSpaceSize,VmVendor,Uptime"/>
+      <AppsInput AttrId="42767091" UsrAttrId="91" UniqueName="STATS_ATTRIB50" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767151" UsrAttrId="151" UniqueName="CONFIG30" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767090" UsrAttrId="90" UniqueName="STATS_ATTRIB49" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767089" UsrAttrId="89" UniqueName="STATS_ATTRIB48" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767088" UsrAttrId="88" UniqueName="STATS_ATTRIB47" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767010" UsrAttrId="10" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42767049" UsrAttrId="49" UniqueName="STATS_ATTRIB9" GUIDisplayName="Thread Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="ThreadCount+java.lang:type=Threading+Stats+java.lang.Integer+Thread Count;1.0;#;false;true;RAW"/>
+      <AppsInput AttrId="42767087" UsrAttrId="87" UniqueName="STATS_ATTRIB46" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767086" UsrAttrId="86" UniqueName="STATS_ATTRIB45" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767048" UsrAttrId="48" UniqueName="STATS_ATTRIB8" GUIDisplayName="Daemon Thread Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="DaemonThreadCount+java.lang:type=Threading+Stats+java.lang.Integer+Daemon Thread Count;1.0;#;false;true;RAW"/>
+      <AppsInput AttrId="42767085" UsrAttrId="85" UniqueName="STATS_ATTRIB44" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767047" UsrAttrId="47" UniqueName="STATS_ATTRIB7" GUIDisplayName="Committed Non Heap Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="NonHeapMemoryUsage^committed+java.lang:type=Memory+Stats+java.lang.Long+Committed Non Heap Memory;9.5367431640625E-7;MB;false;true;RAW"/>
+      <AppsInput AttrId="42767084" UsrAttrId="84" UniqueName="STATS_ATTRIB43" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767046" UsrAttrId="46" UniqueName="STATS_ATTRIB6" GUIDisplayName="Used Non Heap Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="NonHeapMemoryUsage^used+java.lang:type=Memory+Stats+java.lang.Long+Used Non Heap Memory;9.5367431640625E-7;MB;false;true;RAW"/>
+      <AppsInput AttrId="42767045" UsrAttrId="45" UniqueName="STATS_ATTRIB5" GUIDisplayName="Committed Heap Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="HeapMemoryUsage^committed+java.lang:type=Memory+Stats+java.lang.Long+Committed Heap Memory;9.5367431640625E-7;MB;false;true;RAW"/>
+      <AppsInput AttrId="42767083" UsrAttrId="83" UniqueName="STATS_ATTRIB42" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767082" UsrAttrId="82" UniqueName="STATS_ATTRIB41" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767044" UsrAttrId="44" UniqueName="STATS_ATTRIB4" GUIDisplayName="Used Heap Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="HeapMemoryUsage^used+java.lang:type=Memory+Stats+java.lang.Long+Used Heap Memory;9.5367431640625E-7;MB;false;true;RAW"/>
+      <AppsInput AttrId="42767081" UsrAttrId="81" UniqueName="STATS_ATTRIB40" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767043" UsrAttrId="43" UniqueName="STATS_ATTRIB3" GUIDisplayName="Garbage Collection Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="CollectionCount+java.lang:name=Copy,type=GarbageCollector+Stats+java.lang.Long+Garbage Collection Count;1.0;per sec;false;true;RATE"/>
+      <AppsInput AttrId="42767042" UsrAttrId="42" UniqueName="STATS_ATTRIB2" GUIDisplayName="Unloaded Class Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="UnloadedClassCount+java.lang:type=ClassLoading+Stats+java.lang.Long+Unloaded Class Count;1.0;per sec;false;true;RATE"/>
+      <AppsInput AttrId="42767041" UsrAttrId="41" UniqueName="STATS_ATTRIB1" GUIDisplayName="Total Loaded Class Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TotalLoadedClassCount+java.lang:type=ClassLoading+Stats+java.lang.Long+Total Loaded Class Count;1.0;per sec;false;true;RATE"/>
+      <AppsInput AttrId="42767150" UsrAttrId="150" UniqueName="CONFIG29" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767149" UsrAttrId="149" UniqueName="CONFIG28" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767148" UsrAttrId="148" UniqueName="CONFIG27" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767147" UsrAttrId="147" UniqueName="CONFIG26" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767121" UsrAttrId="121" UniqueName="CONFIG_ATTRIB30" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767146" UsrAttrId="146" UniqueName="CONFIG25" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767145" UsrAttrId="145" UniqueName="CONFIG24" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767144" UsrAttrId="144" UniqueName="CONFIG23" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767143" UsrAttrId="143" UniqueName="CONFIG22" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767142" UsrAttrId="142" UniqueName="CONFIG21" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767141" UsrAttrId="141" UniqueName="CONFIG20" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42767080" UsrAttrId="80" UniqueName="STATS_ATTRIB39" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767079" UsrAttrId="79" UniqueName="STATS_ATTRIB38" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767078" UsrAttrId="78" UniqueName="STATS_ATTRIB37" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767996" UsrAttrId="996" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="42767077" UsrAttrId="77" UniqueName="STATS_ATTRIB36" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767076" UsrAttrId="76" UniqueName="STATS_ATTRIB35" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767075" UsrAttrId="75" UniqueName="STATS_ATTRIB34" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767074" UsrAttrId="74" UniqueName="STATS_ATTRIB33" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767073" UsrAttrId="73" UniqueName="STATS_ATTRIB32" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767072" UsrAttrId="72" UniqueName="STATS_ATTRIB31" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767071" UsrAttrId="71" UniqueName="STATS_ATTRIB30" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767120" UsrAttrId="120" UniqueName="CONFIG_ATTRIB29" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767119" UsrAttrId="119" UniqueName="CONFIG_ATTRIB28" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767118" UsrAttrId="118" UniqueName="CONFIG_ATTRIB27" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767117" UsrAttrId="117" UniqueName="CONFIG_ATTRIB26" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767116" UsrAttrId="116" UniqueName="CONFIG_ATTRIB25" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767115" UsrAttrId="115" UniqueName="CONFIG_ATTRIB24" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767140" UsrAttrId="140" UniqueName="CONFIG19" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767114" UsrAttrId="114" UniqueName="CONFIG_ATTRIB23" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767113" UsrAttrId="113" UniqueName="CONFIG_ATTRIB22" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767139" UsrAttrId="139" UniqueName="CONFIG18" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767003" UsrAttrId="3" UniqueName="JNDI_NAME" GUIRequiredOnCreate="Y" GUIDisplayName="JNDI Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="jmxrmi"/>
+      <AppsInput AttrId="42767112" UsrAttrId="112" UniqueName="CONFIG_ATTRIB21" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767138" UsrAttrId="138" UniqueName="CONFIG17" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767137" UsrAttrId="137" UniqueName="CONFIG16" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767111" UsrAttrId="111" UniqueName="CONFIG_ATTRIB20" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767136" UsrAttrId="136" UniqueName="CONFIG15" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767135" UsrAttrId="135" UniqueName="CONFIG14" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767134" UsrAttrId="134" UniqueName="CONFIG13" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767133" UsrAttrId="133" UniqueName="CONFIG12" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767132" UsrAttrId="132" UniqueName="CONFIG11" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767131" UsrAttrId="131" UniqueName="CONFIG10" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="42767069" UsrAttrId="69" UniqueName="STATS_ATTRIB29" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767068" UsrAttrId="68" UniqueName="STATS_ATTRIB28" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767004" UsrAttrId="4" UniqueName="CONN_TYPE" GUIDisplayName="Connection Type" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="54" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="JVM 1.5"/>
+      <AppsInput AttrId="42767067" UsrAttrId="67" UniqueName="STATS_ATTRIB27" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767066" UsrAttrId="66" UniqueName="STATS_ATTRIB26" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767065" UsrAttrId="65" UniqueName="STATS_ATTRIB25" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767064" UsrAttrId="64" UniqueName="STATS_ATTRIB24" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767063" UsrAttrId="63" UniqueName="STATS_ATTRIB23" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767062" UsrAttrId="62" UniqueName="STATS_ATTRIB22" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767061" UsrAttrId="61" UniqueName="STATS_ATTRIB21" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767110" UsrAttrId="110" UniqueName="CONFIG_ATTRIB19" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767060" UsrAttrId="60" UniqueName="STATS_ATTRIB20" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767109" UsrAttrId="109" UniqueName="CONFIG_ATTRIB18" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767108" UsrAttrId="108" UniqueName="CONFIG_ATTRIB17" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767107" UsrAttrId="107" UniqueName="CONFIG_ATTRIB16" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767106" UsrAttrId="106" UniqueName="CONFIG_ATTRIB15" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767105" UsrAttrId="105" UniqueName="CONFIG_ATTRIB14" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767104" UsrAttrId="104" UniqueName="CONFIG_ATTRIB13" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767130" UsrAttrId="130" UniqueName="CONFIG09" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767103" UsrAttrId="103" UniqueName="CONFIG_ATTRIB12" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767129" UsrAttrId="129" UniqueName="CONFIG08" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767102" UsrAttrId="102" UniqueName="CONFIG_ATTRIB11" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767128" UsrAttrId="128" UniqueName="CONFIG07" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767101" UsrAttrId="101" UniqueName="CONFIG_ATTRIB10" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767127" UsrAttrId="127" UniqueName="CONFIG06" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767059" UsrAttrId="59" UniqueName="STATS_ATTRIB19" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767008" UsrAttrId="8" UniqueName="PARENT_MBEAN" GUIDisplayName="Parent MBean" GUIDisplayable="N" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767058" UsrAttrId="58" UniqueName="STATS_ATTRIB18" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767057" UsrAttrId="57" UniqueName="STATS_ATTRIB17" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767056" UsrAttrId="56" UniqueName="STATS_ATTRIB16" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767055" UsrAttrId="55" UniqueName="STATS_ATTRIB15" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767054" UsrAttrId="54" UniqueName="STATS_ATTRIB14" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767053" UsrAttrId="53" UniqueName="STATS_ATTRIB13" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767052" UsrAttrId="52" UniqueName="STATS_ATTRIB12" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767051" UsrAttrId="51" UniqueName="STATS_ATTRIB11" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767997" UsrAttrId="997" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="42767050" UsrAttrId="50" UniqueName="STATS_ATTRIB10" GUIDisplayName="Total Compilation Time" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TotalCompilationTime+java.lang:type=Compilation+Stats+java.lang.Long+Total Compilation Time;0.0010;sec;true;true;RAW"/>
+      <AppsInput AttrId="42767100" UsrAttrId="100" UniqueName="CONFIG_ATTRIB09" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767099" UsrAttrId="99" UniqueName="CONFIG_ATTRIB08" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767098" UsrAttrId="98" UniqueName="CONFIG_ATTRIB07" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767097" UsrAttrId="97" UniqueName="CONFIG_ATTRIB06" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X"/>
+      <AppsInput AttrId="42767096" UsrAttrId="96" UniqueName="CONFIG_ATTRIB05" GUIDisplayName="JVM Uptime" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="Uptime+java.lang:type=Runtime+Config+java.lang.Long+JVM Uptime;1.0;ms;false;false;RAW"/>
+      <AppsInput AttrId="42767095" UsrAttrId="95" UniqueName="CONFIG_ATTRIB04" GUIDisplayName="JVM Vendor" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="VmVendor+java.lang:type=Runtime+Config+java.lang.String+JVM Vendor;1.0;None;false;false;RAW"/>
+      <AppsInput AttrId="42767094" UsrAttrId="94" UniqueName="CONFIG_ATTRIB03" GUIDisplayName="Total Swap Space" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TotalSwapSpaceSize+java.lang:type=OperatingSystem+Config+java.lang.Long+Total Swap Space;1.0E-6;B;false;false;RAW"/>
+      <AppsInput AttrId="42767093" UsrAttrId="93" UniqueName="CONFIG_ATTRIB02" GUIDisplayName="Total Physical Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TotalPhysicalMemorySize+java.lang:type=OperatingSystem+Config+java.lang.Long+Total Physical Memory;1.0E-6;B;false;false;RAW"/>
+      <AppsInput AttrId="42767092" UsrAttrId="92" UniqueName="CONFIG_ATTRIB01" GUIDisplayName="Max Heap Memory" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="HeapMemoryUsage^max+java.lang:type=Memory+Config+java.lang.Long+Max Heap Memory;1.0E-6;B;false;false;RAW"/>
+      <AppsInput AttrId="42767070" UsrAttrId="70" UniqueName="TARGETIP" UseAsInstanceName="Y" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="42767007" UsrAttrId="7" UniqueName="PASSWORD" GUIDisplayName="Credentials" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" GUIDisplayable="N" GUIEditable="Y" GUIRequiredOnCreate="N"/>
+      <AppsInput AttrId="42767006" UsrAttrId="6" UniqueName="PRINCIPLE" GUIDisplayName="Principle" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="55" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767002" UsrAttrId="2" UniqueName="PORT" UseAsInstanceName="Y" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="42767980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="56" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42767981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="57" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42767982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="58" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42767468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="59" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42767993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="42767126" UsrAttrId="126" UniqueName="CONFIG05" GUIDisplayName="JVM Uptime" DisplayType="String" IsAutoCreated="N" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="42767994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="Y" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" GUIInputOnCreate="Y" MoReferenceType="10000" GUIRequiredOnCreate="Y" DisplayType="MOReference" DefaultValue="-1"/>
+      <AppsConfig AttrId="42767125" UsrAttrId="125" UniqueName="CONFIG04" GUIDisplayName="JVM Vendor" DisplayType="String" IsAutoCreated="N" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="42767124" UsrAttrId="124" UniqueName="CONFIG03" GUIDisplayName="Total Swap Space" DisplayType="String" IsAutoCreated="N" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="42767123" UsrAttrId="123" UniqueName="CONFIG02" GUIDisplayName="Total Physical Memory" DisplayType="String" IsAutoCreated="N" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="42767122" UsrAttrId="122" UniqueName="CONFIG01" GUIDisplayName="Max Heap Memory" DisplayType="String" IsAutoCreated="N" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767170" UsrAttrId="170" UniqueName="STATS19" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS19" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767169" UsrAttrId="169" UniqueName="STATS18" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS18" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767200" UsrAttrId="200" UniqueName="STATS49" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS49" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767168" UsrAttrId="168" UniqueName="STATS17" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS17" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767167" UsrAttrId="167" UniqueName="STATS16" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS16" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767199" UsrAttrId="199" UniqueName="STATS48" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS48" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767166" UsrAttrId="166" UniqueName="STATS15" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS15" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767198" UsrAttrId="198" UniqueName="STATS47" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS47" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767197" UsrAttrId="197" UniqueName="STATS46" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS46" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767165" UsrAttrId="165" UniqueName="STATS14" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS14" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767196" UsrAttrId="196" UniqueName="STATS45" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS45" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767164" UsrAttrId="164" UniqueName="STATS13" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS13" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767195" UsrAttrId="195" UniqueName="STATS44" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS44" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767163" UsrAttrId="163" UniqueName="STATS12" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS12" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767160" UsrAttrId="160" UniqueName="STATS9" GUIDisplayName="Thread Count" TableName="JVMMon" ColumnName="STATS9" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767162" UsrAttrId="162" UniqueName="STATS11" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS11" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767194" UsrAttrId="194" UniqueName="STATS43" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS43" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767159" UsrAttrId="159" UniqueName="STATS8" GUIDisplayName="Daemon Thread Count" TableName="JVMMon" ColumnName="STATS8" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767158" UsrAttrId="158" UniqueName="STATS7" GUIDisplayName="Committed Non Heap Memory" TableName="JVMMon" ColumnName="STATS7" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767193" UsrAttrId="193" UniqueName="STATS42" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS42" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767161" UsrAttrId="161" UniqueName="STATS10" GUIDisplayName="Total Compilation Time" TableName="JVMMon" ColumnName="STATS10" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="sec"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767157" UsrAttrId="157" UniqueName="STATS6" GUIDisplayName="Used Non Heap Memory" TableName="JVMMon" ColumnName="STATS6" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767192" UsrAttrId="192" UniqueName="STATS41" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS41" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767156" UsrAttrId="156" UniqueName="STATS5" GUIDisplayName="Committed Heap Memory" TableName="JVMMon" ColumnName="STATS5" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767191" UsrAttrId="191" UniqueName="STATS40" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS40" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767155" UsrAttrId="155" UniqueName="STATS4" GUIDisplayName="Used Heap Memory" TableName="JVMMon" ColumnName="STATS4" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767154" UsrAttrId="154" UniqueName="STATS3" GUIDisplayName="Garbage Collection Count" TableName="JVMMon" ColumnName="STATS3" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767153" UsrAttrId="153" UniqueName="STATS2" GUIDisplayName="Unloaded Class Count" TableName="JVMMon" ColumnName="STATS2" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767152" UsrAttrId="152" UniqueName="STATS1" GUIDisplayName="Total Loaded Class Count" TableName="JVMMon" ColumnName="STATS1" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767190" UsrAttrId="190" UniqueName="STATS39" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS39" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767189" UsrAttrId="189" UniqueName="STATS38" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS38" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767188" UsrAttrId="188" UniqueName="STATS37" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS37" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767187" UsrAttrId="187" UniqueName="STATS36" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS36" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767186" UsrAttrId="186" UniqueName="STATS35" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS35" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767185" UsrAttrId="185" UniqueName="STATS34" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS34" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767184" UsrAttrId="184" UniqueName="STATS33" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS33" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767183" UsrAttrId="183" UniqueName="STATS32" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS32" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767182" UsrAttrId="182" UniqueName="STATS31" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS31" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767181" UsrAttrId="181" UniqueName="STATS30" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS30" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767180" UsrAttrId="180" UniqueName="STATS29" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS29" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767179" UsrAttrId="179" UniqueName="STATS28" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS28" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767178" UsrAttrId="178" UniqueName="STATS27" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS27" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767177" UsrAttrId="177" UniqueName="STATS26" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS26" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767176" UsrAttrId="176" UniqueName="STATS25" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS25" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767175" UsrAttrId="175" UniqueName="STATS24" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS24" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767174" UsrAttrId="174" UniqueName="STATS23" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS23" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767173" UsrAttrId="173" UniqueName="STATS22" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS22" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767172" UsrAttrId="172" UniqueName="STATS21" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS21" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767171" UsrAttrId="171" UniqueName="STATS20" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS20" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42767201" UsrAttrId="201" UniqueName="STATS50" GUIDisplayName="X" TableName="JVMMon" ColumnName="STATS50" ScaleFactor="1000" GUIDisplayable="N" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

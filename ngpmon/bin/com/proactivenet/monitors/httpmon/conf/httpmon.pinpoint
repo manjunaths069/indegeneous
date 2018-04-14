@@ -1,0 +1,16 @@
+#Attribute Group     ,Monitor Name        ,AttributeName       ,Rank,Above Normal, Below Normal
+ResponseTime        ,httpmon             ,Total Response Time ,5
+Availability        ,httpmon             ,AVAILABILITY        ,5	,1	,5
+ResponseTime        ,httpmon             ,Internal Response Ti,4
+ResponseTime        ,httpmon             ,External Response Ti,4
+ResponseTime        ,httpmon             ,Connect Time  ,3
+ResponseTime        ,httpmon             ,Internal Connect Tim,3
+ResponseTime        ,httpmon             ,External Connect Tim,3
+                    ,httpmon             ,Total Objects Not Fo,1
+                    ,httpmon             ,Internal Objects Not,1
+                    ,httpmon             ,External Objects Not,1
+                    ,httpmon             ,Total Invalid Links ,1
+                    ,httpmon             ,Internal Invalid Lin,1
+                    ,httpmon             ,External Invalid Lin,1
+                    ,httpmon             ,DNS Lookup Time,4
+                    ,httpmon             ,First Byte Download,4

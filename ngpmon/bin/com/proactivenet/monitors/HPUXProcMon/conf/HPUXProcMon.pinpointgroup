@@ -1,0 +1,6 @@
+System       ,HPUX Process Info
+ProcAvailability,HPUX Process Info,AVAILABILITY
+ProcCpu,HPUX Process Info,PROC_CPU
+ProcMem,HPUX Process Info,PROC_RSSZ
+ProcMem,HPUX Process Info,PROC_VSZ
+Process,HPUX Process Info

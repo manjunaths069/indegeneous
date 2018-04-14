@@ -1,0 +1,3 @@
+WebSphereMQ,WebSphereMQChannel
+AppServerAvailability    ,WebSphereMQChannel,AVAILABILITY
+AppServer,WebSphereMQChannel

@@ -1,0 +1,3 @@
+
+#SOURCE.java = nntpmon.java 
+SUBDIRS = src

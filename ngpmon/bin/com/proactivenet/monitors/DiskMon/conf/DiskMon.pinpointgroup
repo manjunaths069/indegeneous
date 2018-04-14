@@ -1,0 +1,4 @@
+System       ,DiskSpace
+DiskUsed,DiskSpace,DISK_USED_PERCENT
+DiskUsed,DiskSpace,I_NODE_USED_PERCENT
+DiskAvailability,DiskSpace,AVAILABILITY

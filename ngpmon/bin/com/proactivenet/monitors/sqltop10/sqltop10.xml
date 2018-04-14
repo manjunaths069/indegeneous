@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData [
+<!ELEMENT MetaData (DDMetaData+)>
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+<!ELEMENT MetaInfo EMPTY>
+<!ATTLIST MetaInfo 
+    UniqueDisplayName CDATA #REQUIRED
+    GUIDisplayName CDATA #REQUIRED
+    LongName CDATA #REQUIRED
+    ActionType ( 0 | 1 ) "0"
+    ActionCmd CDATA #REQUIRED
+    ShowOutput  ( 0 | 1) "1"
+    OutputType  ( 0 | 1) "1"
+    SourceOfAgent ( 0 | 1 | 2) "0"
+    AgentOSList CDATA "All"
+    AgentVersion CDATA "6.0"
+    DiagnosticsVersion CDATA "1.0"
+    MaxDataLength CDATA "100000"
+    MonitorTimeout CDATA "300000" 
+    UseInstanceConfig (0 | 1) "1"
+>
+
+
+<!ELEMENT GUIDeviceInfo EMPTY>
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+<!ELEMENT ImplInfo EMPTY >
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+<!ELEMENT ParameterInfo EMPTY >
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+<!ELEMENT AgentInfo EMPTY >
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+]>
+
+<MetaData>
+<DDMetaData>
+        <!--Oracle SQL TOP N By CPU--> 
+        <MetaInfo UniqueDisplayName = "sqltop10ByCpu" GUIDisplayName = "Top SQL-CPU" LongName="Top SQL-CPU(Oracle)" ActionCmd = "top" />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "25001" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "25002" />
+        <ImplInfo Impl = "sqltop10" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "cpu" />
+        <ParameterInfo Parameter = "10" />
+    </DDMetaData>
+<DDMetaData>
+        <!--Oracle SQL TOP N By DISK READS--> 
+        <MetaInfo UniqueDisplayName = "sqltop10ByDiskReads" GUIDisplayName = "Top SQL-DiskReads" LongName="Top SQL-DiskReads(Oracle)" ActionCmd = "top" />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "25001" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "25002" />
+        <ImplInfo Impl = "sqltop10" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "diskreads" />
+        <ParameterInfo Parameter = "10" />
+    </DDMetaData>
+</MetaData>    
+

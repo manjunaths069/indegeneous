@@ -1,0 +1,160 @@
+#!/bin/csh -f 
+source /usr/pronto/bin/.tmcsh
+cd $DB
+
+#Prune Period value will be passed as an arg, store it in a variable
+#If nothing is passed, default it to 192 (8 days)
+if ( $#argv == 0 ) then
+    set PRUNE_PERIOD=192
+else
+    set PRUNE_PERIOD=$1
+endif
+
+#Check if its a Clean or an Upgrade Installation
+
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+SELECT * FROM TAB B WHERE B.TNAME = 'NQ_TCP_STATS';
+EOF
+
+if ( $status == 101 ) then
+
+#Clean Installation for Monitor = Adapter for NetIQ AppManager Tcp
+#Schema & PruneCntl Statements for Monitor = Adapter for NetIQ AppManager Tcp ,moTypeId = 44088
+
+echo Creating tables NQ_TCP_STATS, NQ_TCP_RT, NQ_TCP_BL
+echo Creating Prune Control entries for NQ_TCP_STATS  AND  entries for NQ_TCP_RT
+/usr/pronto/bin/sqli<< EOF 
+CREATE TABLE NQ_TCP_STATS (
+ITEMID numeric(12),
+TIMERECORDED numeric(12),
+DATA_AVAIL numeric(12),
+CONN_ESTB numeric(12),
+CONN_FAIL numeric(12),
+CONN_ACT numeric(12),
+CONN_PASS numeric(12),
+CONN_RSET numeric(12),
+SEG_RECV numeric(12),
+SEG_R_TRN numeric(12),
+SEG_SENT numeric(12),
+TOT_SEG numeric(12),
+PRIMARY KEY ("ITEMID", "TIMERECORDED")
+);
+EOF
+
+#If the STATS table creation failed exit with errorcode
+if ( $status == 1 ) then
+    exit 117
+endif
+
+/usr/pronto/bin/sqli<< EOF 
+
+create        index NQ_TCP_STATS_N3 on NQ_TCP_STATS (TIMERECORDED);
+
+CREATE TABLE NQ_TCP_RT (
+ITEMID numeric(12), 
+FROMTIME numeric(12), 
+TOTIME numeric(12), 
+DATA_AVAIL_HIGH numeric(12), 
+DATA_AVAIL_AVG  numeric(12), 
+DATA_AVAIL_LOW  numeric(12), 
+CONN_ESTB_HIGH numeric(12), 
+CONN_ESTB_AVG  numeric(12), 
+CONN_ESTB_LOW  numeric(12), 
+CONN_FAIL_HIGH numeric(12), 
+CONN_FAIL_AVG  numeric(12), 
+CONN_FAIL_LOW  numeric(12), 
+CONN_ACT_HIGH numeric(12), 
+CONN_ACT_AVG  numeric(12), 
+CONN_ACT_LOW  numeric(12), 
+CONN_PASS_HIGH numeric(12), 
+CONN_PASS_AVG  numeric(12), 
+CONN_PASS_LOW  numeric(12), 
+CONN_RSET_HIGH numeric(12), 
+CONN_RSET_AVG  numeric(12), 
+CONN_RSET_LOW  numeric(12), 
+SEG_RECV_HIGH numeric(12), 
+SEG_RECV_AVG  numeric(12), 
+SEG_RECV_LOW  numeric(12), 
+SEG_R_TRN_HIGH numeric(12), 
+SEG_R_TRN_AVG  numeric(12), 
+SEG_R_TRN_LOW  numeric(12), 
+SEG_SENT_HIGH numeric(12), 
+SEG_SENT_AVG  numeric(12), 
+SEG_SENT_LOW  numeric(12), 
+TOT_SEG_HIGH numeric(12), 
+TOT_SEG_AVG  numeric(12), 
+TOT_SEG_LOW  numeric(12), 
+NUMPOINTS numeric(12), 
+NUMSECS   numeric(12), 
+PRIMARY KEY ("ITEMID", "FROMTIME")
+);
+create        index NQ_TCP_RT_N3 on NQ_TCP_RT (FROMTIME,TOTIME);
+
+
+
+CREATE TABLE NQ_TCP_BL (
+ITEMID   numeric(12),
+TIMESLOT numeric(12),
+STARTTIME numeric(12),
+DURATION numeric(12),
+DATA_AVAIL_HIGH numeric(12),
+DATA_AVAIL_AVG  numeric(12),
+DATA_AVAIL_LOW  numeric(12),
+CONN_ESTB_HIGH numeric(12),
+CONN_ESTB_AVG  numeric(12),
+CONN_ESTB_LOW  numeric(12),
+CONN_FAIL_HIGH numeric(12),
+CONN_FAIL_AVG  numeric(12),
+CONN_FAIL_LOW  numeric(12),
+CONN_ACT_HIGH numeric(12),
+CONN_ACT_AVG  numeric(12),
+CONN_ACT_LOW  numeric(12),
+CONN_PASS_HIGH numeric(12),
+CONN_PASS_AVG  numeric(12),
+CONN_PASS_LOW  numeric(12),
+CONN_RSET_HIGH numeric(12),
+CONN_RSET_AVG  numeric(12),
+CONN_RSET_LOW  numeric(12),
+SEG_RECV_HIGH numeric(12),
+SEG_RECV_AVG  numeric(12),
+SEG_RECV_LOW  numeric(12),
+SEG_R_TRN_HIGH numeric(12),
+SEG_R_TRN_AVG  numeric(12),
+SEG_R_TRN_LOW  numeric(12),
+SEG_SENT_HIGH numeric(12),
+SEG_SENT_AVG  numeric(12),
+SEG_SENT_LOW  numeric(12),
+TOT_SEG_HIGH numeric(12),
+TOT_SEG_AVG  numeric(12),
+TOT_SEG_LOW  numeric(12),
+NUMPOINTS numeric(12),
+NUMWEEKS numeric(12),
+PRIMARY KEY ("ITEMID", "STARTTIME", "DURATION")
+);
+
+
+
+create index NQ_TCP_BL_N2 on NQ_TCP_BL ( STARTTIME, DURATION );
+
+
+
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_TCP_STATS', 'TIMERECORDED', $PRUNE_PERIOD);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_TCP_RT', 'FROMTIME', 2160);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NQ_TCP_BL', 'STARTTIME', 2160);
+EOF
+
+else
+
+#Upgrade Installation for Monitor = Adapter for NetIQ AppManager Tcp
+
+#/usr/pronto/bin/sqli -c << EOF > /dev/null
+#SELECT * FROM COL A, TAB B WHERE A.TNAME = 'TABLENAME' AND B.TNAME = 'TABLENAME' AND A.CNAME = 'COLUMNNAME';
+#EOF
+#if ( $status == 101 ) then
+
+#   alter table add column statement here
+echo Upgrade installation
+
+#endif
+
+endif

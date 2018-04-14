@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="28700" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="tcpmon" GUIDisplayName="Solaris TCP Monitor" OneInstancePerParent="Y" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" HasCustomizedGUI="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.tcpmon.tcpmon" Version="2.0" OS="SunOS" MustRunOnAgent="Y" HasMoreInfo="N" IsStatic="Y" IsSchedulable="N" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" IsNewFrameWork="N" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+    <BasicInfo MoTypeId="28701" MoTypeType="APPS" ParentMoType="28700" UniqueName="SolarisTCPMon" GUIDisplayName="Solaris TCP" OneInstancePerParent="Y" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.tcpmon.tcpmon" Version="2.0" OS="SunOS" MustRunOnAgent="Y" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" IsSchedulable="Y" IsStatic="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="287000" GUIInputType="CFG" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Solaris TCP" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="287001" UsrAttrId="1" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Solaris TCP" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="287024" UsrAttrId="24" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" GUIInputOnCreate="N" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" IsDefaultValueSet="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="287025" UsrAttrId="25" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="287029" UsrAttrId="29" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="28701980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28701981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28701982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="28701468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="6" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="287026" UsrAttrId="26" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="287002" UsrAttrId="2" UniqueName="tcpActiveOpens" GUIDisplayName="Connections Active" TableName="SOLTCP" ColumnName="AVTIVEOPEN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" GUIGraphedByDefault="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287003" UsrAttrId="3" UniqueName="tcpPassiveOpens" GUIDisplayName="Connections Passive" TableName="SOLTCP" ColumnName="PASSIVEOPEN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" GUIGraphedByDefault="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287004" UsrAttrId="4" UniqueName="tcpCurrEstab" GUIDisplayName="Connections Established" TableName="SOLTCP" ColumnName="CURRESTAB" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" GUIGraphedByDefault="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287005" UsrAttrId="5" UniqueName="tcpListenDrop" GUIDisplayName="Listen Drop" TableName="SOLTCP" ColumnName="LISTENDROP" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287006" UsrAttrId="6" UniqueName="tcpHalfOpenDrop" GUIDisplayName="Half Open Dropped" TableName="SOLTCP" ColumnName="HALFOPENDROP" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287007" UsrAttrId="7" UniqueName="tcpListenDropQ0" GUIDisplayName="Listen Drop Q0" TableName="SOLTCP" ColumnName="LISTENDROPQ0" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287008" UsrAttrId="8" UniqueName="tcpInSegs" GUIDisplayName="Segments Received" TableName="SOLTCP" ColumnName="INSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287009" UsrAttrId="9" UniqueName="tcpInDataInorderSegs" GUIDisplayName="Inorder Segments Received" TableName="SOLTCP" ColumnName="INORDERSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287010" UsrAttrId="10" UniqueName="tcpInDataUnorderSegs" GUIDisplayName="Unorder Segments Received" TableName="SOLTCP" ColumnName="UNORDERSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287011" UsrAttrId="11" UniqueName="tcpInDataDupSegs" GUIDisplayName="Dup Segments Received" TableName="SOLTCP" ColumnName="DUPSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287012" UsrAttrId="12" UniqueName="tcpInDataPartDupSegs" GUIDisplayName="Part Dup Segments Received" TableName="SOLTCP" ColumnName="PARTDUPSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287013" UsrAttrId="13" UniqueName="tcpInBytes" GUIDisplayName="Bytes Received" TableName="SOLTCP" ColumnName="INBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287014" UsrAttrId="14" UniqueName="tcpInDataInorderByte" GUIDisplayName="Inorder Bytes Received" TableName="SOLTCP" ColumnName="INORDERBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287015" UsrAttrId="15" UniqueName="tcpInDataUnorderByte" GUIDisplayName="Unorder Bytes Received" TableName="SOLTCP" ColumnName="UNORDERBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287016" UsrAttrId="16" UniqueName="tcpInDataDupBytes" GUIDisplayName="Dup Bytes Received" TableName="SOLTCP" ColumnName="DUPBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287017" UsrAttrId="17" UniqueName="tcpInDataPartDupByte" GUIDisplayName="Part Dup Bytes Received" TableName="SOLTCP" ColumnName="PARTDUPBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287018" UsrAttrId="18" UniqueName="tcpOutSegs" GUIDisplayName="Segments Sent" TableName="SOLTCP" ColumnName="OUTSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287019" UsrAttrId="19" UniqueName="tcpOutDataSegs" GUIDisplayName="Data Segments Sent" TableName="SOLTCP" ColumnName="OUTDATASEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287020" UsrAttrId="20" UniqueName="tcpRetransSegs" GUIDisplayName="Segments Retransmitted" TableName="SOLTCP" ColumnName="RETRANSSEGS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287021" UsrAttrId="21" UniqueName="tcpOutBytes" GUIDisplayName="Bytes Sent" TableName="SOLTCP" ColumnName="OUTBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287022" UsrAttrId="22" UniqueName="tcpOutDataBytes" GUIDisplayName="Data Bytes Sent" TableName="SOLTCP" ColumnName="OUTDATABYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287023" UsrAttrId="23" UniqueName="tcpRetransBytes" GUIDisplayName="Bytes Retransmitted" TableName="SOLTCP" ColumnName="RETRANSBYTES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287027" UsrAttrId="27" UniqueName="tcpAttemptFails" GUIDisplayName="Connections Failure" TableName="SOLTCP" ColumnName="ATTEMPTFAILS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="287028" UsrAttrId="28" UniqueName="tcpOutRsts" GUIDisplayName="Connections Reset" TableName="SOLTCP" ColumnName="OUTRSTS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue=""/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

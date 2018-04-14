@@ -1,0 +1,8 @@
+
+SOURCE.cc = nfsmon.cc
+
+OTHERFILES= nfsmon.h
+
+TARGET_LIB_SHARED = libnfsmon.so
+
+libnfsmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

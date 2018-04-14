@@ -1,0 +1,1 @@
+SOURCE.java = WLActiveInfoJMX.java Logc.java ActiveInfoJMX.java WLActiveInfoJMXConnectionFactory.java WLActiveInfoJMXConnector.java NullTrustManager.java  

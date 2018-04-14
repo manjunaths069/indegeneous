@@ -1,0 +1,26 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+# File        : BMCDiskMon.sigthreshold
+# Description : Signature Threshold File for BMCDiskMon
+# Date        : Wed 12 Feb 2003
+#MonitorType	Attribute	Severity	Duration(min)	Above/Below	BaselineThreshold	Sensitivity	Padding	IsPaddingMultiplier	SuppressFlag
+BMCDisk	DISK_BUSY_TIME	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+BMCDisk	DISK_BUSY_TIME	Normal	-1	below	0.0	50.0	20.0	-1	0	Auto
+BMCDisk	READ_BYTES	Normal	-1	above	0.0	0.0	0.0	-1	1	Auto
+BMCDisk	READ_BYTES	Normal	-1	below	0.0	0.0	0.0	-1	1	Auto
+BMCDisk	WRITE_BYTES	Normal	-1	above	0.0	0.0	0.0	-1	1	Auto
+BMCDisk	WRITE_BYTES	Normal	-1	below	0.0	0.0	0.0	-1	1	Auto
+BMCDisk	AVG_SVC_TIME	Normal	-1	above	0.0	50.0	8.0	-1	0	Auto
+BMCDisk	AVG_SVC_TIME	Normal	-1	below	0.0	0.0	0.25	-1	1	Auto
+BMCDisk	DISK_AVAIL	Normal	-1	above	0.0	0.0	0.0	-1	1	Auto
+BMCDisk	DISK_AVAIL	Normal	-1	below	0.0	50.0	0.0	-1	0	Auto

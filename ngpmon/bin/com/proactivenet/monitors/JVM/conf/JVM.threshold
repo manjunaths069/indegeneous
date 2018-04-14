@@ -1,0 +1,8 @@
+# File        : _tempMon.threshold
+# Description : Threshold File for GenMonBase
+# Date        : Wed Nov 29 10:31:29 GMT+05:30 2006
+JVM	PCT_HEAP_SPACE_USED	Minor	5	above	90	1	Auto
+JVM	PCT_NON_HEAP_SPACE_USED	Minor	5	above	90	1	Auto
+JVM	PROC_CPU_TIME	MINOR	15	above	75	1	Auto
+JVM	AVAILABILITY	CRITICAL	0	below	100	0	Auto
+

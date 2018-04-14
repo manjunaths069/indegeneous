@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- NTDiskIntelliMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="21012" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="NTDiskInfo" GUIDisplayName="NT Disk Space Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="ntdiskmon" Version="2.0" OS="Windows" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="21015" MoTypeType="APPS" ParentMoType="21012" UniqueName="NTDiskIntelli" GUIDisplayName="Windows Disk Performance"/>
+    <AppsInfo ClassName="ntdiskmon" OS="Windows" Version="2.0"/>
+<!--
+<BasicInfo
+      MoTypeId="35101"
+      MoTypeType="APPS"
+      ParentMoType="1"
+      UniqueName="NTDiskMonGenMon"
+      GUIDisplayName="Windows Disk Performance"
+    />
+    <AppsInfo
+      ClassName="GenMonBase"
+      Version="2.0"
+      OS="Windows"
+    />
+    -->
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <!--
+<ParentAppsInput
+        AttrId="210151"
+        UsrAttrId="22"
+        UniqueName="INSTANCE_NAME"
+        GUIDisplayName="Instance Name"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        UseAsMODisplayName="Y"
+        DefaultValue="NT Disk Monitor"
+		IsInputAttribute="Y" 
+		AttrReferenceType="Unknown"       
+		 />
+-->	
+	  <AppsInput AttrId="21015986" UsrAttrId="6" UniqueName="INPUTFILE" GUIDisplayName="Input XML file name " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="ntdiskmon\\NTDiskMonGenMon.xml"/>
+      <AppsInput AttrId="210151" UsrAttrId="22" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="210152" UsrAttrId="23" UniqueName="DISK" GUIDisplayName="Physical Disk" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y" DefaultValue="0"/>
+      <AppsInput AttrId="210161" UsrAttrId="-6" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="210156" UsrAttrId="-3" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="210165" UsrAttrId="993" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="210158" UsrAttrId="-5" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="210157" UsrAttrId="-4" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+<AppsInput AttrId="21015980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="21015981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="21015982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="54" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="21015468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="55" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="210164" UsrAttrId="27" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" DefaultValue="1.0"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="210171" UsrAttrId="33" UniqueName="DISK_WRITE_QUEUE_LEN" GUIDisplayName="Avg. Disk Write Queue Len" TableName="NTDISKPERF" ColumnName="WRITEQUEUE" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210169" UsrAttrId="31" UniqueName="DISK_WRITES_SEC" GUIDisplayName="Disk Writes/Sec" TableName="NTDISKPERF" ColumnName="WRITESEC" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210154" UsrAttrId="25" UniqueName="DISK_TIME" GUIDisplayName="% Disk Time" TableName="NTDISKPERF" ColumnName="DISKTIMEPCT" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210166" UsrAttrId="28" UniqueName="DISK_READ_TIME" GUIDisplayName="% Disk Read Time" TableName="NTDISKPERF" ColumnName="READTIME" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210155" UsrAttrId="26" UniqueName="DISK_TRANSFER" GUIDisplayName="Avg. Disk Transfer Time" TableName="NTDISKPERF" ColumnName="AVGDISKTRAN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210170" UsrAttrId="32" UniqueName="DISK_READ_QUEUE_LEN" GUIDisplayName="Avg. Disk Read Queue Len" TableName="NTDISKPERF" ColumnName="READQUEUE" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210168" UsrAttrId="30" UniqueName="DISK_READS_SEC" GUIDisplayName="Disk Reads/Sec" TableName="NTDISKPERF" ColumnName="READSEC" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210153" UsrAttrId="24" UniqueName="DISK_QUEUE_LEN" GUIDisplayName="Avg. Disk Queue Length" TableName="NTDISKPERF" ColumnName="AVGQLEN" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="210167" UsrAttrId="29" UniqueName="DISK_WRITE_TIME" GUIDisplayName="% Disk Write Time" TableName="NTDISKPERF" ColumnName="WRITETIME" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

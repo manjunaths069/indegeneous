@@ -1,0 +1,11 @@
+#Attribute Group	,Monitor Name	,Attribute Name	,Rank	,Above Normal	,Below Normal
+        ,Linux TCP Info	,ACTIVE_OPENS	,4
+        ,Linux TCP Info	,PASSIVE_OPENS	,4
+        ,Linux TCP Info	,ATTEMPTS_FAILS
+        ,Linux TCP Info	,ESTAB_RESETS
+        ,Linux TCP Info ,CURR_ESTABS
+        ,Linux TCP Info	,IN_SEGS
+        ,Linux TCP Info	,OUT_SEGS
+        ,Linux TCP Info	,RETRANS_SEGS
+        ,Linux TCP Info ,IN_ERRS
+        ,Linux TCP Info	,OUT_RSTS

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SNMPDATA [
+	<!ELEMENT SNMPDATA (ATTRSET+)>
+	<!ELEMENT ATTRSET (ATTRINFO+)>
+	<!ATTLIST ATTRSET
+	platform (all | windows | unix | nt | win2k | linux | solaris | hpux | aix | nt4 | unixA2 | winA3) #REQUIRED
+>
+	<!ELEMENT ATTRINFO (OID, ATTRNAME, ATTRTYPE, ATTRCOMPUTATION, ATTRDEPENDSON?)>
+	<!ELEMENT OID (OIDNAME, OIDINDEX*)>
+	<!ATTLIST OID
+	representedby (value | string) #REQUIRED
+		type (scalar | columnar) #REQUIRED
+		returns (number | string | kb | bytes | mb) #REQUIRED
+>
+	<!ELEMENT ATTRNAME (#PCDATA)>
+	<!ELEMENT ATTRTYPE (#PCDATA)>
+	<!ELEMENT ATTRCOMPUTATION (#PCDATA)>
+	<!ELEMENT ATTRDEPENDSON (OID+)>
+	<!ELEMENT OIDNAME (#PCDATA)>
+	<!ELEMENT OIDINDEX (OIDINDEXNAME, OIDINDEXNUM)>
+	<!ATTLIST OIDINDEX
+	type (string | number) #REQUIRED
+>
+	<!ELEMENT OIDINDEXNAME (#PCDATA)>
+	<!ELEMENT OIDINDEXNUM (#PCDATA)>
+]>
+<SNMPDATA>
+	<ATTRSET platform="unix">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="kb">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.6</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="kb">
+					<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.5</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.21</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>INODE_USED</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+					<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.20</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.4</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.2</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>MOUNT_PT</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="kb">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.5</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>TOMB</ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.6.2.1.20</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>TOT_INODE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+	<ATTRSET platform="nt">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="kb">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.2.2.3.3.2.7</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="kb">
+					<OIDNAME>1.3.6.1.4.1.791.2.9.2.2.3.3.2.6</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.2.2.3.3.2.9</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="kb">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.2.2.3.3.2.6</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>TOMB</ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+	<ATTRSET platform="win2k">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.4.2.1.10</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="mb">
+					<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.4.2.1.9</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.4.2.1.8</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.4.2.1.9</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+	<ATTRSET platform="nt4">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.4.2.1.9</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="mb">
+					<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.4.2.1.8</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.4.2.1.7</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.4.2.1.8</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+
+
+<ATTRSET platform="unixA2">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>  1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.12</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="mb">
+					<OIDNAME> 1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.10</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME> 1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.27</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>INODE_USED</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="string">
+					<OIDNAME>  1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.26</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME> 1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.6</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME> 1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.7</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>MOUNT_PT</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>  1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.10</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.26</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>TOT_INODE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.11</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>TOT_POLICY</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.74.2.10.2.1.9</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>CLUSTER_TYPE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+<ATTRSET platform="winA3">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>   1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.11</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME> SPACE_USED</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> PERCENT </ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="mb">
+					<OIDNAME>1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.10</OIDNAME>
+					<OIDINDEX type="string">
+						<OIDINDEXNAME>DIR</OIDINDEXNAME>
+						<OIDINDEXNUM>1</OIDINDEXNUM>
+					</OIDINDEX>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.6</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FS_STATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="mb">
+				<OIDNAME>  1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.10</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>SIZE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.9</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>CLUSTER_TYPE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.25</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>MISC_FMODE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>      1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.31</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FRAG_MODE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.26</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>MISC_VALUE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.90.2.5.2.1.33</OIDNAME>
+				<OIDINDEX type="string">
+					<OIDINDEXNAME>DIR</OIDINDEXNAME>
+					<OIDINDEXNUM>1</OIDINDEXNUM>
+				</OIDINDEX>
+			</OID>
+			<ATTRNAME>FRAG_VALUE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+ </SNMPDATA>

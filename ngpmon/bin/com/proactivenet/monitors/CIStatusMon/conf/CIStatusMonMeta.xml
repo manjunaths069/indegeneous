@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+	<ManagedObject>
+		<ParentBasicInfo MoTypeId="500060" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="CIStatusMon" GUIDisplayName="CI Status Monitor" OneInstancePerParent="N" EndUserCreatable="N" EndUserDeletable="N" GUIDisplayable="Y" IsAutoCreated="Y" HasCustomizedGUI="N"/>
+		<ParentAppsInfo ClassName="com.proactivenet.monitors.CIStatusMon.CIStatusMon" Version="1.0" OS="Any" HasMoreInfo="Y" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" MustRunOnAgent="N" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="Y" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+			
+		<BasicInfo MoTypeId="500061" MoTypeType="APPS" ParentMoType="500060" UniqueName="CIStatusInfo" GUIDisplayName="CI Status" EndUserCreatable="N" EndUserDeletable="N" GUIDisplayable="N" IsAutoCreated="Y" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>	
+		<AppsInfo ClassName="com.proactivenet.monitors.CIStatusMon.CIStatusMon" Version="1.0" OS="Any" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" IsSchedulable="Y" MustRunOnAgent="N" IsStatic="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+			
+	</ManagedObject>
+	<Attributes>	
+		<Application>
+			<!-- PARENT INPUT ATTRIBUTE -->
+			<ParentAppsInput AttrId="500060999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="CI Status Monitor" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<!-- END PARENT INPUT ATTRIBUTE -->
+		
+			<!-- CHILD INPUT ATTRIBUTE -->
+			<AppsInput AttrId="500061999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" GUIRequiredOnCreate="Y" DisplayType="String" UseAsMODisplayName="Y" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="1" IsAutoCreated="Y" GUIEditable="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+		    <AppsInput AttrId="500061155" UsrAttrId="155" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="Y" GUIEditable="N" GUIDisplaySequenceNumber="2" GUIInputOnCreate="Y" MoReferenceType="10000" GUIRequiredOnCreate="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" UseAsMODisplayName="N" IsDefaultValueSet="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      		<AppsInput AttrId="500061981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIDisplayable="Y" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+		    <AppsInput AttrId="500061982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIDisplayable="Y" GUIEditable="N" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="6" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+			<!-- END CHILD INPUT ATTRIBUTE -->
+
+			<!-- CONTROL ATTRIBUTES -->
+			<AppsInput AttrId="500061998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="N" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<AppsInput AttrId="500061082" UsrAttrId="82" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="N" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+			<!-- END CONTROL ATTRIBUTE -->
+						
+			<!-- CONFIG ATTRIBUTE -->			
+			<AppsConfig AttrId="500061993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIEditable="N" IsAutoCreated="Y" UseAsMODisplayName="N" UseAsInstanceName="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DefaultValue="1.0"/>
+			<!-- END CONFIG ATTRIBUTE -->
+					
+			<!-- STATS ATTRIBUTE -->
+			<AppsStats>
+				<CoreAppsStats AttrId="500061014" UsrAttrId="14" UniqueName="STATUS" GUIDisplayName="Status" TableName="CIStatusMon" ColumnName="STATUS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" UseNormalDistribution="Y" IsArrayAttribute="N" DefaultValue="20"/>
+    		</AppsStats>
+			<!-- END STATS ATTRIBUTE -->
+	    </Application>
+	</Attributes>
+</MetaData>

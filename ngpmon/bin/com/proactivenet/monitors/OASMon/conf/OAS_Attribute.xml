@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE OASDATA [
+        <!ELEMENT OASDATA (ATTRSET+)>
+     
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+          platform (10g | 9i) #REQUIRED
+          attrType (stats | config)     #REQUIRED
+        >
+     
+        <!ELEMENT ATTRINFO (ATTRMAP)>
+        <!ATTLIST ATTRINFO
+          attrName CDATA #REQUIRED
+          dataType (int | float | string) "int"
+	  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff |  perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | complementOf100 | standardTime | bytesToMbPerSec | sum| avg) "asis"
+	  	  scaleFactor CDATA "1.0"
+
+        >
+      
+        <!ELEMENT ATTRMAP (ATTRIBUTE+)>
+        <!ELEMENT ATTRIBUTE (#PCDATA)>
+        <!ATTLIST ATTRIBUTE
+      	          type (table | sensor | metric | noun | type) #REQUIRED
+      	          id  (1 | 2) "1"
+         >
+]>
+
+
+
+<!-- XML Definition for Oracle AppServer Monitor -->
+
+
+<OASDATA>
+    <ATTRSET platform="10g" attrType="stats">
+
+	<ATTRINFO attrName="OHS_ACTIVE_CONNECTIONS"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_CONNECTIONS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="OHS_CONNECTION_TIME"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_ACTIVE_HANDLERS"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> handle </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_HANDLERS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> handle </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+	
+	<ATTRINFO attrName="OHS_HANDLER_TIME"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> handle </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+ 
+	<ATTRINFO attrName="OHS_ACTIVE_REQUESTS"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> request </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_REQUESTS"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> request </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_REQUEST_TIME"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> request </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_INTERNAL_REDIRECTS"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> internalRedirect </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  internalRedirect.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CLIENT_ERRORS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_responses          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor">  CltErr_* </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CltErr_*.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_SERVER_ERRORS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_responses          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> SvrErr_* </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  SvrErr_*.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_NOT_FOUND_ERRORS"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_responses          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CltErr_Not_Found_404 </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CltErr_Not_Found_404.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_RESPONSE_BAND_WIDTH"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> responseSize </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  responseSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_START"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> childStart </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  childStart.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_FINISH"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> childFinish </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  childFinish.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_READY"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> readyChildren </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  readyChildren.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_BUSY"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     ohs_server          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> busyChildren </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  busyChildren.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_TOTAL_PROCESSES"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> * </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_ACTIVE_THREAD_GROUPS"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> activeThreadGroups </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  activeThreadGroups.value</ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_ACTIVE_THREADS"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> activeThreads </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  activeThreads.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_TOTAL_MEMORY"  dataType="int" computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> totalMemory </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  totalMemory.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_USED_MEMORY"  dataType="int" computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> freeMemory </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  freeMemory.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_MAX_MEMORY_USED"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> freeMemory </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  freeMemory.minValue </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_OPENED_CONNECTIONS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_DataSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> ConnectionOpenCount </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  ConnectionOpenCount.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CLOSED_CONNECTIONS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_DataSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> ConnectionCloseCount </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  ConnectionCloseCount.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_ACTIVE_CONNECTIONS"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> * </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_NEW_STATEMENTS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CreateNewStatement </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateNewStatement.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_NEW_STATEMENTS_TIME"  computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CreateNewStatement </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateNewStatement.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_STATEMENTS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CreateStatement </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateStatement.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_STATEMENTS_TIME"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CreateStatement </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateStatement.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CACHE_SIZE"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CacheSize </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CACHE_FREE"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CacheFreeSize </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheFreeSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CONN_CACHE_MISS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CacheMiss </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheMiss.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CONN_CACHE_HIT"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> CacheHit </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheHit.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_STMT_CACHE_MISS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> StatementCacheMiss </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  StatementCacheMiss.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_STMT_CACHE_HIT"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="table">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="sensor"> StatementCacheHit </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  StatementCacheHit.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+   </ATTRSET>
+
+   <ATTRSET platform="9i" attrType="stats">
+
+	<ATTRINFO attrName="OHS_ACTIVE_CONNECTIONS"  dataType="int" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_CONNECTIONS"  dataType="float" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="OHS_CONNECTION_TIME"  dataType="int" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  connection.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_ACTIVE_HANDLERS"  dataType="int" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_HANDLERS"  dataType="float" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+	
+	<ATTRINFO attrName="OHS_HANDLER_TIME"  dataType="int" computation="sum">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  handle.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+ 
+	<ATTRINFO attrName="OHS_ACTIVE_REQUESTS"  dataType="int" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.active </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_COMPLETED_REQUESTS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_REQUEST_TIME"  dataType="int" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  request.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_INTERNAL_REDIRECTS"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  internalRedirect.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CLIENT_ERRORS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun" id="1">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="1">  ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="noun" id="2">     Responses          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="2">  ohs_responses </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CltErr_*.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_SERVER_ERRORS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun" id="1">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="1">  ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="noun" id="2">     Responses          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="2">  ohs_responses </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  SvrErr_*.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_NOT_FOUND_ERRORS"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun" id="1">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="1"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="noun" id="2">     Responses          </ATTRIBUTE>
+			<ATTRIBUTE type="type" id="2"> ohs_responses </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CltErr_Not_Found_404.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_RESPONSE_BAND_WIDTH"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  responseSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_START"  dataType="float"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  childStart.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_FINISH"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  childFinish.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_READY"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  readyChildren.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="OHS_CHILD_BUSY"  dataType="int"  >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     Apache          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> ohs_server </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  busyChildren.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_TOTAL_PROCESSES"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric"> * </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_ACTIVE_THREAD_GROUPS"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  activeThreadGroups.value</ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_ACTIVE_THREADS"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  activeThreads.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_TOTAL_MEMORY"  dataType="int" computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  totalMemory.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_USED_MEMORY"  dataType="int" computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  freeMemory.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JVM_MAX_MEMORY_USED"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JVM          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JVM </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  freeMemory.minValue </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_OPENED_CONNECTIONS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_DataSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_DataSource </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  ConnectionOpenCount.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CLOSED_CONNECTIONS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_DataSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_DataSource </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  ConnectionCloseCount.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_ACTIVE_CONNECTIONS"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  * </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_NEW_STATEMENTS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateNewStatement.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_NEW_STATEMENTS_TIME"  computation="avg" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateNewStatement.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_STATEMENTS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateStatement.completed </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CREATE_STATEMENTS_TIME"  dataType="int" computation="avg">
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CreateStatement.avg </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CACHE_SIZE"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CACHE_FREE"  dataType="int" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheFreeSize.value </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CONN_CACHE_MISS"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheMiss.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_CONN_CACHE_HIT"  dataType="float" computation="sum" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_ConnectionSource          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  CacheHit.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_STMT_CACHE_MISS"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  StatementCacheMiss.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+	<ATTRINFO attrName="JDBC_STMT_CACHE_HIT"  dataType="float" >
+		<ATTRMAP>
+			<ATTRIBUTE type="noun">     JDBC_Connection          </ATTRIBUTE>
+			<ATTRIBUTE type="type"> JDBC_Connection </ATTRIBUTE>
+			<ATTRIBUTE type="metric">  StatementCacheHit.count </ATTRIBUTE>
+		</ATTRMAP>
+        </ATTRINFO>
+
+   </ATTRSET>
+	     
+</OASDATA>
+

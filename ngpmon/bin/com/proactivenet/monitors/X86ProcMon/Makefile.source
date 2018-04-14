@@ -1,0 +1,4 @@
+#SOURCE.java = ProcInfo.java ProcMon.java
+#SOURCE.java = LogFile.java LogMon.java ReportGen.java
+#SOURCE.java = SelectExecutorColumn.java DBSql.java OracleGlobalMon.java Test.java
+SUBDIRS = src

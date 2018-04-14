@@ -1,0 +1,2 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+Availability	,NetIQCpu	,DATA_AVAIL	,3	,1	,3	

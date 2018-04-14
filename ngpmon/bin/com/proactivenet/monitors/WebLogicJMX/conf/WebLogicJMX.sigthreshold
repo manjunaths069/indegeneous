@@ -1,0 +1,19 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+#		Signature Threshold settings for WebLogic 6.1/7.0 monitor
+# MonitorType Attribute	   Severity Duration   	Above/Below    threshold  sensitivity    padding   supress
+WebLogicJMX	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+WebLogicJMX	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+WebLogicJMX	JVM_HEAPUSED	NORMAL	-1	below	0	0	-1	-1	1	Auto
+WebLogicJMX	JVM_HEAPUSED	NORMAL	-1	above	0	50	30	-1	0	Auto
+WebLogicJMX	EXEQUE_USAGE	NORMAL	-1	above	0	50	30	-1	0	Auto

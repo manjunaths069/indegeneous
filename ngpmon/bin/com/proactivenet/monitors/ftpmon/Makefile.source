@@ -1,0 +1,3 @@
+
+#SOURCE.java = ftpmon.java 
+SUBDIRS = src

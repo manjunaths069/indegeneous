@@ -1,0 +1,10 @@
+System       ,NTProcessInfo 
+
+ProcAvailability,NTProcessInfo,AVAILABILITY
+
+ProcCpu,NTProcessInfo,PROC_CPU
+
+ProcMem,NTProcessInfo,PROC_VSZ
+
+Process,NTProcessInfo
+

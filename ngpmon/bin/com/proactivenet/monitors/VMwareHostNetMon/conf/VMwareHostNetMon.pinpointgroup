@@ -1,0 +1,7 @@
+VirtualSystem,VMwareHostNetMon,AVAILABILITY
+VirtualSystem,VMwareHostNetMon,DATA_TRANSMIT_RATE
+VirtualSystem,VMwareHostNetMon,DATA_RECEIVED_RATE
+VirtualSystem,VMwareHostNetMon,PACKETS_RCVD
+VirtualSystem,VMwareHostNetMon,PACKETS_TRMD
+VirtualSystem,VMwareHostNetMon,TOTAL_PACKETS_RCVD_TRMD
+

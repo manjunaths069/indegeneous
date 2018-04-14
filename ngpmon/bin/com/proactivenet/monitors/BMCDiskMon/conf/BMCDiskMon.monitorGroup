@@ -1,0 +1,5 @@
+# File        : BMCDiskMon.monitorGroup
+# Description : MonitorGroup for BMC Disk Monitor
+# Date        : Tue Jan 31 2003
+
+System|BMCAdapter|Adapter for BMC PATROL|BMCDisk

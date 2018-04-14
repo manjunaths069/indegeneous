@@ -1,0 +1,28 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+HPUX System Info	I_O_WAIT	NORMAL	-1	above	0	50	20	-1	0	Auto
+HPUX System Info	MEM_USED_PERCENT	NORMAL	-1	above	0	50	10	-1	0	Auto
+HPUX System Info	SWAP_USED_PERCENT	NORMAL	-1	above	0	50	-1	-1	0	Auto
+HPUX System Info	TOTAL_CPU	NORMAL	-1	below	0	50	10	-1	0	Auto
+HPUX System Info	TOTAL_CPU	NORMAL	-1	above	0	50	-1	-1	0	Auto
+HPUX System Info	KERNEL_CPU	NORMAL	-1	above	0	50	-1	-1	1	Auto
+HPUX System Info	USER_CPU	NORMAL	-1	below	0	0	-1	-1	1	Auto
+HPUX System Info	USER_CPU	NORMAL	-1	above	0	0	-1	-1	1	Auto
+HPUX System Info	SYS_LOAD	NORMAL	-1	below	0	50	-1	-1	0	Auto
+HPUX System Info	SYS_LOAD	NORMAL	-1	above	0	50	-1	-1	0	Auto
+HPUX System Info	PROCESSES_TOTAL	NORMAL	-1	below	0	50	40	-1	0	Auto
+HPUX System Info	PROCESSES_TOTAL	NORMAL	-1	above	0	50	15	-1	0	Auto
+HPUX System Info	INTERRUPT	NORMAL	-1	above	0	50	500	-1	0	Auto
+HPUX System Info	SCAN_RATE	NORMAL	-1	above	0	50	50	-1	0	Auto
+HPUX System Info	CNXT_SWTCH	NORMAL	-1	above	0	50	200	-1	1	Auto
+HPUX System Info	SYS_CALLS	NORMAL	-1	above	0	50	200	-1	1	Auto

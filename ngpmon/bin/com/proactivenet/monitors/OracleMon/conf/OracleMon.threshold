@@ -1,0 +1,31 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The columns are Monitor type, Attribute name, Severity,
+#       Duration, above|below, Threshold
+#       Monitor and Attribute names can contain spaces (just don't put
+#       spaces before or after the name unless the name contains the spaces).
+#       Monitor and Attribute names can be either the unique name or
+#       the display name as long as they are unique.
+#
+#	Two columns have been added to each threshold entry, namely
+#	Outside Baseline Flag and Outside Baseline Type. The values
+#	for these can be 0 (N) or 1 (Y) and Hourly, Daily or Weekly 
+#	respectively.
+#
+#MonitorName    AttributeName   Severity,       Duration,       above/below	Outside Baseline Flag	Outside Baseline Type
+
+OrclQryNew	AVAILABILITY	CRITICAL	0	below	100	0	Auto
+OrclQryNew	Response Time	MINOR	15	above	500	1	Auto
+#OrclQryNew	Connect Time	MAJOR	15	above	500
+#OracleMon	Database Free Space	MAJOR	0	below	10
+#OracleMon	Database Free Space	MINOR	10	below	20
+#OracleMon	Open Cursors	MAJOR	15	above	975
+#OracleMon	Memory Used	MINOR	10	above	90
+#OracleMon	Cache Hit Ratio	MINOR	10	below	95
+#OracleMon	Percent Get Misses	MAJOR	15	above	5
+#OracleMon	Percent Scan Misses	MAJOR	15	above	5
+#OracleMon	Library Cache Get Misses	MAJOR	15	above	5
+#OracleMon	Pin Misses	MAJOR	15	above	5
+#OracleMon	CPU Usage by sessions	MAJOR	15	above	95
+#OracleMon	CPU Usage by sessions	MINOR	10	above	80

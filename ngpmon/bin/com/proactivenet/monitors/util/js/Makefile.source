@@ -1,0 +1,1 @@
+SOURCE.java = JSElement.java DynEnv.java DynamicMethodWrap.java DynamicObject.java  DynamicWithReflection.java EcmaEnv.java History.java JSWrapper.java JS_Dynamic.java JS_Window.java DynamicList.java FormSubmit.java Location.java Screen.java TheScripter.java document.java navigator.java parent.java window.java DummyObject.java DummyList.java

@@ -1,0 +1,8 @@
+#Attribute classification for Pinpointing
+#Attribute_Group	Rank	Above_Normal	Below_Normal
+ 	,LatchMonitor	,Sleeps	,3	,3	,3
+ 	,LatchMonitor	,Misses	,3	,3	,3
+ 	,LatchMonitor	,Gets	,3	,3	,3
+ 	,LatchMonitor	,Spin Gets	,3	,3	,3
+ 	,LatchMonitor	,Immediate Misses	,3	,3	,3
+ 	,LatchMonitor	,Immediate Gets	,3	,3	,3

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+    <ATTRSET platform="unix" attrType="config">
+		
+		<ATTRINFO attrName="Capacity" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/cap" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="URL" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/url" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="MultipleHostAccess" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/access" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Type" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/type" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+    </ATTRSET>
+    
+    <ATTRSET platform="windows" attrType="config">
+		
+		<ATTRINFO attrName="Capacity" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/cap" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="URL" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/url" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="MultipleHostAccess" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/access" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Type" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="/type" type="variable"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+    </ATTRSET>
+    
+    <ATTRSET platform="unix" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Disk_Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Free_Disk_Space"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Free_Disk_Space"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_Utilization"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Disk_Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Disk_Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Free_Disk_Space"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Free_Disk_Space"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_Utilization"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DATASTORE" appInstance="" appParam="Disk_Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+</BMCDATA>

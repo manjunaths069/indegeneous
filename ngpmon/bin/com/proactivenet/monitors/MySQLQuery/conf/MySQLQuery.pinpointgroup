@@ -1,0 +1,8 @@
+Database     ,MySQLQuery  
+
+DatabaseRespTime,MySQLQuery,ResponseTime
+DatabaseRespTime,MySQLQuery,AVAILABILITY
+
+DatabaseConnTime,MySQLQuery,ConnectTime
+
+DatabaseAvailability,MySQLQuery,AVAILABILITY

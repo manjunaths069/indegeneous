@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="31220"     moInstId="30" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "312200" AttrVal = "http"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "312201" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="31220"     moInstId="31" 
+
+parentMOTypeId = "0" parentMOInstId = "0" ></MoInfo> 
+
+  <AttrInfo	AttrID = "312200" AttrVal = "https"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "312201" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

@@ -1,0 +1,7 @@
+SOURCE.cc =NodePing.cc 
+
+OTHERFILES= PingObjectInfo.h 
+
+TARGET_LIB_SHARED = libSolNodePingMon.so
+
+libSolNodePingMon_OBJS =  ${SOURCE.cc:%.cc=%.o}

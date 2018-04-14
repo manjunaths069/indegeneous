@@ -1,0 +1,8 @@
+SOURCE.cc = TCPStats.cc javaCom.cc
+
+OTHERFILES= tcpmon.h 
+
+TARGET_LIB_SHARED = libtcpmon.so
+
+libtcpmon_OBJS =  ${SOURCE.cc:%.cc=%.o}
+

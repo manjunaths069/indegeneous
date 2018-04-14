@@ -1,0 +1,13 @@
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+System	,AIXSystem	,RUN_PRO	,3	,3	,3
+System	,AIXSystem	,SWAP_PRO	,3	,3	,3
+System	,AIXSystem	,IO_PRO	,3	,3	,3
+System	,AIXSystem	,SYS_LOAD	,5	,5	,2
+System	,AIXSystem	,VMEM_USD,5	,4	,2
+System	,AIXSystem	,RMEM_USD	,4	,3	,3
+System	,AIXSystem	,NO_PROCESSES	,2	,3	,3
+System	,AIXSystem	,USR_CPU	,5	,3	,3
+System	,AIXSystem	,KER_CPU	,5	,3	,3
+System	,AIXSystem	,TOL_CPU	,5	,4	,3
+System	,AIXSystem	,SCAN_RATE	,5	,4	,3
+System	,AIXSystem	,IO_WAIT	,3	,3	,3

@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'LDAPRESP_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = LDAP Query
+REM Schema & PruneCntl Statements for Monitor = LDAP Query ,moTypeId = 20131
+
+echo Creating tables LDAPRESP_STATS, LDAPRESP_RT, LDAPRESP_BL
+echo Creating Prune Control entries for LDAPRESP_STATS  AND  entries for LDAPRESP_RT
+sqli "CREATE TABLE LDAPRESP_STATS (ITEMID int,TIMERECORDED int,RESPTIME int,AVAILABILITY int,CONNTIME int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index LDAPRESP_STATS_N3 on LDAPRESP_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE LDAPRESP_RT (ITEMID int, FROMTIME int, TOTIME int, RESPTIME_HIGH int, RESPTIME_AVG  int, RESPTIME_LOW  int, AVAILABILITY_HIGH int, AVAILABILITY_AVG  int, AVAILABILITY_LOW  int, CONNTIME_HIGH int, CONNTIME_AVG  int, CONNTIME_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index LDAPRESP_RT_N3 on LDAPRESP_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE LDAPRESP_BL (ITEMID   int,TIMESLOT int,RESPTIME_HIGH int,RESPTIME_AVG  int,RESPTIME_LOW  int,AVAILABILITY_HIGH int,AVAILABILITY_AVG  int,AVAILABILITY_LOW  int,CONNTIME_HIGH int,CONNTIME_AVG  int,CONNTIME_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('LDAPRESP_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('LDAPRESP_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = LDAP Query
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

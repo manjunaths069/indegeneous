@@ -1,0 +1,11 @@
+System,VMwareRPSysMon,AVAILABILITY
+System,VMwareRPSysMon,CPU_USED
+System,VMwareRPSysMon,MEM_USED
+SystemInfo,VMwareRPSysMon,AVAILABILITY
+SystemInfo,VMwareRPSysMon,CPU_USED
+SystemInfo,VMwareRPSysMon,MEM_USED
+SystemMem,VMwareRPSysMon,MEM_USED
+VirtualSystem,VMwareRPSysMon,AVAILABILITY
+VirtualSystem,VMwareRPSysMon,CPU_USED
+VirtualSystem,VMwareRPSysMon,MEM_USED
+         

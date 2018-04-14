@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- MySQLQueryQueryMeta.xml -->
+
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="43752" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="MySQL" GUIDisplayName="My SQL" OneInstancePerParent="Y" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" HasCustomizedGUI="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.MySQLQuery.MySQLQuery" Version="1.0" OS="Any" IsStatic="Y" IsSchedulable="N" OSName="Any" IsNewFrameWork="Y" SupportFlashCheck="Y"/>
+    <BasicInfo MoTypeId="43753" MoTypeType="APPS" ParentMoType="43752" UniqueName="MySQLQuery" GUIDisplayName="MySQL Query" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.MySQLQuery.MySQLQuery" Version="1.0" OS="Any" OSName="Any" IsSchedulable="Y" MustRunOnAgent="N" IsStatic="N" HasMoreInfo="Y" SupportFlashCheck="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="43752999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="MySQL"/>
+      <AppsInput AttrId="43753999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="43753994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="43753020" UsrAttrId="020" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" GUIDisplayable="N" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" UseAsMODisplayName="N" GUIInputOnCreate="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="43753989" UsrAttrId="989" GUIDisplayName="Target Device" UniqueName="DNSIP" GUIDisplaySequenceNumber="3" GUIDisplayable="Y" DisplayType="String" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="0.0.0.0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="43753004" UsrAttrId="004" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="3306"/>
+      <AppsInput AttrId="43753005" UsrAttrId="005" UniqueName="DB" GUIDisplayName="Database Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String"/>
+      <AppsInput AttrId="43753006" UsrAttrId="006" UniqueName="USER_NAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="Y" GUIDisplaySequenceNumber="6" IsDefaultValueSet="Y" DisplayType="String"/>
+      <AppsInput AttrId="43753007" UsrAttrId="007" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="7" GUIRequiredOnCreate="N" IsDefaultValueSet="Y" DisplayType="Password"/>
+      <AppsInput AttrId="43753008" UsrAttrId="008" UniqueName="SQL" GUIDisplayName="SQL Statement" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="select count(*) from mysql.user;"/>
+      <AppsInput AttrId="43753995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="43753991" UsrAttrId="991" UniqueName="RETRY_COUNT" GUIDisplayName="Retry Count" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="3"/>
+      <AppsInput AttrId="43753992" UsrAttrId="992" UniqueName="RETRY_DELAY" GUIDisplayName="Retry Delay" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="20"/>
+      <AppsInput AttrId="43753998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="43753997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="43753980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="43753981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="43753982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="54" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="43753468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="55" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="43753993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" IsDefaultValueSet="Y" DefaultValue="1.0"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="43753101" UsrAttrId="101" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="MYSQLQUERY" ColumnName="AVAILABILITY" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="Y" MoReferenceType="0" GUIDisplayable="Y" UseNormalDistribution="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="43753102" UsrAttrId="102" UniqueName="CONNECTTIME" GUIDisplayName="Connect Time" TableName="MYSQLQUERY" ColumnName="CONNTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" MoReferenceType="0" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="43753103" UsrAttrId="103" UniqueName="RESPONSETIME" GUIDisplayName="Response Time" TableName="MYSQLQUERY" ColumnName="RESPTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="43753104" UsrAttrId="104" UniqueName="VALUE" GUIDisplayName="Value" TableName="MYSQLQUERY" ColumnName="QUERYVAL" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

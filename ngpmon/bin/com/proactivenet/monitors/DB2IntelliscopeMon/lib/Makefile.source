@@ -1,0 +1,7 @@
+SOURCE.cpp =DB2IntelliscopeMon.cpp
+
+OTHERFILES= DB2IntelliscopeMon.h 
+
+TARGET_LIB_SHARED = libSolDB2IntelliscopeMon.so
+
+libSolDB2IntelliscopeMon_OBJS =  ${SOURCE.cpp:%.cpp=%.o}

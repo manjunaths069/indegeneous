@@ -1,0 +1,2 @@
+#SUBDIRS= src gui
+SOURCE.java = AppVisionParameters.java AppVisionSample.java AppVisionSampler.java

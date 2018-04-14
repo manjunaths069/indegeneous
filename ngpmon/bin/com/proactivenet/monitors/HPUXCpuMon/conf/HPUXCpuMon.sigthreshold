@@ -1,0 +1,27 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+#
+#
+# NOTE: Scan Rate was not set since all monitors are returning value "0". Most likely a bug?
+#HPUXCPUInfo	CNXT_SWTCH	Normal	30	above	0.0	50.0	200.0	-1	1	Auto
+#HPUXCPUInfo	INTERRUPTS	Normal	30	above	0.0	50.0	200.0	-1	1	Auto
+#HPUXCPUInfo	SYS_CALLS	Normal	30	above	0.0	50.0	300.0	-1	1	Auto
+HPUXCPUInfo	SYS_TIME	Normal	30	below	0.0	50.0	10.0	-1	0	Auto
+HPUXCPUInfo	SYS_TIME	Normal	30	above	0.0	50.0	8.0	-1	0	Auto
+HPUXCPUInfo	USR_TIME	Normal	30	below	0.0	50.0	10.0	-1	0	Auto
+HPUXCPUInfo	USR_TIME	Normal	30	above	0.0	50.0	15.0	-1	0	Auto
+HPUXCPUInfo	WAIT_TIME	Normal	30	above	0.0	50.0	10.0	-1	0	Auto
+#HPUXCPUInfo	IDLE_TIME	Normal	30	below	0.0	50.0	10.0	-1	1
+#HPUXCPUInfo	IDLE_TIME	Normal	30	above	0.0	50.0	10.0	-1	0
+#HPUXCPUInfo	FAULTS	Normal	30	below	0.0	50.0	10.0	-1	1
+#HPUXCPUInfo	FAULTS	Normal	30	above	0.0	50.0	10.0	-1	0

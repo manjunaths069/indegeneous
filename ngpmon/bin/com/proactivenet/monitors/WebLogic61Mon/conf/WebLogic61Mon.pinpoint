@@ -1,0 +1,4 @@
+#Attribute Group	,Monitor Name	    ,Attribute Name		,Rank	,Above Normal	,Below Normal
+Availability            ,WebLogic61MonInfo    ,AVAILABILITY               ,5	,1 	,5
+                        ,WebLogic61MonInfo    ,JVM_HEAP_USED              ,4	
+                        ,WebLogic61MonInfo    ,EXE_QUE_USAGE              ,4	

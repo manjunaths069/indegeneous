@@ -1,0 +1,24 @@
+WebRespTime,webtranmon,RESPONSE_TIME
+WebRespTime,webtranmon,AVAILABILITY
+WebRespTime,webtranmon,AR_STAT_RESP01
+WebRespTime,webtranmon,AR_STAT_RESP02
+WebRespTime,webtranmon,AR_STAT_RESP03
+WebRespTime,webtranmon,AR_STAT_RESP04
+WebRespTime,webtranmon,AR_STAT_RESP05
+WebRespTime,webtranmon,AR_STAT_RESP06
+WebRespTime,webtranmon,AR_STAT_RESP07
+WebRespTime,webtranmon,AR_STAT_RESP08
+WebRespTime,webtranmon,AR_STAT_RESP09
+WebRespTime,webtranmon,AR_STAT_RESP10
+WebRespTime,webtranmon,AR_STAT_RESP11
+WebRespTime,webtranmon,AR_STAT_RESP12
+WebRespTime,webtranmon,AR_STAT_RESP13
+WebRespTime,webtranmon,AR_STAT_RESP14
+WebRespTime,webtranmon,AR_STAT_RESP15
+WebRespTime,webtranmon,AR_STAT_RESP16
+WebRespTime,webtranmon,AR_STAT_RESP17
+WebRespTime,webtranmon,AR_STAT_RESP18
+WebRespTime,webtranmon,AR_STAT_RESP19
+WebRespTime,webtranmon,AR_STAT_RESP20
+WebConnTime,webtranmon,Connect Time
+

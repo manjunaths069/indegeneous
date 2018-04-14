@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<MetaData>
+<ManagedObject>
+	<ParentBasicInfo MoTypeId="42924" UniqueName="HPOVTransactionMonP" GUIDisplayName="HPOV Transaction Monitor Parent" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" />
+	<ParentAppsInfo ClassName="com.proactivenet.monitors.HPOVdatastore.HPOVdatastore" Version="1.0" OS="Any" GUIMonitorGroup="OTHER" IsSchedulable="N" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="N" />
+	<BasicInfo HasCustomizedGUI="N" MoTypeId="42925" UniqueName="HPOVTransactionMon" GUIDisplayName="HPOV Transaction Class" MoTypeType="APPS" ParentMoType="42924" />
+	<AppsInfo ClassName="com.proactivenet.monitors.HPOVdatastore.HPOVdatastore" Version="1.0" OS="Any" MustRunOnAgent="N" IsNewFrameWork="Y" HasMoreInfo="Y" AdapterType="60003" SupportFlashCheck="N" IsAutoSyncEnabled="Y" />
+</ManagedObject>
+ <Attributes>
+  <Application>
+	<ParentAppsInput AttrId="42924999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="HPOV Sample Monitor" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42925999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME"   ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42925994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="N" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="N" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N" />	
+	<AppsInput AttrId="42925002" UsrAttrId="2" UniqueName="PORT" GUIDisplayName="OVI Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="8080" GUIRequiredOnCreate="Y" UseAsInstanceName="N" GUIEditable="N" />
+	<AppsInput AttrId="42925003" UsrAttrId="3" UniqueName="WS_URL" GUIDisplayName="OVI WebServices URL" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="6" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="/ovi-soap/OvpmQueryPluglet" GUIRequiredOnCreate="Y" UseAsInstanceName="N" GUIEditable="N" />
+	<AppsInput AttrId="42925004" UsrAttrId="4" UniqueName="WS_USERNAME" GUIDisplayName="OVI UserName" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" GUIRequiredOnCreate="N" UseAsInstanceName="N" GUIEditable="N" />
+	<AppsInput AttrId="42925005" UsrAttrId="5" UniqueName="WS_PASSWORD" GUIDisplayName="OVI Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" DisplayType="Password" DefaultValue="" GUIDisplayable="N" GUIRequiredOnCreate="N" UseAsInstanceName="N" GUIEditable="Y" />
+	<AppsInput AttrId="42925006" UsrAttrId="6" UniqueName="USE_HTTPS" GUIDisplayName="Use Https" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Boolean" GUIEditable="N" />
+	<AppsInput AttrId="42925019" UsrAttrId="19" UniqueName="DATA_SOURCE" GUIDisplayName="Data Source" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" UseAsInstanceName="Y" GUIRequiredOnCreate="N"  IsAutoDiscoverable="Y" GUIEditable="N" />
+    <AppsInput AttrId="42925007" UsrAttrId="7" UniqueName="TARGET_HPAGENT" GUIDisplayName="OV Performance/Operations Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" GUIRequiredOnCreate="N" UseAsInstanceName="N" IsAutoDiscoverable="Y" GUIEditable="N" />
+	<AppsInput AttrId="42925008" UsrAttrId="8" UniqueName="INSTANCE_DETAILS" GUIDisplayName="Instance" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" UseAsInstanceName="Y" GUIRequiredOnCreate="N"  IsAutoDiscoverable="Y" GUIEditable="N" />
+	<AppsInput AttrId="42925020" UsrAttrId="20" UniqueName="DNSIP" GUIDisplayName="OVI IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="0" IsInputAttribute="Y" GUIEditable="N"  />
+
+	<!-- Hidden Input -->
+	<AppsInput AttrId="42925009" UsrAttrId="9" UniqueName="CLASSNAME" GUIDisplayName="Class" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="TRANSACTION" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="N" IsAutoDiscoverable="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42925010" UsrAttrId="10" UniqueName="FILTERNAME" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="TT_APP_TRAN_NAME" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42925018" UsrAttrId="18" UniqueName="LATESTTIME" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="GLOBAL;GBL_CPU_TOTAL_UTIL" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" UseAsMODisplayName="N" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N" />
+	<AppsInput AttrId="42925011" UsrAttrId="11" UniqueName="PARENT_ADAPTER" GUIDisplayName="Adapter Instance Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" GUIDisplayable="Y" IsDefaultValueSet="Y" GUIInputOnCreate="N" MoReferenceType="60003" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="-1" />
+
+	<!-- Hidden Input for Stats -->           
+ 
+	<AppsInput AttrId="42925021" UsrAttrId="21" UniqueName="STATS_ATTRIB01" GUIDisplayName="Transaction Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_COUNT;RAW;#;1;2;3;4;5;6;Stats" />
+	<AppsInput AttrId="42925022" UsrAttrId="22" UniqueName="STATS_ATTRIB02" GUIDisplayName="SLO Percentage" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_SLO_PERCENT;RAW;%;1;2;3;4;5;6;Stats" />
+	<AppsInput AttrId="42925023" UsrAttrId="23" UniqueName="STATS_ATTRIB03" GUIDisplayName="Abort Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_ABORT;RAW;#;1;2;3;4;5;6;Stats" />
+	<AppsInput AttrId="42925024" UsrAttrId="24" UniqueName="STATS_ATTRIB04" GUIDisplayName="Failed Count" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_FAILED;RAW;#;1;2;3;4;5;6;Stats" />
+	<AppsInput AttrId="42925025" UsrAttrId="25" UniqueName="STATS_ATTRIB05" GUIDisplayName="Average Wall Time" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_WALL_TIME_PER_TRAN;RAW;sec;1;2;3;4;5;6;Stats" />
+	<AppsInput AttrId="42925026" UsrAttrId="26" UniqueName="STATS_ATTRIB06" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925027" UsrAttrId="27" UniqueName="STATS_ATTRIB07" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925028" UsrAttrId="28" UniqueName="STATS_ATTRIB08" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925029" UsrAttrId="29" UniqueName="STATS_ATTRIB09" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925030" UsrAttrId="30" UniqueName="STATS_ATTRIB10" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925031" UsrAttrId="31" UniqueName="STATS_ATTRIB11" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925032" UsrAttrId="32" UniqueName="STATS_ATTRIB12" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925033" UsrAttrId="33" UniqueName="STATS_ATTRIB13" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925034" UsrAttrId="34" UniqueName="STATS_ATTRIB14" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925035" UsrAttrId="35" UniqueName="STATS_ATTRIB15" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925036" UsrAttrId="36" UniqueName="STATS_ATTRIB16" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925037" UsrAttrId="37" UniqueName="STATS_ATTRIB17" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925038" UsrAttrId="38" UniqueName="STATS_ATTRIB18" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925039" UsrAttrId="39" UniqueName="STATS_ATTRIB19" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925040" UsrAttrId="40" UniqueName="STATS_ATTRIB20" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925041" UsrAttrId="41" UniqueName="STATS_ATTRIB21" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925042" UsrAttrId="42" UniqueName="STATS_ATTRIB22" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925043" UsrAttrId="43" UniqueName="STATS_ATTRIB23" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925044" UsrAttrId="44" UniqueName="STATS_ATTRIB24" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925045" UsrAttrId="45" UniqueName="STATS_ATTRIB25" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925046" UsrAttrId="46" UniqueName="STATS_ATTRIB26" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925047" UsrAttrId="47" UniqueName="STATS_ATTRIB27" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925048" UsrAttrId="48" UniqueName="STATS_ATTRIB28" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925049" UsrAttrId="49" UniqueName="STATS_ATTRIB29" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925050" UsrAttrId="50" UniqueName="STATS_ATTRIB30" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925051" UsrAttrId="51" UniqueName="STATS_ATTRIB31" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925052" UsrAttrId="52" UniqueName="STATS_ATTRIB32" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925053" UsrAttrId="53" UniqueName="STATS_ATTRIB33" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925054" UsrAttrId="54" UniqueName="STATS_ATTRIB34" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925055" UsrAttrId="55" UniqueName="STATS_ATTRIB35" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925056" UsrAttrId="56" UniqueName="STATS_ATTRIB36" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925057" UsrAttrId="57" UniqueName="STATS_ATTRIB37" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925058" UsrAttrId="58" UniqueName="STATS_ATTRIB38" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925059" UsrAttrId="59" UniqueName="STATS_ATTRIB39" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	<AppsInput AttrId="42925060" UsrAttrId="60" UniqueName="STATS_ATTRIB40" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" /> 
+	   
+	<!-- Hidden Input for Config -->
+ 
+	<AppsInput AttrId="42925131" UsrAttrId="131" UniqueName="CONFIG_ATTRIB01" GUIDisplayName="Transaction Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_NAME;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925132" UsrAttrId="132" UniqueName="CONFIG_ATTRIB02" GUIDisplayName="Transaction ID" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_TRAN_ID;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925133" UsrAttrId="133" UniqueName="CONFIG_ATTRIB03" GUIDisplayName="Transaction UserName" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_UNAME;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925134" UsrAttrId="134" UniqueName="CONFIG_ATTRIB04" GUIDisplayName="SLO Threshold" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_SLO_THRESHOLD;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925135" UsrAttrId="135" UniqueName="CONFIG_ATTRIB05" GUIDisplayName="Transaction Info" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_INFO;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925136" UsrAttrId="136" UniqueName="CONFIG_ATTRIB06" GUIDisplayName="Application Name" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="TRANSACTION+TT_APP_TRAN_NAME+TT_APP_NAME;RAW;None;1;2;3;4;5;6;config" />
+	<AppsInput AttrId="42925137" UsrAttrId="137" UniqueName="CONFIG_ATTRIB07" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925138" UsrAttrId="138" UniqueName="CONFIG_ATTRIB08" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925139" UsrAttrId="139" UniqueName="CONFIG_ATTRIB09" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925140" UsrAttrId="140" UniqueName="CONFIG_ATTRIB10" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925141" UsrAttrId="141" UniqueName="CONFIG_ATTRIB11" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925142" UsrAttrId="142" UniqueName="CONFIG_ATTRIB12" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925143" UsrAttrId="143" UniqueName="CONFIG_ATTRIB13" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925144" UsrAttrId="144" UniqueName="CONFIG_ATTRIB14" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925145" UsrAttrId="145" UniqueName="CONFIG_ATTRIB15" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925146" UsrAttrId="146" UniqueName="CONFIG_ATTRIB16" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925147" UsrAttrId="147" UniqueName="CONFIG_ATTRIB17" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925148" UsrAttrId="148" UniqueName="CONFIG_ATTRIB18" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925149" UsrAttrId="149" UniqueName="CONFIG_ATTRIB19" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925150" UsrAttrId="150" UniqueName="CONFIG_ATTRIB20" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925151" UsrAttrId="151" UniqueName="CONFIG_ATTRIB21" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925152" UsrAttrId="152" UniqueName="CONFIG_ATTRIB22" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925153" UsrAttrId="153" UniqueName="CONFIG_ATTRIB23" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925154" UsrAttrId="154" UniqueName="CONFIG_ATTRIB24" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925155" UsrAttrId="155" UniqueName="CONFIG_ATTRIB25" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925156" UsrAttrId="156" UniqueName="CONFIG_ATTRIB26" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925157" UsrAttrId="157" UniqueName="CONFIG_ATTRIB27" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925158" UsrAttrId="158" UniqueName="CONFIG_ATTRIB28" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925159" UsrAttrId="159" UniqueName="CONFIG_ATTRIB29" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	<AppsInput AttrId="42925160" UsrAttrId="160" UniqueName="CONFIG_ATTRIB30" GUIDisplayName="X" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="Y" AttrReferenceType="Unknown" UseNormalDistribution="Y" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="X" />
+	
+	<!---Control Attributes -->
+			
+	<AppsInput AttrId="42925995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1" />
+	<AppsInput AttrId="42925012" UsrAttrId="12" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300" />
+	<AppsInput AttrId="42925013" UsrAttrId="13" UniqueName="STSPOLLTIMEOUT"  GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="60" />
+	<AppsInput AttrId="42925014" UsrAttrId="14" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="86400" />
+	<AppsInput AttrId="42925015" UsrAttrId="15" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30" />
+	<AppsInput AttrId="42925016" UsrAttrId="16" UniqueName="RETRY_COUNT" GUIDisplayName="Retry Count" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" GUIEditable="Y"  DefaultValue="3" />
+	<AppsInput AttrId="42925017" UsrAttrId="17" UniqueName="RETRY_DELAY" GUIDisplayName="Retry Delay" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" GUIEditable="Y"  DefaultValue="20" />
+           		
+	
+	<!-- Config Attributes 	-->	
+		    
+<AppsInput AttrId="42925980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42925981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="42925982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="42925468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="16" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+	<AppsConfig AttrId="42925993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000" />    
+	<AppsConfig AttrId="42925181" UsrAttrId="181" UniqueName="CONFIG01" GUIDisplayName="Transaction Name" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000" />
+	<AppsConfig AttrId="42925182" UsrAttrId="182" UniqueName="CONFIG02" GUIDisplayName="Transaction ID" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000"/>
+	<AppsConfig AttrId="42925183" UsrAttrId="183" UniqueName="CONFIG03" GUIDisplayName="Transaction UserName" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000"/>
+	<AppsConfig AttrId="42925184" UsrAttrId="184" UniqueName="CONFIG04" GUIDisplayName="SLO Threshold" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000"/>
+	<AppsConfig AttrId="42925185" UsrAttrId="185" UniqueName="CONFIG05" GUIDisplayName="Transaction Info" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000"/>
+	<AppsConfig AttrId="42925186" UsrAttrId="186" UniqueName="CONFIG06" GUIDisplayName="Application Name" GUIDisplayable="Y" DisplayType="String" ScaleFactor="1000"/>
+	<!-- Stats Attributes -->	   
+ 
+	<AppsStats>
+	<CoreAppsStats AttrId="42925070" UsrAttrId="70" UniqueName="DATA_AVAILABILITY" GUIDisplayName="Data Availability" TableName="HPOVTRANMon" ColumnName="DATA_AVAILABILITY" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIGraphedByDefault="Y" GUIDisplayable="Y" />
+	</AppsStats>
+	<AppsStats>
+	<CoreAppsStats AttrId="42925071" UsrAttrId="71" UniqueName="STATS01" GUIDisplayName="Transaction Count" TableName="HPOVTRANMon" ColumnName="STATS01" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="Y"  />
+	</AppsStats>
+	<AppsStats>
+	<CoreAppsStats AttrId="42925072" UsrAttrId="72" UniqueName="STATS02" GUIDisplayName="SLO Percentage" TableName="HPOVTRANMon" ColumnName="STATS02" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N" />
+	</AppsStats>
+	<AppsStats>
+	<CoreAppsStats AttrId="42925073" UsrAttrId="73" UniqueName="STATS03" GUIDisplayName="Abort Count" TableName="HPOVTRANMon" ColumnName="STATS03" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" />
+	</AppsStats>   		
+	<AppsStats>
+	<CoreAppsStats AttrId="42925074" UsrAttrId="74" UniqueName="STATS04" GUIDisplayName="Failed Count" TableName="HPOVTRANMon" ColumnName="STATS04" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N" />
+	</AppsStats> 
+	<AppsStats>
+	<CoreAppsStats AttrId="42925075" UsrAttrId="75" UniqueName="STATS05" GUIDisplayName="Average Wall Time" TableName="HPOVTRANMon" ColumnName="STATS05" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="sec" GUIGraphedByDefault="N" />
+	</AppsStats> 
+	               <AppsStats>
+                        <CoreAppsStats AttrId="42925076" UsrAttrId="76" UniqueName="STATS06" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS06" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   	</AppsStats>
+		   	<AppsStats>
+		   	<CoreAppsStats AttrId="42925077" UsrAttrId="77" UniqueName="STATS07" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS07" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   	 </AppsStats>
+		   	 <AppsStats>
+		   	  <CoreAppsStats AttrId="42925078" UsrAttrId="78" UniqueName="STATS08" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS08" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   	   </AppsStats>
+		   	  <AppsStats>
+		   	    <CoreAppsStats AttrId="42925079" UsrAttrId="79" UniqueName="STATS09" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS09" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   	   </AppsStats>
+		   	<AppsStats>
+		   	    <CoreAppsStats AttrId="42925080" UsrAttrId="80" UniqueName="STATS10" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS10" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   	</AppsStats>
+		   	<AppsStats>
+		   	    <CoreAppsStats AttrId="42925081" UsrAttrId="81" UniqueName="STATS11" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS11" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   	</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925082" UsrAttrId="82" UniqueName="STATS12" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS12" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925083" UsrAttrId="83" UniqueName="STATS13" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS13" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925084" UsrAttrId="84" UniqueName="STATS14" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS14" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925085" UsrAttrId="85" UniqueName="STATS15" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS15" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N"  />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925086" UsrAttrId="86" UniqueName="STATS16" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS16" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925087" UsrAttrId="87" UniqueName="STATS17" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS17" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925088" UsrAttrId="88" UniqueName="STATS18" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS18" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925089" UsrAttrId="89" UniqueName="STATS19" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS19" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925090" UsrAttrId="90" UniqueName="STATS20" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS20" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925091" UsrAttrId="91" UniqueName="STATS21" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS21" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925092" UsrAttrId="92" UniqueName="STATS22" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS22" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925093" UsrAttrId="93" UniqueName="STATS23" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS23" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925094" UsrAttrId="94" UniqueName="STATS24" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS24" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925095" UsrAttrId="95" UniqueName="STATS25" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS25" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925096" UsrAttrId="96" UniqueName="STATS26" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS26" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925097" UsrAttrId="97" UniqueName="STATS27" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS27" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925098" UsrAttrId="98" UniqueName="STATS28" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS28" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925099" UsrAttrId="99" UniqueName="STATS29" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS29" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925100" UsrAttrId="100" UniqueName="STATS30" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS30" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925101" UsrAttrId="101" UniqueName="STATS31" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS31" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925102" UsrAttrId="102" UniqueName="STATS32" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS32" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925103" UsrAttrId="103" UniqueName="STATS33" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS33" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925104" UsrAttrId="104" UniqueName="STATS34" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS34" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925105" UsrAttrId="105" UniqueName="STATS35" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS35" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925106" UsrAttrId="106" UniqueName="STATS36" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS36" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925107" UsrAttrId="107" UniqueName="STATS37" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS37" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925108" UsrAttrId="108" UniqueName="STATS38" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS38" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   		<AppsStats>
+		   	    <CoreAppsStats AttrId="42925109" UsrAttrId="109" UniqueName="STATS39" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS39" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+		   		</AppsStats>
+		   	        <AppsStats>
+		   	    <CoreAppsStats AttrId="42925110" UsrAttrId="110" UniqueName="STATS40" GUIDisplayName="X" TableName="HPOVTRANMon" ColumnName="STATS40" UnitOfMeasurement="#" DisplayType="Integer" AttrReferenceType="Unknown" GUIGraphedByDefault="N" ScaleFactor="1000" GUIDisplayable="N" />
+	       </AppsStats>
+  </Application>
+ </Attributes>
+</MetaData>

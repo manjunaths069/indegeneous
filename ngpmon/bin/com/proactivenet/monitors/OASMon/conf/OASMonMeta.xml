@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd"> 
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="24763" UniqueName="OASMon" GUIDisplayName="OAS Monitor" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.OASMon.OASMon" Version="1.0" OS="Any" GUIMonitorGroup="OTHER" IsSchedulable="N" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="N"/>
+    <BasicInfo MoTypeId="24764" UniqueName="OASMonInfo" GUIDisplayName="Oracle App Server" MoTypeType="APPS" ParentMoType="24763"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.OASMon.OASMon" Version="1.0" OS="Any" MustRunOnAgent="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="24763999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="OAS Sample Monitor" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764994" UsrAttrId="994" GUIDisplayName="Source Agent" UniqueName="SRCIP" MoReferenceType="10000" AttrReferenceType="ANY" DefaultValue="" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="2" GUIDisplayable="Y" DisplayType="MOReference" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764005" UsrAttrId="5" GUIDisplayName="Target IP/Host Name" UniqueName="TARGETIP" GUIDisplaySequenceNumber="3" GUIDisplayable="N" DisplayType="IPAddress" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="N" IsDefaultValueSet="Y" DefaultValue="0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764012" UsrAttrId="12" GUIDisplayName="Target Device" UniqueName="DNSIP" GUIDisplaySequenceNumber="4" GUIDisplayable="Y" DisplayType="String" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" UseAsInstanceName="Y" DefaultValue="0.0.0.0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764006" UsrAttrId="6" GUIDisplayName="Protocol" UniqueName="PROTOCOL" MoReferenceType="24765" AttrReferenceType="ANY" DefaultValue="1" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="5" GUIDisplayable="Y" DisplayType="MOReference" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764007" UsrAttrId="7" GUIDisplayName="Port" UniqueName="PORT" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="7777" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="6" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" UseAsInstanceName="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764995" UsrAttrId="995" GUIDisplayName="Collect Data" UniqueName="COLLECTDATA" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="1" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Boolean" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764996" UsrAttrId="996" GUIDisplayName="Configuration Poll Interval" UniqueName="CFGPOLLPERIOD" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="86400" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764021" UsrAttrId="21" GUIDisplayName="Configuration Poll Timeout" UniqueName="CFGPOLLTIMEOUT" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="20" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764008" UsrAttrId="8" GUIDisplayName="Retry Count" UniqueName="RETRY_COUNT" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="3" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764009" UsrAttrId="9" GUIDisplayName="Retry Delay" UniqueName="RETRY_DELAY" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="20" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764997" UsrAttrId="997" GUIDisplayName="Statistics Poll Timeout" UniqueName="STSPOLLTIMEOUT" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="30" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764998" UsrAttrId="998" GUIDisplayName="Statistics Poll Interval" UniqueName="STSPOLLPERIOD" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="300" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="24764010" UsrAttrId="10" UniqueName="INPUTFILE" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="OASMon/OAS_Attribute.xml"/>
+      <AppsInput AttrId="24764019" UsrAttrId="19" UniqueName="USER_ID" GUIDisplayName="User ID" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String"/>
+      <AppsInput AttrId="24764020" UsrAttrId="20" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="8" GUIRequiredOnCreate="N" DisplayType="Password"/>
+      <AppsInput AttrId="24764980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="24764981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="24764982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="24764468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="12" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="24764101" UsrAttrId="101" UniqueName="OAS_VER" GUIDisplayName="Oracle App Server Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="24764102" UsrAttrId="102" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764034" UsrAttrId="34" GUIDisplayName="Availability" UniqueName="AVAILABILITY" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="AVAILABILITY" TableName="OASMON" UnitOfMeasurement="%" UseNormalDistribution="Y" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764035" UsrAttrId="35" GUIDisplayName="OHS Active Connections" UniqueName="OHS_ACTIVE_CONN" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_AT_CN" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764036" UsrAttrId="36" GUIDisplayName="OHS Completed Connections" UniqueName="OHS_COMPLETE_CONN" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_CP_CN" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764037" UsrAttrId="37" GUIDisplayName="OHS Connection Time" UniqueName="OHS_CONN_TIME" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_CONN_TIME" TableName="OASMON" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764038" UsrAttrId="38" GUIDisplayName="OHS Active Handlers" UniqueName="OHS_ACTIVE_HND" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_AT_H" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764039" UsrAttrId="39" GUIDisplayName="OHS Completed Handlers" UniqueName="OHS_COMPLETE_HAND" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_CM_H" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764040" UsrAttrId="40" GUIDisplayName="OHS Handler Time" UniqueName="OHS_HAND_TIME" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_H_T" TableName="OASMON" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764041" UsrAttrId="41" GUIDisplayName="OHS Active Requests" UniqueName="OHS_ACTIVE_REQ" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_AT_RQ" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764042" UsrAttrId="42" GUIDisplayName="OHS Completed Requests" UniqueName="OHS_COMPLETE_REQS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_CP_RQ" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764043" UsrAttrId="43" GUIDisplayName="OHS Request Time" UniqueName="OHS_REQ_TIME" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_RQ_T" TableName="OASMON" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764044" UsrAttrId="44" GUIDisplayName="OHS Internal Redirects" UniqueName="OHS_INTER_REDRCTS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_RED" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764045" UsrAttrId="45" GUIDisplayName="OHS Client Side Errors" UniqueName="OHS_CLT_ERRORS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_C_ERR" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764046" UsrAttrId="46" GUIDisplayName="OHS Server Side Errors" UniqueName="OHS_SRV_ERRORS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_S_ERR" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764047" UsrAttrId="47" GUIDisplayName="OHS Not Found Errors" UniqueName="OHS_NF_ERRORS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_NF_ERR" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764048" UsrAttrId="48" GUIDisplayName="OHS Response Bandwidth" UniqueName="OHS_BAND_WIDTH" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_BND_WID" TableName="OASMON" UnitOfMeasurement="KB/sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764049" UsrAttrId="49" GUIDisplayName="OHS Child start" UniqueName="OHS_CHILD_START" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_C_ST" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764050" UsrAttrId="50" GUIDisplayName="OHS Child Finish" UniqueName="OHS_CHILD_FINISH" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_C_FH" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764051" UsrAttrId="51" GUIDisplayName="OHS Ready Child process" UniqueName="OHS_CHILD_READY" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_C_RD" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764052" UsrAttrId="52" GUIDisplayName="OHS Busy Child Process" UniqueName="OHS_CHILD_BUSY" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="OHS_C_BS" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764060" UsrAttrId="60" GUIDisplayName="JVM Total Processes" UniqueName="JVM_TOT_PROC" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_T_PRC" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764061" UsrAttrId="61" GUIDisplayName="JVM Active Thread Groups" UniqueName="JVM_ACT_THR_GPS" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_T_GP" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764062" UsrAttrId="62" GUIDisplayName="JVM Active Threads" UniqueName="JVM_ACT_THRDS" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_AT_T" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764063" UsrAttrId="63" GUIDisplayName="JVM Total Memory" UniqueName="JVM_TOT_MEM" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_T_M" TableName="OASMON" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764064" UsrAttrId="64" GUIDisplayName="JVM Used Memory" UniqueName="JVM_USED_MEM" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_U_M" TableName="OASMON" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764065" UsrAttrId="65" GUIDisplayName="JVM Max Memory Used" UniqueName="JVM_MAX_MEM_USD" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JVM_M_M_USD" TableName="OASMON" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764071" UsrAttrId="71" GUIDisplayName="JDBC Opened Connections" UniqueName="JDBC_OPEN_CONN" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_OP_C" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764072" UsrAttrId="72" GUIDisplayName="JDBC Closed Connections" UniqueName="JDBC_CLOSD_CONN" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_CL_C" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764073" UsrAttrId="73" GUIDisplayName="JDBC Active Connections" UniqueName="JDBC_ACT_CONN" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_A_C" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764074" UsrAttrId="74" GUIDisplayName="JDBC Create New Statements" UniqueName="JDBC_NEW_STMTS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_N_S" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764075" UsrAttrId="75" GUIDisplayName="JDBC Create New Statements Time" UniqueName="JDBC_NEW_STMT_TME" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_N_T" TableName="OASMON" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764076" UsrAttrId="76" GUIDisplayName="JDBC Create Statements" UniqueName="JDBC_CREATE_STMT" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_C_ST" TableName="OASMON" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764077" UsrAttrId="77" GUIDisplayName="JDBC Create Statements Time" UniqueName="JDBC_STMT_TIME" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_C_T" TableName="OASMON" UnitOfMeasurement="ms" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764078" UsrAttrId="78" GUIDisplayName="JDBC Connection Cache Miss Ratio" UniqueName="JDBC_CONN_MISS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_C_M" TableName="OASMON" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764079" UsrAttrId="79" GUIDisplayName="JDBC Cache Size" UniqueName="JDBC_CACHE_SIZE" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_C_SZE" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764080" UsrAttrId="80" GUIDisplayName="JDBC Free Cache Size" UniqueName="JDBC_CACHE_FREE" ScaleFactor="1" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_C_FREE" TableName="OASMON" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="24764081" UsrAttrId="81" GUIDisplayName="JDBC Statement Cache Miss Ratio" UniqueName="JDBC_STMT_MISS" ScaleFactor="100" GUIStringLength="0" GUIDisplayable="Y" DisplayType="Integer" ColumnName="JD_S_MISS" TableName="OASMON" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

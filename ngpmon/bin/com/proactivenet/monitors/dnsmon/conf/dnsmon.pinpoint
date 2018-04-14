@@ -1,0 +1,2 @@
+ResponseTime        ,DNSResponse         ,Response Time       ,5
+Availability        ,DNSResponse         ,AVAILABILITY        ,5, 1, 5

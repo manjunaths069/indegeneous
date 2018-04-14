@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<ParentBasicInfo MoTypeId="500036" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="HybridAggregateStorageMeta" GUIDisplayName="Hybrid Aggregate Storage Meta Monitor" OneInstancePerParent="Y" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" HasCustomizedGUI="N"/>
+<ParentAppsInfo ClassName="com.proactivenet.monitors.HybridAggregateMon.HybridAggregateMon" Version="1.0 " IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N" IsGroupResourcePool="Y" OS="Any" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" MustRunOnAgent="N" HasMoreInfo="Y" SupportFlashCheck="Y" HasArrayAttribute="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+<BasicInfo MoTypeId="500037" MoTypeType="APPS" ParentMoType="500036" UniqueName="_HybridAggregateStorageMeta" GUIDisplayName="Hybrid Aggregate Storage Meta Monitor" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+<AppsInfo ClassName="com.proactivenet.monitors.HybridAggregateMon.HybridAggregateMon" Version="1.0" OS="Any" OSName="Any" GUIMonitorGroup="OTHER" VendorName="ProactiveNet Inc." BuildDescription="This_Is_A_Sample_Build_Description" MinVersion="4.1.2" MinBuild="32" IsSchedulable="Y" MustRunOnAgent="N" IsStatic="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y" HasArrayAttribute="N" IsGroupResourcePool="N" IsIndexMon="N" AutoDiscoveryEnabled="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Application>
+<ParentAppsInput AttrId="500036999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="HybridAggregateStorageMetaMon" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" IsInputAttribute="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+</Application>
+</Attributes>
+</MetaData>

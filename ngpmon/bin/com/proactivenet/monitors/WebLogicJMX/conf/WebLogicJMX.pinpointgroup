@@ -1,0 +1,3 @@
+AppAvailability    ,WebLogicJMX,AVAILABILITY
+AppServer    ,WebLogicJMX
+AppServerAvailability    ,WebLogicJMX,AVAILABILITY

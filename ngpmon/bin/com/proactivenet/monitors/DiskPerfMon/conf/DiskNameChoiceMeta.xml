@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+    <BasicInfo
+      GUIDisplayable="N"
+      MoTypeId="28005"
+      MoTypeType="PERS"
+      EndUserReportable="N"
+      UniqueName="DskNameChoice"
+      GUIDisplayName="Disk Name Choices"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Persistent
+      AttrId="280051"
+      GUIDisplayable="N"
+      UniqueName="CHOICENAME"
+      GUIDisplayName="Choice Name"
+      IsDefaultValueSet="Y"
+      DisplayType="String"
+      EndUserReportable="Y"
+      UseAsMODisplayName="Y"
+      DefaultValue=""
+    />
+    <Persistent
+      AttrId="280052"
+      GUIEditable="N"
+      UniqueName="CHOICENO"
+      GUIDisplayName="Choice Number"
+      GUIDisplayable="N"
+      IsDefaultValueSet="Y"
+      DisplayType="Integer"
+      EndUserReportable="Y"
+      DefaultValue=""
+    />
+  </Attributes>
+</MetaData>

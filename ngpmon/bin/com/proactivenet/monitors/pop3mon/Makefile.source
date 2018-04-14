@@ -1,0 +1,4 @@
+
+#SOURCE.java = pop3mon.java 
+SUBDIRS = src
+

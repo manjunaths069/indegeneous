@@ -1,0 +1,20 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+
+VMwareHostNetMon	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareHostNetMon	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+VMwareHostNetMon	DATA_TRANSMIT_RATE	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareHostNetMon	DATA_RECEIVED_RATE	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareHostNetMon	PACKETS_RCVD	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareHostNetMon	PACKETS_TRMD	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareHostNetMon	TOTAL_PACKETS_RCVD_TRMD	NORMAL	-1	above	0	50	-1	-1	0	Auto

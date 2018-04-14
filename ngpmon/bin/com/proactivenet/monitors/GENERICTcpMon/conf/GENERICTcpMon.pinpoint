@@ -1,0 +1,17 @@
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+	,GenericTCPInfo	,TCPRTOMIN
+	,GenericTCPInfo	,TCPRTOMAX
+	,GenericTCPInfo	,TCPMAXCONN
+	,GenericTCPInfo	,TCPACTIVEOPENS
+	,GenericTCPInfo	,TCPPASSIVEOPENS
+	,GenericTCPInfo	,TCPATTEMPTFAILS
+	,GenericTCPInfo	,TCPESTABRESETS
+	,GenericTCPInfo	,TCPCURRESTAB
+	,GenericTCPInfo	,TCPINSEGS
+	,GenericTCPInfo	,TCPOUTSEGS
+	,GenericTCPInfo	,TCPRETRANSSEGS
+	,GenericTCPInfo	,TCPINERRS
+	,GenericTCPInfo	,TCPOUTRSTS
+	,GenericTCPInfo	,TCPFINWAIT
+	,GenericTCPInfo	,TCPCLOSEWAIT
+

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">  
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42770" UniqueName="WebLogicJMXP" GUIDisplayName="WebLogic JMX Parent" OneInstancePerParent="Y" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.WebLogicJMX.WebLogicJMX" Version="2.0" OS="Any" GUIMonitorGroup="OTHER" IsSchedulable="N" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" HasArrayAttribute="N" IsGroupResourcePool="N" HasMoreInfo="N" SupportFlashCheck="N"/>
+    <BasicInfo MoTypeId="42771" UniqueName="WebLogicJMX" HasCustomizedGUI="Y" GUIDisplayName="WebLogic JMX" MoTypeType="APPS" ParentMoType="42770"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.WebLogicJMX.WebLogicJMX" Version="2.0" OS="Any" MustRunOnAgent="N" IsNewFrameWork="N" HasMoreInfo="Y" SupportFlashCheck="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42770999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="WebLogicJMX Monitor" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="0" GUIDisplayable="Y" GUIInputType="CFG" DisplayType="String" UseAsMODisplayName="Y" IsAutoCreated="Y" IsInputAttribute="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771999" UsrAttrId="999" GUIDisplayName="Instance Name" UniqueName="INSTANCE_NAME" ScaleFactor="0" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="String" UseAsMODisplayName="Y" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" AttrReferenceType="ANY" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771110" UsrAttrId="110" GUIDisplayName="Target IP/Host Name" UniqueName="TARGETIP" GUIDisplaySequenceNumber="3" GUIDisplayable="N" DisplayType="IPAddress" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="N" IsDefaultValueSet="Y" DefaultValue="" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771012" UsrAttrId="12" GUIDisplayName="Target Device" UniqueName="DNSIP" GUIDisplaySequenceNumber="4" GUIDisplayable="Y" UseAsInstanceName="Y" DisplayType="String" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="0.0.0.0" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771002" UsrAttrId="2" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="7001" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771003" UsrAttrId="3" UniqueName="VERSION" GUIDisplayName="Weblogic Version" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="6" GUIDisplayable="N" IsDefaultValueSet="Y" MoReferenceType="42772" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="42771007" UsrAttrId="7" UniqueName="IS_SSL" GUIDisplayName="SSL Enabled" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771004" UsrAttrId="4" UniqueName="SERVER" GUIDisplayName="Application Server Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="N" GUIHasListOfChoice="N" DefaultValue="" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771005" UsrAttrId="5" UniqueName="USER_NAME" GUIDisplayName="Security Principal(User Name)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="N" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771006" UsrAttrId="6" UniqueName="PASSWORD" GUIDisplayName="Security Credentials(Password)" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="N" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Password" DefaultValue="" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="N" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771010" UsrAttrId="10" UniqueName="JVM_STATS" GUIDisplayName="JVM Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771011" UsrAttrId="11" UniqueName="JDBC_STATS" GUIDisplayName="DB Connection Pool Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771019" UsrAttrId="19" UniqueName="JMS_STATS" GUIDisplayName="JMS Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771013" UsrAttrId="13" UniqueName="SERVLET_STATS" GUIDisplayName="Servlet Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771014" UsrAttrId="14" UniqueName="JTA_STATS" GUIDisplayName="Transaction Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="15" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771015" UsrAttrId="15" UniqueName="EXE_QUE_STATS" GUIDisplayName="Execute Queue Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="16" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771016" UsrAttrId="16" UniqueName="EJB_STATS" GUIDisplayName="EJB Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="17" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771017" UsrAttrId="17" UniqueName="SERVER_STATS" GUIDisplayName="Server Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="18" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771022" UsrAttrId="22" UniqueName="LOG_BROAD_STATS" GUIDisplayName="Log Broadcaster Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="20" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771023" UsrAttrId="23" UniqueName="CLUSTER_STATS" GUIDisplayName="Cluster Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="21" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771024" UsrAttrId="24" UniqueName="TIME_SERV_STATS" GUIDisplayName="Time Service Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="22" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771025" UsrAttrId="25" UniqueName="WORK_MAN_STATS" GUIDisplayName="Work Manager Statistics" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="23" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" IsAutoCreated="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771995" UsrAttrId="995" GUIDisplayName="Collect Data" UniqueName="COLLECTDATA" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="1" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="1" GUIDisplayable="Y" DisplayType="Boolean" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" GUIDisplaySequenceNumber="4" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="600" IsInputAttribute="Y" DisplayType="Integer"/>
+      <AppsInput AttrId="42771020" UsrAttrId="20" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" GUIDisplaySequenceNumber="5" GUIRequiredOnCreate="Y" IsDefaultValueSet="Y" DefaultValue="300" IsInputAttribute="Y" DisplayType="Integer"/>
+      <AppsInput AttrId="42771996" UsrAttrId="996" GUIDisplayName="Configuration Poll Interval" UniqueName="CFGPOLLPERIOD" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="86400" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="6" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771021" UsrAttrId="21" GUIDisplayName="Configuration Poll Timeout" UniqueName="CFGPOLLTIMEOUT" MoReferenceType="0" AttrReferenceType="ANY" DefaultValue="300" ScaleFactor="1000" GUIStringLength="0" GUIDisplaySequenceNumber="7" GUIDisplayable="Y" DisplayType="Integer" UseAsMODisplayName="N" GUIInputType="CTL" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" GUIInputOnCreate="Y" IsDefaultValueSet="Y" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42771980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="24" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42771981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="25" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42771982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="26" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42771468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="27" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42771993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42771111" UsrAttrId="111" UniqueName="SERVER_START_TIME" GUIDisplayName="Weblogic Start Time" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771112" UsrAttrId="112" UniqueName="SERVER_VER" GUIDisplayName="Weblogic version" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771113" UsrAttrId="113" UniqueName="CLUSTER_NAME" GUIDisplayName="Cluster Name" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771114" UsrAttrId="114" UniqueName="DOMAIN_NAME" GUIDisplayName="Domain Name" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771115" UsrAttrId="115" UniqueName="JDBC_MAX_CAPACITY" GUIDisplayName="JDBC Connection Pool Max Capacity" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771116" UsrAttrId="116" UniqueName="JMS_SERV_TOT_COUNT" GUIDisplayName="JMS Servers Total Count" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771117" UsrAttrId="117" UniqueName="SERV_POOL_MAX_CAP" GUIDisplayName="Servlet Pool Max Capacity" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsConfig AttrId="42771118" UsrAttrId="118" UniqueName="CONN_POOL_COUNT" GUIDisplayName="WLEC Connection Pool Count" GUIDisplaySequenceNumber="0" DefaultValue="" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N" DisplayType="String"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771030" UsrAttrId="30" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="WebLogicJMX" ColumnName="AVAILABILITY" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIGraphedByDefault="Y" GUIDisplayable="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771031" UsrAttrId="31" UniqueName="JVM_HEAPUSED" GUIDisplayName="JVM Memory Used" TableName="WebLogicJMX" ColumnName="JVM_HEAP_USED" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771032" UsrAttrId="32" UniqueName="JVM_HEAPSIZE" GUIDisplayName="JVM Total Memory" TableName="WebLogicJMX" ColumnName="JVM_HEAP_SZ" DisplayType="Integer" UnitOfMeasurement="MB" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771041" UsrAttrId="41" UniqueName="JDBC_ACTIVE_CON" GUIDisplayName="JDBC Active Connections" TableName="WebLogicJMX" ColumnName="JDBC_ACT_CON" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIGraphedByDefault="N" GUIDisplayable="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771042" UsrAttrId="42" UniqueName="JDBC_WAIT" GUIDisplayName="JDBC Requests Waiting for Connection" TableName="WebLogicJMX" ColumnName="JDBC_WAIT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771043" UsrAttrId="43" UniqueName="JDBC_WAIT_H" GUIDisplayName="JDBC Waiting Connections High" TableName="WebLogicJMX" ColumnName="JDBC_WAIT_H" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771044" UsrAttrId="44" UniqueName="JDBC_LONGWAIT" GUIDisplayName="JDBC Wait Seconds High" TableName="WebLogicJMX" ColumnName="JDBC_LONGWAIT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771045" UsrAttrId="45" UniqueName="JDBC_ACTCON" GUIDisplayName="JDBC Active Connections High" TableName="WebLogicJMX" ColumnName="JDBC_ACTCON" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771046" UsrAttrId="46" UniqueName="JDBC_CON_TOT_COUNT" GUIDisplayName="JDBC Connections Total Count" TableName="WebLogicJMX" ColumnName="JDBC_CON_TOT_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771050" UsrAttrId="50" UniqueName="JMS_CONN" GUIDisplayName="JMS Connections" TableName="WebLogicJMX" ColumnName="JMS_CONN" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771051" UsrAttrId="51" UniqueName="JMS_CONN_HIGH" GUIDisplayName="JMS Connections High" TableName="WebLogicJMX" ColumnName="JMS_CON_HI" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771055" UsrAttrId="55" UniqueName="JMS_CONN_TOT_COUNT" GUIDisplayName="JMS Connections Total Count" TableName="WebLogicJMX" ColumnName="JMS_CONN_TOT_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771056" UsrAttrId="56" UniqueName="JMS_SERV_CURR_COUNT" GUIDisplayName="JMS Servers Current Count" TableName="WebLogicJMX" ColumnName="JMS_SERV_CURR_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771057" UsrAttrId="57" UniqueName="JMS_SERV_HIGH_COUNT" GUIDisplayName="JMS Servers High Count" TableName="WebLogicJMX" ColumnName="JMS_SERV_HIGH_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="N" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771052" UsrAttrId="52" UniqueName="JMS_SES_POOL" GUIDisplayName="JMS Server Session Pools" TableName="WebLogicJMX" ColumnName="JMS_SES_POOL" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771053" UsrAttrId="53" UniqueName="JMS_MSG" GUIDisplayName="JMS Server Messages" TableName="WebLogicJMX" ColumnName="JMS_MSG" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771054" UsrAttrId="54" UniqueName="JMS_CURRBYTE" GUIDisplayName="JMS Server Bytes" TableName="WebLogicJMX" ColumnName="JMS_CURRBYTE" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771060" UsrAttrId="60" UniqueName="SRVLT_EXEAVG" GUIDisplayName="Servlet Execution Time Average" TableName="WebLogicJMX" ColumnName="SRVLT_EXEAVG" DisplayType="Integer" UnitOfMeasurement="ms" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771061" UsrAttrId="61" UniqueName="SRVLT_RELOAD" GUIDisplayName="Servlet Reloads" TableName="WebLogicJMX" ColumnName="SRVLT_RELOAD" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771062" UsrAttrId="62" UniqueName="SRVLT_INVOC" GUIDisplayName="Servlet Invocations" TableName="WebLogicJMX" ColumnName="SRVLT_INVOC" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771063" UsrAttrId="63" UniqueName="SRVLT_SESS" GUIDisplayName="Servlet Total Sessions Open" TableName="WebLogicJMX" ColumnName="SRVLT_SESS" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771064" UsrAttrId="64" UniqueName="SRVLT_CURR_SESS" GUIDisplayName="Servlet Current Open Sessions" TableName="WebLogicJMX" ColumnName="SRVLT_CURR_SESS" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771065" UsrAttrId="65" UniqueName="SRVLT_EXETIME_HIGH" GUIDisplayName="Servlet Execution Time High" TableName="WebLogicJMX" ColumnName="SRVLT_EXETIME_HIGH" DisplayType="Integer" UnitOfMeasurement="ms" ScaleFactor="1" GUIDisplayable="N" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771066" UsrAttrId="66" UniqueName="SRVLT_EXETIME_LOW" GUIDisplayName="Servlet Execution Time Low" TableName="WebLogicJMX" ColumnName="SRVLT_EXETIME_LOW" DisplayType="Integer" UnitOfMeasurement="ms" ScaleFactor="1" GUIDisplayable="N" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771070" UsrAttrId="70" UniqueName="JTA_COMMITTRAN" GUIDisplayName="JTA Committed Transactions" TableName="WebLogicJMX" ColumnName="JTA_COMMITTRAN" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771071" UsrAttrId="71" UniqueName="JTA_ACTIVETIME" GUIDisplayName="JTA Committed Transactions Average Time" TableName="WebLogicJMX" ColumnName="JTA_ACTIVETIME" DisplayType="Integer" UnitOfMeasurement="sec" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771072" UsrAttrId="72" UniqueName="JTA_ROLLBACK" GUIDisplayName="JTA Rolled Back Transactions" TableName="WebLogicJMX" ColumnName="JTA_ROLLBACK" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771073" UsrAttrId="73" UniqueName="JTA_HEURISTIC" GUIDisplayName="JTA Heuristic Transactions" TableName="WebLogicJMX" ColumnName="JTA_HEURISTIC" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771074" UsrAttrId="74" UniqueName="JTA_RESERRROLBK" GUIDisplayName="JTA Resource Error Rollbacks" TableName="WebLogicJMX" ColumnName="JTA_RESERRROLBK" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771075" UsrAttrId="75" UniqueName="JTA_APPERRROLBK" GUIDisplayName="JTA Application Error Rollbacks" TableName="WebLogicJMX" ColumnName="JTA_APPERRROLBK" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771076" UsrAttrId="76" UniqueName="JTA_INTERRROLBK" GUIDisplayName="JTA Internal Error Rollbacks" TableName="WebLogicJMX" ColumnName="JTA_INTERRROLBK" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771077" UsrAttrId="77" UniqueName="JTA_RB_TIME_O_TRAN" GUIDisplayName="JTA Rolled Back Timed Out Transaction" TableName="WebLogicJMX" ColumnName="JTA_RB_TIME_O_TRAN" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771078" UsrAttrId="78" UniqueName="JTA_TOT_COUNT" GUIDisplayName="JTA Transaction Total count" TableName="WebLogicJMX" ColumnName="JTA_TOT_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771080" UsrAttrId="80" UniqueName="EXEQUE_IDLETHR" GUIDisplayName="Execute Queue Idle threads" TableName="WebLogicJMX" ColumnName="EXEQUE_IDLETHR" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771081" UsrAttrId="81" UniqueName="EXEQUE_LONGWAIT" GUIDisplayName="Execute Queue Longest wait time" TableName="WebLogicJMX" ColumnName="EXEQUE_LONGWAIT" DisplayType="Integer" UnitOfMeasurement="ms" ScaleFactor="1" GUIDisplayable="N" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771082" UsrAttrId="82" UniqueName="EXEQUE_REQWAIT" GUIDisplayName="Execute Queue Requests waiting" TableName="WebLogicJMX" ColumnName="EXEQUE_REQWAIT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771083" UsrAttrId="83" UniqueName="EXEQUE_REQPROS" GUIDisplayName="Execute Queue Requests processed" TableName="WebLogicJMX" ColumnName="EXEQUE_REQPROS" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771084" UsrAttrId="84" UniqueName="EXEQUE_USAGE" GUIDisplayName="Execute Queue usage" TableName="WebLogicJMX" ColumnName="EXEQUE_USAGE" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771090" UsrAttrId="90" UniqueName="EJBENT_TRAN_COMM" GUIDisplayName="EJB(Entity) Transactions Committed" TableName="WebLogicJMX" ColumnName="EJBENT_TRANCOMM" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771091" UsrAttrId="91" UniqueName="EJBENT_ROLLBACK" GUIDisplayName="EJB(Entity)  Rolled back transactions" TableName="WebLogicJMX" ColumnName="EJBENT_ROLLBACK" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771092" UsrAttrId="92" UniqueName="EJB_ENT_CACHE" GUIDisplayName="EJB(Entity) Cached" TableName="WebLogicJMX" ColumnName="EJB_ENT_CACHE" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771093" UsrAttrId="93" UniqueName="EJBENT_TI_OUT" GUIDisplayName="EJB(Entity) TimedOut transactions" TableName="WebLogicJMX" ColumnName="EJBENT_TI_OUT" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771102" UsrAttrId="102" UniqueName="EJBENT_WAIT_TOT_CT" GUIDisplayName="EJB(Entity) Waiter Total Count" TableName="WebLogicJMX" ColumnName="EJBENT_WAIT_TOT_CT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771105" UsrAttrId="105" UniqueName="EJBENT_BEANS_INUSE" GUIDisplayName="EJB(Entity) Beans In Use" TableName="WebLogicJMX" ColumnName="EJBENT_BEANS_INUSE" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771094" UsrAttrId="94" UniqueName="EJBSTFUL_TRNCOM" GUIDisplayName="EJB(Stateful) Transactions Committed" TableName="WebLogicJMX" ColumnName="EJBSTFUL_TRNCOM" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771095" UsrAttrId="95" UniqueName="EJBSTFUL_ROLBAK" GUIDisplayName="EJB(Stateful) Rolled back transactions" TableName="WebLogicJMX" ColumnName="EJBSTFUL_ROLBAK" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771096" UsrAttrId="96" UniqueName="EJBSTFUL_CACHED" GUIDisplayName="EJB(Stateful) Cached" TableName="WebLogicJMX" ColumnName="EJBSTFUL_CACHED" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771097" UsrAttrId="97" UniqueName="EJBSTFUL_TI_OUT" GUIDisplayName="EJB(Stateful) TimedOut transactions" TableName="WebLogicJMX" ColumnName="EJBSTFUL_TI_OUT" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771103" UsrAttrId="103" UniqueName="EJBSTFUL_WAIT_TOT_CT" GUIDisplayName="EJB(Stateful) Waiter Total Count" TableName="WebLogicJMX" ColumnName="EJBSTFUL_WAIT_TOT_CT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771106" UsrAttrId="106" UniqueName="EJBSTFUL_BEANS_INUSE" GUIDisplayName="EJB(Stateful) Beans In Use" TableName="WebLogicJMX" ColumnName="EJBSTFUL_BEANS_INUSE" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771098" UsrAttrId="98" UniqueName="EJBSTLES_TRNCOM" GUIDisplayName="EJB(Stateless) Transactions Committed" TableName="WebLogicJMX" ColumnName="EJBSTLES_TRNCOM" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771099" UsrAttrId="99" UniqueName="EJBSTLES_ROLBAK" GUIDisplayName="EJB(Stateless) Rolled back transactions" TableName="WebLogicJMX" ColumnName="EJBSTLES_ROLBAK" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771100" UsrAttrId="100" UniqueName="EJBSTLES_CACHED" GUIDisplayName="EJB(Stateless) Cached" TableName="WebLogicJMX" ColumnName="EJBSTLES_CACHED" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771101" UsrAttrId="101" UniqueName="EJBSTLES_TI_OUT" GUIDisplayName="EJB(Stateless) TimedOut transactions" TableName="WebLogicJMX" ColumnName="EJBSTLES_TI_OUT" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771104" UsrAttrId="104" UniqueName="EJBSTLES_WAIT_TOT_CT" GUIDisplayName="EJB(Stateless) Waiter Total Count" TableName="WebLogicJMX" ColumnName="EJBSTLES_WAIT_TOT_CT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771107" UsrAttrId="107" UniqueName="EJBSTLES_BEANS_INUSE" GUIDisplayName="EJB(Stateless) Beans In Use" TableName="WebLogicJMX" ColumnName="EJBSTLES_BEANS_INUSE" DisplayType="Integer" UnitOfMeasurement="%" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771120" UsrAttrId="120" UniqueName="OPEN_SOCK" GUIDisplayName="Server Total Open Sockets" TableName="WebLogicJMX" ColumnName="OPEN_SOCK" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771121" UsrAttrId="121" UniqueName="INVALID_LOGIN" GUIDisplayName="Server Invalid Login Attempts" TableName="WebLogicJMX" ColumnName="INVALID_LOGIN" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771122" UsrAttrId="122" UniqueName="OPEN_SOCK_CURR" GUIDisplayName="Server Open Sockets Current Count" TableName="WebLogicJMX" ColumnName="OPEN_SOCK_CURR" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771123" UsrAttrId="123" UniqueName="UNLOCKED_USERS" GUIDisplayName="Server Unlocked Users Total Count" TableName="WebLogicJMX" ColumnName="UNLOCKED_USERS" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771124" UsrAttrId="124" UniqueName="LOCKED_USERS" GUIDisplayName="Server Locked Users Current Count" TableName="WebLogicJMX" ColumnName="LOCKED_USERS" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771125" UsrAttrId="125" UniqueName="LOGIN_ATT_WHILE_LOCK" GUIDisplayName="Server Login Attempts While Locked Total Count" TableName="WebLogicJMX" ColumnName="LOGIN_ATT_WHILE_LOCK" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771126" UsrAttrId="126" UniqueName="INVALID_LOGIN_HIGH" GUIDisplayName="Server Invalid Login Users High Count" TableName="WebLogicJMX" ColumnName="INVALID_LOGIN_HIGH" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771127" UsrAttrId="127" UniqueName="USER_LOCK_TOT" GUIDisplayName="Server User Lockout Total Count" TableName="WebLogicJMX" ColumnName="USER_LOCK_TOT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771128" UsrAttrId="128" UniqueName="RESTART_TOT" GUIDisplayName="Server Restarts Total Count" TableName="WebLogicJMX" ColumnName="RESTART_TOT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771135" UsrAttrId="135" UniqueName="FRAG_SENT_COUNT" GUIDisplayName="Cluster Fragments Sent Count" TableName="WebLogicJMX" ColumnName="FRAG_SENT_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771136" UsrAttrId="136" UniqueName="FRAG_REC_COUNT" GUIDisplayName="Cluster Fragments Received Count" TableName="WebLogicJMX" ColumnName="FRAG_REC_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771137" UsrAttrId="137" UniqueName="PRIM_COUNT" GUIDisplayName="Cluster Primary Count" TableName="WebLogicJMX" ColumnName="PRIM_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771138" UsrAttrId="138" UniqueName="RESEND_REQ_CONT" GUIDisplayName="Cluster Resend Requests Count" TableName="WebLogicJMX" ColumnName="RESEND_REQ_CONT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771139" UsrAttrId="139" UniqueName="MULT_MSG_LOST_COUNT" GUIDisplayName="Cluster Multicast Messages Lost Count" TableName="WebLogicJMX" ColumnName="MULT_MSG_LOST_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771140" UsrAttrId="140" UniqueName="FOR_FRAG_DROP_COUNT" GUIDisplayName="Cluster Foreign Fragments Dropped Count" TableName="WebLogicJMX" ColumnName="FOR_FRAG_DROP_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771141" UsrAttrId="141" UniqueName="ALIVE_SERV_COUNT" GUIDisplayName="Cluster Alive Server Count" TableName="WebLogicJMX" ColumnName="ALIVE_SERV_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771145" UsrAttrId="145" UniqueName="SCHD_TRIG_COUNT" GUIDisplayName="Time Service Scheduled Trigger Count" TableName="WebLogicJMX" ColumnName="SCHD_TRIG_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771146" UsrAttrId="146" UniqueName="EXE_COUNT" GUIDisplayName="Time Service Execution Count" TableName="WebLogicJMX" ColumnName="EXE_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771147" UsrAttrId="147" UniqueName="EXCEPTION_COUNT" GUIDisplayName="Time Service Exception Count" TableName="WebLogicJMX" ColumnName="EXCEPTION_COUNT" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771151" UsrAttrId="151" UniqueName="MSG_LOGGED" GUIDisplayName="Log Broadcaster Message Logged Count" TableName="WebLogicJMX" ColumnName="MSG_LOGGED" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771161" UsrAttrId="161" UniqueName="WM_PEN_REQ" GUIDisplayName="Work Manager Pending Reqest" TableName="WebLogicJMX" ColumnName="WM_PEN_REQ" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771162" UsrAttrId="162" UniqueName="WM_COMPL_REQ" GUIDisplayName="Work Manager Completed Request" TableName="WebLogicJMX" ColumnName="WM_COMPL_REQ" DisplayType="Integer" UnitOfMeasurement="per sec" ScaleFactor="100" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42771163" UsrAttrId="163" UniqueName="WM_STUCK_THR_COUNT" GUIDisplayName="Work Manager Stuck Thread Count" TableName="WebLogicJMX" ColumnName="WM_STUCK_THR_COUNT" DisplayType="Integer" UnitOfMeasurement="#" ScaleFactor="1" GUIDisplayable="Y" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

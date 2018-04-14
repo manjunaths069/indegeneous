@@ -1,0 +1,2 @@
+#SOURCE.java = SystemInfo.java SystemMon.java
+SUBDIRS = src

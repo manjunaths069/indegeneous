@@ -1,0 +1,4 @@
+System       ,AIXFileSystem
+DiskUsed,AIXFileSystem,DISK_USED
+DiskUsed,AIXFileSystem,I_NODES_USED
+DiskAvailability,AIXFileSystem,AVAILABILITY

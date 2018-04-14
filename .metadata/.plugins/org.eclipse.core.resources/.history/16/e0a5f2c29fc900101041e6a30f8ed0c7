@@ -1,0 +1,19 @@
+import java.util.HashMap;
+import java.util.Map;
+
+
+class Recursion
+{ 
+
+	int fact (int n) { if (n==1) return 1; else return (fact(n-1)*n); }
+	
+	public static void main (String argS[]) 
+	{ 
+		Map m = new HashMap();
+		m.entrySet();
+		m.clear();
+		Recursion f =new Recursion(); 
+		System.out.println(" 6! = " + (f.fact(6))); 
+
+	}
+} 

@@ -1,0 +1,3 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+System               ,NokiaIPSOFileSystem      ,DISK_USED ,3 , 4, 3
+Availability         ,NokiaIPSOFileSystem      ,DATA_AVAIL ,3, 1, 3

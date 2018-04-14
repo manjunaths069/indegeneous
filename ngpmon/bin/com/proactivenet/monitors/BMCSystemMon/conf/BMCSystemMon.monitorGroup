@@ -1,0 +1,5 @@
+# File        : BMCSystem.monitorGroup
+# Description : MonitorGroup for BMC System Monitor
+# Date        : Tue Jan 28 2003
+
+System|BMCAdapter|Adapter for BMC PATROL|BMCSystem

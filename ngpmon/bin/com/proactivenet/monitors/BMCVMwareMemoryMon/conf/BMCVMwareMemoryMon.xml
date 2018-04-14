@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	
+	<ATTRSET platform="unix" attrType="stats">
+
+			
+		<ATTRINFO attrName="Granted"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Granted"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Active"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Active"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Utilization"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+	
+		<ATTRINFO attrName="Granted"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Granted"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Active"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Active"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Utilization"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_MEMORY" appInstance="" appParam="Utilization"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+	</ATTRSET>
+
+
+</BMCDATA>
+

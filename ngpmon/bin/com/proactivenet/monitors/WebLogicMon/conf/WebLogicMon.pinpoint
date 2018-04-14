@@ -1,0 +1,15 @@
+                    ,WebLogicMonInfo     ,Current Heap Memory ,3
+                    ,WebLogicMonInfo     ,Active Connections  ,4
+                    ,WebLogicMonInfo     ,Total Connects      ,4
+                    ,WebLogicMonInfo     ,Total Disconnects   ,3
+                    ,WebLogicMonInfo     ,Active Thread Count ,3
+                    ,WebLogicMonInfo     ,Current Client Works,3
+Availability        ,WebLogicMonInfo     ,AVAILABILITY        ,5,1,5
+                    ,WebLogicMonInfo     ,JDBC Connections In ,3
+                    ,WebLogicMonInfo     ,JDBC Pool Size      ,3
+                    ,WebLogicMonInfo     ,JDBC Connection Requ,3
+                    ,WebLogicMonInfo     ,JDBC Connection Rele,3
+                    ,WebLogicMonInfo     ,JDBC Waiters        ,3
+                    ,WebLogicMonInfo     ,JDBC Waiters High Wa,3
+                    ,WebLogicMonInfo     ,JDBC Longest Wait (S,3
+

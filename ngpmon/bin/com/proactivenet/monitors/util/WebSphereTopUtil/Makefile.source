@@ -1,0 +1,4 @@
+SOURCE.java = WebSphereGetTop.java WebSphereTopComparator.java \
+		WebSphereTopConstants.java WebSphereTopException.java \
+		WebSphereTopInfo.java WebSphereTopParameters.java \
+		WebSphereTopParser.java WebSphereTopSorter.java

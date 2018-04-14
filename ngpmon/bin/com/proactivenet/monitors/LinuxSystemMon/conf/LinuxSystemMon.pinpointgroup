@@ -1,0 +1,14 @@
+System       ,Linux System Info
+
+DiskPerformance,Linux System Info,SWAP_USED_PERCENT
+DiskPerformance,Linux System Info,IO_WAIT
+
+SystemCpu,Linux System Info,TOTAL_CPU
+SystemCpu,Linux System Info,KERNEL_CPU
+SystemCpu,Linux System Info,USER_CPU
+
+ProcTotal,Linux System Info,PROCESSES_TOTAL
+
+SystemMem,Linux System Info,MEM_USED_PERCENT
+
+SystemInfo,Linux System Info

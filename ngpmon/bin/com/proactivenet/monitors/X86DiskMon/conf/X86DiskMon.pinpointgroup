@@ -1,0 +1,4 @@
+System       ,X86DiskSpace
+DiskUsed,X86DiskSpace,DISK_USED_PERCENT
+DiskUsed,X86DiskSpace,I_NODE_USED_PERCENT
+DiskAvailability,X86DiskSpace,AVAILABILITY

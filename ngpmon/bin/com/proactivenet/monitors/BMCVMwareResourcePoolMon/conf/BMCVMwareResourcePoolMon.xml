@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | userdefined ) "asis"
+		  value CDATA "">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+
+ <ATTRSET platform="unix" attrType="config">
+	
+       <ATTRINFO attrName="CPUReservation" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuRes" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPUUnreserved" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuUnres" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPUReservationType" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuResType" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MemoryReservation" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memRes" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MemoryReservationType" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memResType" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MemoryUnreserved" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memUnres" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPUShares" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuShares" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MemoryShares" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memShares" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MemoryLimit" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memLimit" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPULimit" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuLimit" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="NumberOfVirtualMachines" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/vmNum" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+    </ATTRSET>
+    
+    <ATTRSET platform="windows" attrType="config">
+	
+    	 <ATTRINFO attrName="CPUReservation" dataType="string" computation="asis">
+	 	<ATTRDEPENDSON> 
+	        	<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuRes" type="variable" />
+	        </ATTRDEPENDSON> 
+	 </ATTRINFO>
+	           
+	 <ATTRINFO attrName="CPUUnreserved" dataType="string" computation="asis">
+	       <ATTRDEPENDSON> 
+	            <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuUnres" type="variable" />
+	       </ATTRDEPENDSON> 
+	 </ATTRINFO>
+	           
+	 <ATTRINFO attrName="CPUReservationType" dataType="string" computation="asis">
+	        <ATTRDEPENDSON> 
+	        	<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuResType" type="variable" />
+	        </ATTRDEPENDSON> 
+	 </ATTRINFO>
+	           
+	 <ATTRINFO attrName="MemoryReservation" dataType="string" computation="asis">
+	 	<ATTRDEPENDSON> 
+	                <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memRes" type="variable" />
+	        </ATTRDEPENDSON> 
+	 </ATTRINFO>
+	           
+	           <ATTRINFO attrName="MemoryReservationType" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memResType" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="MemoryUnreserved" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memUnres" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="CPUShares" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuShares" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="MemoryShares" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memShares" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="MemoryLimit" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/memLimit" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="CPULimit" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/cpuLimit" type="variable" />
+	               </ATTRDEPENDSON> 
+	           </ATTRINFO>
+	           
+	           <ATTRINFO attrName="NumberOfVirtualMachines" dataType="string" computation="asis">
+	               <ATTRDEPENDSON> 
+	                   <ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="/vmNum" type="variable"/>
+	               </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+    </ATTRSET>
+	
+	<ATTRSET platform="unix" attrType="stats">
+
+		<ATTRINFO attrName="Status" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="MemoryReservationUsed"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Memory_Reservation_Used"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	
+		<ATTRINFO attrName="CPUReservationUsed"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="CPU_Reservation_Used"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+
+		<ATTRINFO attrName="Status" dataType="int" computation="asis">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Status"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+		
+				<ATTRINFO attrName="MemoryReservationUsed"  computation="asis">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Memory_Reservation_Used"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+			
+				<ATTRINFO attrName="CPUReservationUsed"  computation="asis">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="CPU_Reservation_Used"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+				
+				<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_RESOURCE_POOL" appInstance="" appParam="Status"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

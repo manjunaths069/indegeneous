@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SNMPDATA [
+	<!ELEMENT SNMPDATA (ATTRSET+)>
+	<!ELEMENT ATTRSET (ATTRINFO+)>
+	<!ATTLIST ATTRSET
+	platform (all | windows | unix | nt | win2k | linux | solaris | hpux | aix | nt4 | unixA2 | winA3 ) #REQUIRED
+>
+	<!ELEMENT ATTRINFO (OID, ATTRNAME, ATTRTYPE, ATTRCOMPUTATION, ATTRDEPENDSON?)>
+	<!ELEMENT OID (OIDNAME, OIDINDEX*)>
+	<!ATTLIST OID
+	representedby (value | string) #REQUIRED
+		type (scalar | columnar) #REQUIRED
+		returns (number | string | kb | bytes | mb) #REQUIRED
+>
+	<!ELEMENT ATTRNAME (#PCDATA)>
+	<!ELEMENT ATTRTYPE (#PCDATA)>
+	<!ELEMENT ATTRCOMPUTATION (#PCDATA)>
+	<!ELEMENT ATTRDEPENDSON (OID+)>
+	<!ELEMENT OIDNAME (#PCDATA)>
+	<!ELEMENT OIDINDEX (OIDINDEXNAME, OIDINDEXNUM)>
+	<!ATTLIST OIDINDEX
+	type (string | number) #REQUIRED
+>
+	<!ELEMENT OIDINDEXNAME (#PCDATA)>
+	<!ELEMENT OIDINDEXNUM (#PCDATA)>
+]>
+<SNMPDATA>
+	<ATTRSET platform="unix">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.11.2.0</OIDNAME>
+			</OID>
+			<ATTRNAME> IN_PACKETS</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.11.12.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_PACKETS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.11.7.0</OIDNAME>
+			</OID>
+			<ATTRNAME>IN_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.9.4.5.2.11.17.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+	<ATTRSET platform="nt4">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="numberkb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.10.4.0</OIDNAME>
+			</OID>
+			<ATTRNAME> IN_PACKETS</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.10.9.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_PACKETS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.10.14.0</OIDNAME>
+			</OID>
+			<ATTRNAME>IN_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.52.2.10.19.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+	<ATTRSET platform="win2k">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="numberkb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.15.4.0</OIDNAME>
+			</OID>
+			<ATTRNAME> IN_PACKETS</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.15.9.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_PACKETS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.15.14.0</OIDNAME>
+			</OID>
+			<ATTRNAME>IN_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.43.2.15.19.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+  <ATTRSET platform="unixA2">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>     1.3.6.1.4.1.791.2.10.2.74.2.15.4</OIDNAME>
+			</OID>
+			<ATTRNAME> IN_PACKETS</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME> 1.3.6.1.4.1.791.2.10.2.74.2.15.21</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_PACKETS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>     1.3.6.1.4.1.791.2.10.2.74.2.15.16</OIDNAME>
+			</OID>
+			<ATTRNAME>IN_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.74.2.15.33</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+  <ATTRSET platform="winA3">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="numberkb">
+				<OIDNAME>1.3.6.1.4.1.791.2.10.2.90.2.16.11.0</OIDNAME>
+			</OID>
+			<ATTRNAME> IN_PACKETS</ATTRNAME>
+			<ATTRTYPE> STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>         1.3.6.1.4.1.791.2.10.2.90.2.16.28.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_PACKETS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME> 1.3.6.1.4.1.791.2.10.2.90.2.16.16.0</OIDNAME>
+			</OID>
+			<ATTRNAME>IN_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>   1.3.6.1.4.1.791.2.10.2.90.2.16.33.0</OIDNAME>
+			</OID>
+			<ATTRNAME>OUT_ERRORS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+	</ATTRSET>
+</SNMPDATA>

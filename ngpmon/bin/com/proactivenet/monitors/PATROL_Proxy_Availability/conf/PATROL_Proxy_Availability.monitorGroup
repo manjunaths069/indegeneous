@@ -1,0 +1,4 @@
+# File        : PATROL_Proxy_Availability.monitorGroup
+# Description : MonitorGroup for PATROL
+
+System|PATROLProxyAvailability

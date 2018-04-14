@@ -1,0 +1,8 @@
+Database     ,SybaseQuery 
+
+DatabaseRespTime,SybaseQuery,Response Time
+DatabaseRespTime,SybaseQuery,AVAILABILITY
+
+DatabaseConnTime,SybaseQuery,Connect Time
+
+DatabaseAvailability,SybaseQuery,AVAILABILITY

@@ -1,0 +1,13 @@
+DiskAvailability,VMwareVMDiskMon,AVAILABILITY
+DiskPerformance,VMwareVMDiskMon,AVAILABILITY
+DiskPerformance,VMwareVMDiskMon,DISK_READ_RATE
+DiskPerformance,VMwareVMDiskMon,DISK_WRITE_RATE
+DiskPerformance,VMwareVMDiskMon,READ_REQUESTS
+DiskPerformance,VMwareVMDiskMon,WRITE_REQUESTS
+DiskPerformance,VMwareVMDiskMon,TOTAL_REQUESTS
+VirtualSystem,VMwareVMDiskMon,AVAILABILITY
+VirtualSystem,VMwareVMDiskMon,DISK_READ_RATE
+VirtualSystem,VMwareVMDiskMon,DISK_WRITE_RATE
+VirtualSystem,VMwareVMDiskMon,READ_REQUESTS
+VirtualSystem,VMwareVMDiskMon,WRITE_REQUESTS
+VirtualSystem,VMwareVMDiskMon,TOTAL_REQUESTS

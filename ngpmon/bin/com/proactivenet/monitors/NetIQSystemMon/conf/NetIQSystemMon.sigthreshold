@@ -1,0 +1,23 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NetIQSystem	INTRUPTS	Normal	-1	above	0	50	500	-1	0	Auto
+NetIQSystem	SYS_CPU_USED	Normal	-1	above	0	50	-1	-1	0	Auto
+NetIQSystem	MEM_USED	Normal	-1	above	0	50	10	-1	0	Auto
+NetIQSystem	NO_PROC_SWAP	Normal	-1	above	0	50	-1	-1	0	Auto
+NetIQSystem	NO_PROC_RUN	Normal	-1	above	0	50	-1	-1	0	Auto
+NetIQSystem	NUM_PROC	Normal	-1	below	0	50	40	-1	0	Auto
+NetIQSystem	SWAP_USED	Normal	-1	above	0	50	-1	-1	0	Auto
+NetIQSystem	TOT_CPU_USED	Normal	-1	above	0	50	-1	-1	0	Auto
+NetIQSystem	TOT_CPU_USED	Normal	-1	below	0	50	10	-1	0	Auto
+NetIQSystem	USR_CPU_USED	Normal	-1	above	0	50	-1	-1	1	Auto
+NetIQSystem	USR_CPU_USED	Normal	-1	below	0	50	-1	-1	1	Auto

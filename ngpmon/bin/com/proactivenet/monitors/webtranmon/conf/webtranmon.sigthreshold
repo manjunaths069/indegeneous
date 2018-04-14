@@ -1,0 +1,25 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+webtranmon	AVAILABILITY	Normal	10	above	0.0	0.0	0.0	-1	1	Auto
+webtranmon	AVAILABILITY	Normal	10	below	0.0	50.0	0.0	-1	0	Auto
+webtranmon	First Byte Time	Normal	10	above	0.0	50.0	400.0	-1	0	Auto
+#webtranmon	External Connect Tim	Normal	10	above	0.0	50.0	10.0	-1	1	Auto
+#webtranmon	External Response Ti	Normal	10	above	0.0	50.0	20.0	-1	1	Auto
+#webtranmon	Internal Connect Tim	Normal	10	above	0.0	50.0	10.0	-1	1	Auto
+#webtranmon	Internal Response Ti	Normal	10	above	0.0	50.0	20.0	-1	1	Auto
+#webtranmon	Total Objects Not Fo	NORMAL	10	above	0	0	0	-1	1	Auto
+#webtranmon	Internal Objects Not	NORMAL	10	above	0	0	0	-1	1	Auto
+#webtranmon	External Objects Not	NORMAL	10	above	0	0	0	-1	1	Auto
+#webtranmon	Total Invalid Links	NORMAL	10	above	0	0	0	-1	1	Auto
+#webtranmon	Internal Invalid Lin	NORMAL	10	above	0	0	0	-1	1	Auto
+#webtranmon	External Invalid Lin	NORMAL	10	above	0	0	0	-1	1	Auto

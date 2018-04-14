@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="N" MoTypeId="29600" MoTypeType="PERS" EndUserReportable="N" UniqueName="logtype" GUIDisplayName="logTypeOpt" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="296001" GUIDisplayable="N" UniqueName="LOGTYPE" GUIDisplayName="Log Type" IsDefaultValueSet="Y" DisplayType="String" EndUserReportable="Y" UseAsMODisplayName="Y" DefaultValue="Application" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+<Persistent AttrId="296002" GUIEditable="N" UniqueName="LOGTYPE1" GUIDisplayName="Log Type" GUIDisplayable="N" IsDefaultValueSet="Y" DisplayType="Integer" EndUserReportable="Y" DefaultValue="1" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" UseAsForcedDBKey="N" UseAsMODisplayName="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+</Attributes>
+</MetaData>

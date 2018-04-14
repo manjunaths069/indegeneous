@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- TransactionChoiceMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <BasicInfo
+      GUIDisplayable="N"
+      MoTypeId="42772"
+      MoTypeType="PERS"
+      EndUserReportable="N"
+      UniqueName="WebLogicVersion"
+      GUIDisplayName="WebLogic Version Choices"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Persistent
+      AttrId="427720"
+      UseAsMODisplayName="Y"
+      UniqueName="WVERSION_NAME"
+      GUIDisplayName="WebLogic Version"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="String"
+      GUIEditable="N"
+    />
+    <Persistent
+      AttrId="427721"
+      UseAsForcedDBKey="Y"
+      UniqueName="WVERSION_NO"
+      GUIDisplayName="WebLogic Version Choice"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="Integer"
+      GUIEditable="N"
+    />
+  
+  </Attributes>
+</MetaData>

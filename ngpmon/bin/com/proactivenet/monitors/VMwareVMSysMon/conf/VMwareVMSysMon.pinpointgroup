@@ -1,0 +1,25 @@
+SystemCpu,VMwareVMSysMon,CPU_USAGE
+SystemMem,VMwareVMSysMon,MEM_USED_PERCENT
+System,VMwareVMSysMon,AVAILABILITY
+System,VMwareVMSysMon,MEM_USED_PERCENT
+System,VMwareVMSysMon,CPU_USAGE
+System,VMwareVMSysMon,DISK_USAGE
+System,VMwareVMSysMon,MEMORY_BALLOON
+System,VMwareVMSysMon,NETWORK_USAGE
+SystemInfo,VMwareVMSysMon,AVAILABILITY
+SystemInfo,VMwareVMSysMon,MEM_USED_PERCENT
+SystemInfo,VMwareVMSysMon,CPU_USAGE
+SystemInfo,VMwareVMSysMon,DISK_USAGE
+SystemInfo,VMwareVMSysMon,MEMORY_BALLOON
+SystemInfo,VMwareVMSysMon,NETWORK_USAGE
+DiskUsed,VMwareVMSysMon,DISK_USAGE
+VirtualSystem,VMwareVMSysMon,AVAILABILITY
+VirtualSystem,VMwareVMSysMon,MEM_USED_PERCENT
+VirtualSystem,VMwareVMSysMon,CPU_USAGE
+VirtualSystem,VMwareVMSysMon,DISK_USAGE
+VirtualSystem,VMwareVMSysMon,MEMORY_BALLOON
+VirtualSystem,VMwareVMSysMon,NETWORK_USAGE
+VirtualSystem,VMwareVMSysMon,NUM_VCOUNT_WEEK
+VirtualSystem,VMwareVMSysMon,NUM_VCOUNT_DAY
+VirtualSystem,VMwareVMSysMon,NUM_VCOUNT_HOUR
+Infrastructure Availability,VMwareVMSysMon,AVAILABILITY

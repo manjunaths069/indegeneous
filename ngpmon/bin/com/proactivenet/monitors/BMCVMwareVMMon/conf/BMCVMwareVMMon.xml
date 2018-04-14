@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | userdefined ) "asis"
+		  value CDATA "">
+
+	    <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	
+	<ATTRSET platform="unix" attrType="config">
+	
+       <ATTRINFO attrName="PATH" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/path" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="EVENTCOLLECTOR" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/eventCollector" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="GUESTOS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/guestOS" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="HOST" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/host" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="PHYSICALHOST" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/physicalhost" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+   		<ATTRINFO attrName="IPADDRESS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/ipaddress" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="HOSTNAME" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/hostname" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="GUESTOS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/guestOS" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORYMAX" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memoryMax" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORYMIN" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memoryMin" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORY" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memory" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPUNUM" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/cpunum" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="SHARES" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/shares" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="UUID" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/uuid" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="FILE" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/file" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+    </ATTRSET>
+	
+	
+	<ATTRSET platform="windows" attrType="config">
+	
+       <ATTRINFO attrName="PATH" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/path" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="EVENTCOLLECTOR" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/eventCollector" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="GUESTOS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/guestOS" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="HOST" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/host" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="PHYSICALHOST" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/physicalhost" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+   		<ATTRINFO attrName="IPADDRESS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/ipaddress" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="HOSTNAME" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/hostname" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="GUESTOS" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/guestOS" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORYMAX" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memoryMax" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORYMIN" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memoryMin" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="MEMORY" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/memory" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="CPUNUM" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/cpunum" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="SHARES" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_VM" appInstance="" appParam="/shares" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="UUID" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/uuid" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="FILE" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_VM" appInstance="" appParam="/file" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+    </ATTRSET>
+	
+	
+	
+	<ATTRSET platform="unix" attrType="stats">
+
+				
+		<ATTRINFO attrName="Status" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VM" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VM" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+	
+				
+		<ATTRINFO attrName="Status" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VM" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VM" appInstance="" appParam="Status"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+	</ATTRSET>
+
+
+</BMCDATA>
+

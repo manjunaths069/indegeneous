@@ -1,0 +1,10 @@
+                    ,NetscapeMonInfo     ,BYTES_TOTAL         ,2
+                    ,NetscapeMonInfo     ,CURRENT_CONNECTIONS ,4
+                    ,NetscapeMonInfo     ,MAXIMUM_CONNECTIONS ,1
+                    ,NetscapeMonInfo     ,GET_REQUESTS        ,3
+                    ,NetscapeMonInfo     ,POST_REQUESTS       ,3
+                    ,NetscapeMonInfo     ,NOT_FOUND_ERRORS    ,1
+                    ,NetscapeMonInfo     ,CLIENT_SIDE_ERRORS  ,3
+                    ,NetscapeMonInfo     ,SERVER_SIDE_ERRORS  ,3
+                    ,NetscapeMonInfo     ,TOTAL_ERRORS        ,3
+Availability        ,NetscapeMonInfo     ,AVAILABILITY        ,5	,1	,5

@@ -1,0 +1,6 @@
+#Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+System              ,DiskSpace           ,DISK_USED_PERCENT   ,5 , 4, 3
+Availability        ,DiskSpace           ,AVAILABILITY        ,5, 1, 5
+System              ,DiskSpace           ,I_NODE_USED_PERCENT ,3 , 4 , 1
+
+

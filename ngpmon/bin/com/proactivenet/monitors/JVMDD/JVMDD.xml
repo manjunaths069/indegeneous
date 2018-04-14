@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData [
+<!ELEMENT MetaData (DDMetaData+)>
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+<!ELEMENT MetaInfo EMPTY>
+<!ATTLIST MetaInfo 
+    UniqueDisplayName CDATA #REQUIRED
+    GUIDisplayName CDATA #REQUIRED
+    LongName CDATA #REQUIRED
+    ActionType ( 0 | 1 ) "0"
+    ActionCmd CDATA ""
+    ShowOutput  ( 0 | 1) "1"
+    OutputType  ( 0 | 1) "1"
+    SourceOfAgent ( 0 | 1 | 2) "0"
+    AgentOSList CDATA "All"
+    AgentVersion CDATA "6.0"
+    DiagnosticsVersion CDATA "1.0"
+    MaxDataLength CDATA "40120"
+    MonitorTimeout CDATA "300000" 
+    UseInstanceConfig (0 | 1) "1"
+>
+<!ELEMENT GUIDeviceInfo EMPTY>
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+<!ELEMENT ImplInfo EMPTY >
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+<!ELEMENT ParameterInfo EMPTY >
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+<!ELEMENT AgentInfo EMPTY >
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+]>
+
+
+<MetaData>
+<DDMetaData>
+        <!-- JVMDD  --> 
+        <MetaInfo UniqueDisplayName = "JVMDD" GUIDisplayName = "JVM Detail Diagnostics" LongName="JVM Detail Diagnostics"  />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "42774" />
+        <ImplInfo Impl = "JVMDD" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "$device" />
+        <ParameterInfo Parameter = "$ip" />  
+   </DDMetaData>
+</MetaData>    

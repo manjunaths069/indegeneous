@@ -1,0 +1,3 @@
+SUBDIRS = src util
+#SOURCE.java = sybasemon.java SybaseSql.java TimeSybaseJDBCConnector.java 
+

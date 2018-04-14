@@ -1,0 +1,2 @@
+SOURCE.java = SolTop10.java 
+SUBDIRS = lib 

@@ -1,0 +1,95 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+OrclQryNew	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+OrclQryNew	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+OrclQryNew	Connect Time	NORMAL	-1	below	0	0	-1	-1	1	Auto
+#Commented to allow global default of above 5 units and above 5%
+#OrclQryNew	Connect Time	NORMAL	30	above	0	50	10	-1	0
+OrclQryNew	Response Time	NORMAL	-1	below	0	0	-1	-1	1	Auto
+#Commented to allow global default of above 5 units and above 5%
+#OrclQryNew	Response Time	NORMAL	30	above	0	50	20	-1	0
+#Adding following to include this attribute into Default Alarm Rule for SQL TopN
+OrclQryNew	Response Time	NORMAL	-1	above	500	50	10	-1	0	Auto
+
+OrclQryNew	Value	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OrclQryNew	Value	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Disk Reads	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Disk Reads	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Disk Writes	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Disk Writes	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Database Free Space	NORMAL	-1	above	0	0	-1	-1	1	Auto
+OracleMon	Database Free Space	NORMAL	-1	below	0	50	-1	-1	0	Auto
+OracleMon	Commits	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Commits	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Recursive Calls	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Recursive Calls	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Buffer Cache Hit Ratio	NORMAL	-1	Above	0.0	50.0	-1	-1	1	Auto
+OracleMon	Buffer Cache Hit Ratio	NORMAL	-1	Below	0.0	50.0	-1	-1	0	Auto
+OracleMon	Open Cursors	NORMAL	-1	Below	0.0	50.0	-1	-1	1	Auto
+OracleMon	Open Cursors	NORMAL	-1	Above	0.0	50.0	-1	-1	1	Auto
+OracleMon	Total Server Memory	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Total Server Memory	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Percent Memory Used	NORMAL	-1	Above	0.0	50.0	-1	-1	0	Auto
+OracleMon	Percent Memory Used	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Total Session Memory	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Total Session Memory	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Session Memory Peak	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Session Memory Peak	NORMAL	-1	Below	0.0	50.0	-1	-1	1	Auto
+OracleMon	User Connections	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	User Connections	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+#OracleMon	DeadLocks	NORMAL	30	Above	0.0	50.0	0.0	-1	0
+OracleMon	DeadLocks	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+#OracleMon	Errors	NORMAL	30	Above	0.0	50.0	5.0	-1	0
+OracleMon	Errors	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Active Transactions	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Active Transactions	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Gets	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Gets	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+#OracleMon	Dictionary Cache Percent Get Misses	NORMAL	30	Above	0.0	50.0	5.0	-1	0
+OracleMon	Dictionary Cache Percent Get Misses	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+#OracleMon	Dictionary Cache Misses	NORMAL	30	Above	0.0	0.0	0.0	-1	0
+OracleMon	Dictionary Cache Misses	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Scans	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Scans	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Scan Misses	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Scan Misses	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Percent Scan Misses	NORMAL	-1	below	0	0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Percent Scan Misses	NORMAL	-1	above	0	50	-1	-1	0	Auto
+OracleMon	Dictionary Cache Modifications	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Dictionary Cache Modifications	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Library Cache Gets	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Library Cache Gets	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Library Cache Get Misses	NORMAL	-1	below	0	0	-1	-1	1	Auto
+OracleMon	Library Cache Get Misses	NORMAL	-1	above	0	50.0	-1	-1	0	Auto
+OracleMon	Library Cache Pins	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Library Cache Pins	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Library Cache Pin Misses	NORMAL	-1	below	0	0	-1	-1	1	Auto
+OracleMon	Library Cache Pin Misses	NORMAL	-1	above	0	50	-1	-1	0	Auto
+OracleMon	Library Cache Invalidations	NORMAL	-1	Above	0.0	50.0	-1	-1	0	Auto
+OracleMon	Library Cache Invalidations	NORMAL	-1	Below	0.0	50.0	-1	-1	1	Auto
+OracleMon	Parse Rate	NORMAL	-1	Above	0.0	50.0	-1	-1	1	Auto
+OracleMon	Parse Rate	NORMAL	-1	Below	0.0	50.0	-1	-1	1	Auto
+OracleMon	Parse Ratio	NORMAL	-1	Above	0.0	50.0	-1	-1	1	Auto
+OracleMon	Parse Ratio	NORMAL	-1	Below	0.0	50.0	-1	-1	1	Auto
+OracleMon	Redo Blocks Written	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Redo Blocks Written	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Blocks Gotten	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Blocks Gotten	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Rows Gotten	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Rows Gotten	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Small Tables	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Table Scan Small Tables	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	Redo Writes	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+OracleMon	Redo Writes	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+OracleMon	CPU Usage by sessions	NORMAL	-1	below	0	0	-1	-1	1	Auto
+OracleMon	CPU Usage by sessions	NORMAL	-1	above	0	40	-1	-1	0	Auto

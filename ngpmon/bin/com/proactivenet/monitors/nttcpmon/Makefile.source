@@ -1,0 +1,2 @@
+SUBDIRS = src
+#SOURCE.java =nttcpmon.java 

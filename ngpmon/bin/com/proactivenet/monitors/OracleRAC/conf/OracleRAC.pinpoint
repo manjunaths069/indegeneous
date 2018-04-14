@@ -1,0 +1,8 @@
+Availability        ,OracleRAC          ,AVAILABILITY        ,5	,1	,5
+                    ,OracleRAC           ,Database Free Space ,5	,0	,5
+                    ,OracleRAC           ,Percent Memory Used         ,5	,5	,0
+                    ,OracleRAC           ,Buffer Cache Hit Rat     ,5	,5	,0
+		    ,OracleRAC		 ,Dictionary Cache Per  ,5	,5	,0
+		    ,OracleRAC		 ,PERC_SCAN_MISSES ,5	,5	,0
+		    ,OracleRAC		 ,Library Cache Get Mi ,3		,5	,0
+		    ,OracleRAC		 ,CPU Usage by session ,5	,5	,0

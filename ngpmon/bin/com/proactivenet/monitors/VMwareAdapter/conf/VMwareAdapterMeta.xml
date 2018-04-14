@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<!-- VMwareAdapterMeta.xml -->
+
+
+
+<MetaData>
+
+	
+
+	<ManagedObject>
+
+
+
+		<BasicInfo
+
+		MoTypeId="60007"
+
+		MoTypeType="APPS"
+
+		ParentMoType="1"
+
+		UniqueName="VMwareAdapter"
+
+		GUIDisplayName="VMware"
+
+		GUIDisplayable="N"
+
+		/>
+
+
+
+		<AppsInfo
+
+		ClassName="com.proactivenet.monitors.VMwareAdapter.VMwareAdapter"
+
+		AdapterType="999"
+
+		IsStatic="Y"
+
+		SupportFlashCheck="Y"
+
+		IsNewFrameWork="Y"
+
+		/>
+
+	</ManagedObject>
+
+
+
+	<Attributes>
+
+		
+
+		<Application>
+
+
+
+			<AppsInput
+
+			AttrId="60007001"
+
+			UsrAttrId="1"
+
+			UniqueName="INSTANCE_NAME"
+
+			GUIDisplayName="Instance Name"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplaySequenceNumber="1"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			UseAsMODisplayName="Y"
+
+			/>
+
+
+
+
+
+			<AppsInput
+
+			AttrId="60007002"
+
+			UsrAttrId="2"
+
+			UniqueName="SRCIP"
+
+			GUIDisplayName="Source Agent"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplaySequenceNumber="2"
+
+			IsDefaultValueSet="Y"
+
+			MoReferenceType="10000"
+
+			IsInputAttribute="Y"
+
+			DisplayType="MOReference"
+
+			DefaultValue="-1"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007003"
+
+			UsrAttrId="3"
+
+			UniqueName="DNSIP"
+
+			GUIDisplayName="Hostname/IP"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplaySequenceNumber="3"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+			
+
+<!--
+
+			<AppsInput
+
+			AttrId="60007004"
+
+			UsrAttrId="4"
+
+			UniqueName="DOMAINNAME"
+
+			GUIDisplayName="Domain Name"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplaySequenceNumber="4"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+
+
+-->
+
+
+
+			<AppsInput
+
+			AttrId="60007006"
+
+			UsrAttrId="6"
+
+			UniqueName="USERNAME"
+
+			GUIDisplayName="User Name"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplaySequenceNumber="6"			
+
+			AttrReferenceType="Unknown"
+
+			IsDefaultValueSet="Y"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			DefaultValue=""
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007007"
+
+			UsrAttrId="7"
+
+			UniqueName="PASSWORD"
+
+			GUIDisplayName="Password"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			GUIDisplaySequenceNumber="7"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Password"
+
+			DefaultValue=""
+
+			/>
+
+			
+
+			<AppsInput 
+
+			AttrId="60007008" 
+
+			UsrAttrId="8"
+
+			UniqueName="GROUP_DISCOVER_FLAG" 
+
+			GUIDisplayName="Discover Groups"
+
+			GUIInputType="CFG" 
+
+			ScaleFactor="1000" 
+
+			GUIDisplaySequenceNumber="8"
+
+			IsDefaultValueSet="Y" 
+
+			AttrReferenceType="Unknown" 
+
+			GUIInputOnCreate="Y"
+
+			IsInputAttribute="Y" 
+
+			DisplayType="Boolean" 
+
+			DefaultValue="1" 
+
+			GUIDisplayable="Y" 
+
+			GUIRequiredOnCreate="Y" 
+
+			GUIEditable="Y" />			
+
+			
+
+
+
+			<AppsInput
+
+			AttrId="60007010"
+
+			UsrAttrId="10"
+
+			UniqueName="COLLECTDATA"
+
+			GUIDisplayName="Collect Data"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Boolean"
+
+			DefaultValue="1"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007011"
+
+			UsrAttrId="11"
+
+			UniqueName="STSPOLLPERIOD"
+
+			GUIDisplayName="Statistics Poll Interval"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Integer"
+
+			DefaultValue="300"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007012"
+
+			UsrAttrId="12"
+
+			UniqueName="INSTLEVELPOLL"
+
+			GUIDisplayName="Instance Level Poll"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Boolean"
+
+			DefaultValue="0"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007013"
+
+			UsrAttrId="13"
+
+			UniqueName="STSPOLLTIMEOUT"
+
+			GUIDisplayName="Statistics Poll Timeout"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Integer"
+
+			DefaultValue="120"
+
+			/>
+
+
+
+			<AppsInput 
+
+			AttrId="60007018" 
+
+			UsrAttrId="18"
+
+			UniqueName="CFGPOLLPERIOD"
+
+			GUIDisplayName="Configuration Poll Interval" 
+
+			GUIEditable="N"
+
+			GUIInputType="CTL" 
+
+			ScaleFactor="1000" 
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y" 
+
+			IsInputAttribute="Y" 
+
+			DisplayType="Integer"
+
+			DefaultValue="86400" />
+
+			
+
+			<AppsInput 
+
+			AttrId="60007019" 
+
+			UsrAttrId="19"
+
+			UniqueName="CFGPOLLTIMEOUT"
+
+			GUIDisplayName="Configuration Poll Timeout" 
+
+			GUIEditable="N"
+
+			GUIInputType="CTL" 
+
+			ScaleFactor="1000" 
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y" 
+
+			IsInputAttribute="Y" 
+
+			DisplayType="Integer"
+
+			DefaultValue="120" />
+
+
+
+			<AppsInput
+
+			AttrId="60007023"
+
+			UsrAttrId="23"
+
+			UniqueName="ASSOC_MOTYPEIDS"
+
+			GUIDisplayName="Associated MOType Ids"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			GUIRequiredOnCreate="N"
+
+			GUIDisplayable="N"
+
+			GUIInputOnCreate="N"
+
+			GUIEditable="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+<!--			
+
+			<AppsInput AttrId="60007053" 
+
+			UsrAttrId="53"
+
+			UniqueName="GROUP_DISCOVER_FLAG" 
+
+			GUIDisplayName="Discover Groups"
+
+			GUIInputType="CFG" 
+
+			ScaleFactor="1000" 
+
+			GUIDisplaySequenceNumber="14"
+
+			IsDefaultValueSet="Y" 
+
+			AttrReferenceType="Unknown"
+
+			IsInputAttribute="Y" 
+
+			DisplayType="Boolean" 
+
+			GUIInputOnCreate="N"
+
+			DefaultValue="0"
+
+			GUIDisplayable="N"
+
+			GUIRequiredOnCreate="N"
+
+			GUIEditable="N"
+
+			/>
+
+-->			
+
+
+
+			
+
+			
+
+			<AppsInput
+
+			AttrId="60007024"
+
+			UsrAttrId="24"
+
+			UniqueName="ASSOC_AUTOSYNCINSTANCEIDS"
+
+			GUIDisplayName="Associated AutoSync Instance Ids"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			GUIRequiredOnCreate="N"
+
+			GUIDisplayable="N"
+
+			GUIInputOnCreate="N"
+
+			GUIEditable="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+			
+
+			<AppsInput
+
+			AttrId="60007025"
+
+			UsrAttrId="25"
+
+			UniqueName="AUTODISCOVERYPERIOD"
+
+			GUIDisplayName="AutoDiscovery Poll Period"
+
+			GUIEditable="Y"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Integer"
+
+			DefaultValue="86400"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007026"
+
+			UsrAttrId="26"
+
+			UniqueName="AUTODISCOVERYTIMEOUT"
+
+			GUIDisplayName="AutoDiscovery Poll Timeout"
+
+			GUIEditable="Y"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Integer"
+
+			DefaultValue="480"
+
+			/>
+
+			
+
+			<AppsInput
+
+			AttrId="60007028"
+
+			UsrAttrId="28"
+
+			UniqueName="FREQUENCY_TYPE"
+
+			GUIDisplayName="Frequency Type"
+
+			GUIEditable="Y"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="Integer"
+
+			DefaultValue="0"
+
+			/>
+
+						
+
+			<AppsInput
+
+			AttrId="60007029"
+
+			UsrAttrId="29"
+
+			UniqueName="TIME_ZONE"
+
+			GUIDisplayName="Time Zone"
+
+			GUIEditable="Y"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			DefaultValue="GMT+5:30 Asia/Calcutta"
+
+			/>
+
+
+
+			<AppsInput
+
+			AttrId="60007030"
+
+			UsrAttrId="30"
+
+			UniqueName="DAY_OF_WEEK"
+
+			GUIDisplayName="Day Of a Week"
+
+			GUIEditable="Y"
+
+			GUIInputType="CTL"
+
+			ScaleFactor="1000"
+
+			GUIDisplayable="N"
+
+			IsDefaultValueSet="Y"
+
+			GUIInputOnCreate="N"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			DefaultValue="0"
+
+			/>
+
+			
+
+			<AppsInput
+
+			AttrId="60007020"
+
+			UsrAttrId="20"
+
+			UniqueName="DEVICE_FILTER_INCLUDE"
+
+			GUIDisplayName="Device Name Include Filter"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			IsAutoDiscoverable="Y"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+			
+
+			<AppsInput
+
+			AttrId="60007021"
+
+			UsrAttrId="21"
+
+			UniqueName="DEVICE_FILTER_EXCLUDE"
+
+			GUIDisplayName="Device Name Exclude Filter"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			IsAutoDiscoverable="Y"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+			
+
+			<!--
+
+			<AppsInput
+
+			AttrId="60007035"
+
+			UsrAttrId="35"
+
+			UniqueName="OBJ_INST_ID"
+
+			GUIDisplayName="Object Instance ID"
+
+			GUIInputType="CFG"
+
+			ScaleFactor="1000"
+
+			IsDefaultValueSet="Y"
+
+			AttrReferenceType="Unknown"
+
+			IsAutoDiscoverable="Y"
+
+			GUIRequiredOnCreate="N"
+
+			IsInputAttribute="Y"
+
+			DisplayType="String"
+
+			/>
+
+			-->
+
+			
+
+		</Application>
+
+		
+
+	</Attributes>
+
+	
+
+</MetaData>
+
+
+

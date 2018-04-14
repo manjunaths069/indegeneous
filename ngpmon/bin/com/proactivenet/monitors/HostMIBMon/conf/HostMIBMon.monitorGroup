@@ -1,0 +1,5 @@
+# File        : HostMIBMon.monitorGroup
+# Description : MonitorGroup for Host MIB Monitor
+# Date        : Tue Novembet 11 2006
+
+System | DistHostMIB

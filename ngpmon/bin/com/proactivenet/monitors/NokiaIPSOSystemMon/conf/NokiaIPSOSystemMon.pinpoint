@@ -1,0 +1,4 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+System               ,NokiaIPSOSystem      ,MEM_USED ,2 , 3, 3
+System               ,NokiaIPSOSystem      ,SWAP_USED,5 , 4 , 2
+Availability         ,NokiaIPSOSystem      ,DATA_AVAIL ,3, 1, 3

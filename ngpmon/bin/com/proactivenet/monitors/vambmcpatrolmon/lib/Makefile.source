@@ -1,0 +1,9 @@
+SOURCE.cc =BMCMon.cc
+
+OTHERFILES= BMCMon.h
+
+libbmcmon.so_LD_LIB=$(APPS3RDPARTY_DIR)/bmc/Solaris/lib/libpemapi.a
+
+TARGET_LIB_SHARED = libvambmcpatrolmon.so
+
+libbmcmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

@@ -1,0 +1,8 @@
+SystemCpu,VMwareVMCPUMon,CPU_USED
+VirtualSystem,VMwareVMCPUMon,AVAILABILITY
+VirtualSystem,VMwareVMCPUMon,CPU_USED
+VirtualSystem,VMwareVMCPUMon,CPU_EXTRA
+VirtualSystem,VMwareVMCPUMon,CPU_GUARANTEED
+VirtualSystem,VMwareVMCPUMon,CPU_WAIT
+VirtualSystem,VMwareVMCPUMon,CPU_READY
+

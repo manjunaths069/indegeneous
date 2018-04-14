@@ -1,0 +1,21 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+# File        : TMWSystemMon.sigthreshold
+# Description : Signature Threshold File for TMWSystemMon
+#MonitorType	Attribute	Severity	Duration(min)	Above/Below	BaselineThreshold	Sensitivity	Padding	IsPaddingMultiplier	SuppressFlag
+TMWSystem	TOTCPU	Normal	10	above	0.0	50.0	5.0	-1	0	Auto
+TMWSystem	TOTCPU	Normal	10	below	0.0	50.0	10.0	-1	0	Auto
+TMWSystem	USRCPU	Normal	30	above	0.0	0.0	0.0	-1	1	Auto
+TMWSystem	USRCPU	Normal	30	below	0.0	0.0	0.0	-1	1	Auto
+TMWSystem	SYSCPU	Normal	10	above	0.0	50.0	3.0	-1	0	Auto
+TMWSystem	REALMEM	Normal	30	below	0.0	50.0	10.0	-1	0	Auto

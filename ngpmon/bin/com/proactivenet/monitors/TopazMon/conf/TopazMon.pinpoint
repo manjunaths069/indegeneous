@@ -1,0 +1,6 @@
+Availability	,Topaz	,AVAILABILITY	,5, 1, 5
+Availability	,Topaz	,DB_AVAILABILITY	,5
+ResponseTime	,Topaz	,CONNECT_TIME	,3
+ResponseTime	,Topaz	,TOT_RESP_TIME	,5
+		,Topaz	,DNS_TIME	,4
+		,Topaz	,FST_BUFF_TIME	,4

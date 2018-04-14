@@ -1,0 +1,23 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+	,SolarisTCPMon	,tcpActiveOpens	,4
+	,SolarisTCPMon	,tcpPassiveOpens	,4
+	,SolarisTCPMon	,tcpCurrEstab
+	,SolarisTCPMon	,tcpListenDrop	,5
+	,SolarisTCPMon	,tcpHalfOpenDrop
+	,SolarisTCPMon	,tcpListenDropQ0	,4
+	,SolarisTCPMon	,tcpInSegs
+	,SolarisTCPMon	,tcpInDataInorderSegs
+	,SolarisTCPMon	,tcpInDataUnorderSegs
+	,SolarisTCPMon	,tcpInDataDupSegs
+	,SolarisTCPMon	,tcpInDataPartDupSegs
+	,SolarisTCPMon	,tcpInBytes	,4
+	,SolarisTCPMon	,tcpInDataInorderByte
+	,SolarisTCPMon	,tcpInDataUnorderByte
+	,SolarisTCPMon	,tcpInDataDupBytes
+	,SolarisTCPMon	,tcpInDataPartDupByte
+	,SolarisTCPMon	,tcpOutSegs
+	,SolarisTCPMon	,tcpOutDataSegs
+	,SolarisTCPMon	,tcpRetransSegs
+	,SolarisTCPMon	,tcpOutBytes	,4
+	,SolarisTCPMon	,tcpOutDataBytes
+	,SolarisTCPMon	,tcpRetransBytes

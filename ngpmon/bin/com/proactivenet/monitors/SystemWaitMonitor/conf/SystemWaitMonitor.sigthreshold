@@ -1,0 +1,18 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+SystemWaitMonitor	Time Waited	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+SystemWaitMonitor	Time Waited	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+SystemWaitMonitor	Percent Time Waited	NORMAL	-1	Above	0.0	50.0	-1	-1	0	Auto
+SystemWaitMonitor	Percent Time Waited	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto
+SystemWaitMonitor	Total Wait	NORMAL	-1	Above	0.0	0.0	-1	-1	1	Auto
+SystemWaitMonitor	Total Wait	NORMAL	-1	Below	0.0	0.0	-1	-1	1	Auto

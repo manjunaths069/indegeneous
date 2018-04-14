@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TMWDATA [
+        <!ELEMENT TMWDATA (ATTRSET+)>
+     
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+          platform (windows2k | windowsnt4 | windowsxp  | windows2003 | windowsvista | windows2008r2) #REQUIRED
+          attrType (stats | config)     #REQUIRED
+        >
+     
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+        <!ATTLIST ATTRINFO
+          attrName CDATA #REQUIRED
+          dataType (int | float | string) "int"
+	  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff |  perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | complementOf100 | standardTime) "asis"
+	  	  collectData ( y | Y | n | N) "Y"	
+	  	  scaleFactor CDATA "1.0"
+	  	  availabilityRule (default | boolean | negativeBoolean) "default"
+
+        >
+      
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+        
+        <!ELEMENT ATTRMAP (ATTRIBUTE+)>
+        <!ELEMENT ATTRIBUTE (#PCDATA)>
+        <!ATTLIST ATTRIBUTE
+      	          type (class | instance | property) #REQUIRED
+        	  	  dynamicInput (y | Y | n | N) "N"
+        	  	  usrAttrID CDATA #IMPLIED          
+         >
+]>
+
+
+
+<!-- XML Definition for Windows Service Monitor -->
+
+
+<GENMONDATA>
+    <ATTRSET platform="windows2k,windowsnt4,windowsxp,windows2003,windowsvista,windows2008r2" attrType="stats">
+
+        <ATTRINFO attrName="SERVICE_CPU"  dataType="float" computation="percentRate" scaleFactor="100000" collectData="Y" dataSource="WinServiceMonDataSrc">
+            <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service          </ATTRIBUTE>
+			<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="24"></ATTRIBUTE>
+			<ATTRIBUTE type="counter">  % Processor Time </ATTRIBUTE>
+		</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="SERVICE_VSZ" dataType="float" computation="bytesToMb" collectData="Y" dataSource="WinServiceMonDataSrc">
+            <ATTRDEPENDSON >
+		<ATTRMAP>
+			<ATTRIBUTE type="object">    Service  </ATTRIBUTE>
+			<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="24"></ATTRIBUTE>
+			<ATTRIBUTE type="counter">  Working Set </ATTRIBUTE>
+		</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="TOTAL_THREADS" dataType="int" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+            <ATTRDEPENDSON >
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service </ATTRIBUTE>
+			<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="24"></ATTRIBUTE>
+			<ATTRIBUTE type="counter">  Thread Count </ATTRIBUTE>
+		</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO> 
+	
+	<ATTRINFO attrName="HANDLE_COUNT" dataType="int" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON >
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service </ATTRIBUTE>
+			<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="24"></ATTRIBUTE>
+			<ATTRIBUTE type="counter">  Handle Count </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+	</ATTRINFO> 
+
+	<ATTRINFO attrName="PROCESS_INSTANCES" dataType="int" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON >
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+	</ATTRINFO> 
+	
+	<ATTRINFO attrName="AVAILABILITY" dataType="int" computation="availability" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON >
+		<ATTRMAP>
+			<ATTRIBUTE type="object">  Service_Info </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+	</ATTRINFO> 
+ 
+  </ATTRSET>
+
+  <ATTRSET platform="windows2k,windowsnt4,windowsxp,windows2003,windowsvista,windows2008r2" attrType="config">
+
+        <ATTRINFO attrName="START_UP_TYPE"  dataType="string" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+            <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info          </ATTRIBUTE>
+		</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+        <ATTRINFO attrName="LOG_ON_AS"  dataType="string" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info          </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+        </ATTRINFO>
+        <ATTRINFO attrName="STARTED_AT"  dataType="string" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info          </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+        </ATTRINFO>
+        <ATTRINFO attrName="DEP_SERVICE_COUNT"  dataType="string" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info          </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+        </ATTRINFO>
+        <ATTRINFO attrName="SERVICE_NAME"  dataType="string" computation="asis" collectData="Y" dataSource="WinServiceMonDataSrc">
+	    <ATTRDEPENDSON>
+		<ATTRMAP>
+			<ATTRIBUTE type="object">     Service_Info          </ATTRIBUTE>
+		</ATTRMAP>
+	    </ATTRDEPENDSON>
+        </ATTRINFO>
+    </ATTRSET> 
+
+
+    <INPUT_ATTR dataSource="WinServiceMonDataSrc" dataSrcClass="com.proactivenet.monitors.WinServiceMon.WinServiceMonDataCollector">
+    </INPUT_ATTR>
+     
+</GENMONDATA>

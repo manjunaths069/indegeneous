@@ -1,0 +1,26 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+AIXDiskPerf	AVAILABILITY	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+AIXDiskPerf	AVAILABILITY	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+AIXDiskPerf	DISK_BUSY_PERCENT	Normal	-1	below	0.0	50.0	20.0	-1	0	Auto
+AIXDiskPerf	DISK_BUSY_PERCENT	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+AIXDiskPerf	DISK_KB_READ	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+AIXDiskPerf	DISK_KB_READ	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+AIXDiskPerf	DISK_KB_WRITE	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+AIXDiskPerf	DISK_KB_WRITE	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+#AIXDiskPerf	DISK_TRANSFER	Normal	10	below	0.0	0.0	0.0	-1	1
+#AIXDiskPerf	DISK_TRANSFER	Normal	10	above	0.0	0.0	0.0	-1	1
+#AIXDiskPerf	DISK_KBYTES_TRANSFER	Normal	10	below	0.0	0.0	0.0	-1	1
+#AIXDiskPerf	DISK_KBYTES_TRANSFER	Normal	10	above	0.0	0.0	0.0	-1	1
+#AIXDiskPerf	DISK_QUEUE_LENGTH	Normal	10	below	0.0	0.0	20.0	-1	1
+#AIXDiskPerf	DISK_QUEUE_LENGTH	Normal	10	above	0.0	50.0	8.0	-1	0

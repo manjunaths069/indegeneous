@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+     <ATTRSET platform="unix" attrType="config">
+		
+		<ATTRINFO attrName="Emulation" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/emulation" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+ 
+        <ATTRINFO attrName="OperatingMode" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/mode" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+        
+        <ATTRINFO attrName="NetworkInterface" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/network" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+        
+        <ATTRINFO attrName="MACAddress" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/address" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+     </ATTRSET>   
+     
+     <ATTRSET platform="windows" attrType="config">
+		
+		<ATTRINFO attrName="Emulation" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/emulation" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+ 
+        <ATTRINFO attrName="OperatingMode" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/mode" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+        
+        <ATTRINFO attrName="NetworkInterface" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/network" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+        
+        <ATTRINFO attrName="MACAddress" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="/address" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+     </ATTRSET>
+     
+     <ATTRSET platform="unix" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_In"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_In"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_Out"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Out"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_In"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_In"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_Out"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_Out"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	 </ATTRSET>
+	
+	 <ATTRSET platform="windows" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_In"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_In"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_Out"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Out"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Packets_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Packets_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_In"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_In"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_Out" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_Out"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Net_Bytes_Total" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_VNET_PERF" appInstance="" appParam="Net_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+
+</BMCDATA>

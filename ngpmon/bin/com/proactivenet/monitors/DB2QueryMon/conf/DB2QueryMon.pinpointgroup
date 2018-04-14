@@ -1,0 +1,9 @@
+Database     ,DB2Query
+DatabaseRespTime,DB2Query,RES_TIME
+DatabaseRespTime,DB2Query,AVAILABILITY
+
+
+DatabaseConnTime,DB2Query,CON_TIME
+
+DatabaseAvailability,DB2Query,AVAILABILITY
+

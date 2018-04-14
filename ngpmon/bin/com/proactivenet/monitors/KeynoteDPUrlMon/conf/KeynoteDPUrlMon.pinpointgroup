@@ -1,0 +1,3 @@
+WebRespTime,KeynoteDPUrlMonInfo,MEASUREMENT_TOTAL
+WebRespTime,KeynoteDPUrlMonInfo,SERVER_AVAILABILITY
+WebConnTime,KeynoteDPUrlMonInfo,INITIAL_CONNECT

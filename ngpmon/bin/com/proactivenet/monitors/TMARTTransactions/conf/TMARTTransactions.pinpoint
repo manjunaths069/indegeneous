@@ -1,0 +1,107 @@
+#Attribute Group	,Monitor Name	,AttributeName	,Rank	,Above Normal	, Below Normal
+ResponseTime	,TMARTTransactionInfo	,STATS_RESPONSETIME	,5
+Availability	,TMARTTransactionInfo	,STATS_AVAILABILITY	,5	,1	,5
+Accuracy		,TMARTTransactionInfo	,STATS_ACCURACY		,5	,1	,5
+
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES01	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES02	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES03	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES04	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES05	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES06	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES07	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES08	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES09	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES10	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES11	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES12	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES13	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES14	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES15	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES16	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES17	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES18	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES19	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES20	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES21	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES22	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES23	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES24	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES25	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES26	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES27	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES28	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES29	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES30	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES31	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES32	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES33	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES34	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES35	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES36	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES37	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES38	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES39	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES40	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES41	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES42	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES43	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES44	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES45	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES46	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES47	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES48	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES49	,5
+ResponseTime	,TMARTTransactionInfo	,TIMER_STAT_RES50	,5
+
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL01	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL02	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL03	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL04	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL05	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL06	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL07	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL08	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL09	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL10	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL11	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL12	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL13	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL14	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL15	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL16	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL17	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL18	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL19	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL20	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL21	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL22	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL23	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL24	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL25	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL26	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL27	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL28	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL29	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL30	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL31	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL32	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL33	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL34	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL35	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL36	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL37	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL38	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL39	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL40	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL41	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL42	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL43	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL44	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL45	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL46	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL47	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL48	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL49	,5	,1	,5
+Availability	,TMARTTransactionInfo	,TIMER_STAT_AVAIL50	,5	,1	,5
+

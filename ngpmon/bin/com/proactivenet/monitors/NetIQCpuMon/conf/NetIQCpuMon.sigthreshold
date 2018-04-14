@@ -1,0 +1,29 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NetIQCpu	W_USER_TIME	Normal	-1	above	0.0	50	15	-1	0	Auto
+NetIQCpu	W_USER_TIME	Normal	-1	below	0.0	50	10	-1	0	Auto
+NetIQCpu	W_PROC_TIME	Normal	-1	below	0.0	50	15	-1	0	Auto
+NetIQCpu	W_PROC_TIME	Normal	-1	above	0.0	50	10	-1	0	Auto
+NetIQCpu	W_INT_TIME	Normal	-1	below	0.0	50	-1	-1	1	Auto
+NetIQCpu	W_INT_TIME	Normal	-1	above	0.0	50	-1	-1	1	Auto
+NetIQCpu	W_INTRUPTS	Normal	-1	below	0.0	50	300	-1	1	Auto
+NetIQCpu	W_INTRUPTS	Normal	-1	above	0.0	50	300	-1	1	Auto
+NetIQCpu	W_APC_BPASS	Normal	-1	below	0.0	50	10	-1	1	Auto
+NetIQCpu	W_APC_BPASS	Normal	-1	above	0.0	50	-1	-1	1	Auto
+NetIQCpu	U_CON_SWTCH	Normal	-1	above	0.0	50	200	-1	1	Auto
+NetIQCpu	U_SYS_CALLS	Normal	-1	above	0.0	50	300	-1	1	Auto
+NetIQCpu	U_SYS_TIME	Normal	-1	below	0.0	50	10	-1	0	Auto
+NetIQCpu	U_SYS_TIME	Normal	-1	above	0.0	50	8	-1	0	Auto
+NetIQCpu	U_WAIT_TIME	Normal	-1	above	0.0	50	10	-1	0	Auto
+NetIQCpu	U_IDLE_TIME	Normal	-1	below	0.0	50	10	-1	1	Auto
+NetIQCpu	U_IDLE_TIME	Normal	-1	above	0.0	50	10	-1	0	Auto

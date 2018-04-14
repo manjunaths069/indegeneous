@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | userdefined) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+    <ATTRSET platform="unix" attrType="config">
+		
+		<ATTRINFO attrName="MemorySize" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/memSize" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Name" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/hostname" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="NumberOfCPU" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/cpu_count" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Port1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/port" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerBuild" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/build" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerType" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/vmname" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerVersion" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/version" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="NumberOfVirtualMachines" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/VMNum" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="ActiveVirtualMachines" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/activeVMNum" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="MigrationEnabled" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/migrationEnabled" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="config">
+		
+		<ATTRINFO attrName="MemorySize" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/memSize" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Name" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/hostname" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="NumberOfCPU" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/cpu_count" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Port1" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/port" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerBuild" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/build" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerType" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/vmname" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="VirtualServerVersion" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/version" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="NumberOfVirtualMachines" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/VMNum" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="ActiveVirtualMachines" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/activeVMNum" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="MigrationEnabled" dataType="string" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="/migrationEnabled" type="variable" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+	<ATTRSET platform="unix" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="State"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="State" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="State"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_HOST" appInstance="" appParam="State"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+				
+		<ATTRINFO attrName="State" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+   			   <ATTRMAP appType="VSM_HOST" appInstance="" appParam="State"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+</BMCDATA>

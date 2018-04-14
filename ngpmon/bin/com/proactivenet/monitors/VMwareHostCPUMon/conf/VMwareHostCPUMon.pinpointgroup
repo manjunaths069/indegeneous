@@ -1,0 +1,5 @@
+SystemCpu,VMwareHostCPUMon,CPU_USAGE
+VirtualSystem,VMwareHostCPUMon,CPU_USAGE
+VirtualSystem,VMwareHostCPUMon,AVAILABILITY
+VirtualSystem,VMwareHostCPUMon,CPU_USED
+         

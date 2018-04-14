@@ -1,0 +1,2 @@
+#SOURCE.java = LogFileMon.java LogFileMonitorData.java
+SUBDIRS = util src gui

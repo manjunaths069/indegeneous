@@ -1,0 +1,23 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+# NOTE: IDLE TIME ATTRIBUTE REQUIRES TIME FOR ANALYSIS. WILL TAKE GLOBAL VALUE FOR NOW.
+#
+AIX CPU Info	CNXT_SWTCH	Normal	-1	above	0.0	50.0	200.0	-1	1	Auto
+AIX CPU Info	SYS_CALLS	Normal	-1	above	0.0	50.0	300.0	-1	1	Auto
+AIX CPU Info	SYS_TIME	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto
+AIX CPU Info	SYS_TIME	Normal	-1	above	0.0	50.0	8.0	-1	0	Auto
+AIX CPU Info	USR_TIME	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto
+AIX CPU Info	USR_TIME	Normal	-1	above	0.0	50.0	15.0	-1	0	Auto
+AIX CPU Info	WAIT_TIME	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+#AIX CPU Info	IDLE_TIME	Normal	30	below	0.0	50.0	10.0	-1	1
+#AIX CPU Info	IDLE_TIME	Normal	30	above	0.0	50.0	10.0	-1	0

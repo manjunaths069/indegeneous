@@ -1,0 +1,7 @@
+System              ,NTSystemInfo        ,CPU_TIME            ,4
+System              ,NTSystemInfo        ,SWAP_USED_PERCENT   ,4
+System              ,NTSystemInfo        ,PROCESS_TOTAL       ,1
+System              ,NTSystemInfo        ,CPU_SYSTEM_TIME     ,4
+System              ,NTSystemInfo        ,CPU_USER_TIME       ,4
+System              ,NTSystemInfo        ,REAL_MEM            ,4
+System              ,NTSystemInfo        ,INTERRUPTS          ,1

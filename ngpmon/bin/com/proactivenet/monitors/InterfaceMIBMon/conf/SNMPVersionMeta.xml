@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+	<ManagedObject>
+		<BasicInfo MoTypeId="48015" MoTypeType="PERS" UniqueName="SNMPVERSIONS" GUIDisplayName="Snmp Version" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+	</ManagedObject>
+
+	<Attributes>
+		<Persistent AttrId="480150" UseAsMODisplayName="Y" UniqueName="SNMPVER1" GUIDisplayName="Version1" EndUserReportable="Y" GUIRequiredOnCreate="N" DisplayType="String" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" UseAsForcedDBKey="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+		<Persistent AttrId="480151" UseAsForcedDBKey="Y" UniqueName="SNMPVER2" GUIDisplayName="Version2" EndUserReportable="Y" GUIRequiredOnCreate="N" DisplayType="Integer" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+	</Attributes>
+</MetaData>

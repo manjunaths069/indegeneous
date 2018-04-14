@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'NODEPING_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = Ping
+REM Schema & PruneCntl Statements for Monitor = Ping ,moTypeId = 29501
+
+echo Creating tables NODEPING_STATS, NODEPING_RT, NODEPING_BL
+echo Creating Prune Control entries for NODEPING_STATS  AND  entries for NODEPING_RT
+sqli "CREATE TABLE NODEPING_STATS (ITEMID int,TIMERECORDED int,AVAILABILITY int,RESPTIME int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index NODEPING_STATS_N3 on NODEPING_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE NODEPING_RT (ITEMID int, FROMTIME int, TOTIME int, AVAILABILITY_HIGH int, AVAILABILITY_AVG  int, AVAILABILITY_LOW  int, RESPTIME_HIGH int, RESPTIME_AVG  int, RESPTIME_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index NODEPING_RT_N3 on NODEPING_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE NODEPING_BL (ITEMID   int,TIMESLOT int,AVAILABILITY_HIGH int,AVAILABILITY_AVG  int,AVAILABILITY_LOW  int,RESPTIME_HIGH int,RESPTIME_AVG  int,RESPTIME_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NODEPING_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NODEPING_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = Ping
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

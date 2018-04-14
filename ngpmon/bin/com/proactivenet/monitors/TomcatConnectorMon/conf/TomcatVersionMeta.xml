@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>    
+	<ManagedObject>
+<BasicInfo MoTypeId="42756" UniqueName="TomcatVersion" GUIDisplayName="Tomcat Version" MoTypeType="PERS" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+</ManagedObject>    
+	<Attributes>
+<Persistent AttrId="427560" UseAsForcedDBKey="Y" UseAsMODisplayName="Y" UniqueName="VERSION_NAME" GUIDisplayName="Version Name" EndUserReportable="Y" GUIRequiredOnCreate="N" DisplayType="String" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+<Persistent AttrId="427561" UseAsForcedDBKey="Y" UniqueName="VERSION_NO" GUIDisplayName="Version Number" EndUserReportable="Y" GUIRequiredOnCreate="N" GUIEditable="N" DisplayType="Integer" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+</Attributes>
+</MetaData>

@@ -1,0 +1,11 @@
+ResponseTime        ,OrclQryNew          ,Response Time       ,5	,5	,0
+Availability        ,OrclQryNew          ,AVAILABILITY        ,5	,1	,5
+ResponseTime        ,OrclQryNew          ,Connect Time        ,3	,5	,0
+                    ,OracleMon           ,Database Free Space ,5	,0	,5
+                    ,OracleMon           ,Percent Memory Used         ,5	,5	,0
+                    ,OracleMon           ,Buffer Cache Hit Rat     ,5	,5	,0
+		    ,OracleMon		 ,Dictionary Cache Per  ,5	,5	,0
+		    ,OracleMon		 ,PERC_SCAN_MISSES ,5	,5	,0
+		    ,OracleMon		 ,Library Cache Get Mi ,3		,5	,0
+		    ,OracleMon		 ,Library Cache Pin Mi ,3	,5	,0
+		    ,OracleMon		 ,CPU Usage by session ,5	,5	,0

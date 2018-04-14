@@ -1,0 +1,5 @@
+# File        : InterfaceMIBMon.monitorGroup
+# Description : MonitorGroup for Interface MIB Monitor
+# Date        : Tue May 05 2005
+
+Network|InterfaceMIBMon

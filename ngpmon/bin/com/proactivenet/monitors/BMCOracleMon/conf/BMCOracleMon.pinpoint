@@ -1,0 +1,10 @@
+# File        : BMCOracleMon.pinpoint
+# Description : Pinpoint File for BMCOracleMon
+# Date        : Tue Jan 28 2003
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+System	,BMCOracle	,BUFF_HIT_RATIO	,5	,5	,0
+System	,BMCOracle	,GET_MISSES	,5	,5	,0
+System	,BMCOracle	,LIB_MISSES	,3	,5	,0
+System	,BMCOracle	,LIB_PIN_MISSES	,3	,5	,0
+
+

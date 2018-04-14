@@ -1,0 +1,7 @@
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+System	,CASystemMonInfo	,SYS_LOAD	,5	,5	,2
+System	,CASystemMonInfo	,SWAP_USED	,5	,4	,2
+System	,CASystemMonInfo	,MEM_USED	,4	,3	,3
+System	,CASystemMonInfo	,USR_CPU	,5	,3	,3
+System	,CASystemMonInfo	,KERNEL_CPU	,5	,3	,3
+System	,CASystemMonInfo	,TOT_CPU	,5	,4	,3

@@ -1,0 +1,7 @@
+SOURCE.cc = df.cc javaCom.cc
+
+OTHERFILES= DiskMon.h df.h 
+
+TARGET_LIB_SHARED = libdiskmon.so
+
+libdiskmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

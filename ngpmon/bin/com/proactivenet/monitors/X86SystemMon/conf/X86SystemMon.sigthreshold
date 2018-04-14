@@ -1,0 +1,29 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+X86 System Info	I_O_WAIT	Normal	-1	above	0.0	50.0	20.0	-1	0	Auto
+X86 System Info	INTERRUPT	Normal	-1	above	0.0	50.0	500.0	-1	0	Auto
+X86 System Info	KERNEL_CPU	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	MEM_USED_PERCENT	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+X86 System Info	AVE_SWPQUE	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	AVE_WAITING	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	AVE_RUNQUE	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	PROCESSES_TOTAL	Normal	-1	below	0.0	50.0	40.0	-1	0	Auto
+X86 System Info	PROCESSES_TOTAL	Normal	-1	above	0.0	50.0	15.0	-1	0	Auto
+X86 System Info	SCAN_RATE	Normal	-1	above	0.0	50.0	50.0	-1	0	Auto
+X86 System Info	SWAP_USED_PERCENT	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	SYS_LOAD	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+X86 System Info	SYS_LOAD	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	TOTAL_CPU	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto
+X86 System Info	TOTAL_CPU	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+X86 System Info	USER_CPU	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+X86 System Info	USER_CPU	Normal	-1	above	0.0	0.0	-1	-1	1	Auto

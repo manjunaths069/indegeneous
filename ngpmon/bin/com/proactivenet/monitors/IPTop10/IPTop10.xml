@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData [
+<!ELEMENT MetaData (DDMetaData+)>
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+<!ELEMENT MetaInfo EMPTY>
+<!ATTLIST MetaInfo 
+    UniqueDisplayName CDATA #REQUIRED
+    GUIDisplayName CDATA #REQUIRED
+    LongName CDATA #REQUIRED
+    ActionType ( 0 | 1 ) "0"
+    ActionCmd CDATA #REQUIRED
+    ShowOutput  ( 0 | 1) "1"
+    OutputType  ( 0 | 1) "1"
+    SourceOfAgent ( 0 | 1 | 2) "0"
+    AgentOSList CDATA ""
+    AgentVersion CDATA "6.0"
+    DiagnosticsVersion CDATA "1.0"
+    MaxDataLength CDATA "40000"
+    MonitorTimeout CDATA "300000" 
+>
+
+
+<!ELEMENT GUIDeviceInfo EMPTY>
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+<!ELEMENT ImplInfo EMPTY >
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+<!ELEMENT ParameterInfo EMPTY >
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+<!ELEMENT AgentInfo EMPTY >
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+]>
+
+<MetaData>
+ <DDMetaData>
+        <!-- Network Monitors --> 
+        <MetaInfo UniqueDisplayName = "IPTop10" GUIDisplayName = "Top IP Traffic" LongName="Top IP Traffic" AgentOSList = "SunOS:Windows" ActionCmd = "iptop" />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "28701" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "28201" />
+        <ImplInfo Impl = "IPTop10" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "5" /> <!-- Capture interval in seconds -->
+        <ParameterInfo Parameter = "10" /> <!-- No. of result rows -->
+        <ParameterInfo Parameter = "$device" />
+        <ParameterInfo Parameter = "$ip" />        
+        <ParameterInfo Parameter = "$srcip" />        
+ </DDMetaData>
+</MetaData>    

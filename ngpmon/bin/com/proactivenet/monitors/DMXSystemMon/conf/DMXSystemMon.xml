@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DMXDATA [
+        <!ELEMENT DMXDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+              platform (Linux | unix) #REQUIRED
+          attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+    <!ATTLIST ATTRINFO 
+          attrName CDATA #REQUIRED
+          dataType (int | float | string) "int" 
+          computation (asis | delta | rate | percent | complementOf100 | chkPercentRange | diffPercent | diff | perHourToPerSec | sum |  bytesToKb | bytesToMb | kbToMb | availability) "asis"
+                  collectData (Y | y | N |n ) "Y"
+                  scaleFactor CDATA "1.0"
+                  availabilityRule (default | boolean | negativeBoolen) "default"
+        >
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+    <!ELEMENT ATTRMAP (ATTRIBUTE+)>
+        <!ELEMENT ATTRIBUTE (#PCDATA)>
+    <!ATTLIST ATTRIBUTE 
+                  type (profile | resourcemodel | context | instance | stat | name ) #REQUIRED 
+                  dynamicInput (y | Y | n | N) "N"
+                 usrAttrID CDATA #IMPLIED >
+      
+]>
+<DMXDATA>
+    <ATTRSET platform="unix" attrType="stats">  
+        <ATTRINFO attrName="DMX_USER_CPU" dataType="float" computation="asis" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP>
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Percent usage </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> prcUserTime </ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+                        
+        <ATTRINFO attrName="DMX_KERNEL_CPU" dataType="float" computation="asis" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Percent usage </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> prcSysTime </ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="DMX_TOTAL_CPU" dataType="float" computation="sum" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Percent usage </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> prcUserTime </ATTRIBUTE> 
+                </ATTRMAP>
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Percent usage </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> prcSysTime </ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="DMX_AVG_LOAD" dataType="float" computation="asis" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Average Loading </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"  dynamicInput="Y" usrAttrID="11"/>
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="DMX_SWAP_SPACE" dataType="float" computation="complementOf100" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXMemory </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Memory Availability </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> PrcAvailSwap</ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="DMX_MEM_SPACE" dataType="float" computation="complementOf100" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXMemory </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Memory Availability </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> PrcAvailStorage</ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+
+        <ATTRINFO attrName="DMX_AVAIL" dataType="int" computation="availability" collectData="Y">
+            <ATTRDEPENDSON> 
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXMemory </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Memory Availability </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> PrcAvailSwap </ATTRIBUTE> 
+                </ATTRMAP>
+                <ATTRMAP> 
+                    <ATTRIBUTE type = "profile" dynamicInput="Y" usrAttrID="10"/>
+                    <ATTRIBUTE type = "resourcemodel"> DMXCpu </ATTRIBUTE> 
+                    <ATTRIBUTE type = "context"> Percent usage </ATTRIBUTE> 
+                    <ATTRIBUTE type = "instance"> name=total; </ATTRIBUTE> 
+                    <ATTRIBUTE type = "stat" dynamicInput="Y" usrAttrID="12"/>
+                    <ATTRIBUTE type = "name"> prcSysTime </ATTRIBUTE> 
+                </ATTRMAP>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+    </ATTRSET>
+</DMXDATA>
+

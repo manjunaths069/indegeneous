@@ -1,0 +1,3 @@
+#SOURCE.java = DiskMon.java MntabParser.java DiskMonAttributeChoice.java
+SUBDIRS = src autodiscovery
+

@@ -1,0 +1,4 @@
+# This is a DUmmy metafile as Scriptmon does not need any metadata
+# and if we do not have this file install script keeps displaying errors causing confusion
+# for people trying to troubleshoot any problem with installl.
+

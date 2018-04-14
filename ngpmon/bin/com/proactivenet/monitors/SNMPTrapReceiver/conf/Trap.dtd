@@ -1,0 +1,35 @@
+<!ELEMENT PronetTrapConf (Trap+)>
+<!ELEMENT Trap (TrapOID, SpecificTrapType?, DeviceOID?, TrapName?, ImportFlag, DescriptionStr*, SeverityMapping*, Filter*)>
+<!ELEMENT TrapOID EMPTY>
+<!ATTLIST TrapOID oid CDATA #REQUIRED>
+<!-- SpecificTrapType -->
+<!ELEMENT SpecificTrapType EMPTY>
+<!ATTLIST SpecificTrapType id CDATA #REQUIRED>
+<!ELEMENT DeviceOID EMPTY>
+<!ATTLIST DeviceOID doid CDATA #REQUIRED>
+<!ELEMENT TrapName EMPTY>
+<!ATTLIST TrapName name CDATA #IMPLIED>
+<!ELEMENT ImportFlag EMPTY>
+<!ATTLIST ImportFlag import (true|false) #REQUIRED>
+<!ELEMENT DescriptionStr (Variable*)>
+<!ATTLIST DescriptionStr descr CDATA #IMPLIED>
+<!ELEMENT Variable EMPTY>
+<!ATTLIST Variable descr_iod CDATA #REQUIRED
+                   descr_name CDATA #REQUIRED 
+                   descr_prefix CDATA #IMPLIED 
+                   descr_postfix CDATA #IMPLIED
+> 
+<!ELEMENT SeverityMapping EMPTY>
+<!ATTLIST SeverityMapping severity (MINOR|MAJOR|CRITICAL|NORMAL) #REQUIRED>
+<!ELEMENT Filter (FilterElement+)> 
+<!ELEMENT FilterElement EMPTY>
+<!ATTLIST FilterElement filt_oid CDATA #REQUIRED
+                        filt_type (INTEGER|STRING|OCTETSTRING) #REQUIRED
+                        filt_comparator (EQ|GT|GE|LT|LE|NE|SUBSTR) #REQUIRED
+                        filt_value      CDATA #REQUIRED
+                        filt_conjunct (AND|OR) #IMPLIED
+>
+
+
+
+

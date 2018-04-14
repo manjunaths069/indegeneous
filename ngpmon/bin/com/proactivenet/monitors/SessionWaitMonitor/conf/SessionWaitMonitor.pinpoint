@@ -1,0 +1,4 @@
+#Attribute classification for Pinpointing
+#Attribute_Group	Rank	Above_Normal	Below_Normal
+ 	,SessionWaitMonitor	,SessCount	,3	,3	,3
+ 	,SessionWaitMonitor	,Sess_wt_so_far	,3	,3	,3

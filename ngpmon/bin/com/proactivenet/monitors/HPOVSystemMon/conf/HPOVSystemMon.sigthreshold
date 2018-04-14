@@ -1,0 +1,19 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+#MonitorType	Attribute	Severity	Duration(min)	Above/Below	BaselineThreshold	Sensitivity	Padding	IsPaddingMultiplier	SuppressFlag
+HPOVSystemMon	STATS01	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto
+HPOVSystemMon	STATS01	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+HPOVSystemMon	STATS13	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+HPOVSystemMon	STATS22	Normal	-1	below	0.0	0.0	-1	-1	1	Auto
+HPOVSystemMon	STATS22	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+HPOVSystemMon	STATS10	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto

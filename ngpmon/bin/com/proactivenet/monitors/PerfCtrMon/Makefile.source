@@ -1,0 +1,2 @@
+#SOURCE.java = PerfCtrMon.java PerfCtrMonData.java PerfCtrMonAttributeChoice.java
+SUBDIRS = src

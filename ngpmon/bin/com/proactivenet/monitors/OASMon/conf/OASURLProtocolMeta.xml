@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- WebSphereURLProtocolMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <BasicInfo
+      MoTypeId="24765"
+      MoTypeType="PERS"
+      UniqueName="OASURLProtocol"
+      GUIDisplayName="OASURL Protocol"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Persistent
+      AttrId="247651"
+      UseAsForcedDBKey="Y"
+      UniqueName="PROT_CHOICENO"
+      GUIDisplayName="Choice Number"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="Integer"
+      GUIEditable="N"
+    />
+    <Persistent
+      AttrId="247650"
+      UseAsMODisplayName="Y"
+      UniqueName="PROT_CHOICENAME"
+      GUIDisplayName="Choice Name"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="String"
+      GUIEditable="N"
+    />
+  </Attributes>
+</MetaData>
+

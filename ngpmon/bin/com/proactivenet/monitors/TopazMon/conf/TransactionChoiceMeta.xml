@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="N" MoTypeId="40014" MoTypeType="PERS" EndUserReportable="N" UniqueName="TransactionChoice" GUIDisplayName="Transaction Type Choices" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="400140" UseAsMODisplayName="Y" UniqueName="TRAXN_TYPENAME" GUIDisplayName="Transaction Type" EndUserReportable="Y" GUIRequiredOnCreate="N" DisplayType="String" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" UseAsForcedDBKey="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+<Persistent AttrId="400141" UseAsForcedDBKey="Y" UniqueName="TRAXN_TYPENO" GUIDisplayName="Transaction Type Choice" EndUserReportable="Y" GUIRequiredOnCreate="N" DisplayType="Integer" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+</Attributes>
+</MetaData>

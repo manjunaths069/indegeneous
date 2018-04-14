@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SNMPDATA [
+	<!ELEMENT SNMPDATA (ATTRSET+)>
+	<!ELEMENT ATTRSET (ATTRINFO+)>
+	<!ATTLIST ATTRSET
+	platform (all | windows | unix | nt | win2k | linux | solaris | hpux | aix) #REQUIRED
+>
+	<!ELEMENT ATTRINFO (OID, ATTRNAME, ATTRTYPE, ATTRCOMPUTATION, ATTRDEPENDSON?)>
+	<!ELEMENT OID (OIDNAME, OIDINDEX*)>
+	<!ATTLIST OID
+	representedby (value | string) #REQUIRED
+		type (scalar | columnar) #REQUIRED
+		returns (number | string | kb | bytes | mb) #REQUIRED
+>
+	<!ELEMENT ATTRNAME (#PCDATA)>
+	<!ELEMENT ATTRTYPE (#PCDATA)>
+	<!ELEMENT ATTRCOMPUTATION (#PCDATA)>
+	<!ELEMENT ATTRDEPENDSON (OID+)>
+	<!ELEMENT OIDNAME (#PCDATA)>
+	<!ELEMENT OIDINDEX (OIDINDEXNAME, OIDINDEXNUM)>
+	<!ATTLIST OIDINDEX
+	type (string | number) #REQUIRED
+>
+	<!ELEMENT OIDINDEXNAME (#PCDATA)>
+	<!ELEMENT OIDINDEXNUM (#PCDATA)>
+]>
+<SNMPDATA>
+	<ATTRSET platform="all">
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.7.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_LAR_FREE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>TOMB</ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.5.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_USED</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+			<ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.6.1</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.2.1.2.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_FIVEMIN</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION> ASIS </ATTRCOMPUTATION>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.109.1.1.1.1.5.1</OIDNAME>
+			</OID>
+			<ATTRNAME>CPU_FIVEMIN</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.2.1.5</OIDNAME>
+			</OID>
+			<ATTRNAME>CUSE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.1.1.1.3.6</OIDNAME>
+			</OID>
+			<ATTRNAME>FAIL_PSTATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.1.1.1.3.7</OIDNAME>
+			</OID>
+			<ATTRNAME>FAIL_SSTATUS</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	     <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.4.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_FBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.4.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.80.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_EBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.80.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+		<ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.256.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_TBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.256.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.1550.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_FTBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.1550.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.16384.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_SIBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.16384.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.65536.8</OIDNAME>
+			</OID>
+			<ATTRNAME>FBUFF_SFBYTE</ATTRNAME>
+			<ATTRTYPE>STATS</ATTRTYPE>
+			<ATTRCOMPUTATION>PERCENT</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.2.1.1.4.65536.3</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.3.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_ALTERNATE</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>1.3.6.1.4.1.9.9.147.1.2.1.1.1.3.6</OIDNAME>
+			</OID>
+			<ATTRNAME>FAILOVER_STS</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="string">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.2.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_NAME</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>ASIS</ATTRCOMPUTATION>
+		</ATTRINFO>
+	    <ATTRINFO>
+			<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.5.1</OIDNAME>
+			</OID>
+			<ATTRNAME>MEM_TOT</ATTRNAME>
+			<ATTRTYPE>CONFIG</ATTRTYPE>
+			<ATTRCOMPUTATION>SUM</ATTRCOMPUTATION>
+		    <ATTRDEPENDSON>
+				<OID representedby="value" type="scalar" returns="number">
+				<OIDNAME>1.3.6.1.4.1.9.9.48.1.1.1.6.1</OIDNAME>
+				</OID>
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+	 </ATTRSET>
+</SNMPDATA>
+

@@ -1,0 +1,4 @@
+WebRespTime,Topaz,TOT_RESP_TIME
+WebRespTime,Topaz,AVAILABILITY
+WebRespTime,Topaz,DB_AVAILABILITY
+WebConnTime,Topaz,CONNECT_TIME

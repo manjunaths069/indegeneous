@@ -1,0 +1,2 @@
+SUBDIRS = src
+#SOURCE.java = eventlog.java eventlogrec.java ntevlogmon.java

@@ -1,0 +1,2 @@
+#SOURCE.java = BroadVisionMon.java BVObject.java IMObject.java SrvObject.java DBAccessorInfo.java IMCacheInfo.java IMScriptInfo.java
+SUBDIRS = util src

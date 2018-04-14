@@ -1,0 +1,49 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'DMXPROCESS_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = Adapter for Tivoli Unix Process
+REM Schema & PruneCntl Statements for Monitor = Adapter for Tivoli Unix Process ,moTypeId = 31275
+
+echo Creating tables DMXPROCESS_STATS, DMXPROCESS_RT, DMXPROCESS_BL
+echo Creating Prune Control entries for DMXPROCESS_STATS  AND  entries for DMXPROCESS_RT
+sqli "CREATE TABLE DMXPROCESS_STATS (ITEMID int,TIMERECORDED int,DMX_PROC_USD int,DMX_PROC_AVAIL int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index DMXPROCESS_STATS_N3 on DMXPROCESS_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE DMXPROCESS_RT (ITEMID int, FROMTIME int, TOTIME int, DMX_PROC_USD_HIGH int, DMX_PROC_USD_AVG  int, DMX_PROC_USD_LOW  int, DMX_PROC_AVAIL_HIGH int, DMX_PROC_AVAIL_AVG  int, DMX_PROC_AVAIL_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index DMXPROCESS_RT_N3 on DMXPROCESS_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE DMXPROCESS_BL (ITEMID   int,TIMESLOT int,STARTTIME int,DURATION int,DMX_PROC_USD_HIGH int,DMX_PROC_USD_AVG  int,DMX_PROC_USD_LOW  int,DMX_PROC_AVAIL_HIGH int,DMX_PROC_AVAIL_AVG  int,DMX_PROC_AVAIL_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "STARTTIME", "DURATION") WITH HASH SIZE 10);"
+
+sqli "create index DMXPROCESS_BL_N2 on DMXPROCESS_BL ( STARTTIME, DURATION );"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DMXPROCESS_STATS', 'TIMERECORDED', 192);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DMXPROCESS_RT', 'FROMTIME', 2160);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DMXPROCESS_BL', 'STARTTIME', 8760);"
+
+) else (
+
+REM Upgrade Installation for Monitor = Adapter for Tivoli Unix Process
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

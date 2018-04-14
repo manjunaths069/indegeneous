@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TOMCATDATA [
+        <!ELEMENT TOMCATDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix | all) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  beanType     CDATA #REQUIRED 
+		  beanInstance     CDATA #REQUIRED
+		  beanAttribute CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<TOMCATDATA>
+	<ATTRSET platform="all" attrType="stats">
+
+		<ATTRINFO attrName="REQUESTS" dataType="float" computation="rate">
+			<ATTRDEPENDSON> 
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="requestCount" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="ERRORS" dataType="float" computation="rate">
+			<ATTRDEPENDSON> 
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="errorCount" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="RESP_TIME_MAX" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="maxTime" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="RESP_TIME_MIN" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="minTime" />
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="RESP_TIME_AVG" dataType="float" computation="percent">
+			<ATTRDEPENDSON> 
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="processingTime" />
+				<ATTRMAP beanType="Catalina:J2EEApplication=none,J2EEServer=none,j2eeType=Servlet," beanInstance="WebModule=//localhost,name=," beanAttribute="requestCount" />
+			</ATTRDEPENDSON>
+		</ATTRINFO>
+
+	</ATTRSET>
+
+</TOMCATDATA>
+

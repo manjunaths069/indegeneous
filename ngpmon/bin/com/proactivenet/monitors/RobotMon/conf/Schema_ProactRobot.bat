@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'NEWROBOTMON_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = Adapter for Robot
+REM Schema & PruneCntl Statements for Monitor = Adapter for Robot ,moTypeId = 42703
+
+echo Creating tables NEWROBOTMON_STATS, NEWROBOTMON_RT, NEWROBOTMON_BL
+echo Creating Prune Control entries for NEWROBOTMON_STATS  AND  entries for NEWROBOTMON_RT
+sqli "CREATE TABLE NEWROBOTMON_STATS (ITEMID int,TIMERECORDED int,AVAILABILITY int,RESPTIME int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index NEWROBOTMON_STATS_N3 on NEWROBOTMON_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE NEWROBOTMON_RT (ITEMID int, FROMTIME int, TOTIME int, AVAILABILITY_HIGH int, AVAILABILITY_AVG  int, AVAILABILITY_LOW  int, RESPTIME_HIGH int, RESPTIME_AVG  int, RESPTIME_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index NEWROBOTMON_RT_N3 on NEWROBOTMON_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE NEWROBOTMON_BL (ITEMID   int,TIMESLOT int,AVAILABILITY_HIGH int,AVAILABILITY_AVG  int,AVAILABILITY_LOW  int,RESPTIME_HIGH int,RESPTIME_AVG  int,RESPTIME_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NEWROBOTMON_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NEWROBOTMON_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = Adapter for Robot
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

@@ -1,0 +1,4 @@
+#Attribute Group	,Monitor Name	    ,Attribute Name		,Rank	,Above Normal	,Below Normal
+Availability            ,WebLogicJMX    ,AVAILABILITY               ,5	,1 	,5
+                        ,WebLogicJMX    ,JVM_HEAPUSED              ,4	
+                        ,WebLogicJMX    ,EXEQUE_USAGE              ,4	

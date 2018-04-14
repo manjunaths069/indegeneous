@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+                  platform (windows | unix) #REQUIRED
+                  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+        <!ATTLIST ATTRINFO
+                  attrName CDATA #REQUIRED
+                  dataType (int | float | string) "float"
+                  computation (asis | delta | rate | percent | diffPercent | diff | complement100 | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | persec) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+        <!ELEMENT ATTRMAP EMPTY>
+        <!ATTLIST ATTRMAP
+                  appType     CDATA #REQUIRED
+                  appInstance CDATA #REQUIRED
+                  appParam    CDATA #REQUIRED 
+                  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+
+<BMCDATA>
+
+	<ATTRSET platform="unix" attrType="stats">
+		<ATTRINFO attrName="USR_RB_RATIO" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_PERFORMANCE" appInstance="" appParam="UserRBRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="TRANS_RATE" dataType="float" computation="perHourToPerSec">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_PERFORMANCE" appInstance="" appParam="TransRate"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="RECURSIVE_CALLS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_ENVIRONMENT" appInstance="" appParam="RecsvCallsRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="BUFF_HIT_RATIO" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="BuffHitRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="USERS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_USERS" appInstance="" appParam="Users"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="DICT_REQUESTS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="DictRequests"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="DICT_MISSES" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="DictMisses"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="GET_MISSES" dataType="float" computation="complement100">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="DictHitRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LIB_REQUESTS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibGetHits"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LIB_MISSES" dataType="float" computation="complement100">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibGetHitRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LIB_PIN_REQUESTS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibPinRequests"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LIB_PIN_MISSES" dataType="float" computation="diffPercent">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibPinRequests"/>
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibPinHits"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LIB_INVALIDATIONS" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LibInvalidations"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="PARSE_CALL_RATIO" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_ENVIRONMENT" appInstance="" appParam="ParseCallRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="ROW_SRC_RATIO" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_ENVIRONMENT" appInstance="" appParam="RowSourceRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="REDO_RATE" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_LOG" appInstance="" appParam="RedoRate"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="LATCH_GET_MISSES" dataType="float" computation="complement100">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="LatchGetRatio"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="RBSEG_EXT_USED" dataType="float" computation="complement100">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_AVAILABILITY" appInstance="" appParam="RSExtentsLeftPct"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="RBSEG_BUF_RATE" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_SGA" appInstance="" appParam="RollBuffBusyRate"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		<ATTRINFO attrName="ORA_AVAILABILITY" dataType="float" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="ORACLE_AVAILABILITY" appInstance="" appParam="InstanceStatus" availabilityRule="boolean"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+</BMCDATA>

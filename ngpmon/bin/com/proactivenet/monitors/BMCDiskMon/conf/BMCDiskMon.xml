@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	<ATTRSET platform="unix" attrType="stats">
+
+		<ATTRINFO attrName="DISK_BUSY_TIME" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKPercentBusy"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="READ_BYTES" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKRead"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="WRITE_BYTES" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKWrite"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="AVG_SVC_TIME" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKAvgServ"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="AVG_TXN_WAITQ" dataType="float" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKAvgWait"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="DISK_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKAvgServ"/>
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKWrite"/>
+				<ATTRMAP appType="DISK" appInstance="" appParam="DSKRead"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+
+
+	<ATTRSET platform="windows" attrType="stats">
+
+		<ATTRINFO attrName="DISK_BUSY_TIME" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PHYSICAL_DISKS" appInstance="" appParam="PDpdDiskTimePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="DISK_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PHYSICAL_DISKS" appInstance="" appParam="PDpdDiskTimePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

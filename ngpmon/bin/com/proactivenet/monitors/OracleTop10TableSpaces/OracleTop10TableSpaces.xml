@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE MetaData [
+<!ELEMENT MetaData (DDMetaData+)>
+<!ELEMENT DDMetaData (MetaInfo, GUIDeviceInfo*, GUIMOTypeIdInfo*, ImplInfo+, ParameterInfo+, AgentInfo*)>
+<!ELEMENT MetaInfo EMPTY>
+<!ATTLIST MetaInfo 
+    UniqueDisplayName CDATA #REQUIRED
+    GUIDisplayName CDATA #REQUIRED
+    LongName CDATA #REQUIRED
+    ActionType ( 0 | 1 ) "0"
+    ActionCmd CDATA #REQUIRED
+    ShowOutput  ( 0 | 1) "1"
+    OutputType  ( 0 | 1) "1"
+    SourceOfAgent ( 0 | 1 | 2) "0"
+    AgentOSList CDATA "All"
+    AgentVersion CDATA "6.0"
+    DiagnosticsVersion CDATA "1.0"
+    MaxDataLength CDATA "100000"
+    MonitorTimeout CDATA "300000" 
+    UseInstanceConfig (0 | 1) "1"
+>
+
+
+<!ELEMENT GUIDeviceInfo EMPTY>
+<!ATTLIST GUIDeviceInfo GUIDevice CDATA #REQUIRED>
+
+<!ELEMENT GUIMOTypeIdInfo EMPTY >
+<!ATTLIST GUIMOTypeIdInfo GUIMOTypeId CDATA #IMPLIED>
+
+<!ELEMENT ImplInfo EMPTY >
+<!ATTLIST ImplInfo Impl CDATA #REQUIRED>
+
+<!ELEMENT ParameterInfo EMPTY >
+<!ATTLIST ParameterInfo Parameter CDATA #REQUIRED >
+
+<!ELEMENT AgentInfo EMPTY >
+<!ATTLIST AgentInfo Agent CDATA #IMPLIED>
+]>
+
+<MetaData>
+	<DDMetaData>
+        <!-- Oracle TOP N By Table Space --> 
+        <MetaInfo 
+        	UniqueDisplayName = "OracleTop10TableSpaces" 
+        	GUIDisplayName = "Top Table-Spaces" 
+        	LongName="OracleTop10TableSpaces" 
+        	ActionCmd = "top" 
+        />
+        <GUIDeviceInfo GUIDevice = "0" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "25001" /> 
+        <GUIMOTypeIdInfo GUIMOTypeId = "25002" />
+        <GUIMOTypeIdInfo GUIMOTypeId = "41055" />
+        <ImplInfo Impl = "OracleTop10TableSpaces" />
+
+        <!-- change the following to match to a specific need -->
+        <ParameterInfo Parameter = "TableSpace" />
+        <ParameterInfo Parameter = "10" />
+        <ParameterInfo Parameter = "$device" />
+        <ParameterInfo Parameter = "$target" />
+        <ParameterInfo Parameter = "$ip" />
+        <ParameterInfo Parameter = "$srcip" />     
+    </DDMetaData>
+
+</MetaData>    
+

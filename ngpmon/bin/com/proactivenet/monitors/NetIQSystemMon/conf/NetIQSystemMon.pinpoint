@@ -1,0 +1,9 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+System	,NetIQSystem	,INTRUPTS	,1	,4	,2
+System	,NetIQSystem	,NO_PROC_RUN	,3	,3	,3
+System	,NetIQSystem	,NO_PROC_SWAP	,3	,3	,3
+System	,NetIQSystem	,NUM_PROC	,2	,3	,3
+System	,NetIQSystem	,SWAP_USED	,5	,4	,2
+System	,NetIQSystem	,SYS_CPU_USED	,5	,3	,3
+System	,NetIQSystem	,TOT_CPU_USED	,5	,4	,3
+System	,NetIQSystem	,USR_CPU_USED	,5	,3	,3

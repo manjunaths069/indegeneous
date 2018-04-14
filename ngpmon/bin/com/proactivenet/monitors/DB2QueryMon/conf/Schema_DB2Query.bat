@@ -1,0 +1,45 @@
+REM Check if its a Clean or an Upgrade Installation
+
+sqli -c "SELECT * FROM SYSTABLE B WHERE B.TABLE_NAME = 'DB2QRY_STATS';" > out.txt
+
+if %errorlevel% == 101 (
+
+REM Clean Installation for Monitor = DB2 Query
+REM Schema & PruneCntl Statements for Monitor = DB2 Query ,moTypeId = 48001
+
+echo Creating tables DB2QRY_STATS, DB2QRY_RT, DB2QRY_BL
+echo Creating Prune Control entries for DB2QRY_STATS  AND  entries for DB2QRY_RT
+sqli "CREATE TABLE DB2QRY_STATS (ITEMID int,TIMERECORDED int,CONNTIME int,RESPTIME int,AVAILABILITY int,QUERYVAL int,PRIMARY KEY ("ITEMID", "TIMERECORDED") WITH HASH SIZE 10);"
+
+REM If the STATS table creation failed exit with errorcode
+if %errorlevel% == 1 (
+    exit /b 117
+)
+
+sqli "create        index DB2QRY_STATS_N3 on DB2QRY_STATS (TIMERECORDED);"
+
+sqli "CREATE TABLE DB2QRY_RT (ITEMID int, FROMTIME int, TOTIME int, CONNTIME_HIGH int, CONNTIME_AVG  int, CONNTIME_LOW  int, RESPTIME_HIGH int, RESPTIME_AVG  int, RESPTIME_LOW  int, AVAILABILITY_HIGH int, AVAILABILITY_AVG  int, AVAILABILITY_LOW  int, QUERYVAL_HIGH int, QUERYVAL_AVG  int, QUERYVAL_LOW  int, NUMPOINTS int, NUMSECS   int, PRIMARY KEY ("ITEMID", "FROMTIME") WITH HASH SIZE 10);"
+
+sqli "create index DB2QRY_RT_N3 on DB2QRY_RT (FROMTIME,TOTIME);"
+
+sqli "CREATE TABLE DB2QRY_BL (ITEMID   int,TIMESLOT int,CONNTIME_HIGH int,CONNTIME_AVG  int,CONNTIME_LOW  int,RESPTIME_HIGH int,RESPTIME_AVG  int,RESPTIME_LOW  int,AVAILABILITY_HIGH int,AVAILABILITY_AVG  int,AVAILABILITY_LOW  int,QUERYVAL_HIGH int,QUERYVAL_AVG  int,QUERYVAL_LOW  int,NUMPOINTS int,NUMWEEKS int,PRIMARY KEY ("ITEMID", "TIMESLOT") WITH HASH SIZE 10);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DB2QRY_STATS', 'TIMERECORDED', 24);"
+
+sqli "INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('DB2QRY_RT', 'FROMTIME', 2160);"
+
+) else (
+
+REM Upgrade Installation for Monitor = DB2 Query
+
+REM sqli -c "
+REM SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'TABLENAME' AND A.COLUMN_NAME = 'COLUMNNAME';
+REM "
+REM if %errorlevel% == 101 (
+
+REM alter table add column statement here
+echo Upgrade installation
+
+REM )
+
+)

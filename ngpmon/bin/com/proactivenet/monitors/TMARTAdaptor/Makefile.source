@@ -1,0 +1,1 @@
+SUBDIRS = ws utils api src gui autodiscovery 

@@ -1,0 +1,13 @@
+# MonitorName : Monitor Specific Dependecies  : Common Volatile Dependencies : Common Stable Dependencies#
+##########################################################################################################
+ProcMon     : libprocmon.so : :  
+DiskMon     : libdiskmon.so : : pop3/pop3.jar
+DiskPerfMon : libdiskperfmon.so :
+nfsmon      : libnfsmon.so : : 
+SystemMon   : libsysmon.so:  :
+ntprocmon   : PdhPerfInfo.dll:
+EmailMon    : : : pop3/pop3.jar
+LogFileMon    : : : orm/OROMatcher.jar
+LogFileMon    : : : orm/OROMatcher.jar
+NetscapeMon    : : : orm/OROMatcher.jar
+NTTraceRouteMon : Trdll.ddl : :

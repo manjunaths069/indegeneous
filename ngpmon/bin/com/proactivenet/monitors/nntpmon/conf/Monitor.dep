@@ -1,0 +1,3 @@
+# MonitorName : Monitor Specific Dependecies  : Common Volatile Dependencies : Common Stable Dependencies#
+##########################################################################################################
+ntprocmon   : PdhPerfInfo.dll:

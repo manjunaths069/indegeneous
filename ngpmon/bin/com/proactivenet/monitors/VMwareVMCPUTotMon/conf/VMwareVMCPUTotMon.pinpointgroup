@@ -1,0 +1,4 @@
+SystemCpu,VMwareVMCPUTotMon,CPU_UTILIZED
+VirtualSystem,VMwareVMCPUTotMon,AVAILABILITY         
+VirtualSystem,VMwareVMCPUTotMon,CPU_UTILIZED
+VirtualSystem,VMwareVMCPUTotMon,CPU_USAGE

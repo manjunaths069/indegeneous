@@ -1,0 +1,46 @@
+#Attribute Group	,Monitor Name	,AttributeName	,Rank	,Above Normal	, Below Normal
+ResponseTime	,TMARTAdapterInfo	,STATS_RESPONSETIME	,5
+Availability	,TMARTAdapterInfo	,STATS_AVAILABILITY	,5	,1	,5
+
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES01	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES02	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES03	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES04	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES05	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES06	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES07	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES08	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES09	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES10	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES11	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES12	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES13	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES14	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES15	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES16	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES17	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES18	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES19	,5
+ResponseTime	,TMARTAdapterInfo	,TIMER_STAT_RES20	,5
+
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL01	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL02	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL03	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL04	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL05	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL06	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL07	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL08	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL09	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL10	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL11	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL12	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL13	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL14	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL15	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL16	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL17	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL18	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL19	,5	,1	,5
+Availability	,TMARTAdapterInfo	,TIMER_STAT_AVAIL20	,5	,1	,5
+

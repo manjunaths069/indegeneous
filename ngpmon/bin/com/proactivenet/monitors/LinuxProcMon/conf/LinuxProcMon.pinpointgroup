@@ -1,0 +1,11 @@
+System       ,LinuxProcMonInfo
+
+ProcAvailability,LinuxProcMonInfo,AVAILABILITY
+
+ProcCpu,LinuxProcMonInfo,PROC_CPU
+
+ProcMem,LinuxProcMonInfo,PROC_RSSZ
+ProcMem,LinuxProcMonInfo,PROC_VSZ
+
+
+Process,LinuxProcMonInfo

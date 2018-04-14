@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+
+  <updateMO 	Action = "delete"> 
+    <MoInfo	moTypeId ="30081"     moInstId="1" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300810" AttrVal = "EMPIRIXTX"/>
+    <AttrInfo	AttrID = "300811" AttrVal = "1"/>
+  </updateMO> 
+
+  <updateMO 	Action = "delete"> 
+    <MoInfo	moTypeId ="30081"     moInstId="2" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300810" AttrVal = "UTATX"/>
+    <AttrInfo	AttrID = "300811" AttrVal = "2"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "delete"> 
+      <MoInfo	moTypeId ="30081"     moInstId="3" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "UTATXBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "3"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "delete"> 
+      <MoInfo	moTypeId ="30081"     moInstId="4" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "UTATXANDBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "4"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "delete"> 
+      <MoInfo	moTypeId ="30081"     moInstId="5" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "EMPIRIXTXBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "5"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "delete"> 
+      <MoInfo	moTypeId ="30081"     moInstId="6" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "EMPIRIXTXANDBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "6"/>
+  </updateMO> 
+
+
+
+
+ 
+
+  <updateMO 	Action = "insert"> 
+    <MoInfo	moTypeId ="30081"     moInstId="2" parentMOTypeId = "29" parentMOInstId = "1" />
+    <AttrInfo	AttrID = "300810" AttrVal = "UTATX"/>
+    <AttrInfo	AttrID = "300811" AttrVal = "2"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "insert"> 
+      <MoInfo	moTypeId ="30081"     moInstId="3" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "UTATXBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "3"/>
+  </updateMO> 
+  
+  <updateMO 	Action = "insert"> 
+      <MoInfo	moTypeId ="30081"     moInstId="4" parentMOTypeId = "29" parentMOInstId = "1" />
+      <AttrInfo	AttrID = "300810" AttrVal = "UTATXANDBENCHMARK"/>
+      <AttrInfo	AttrID = "300811" AttrVal = "4"/>
+  </updateMO> 
+  
+  
+</PRE_POST> 
+
+

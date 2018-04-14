@@ -1,0 +1,2 @@
+SUBDIRS = src 
+#SOURCE.java = ntdiskmon.java ntdiskmonAttributeChoice.java

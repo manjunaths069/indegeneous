@@ -1,0 +1,6 @@
+System	,NTServiceInfo	,SERVICE_VSZ	,3	
+System	,NTServiceInfo	,SERVICE_CPU	,4	
+Availability	,NTServiceInfo	,AVAILABILITY	,5	,1	,5	
+System	,NTServiceInfo	,PROCESS_INSTANCES	,5	
+System	,NTServiceInfo	,TOTAL_THREADS	,1
+System	,NTServiceInfo	,HANDLE_COUNT	,1	

@@ -1,0 +1,8 @@
+# File        : BMCDiskMon.pinpoint
+# Description : Pinpoint File for BMCDiskMon
+# Date        : Tue Jan 28 2003
+#Attribute Group	,Monitor Name	,AttributeName		,Rank		,Above Normal		,Below Normal	
+System	,BMCDisk	,DISK_AVAIL	,5	,1	,3
+
+
+

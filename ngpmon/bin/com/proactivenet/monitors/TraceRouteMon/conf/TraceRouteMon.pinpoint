@@ -1,0 +1,6 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+Network	,TraceRoute	,REACH_TIME	,5	,5	,3
+Network	,TraceRoute	,NO_OF_HOPS	,4	,5	,3
+Network	,TraceRoute	,MAXIMUM_HOP_TIME	,4	,5	,3
+Network	,TraceRoute	,AVAILABILITY	,5	,1	,5
+

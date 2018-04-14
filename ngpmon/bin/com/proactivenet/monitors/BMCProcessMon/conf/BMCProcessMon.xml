@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	<ATTRSET platform="unix" attrType="stats">
+
+		<ATTRINFO attrName="PROC_TOT_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="PROCPRES" appInstance="" appParam="PROCPPCPUPerc"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROC_INST" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="PROCPRES" appInstance="" appParam="PROCPPCount"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROC_INST_SZ" dataType="float" computation="kbToMb">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="PROCPRES" appInstance="" appParam="PROCPPMem"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROC_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="PROCPRES" appInstance="" appParam="PROCPPCount" availabilityRule="negativeBoolen"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+
+
+	<ATTRSET platform="windows" attrType="stats">
+
+		<ATTRINFO attrName="PROC_TOT_CPU" dataType="float" computation="chkPercentRange">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PROCESS" appInstance="" appParam="PROCProcessorTimePercent"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROC_INST_SZ" dataType="float" computation="kbToMb">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PROCESS" appInstance="" appParam="PROCPageFileBytes"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="PROC_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PROCESS" appInstance="" appParam="PROCStatus" availabilityRule="boolean"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+		<ATTRINFO attrName="TOT_THREADS" dataType="int" computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="NT_PROCESS" appInstance="" appParam="PROCThreadCount"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

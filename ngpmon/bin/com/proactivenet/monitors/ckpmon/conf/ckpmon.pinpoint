@@ -1,0 +1,11 @@
+                    ,CheckPointRule      ,Packets Accepted    ,3
+                    ,CheckPointRule      ,Packets Rejected    ,4,5,3
+                    ,CheckPointRule      ,Packets Dropped     ,4
+                    ,CheckPointRule      ,Packets Encrypted   ,2
+Availability        ,CheckPointRule      ,Availability        ,5
+                    ,CheckPointRule      ,Connection Requests ,3
+                    ,CheckPointRule      ,Packets Authcrypted ,2
+                    ,CheckPointRule      ,Packets Authorized  ,3
+                    ,CheckPointRule      ,Packets Deauthorized,2
+                    ,CheckPointRule      ,Packets Decrypted   ,2
+                    ,CheckPointRule      ,Packets Keyinstalled,2

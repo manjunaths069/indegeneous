@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30078"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300780" AttrVal = "UNIX"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300781" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="30078"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300780" AttrVal = "WINDOWS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300781" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30078"     moInstId="1" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300780" AttrVal = "UNIX"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300781" AttrVal = "1"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="30078"     moInstId="2" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "300780" AttrVal = "WINDOWS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "300781" AttrVal = "2"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

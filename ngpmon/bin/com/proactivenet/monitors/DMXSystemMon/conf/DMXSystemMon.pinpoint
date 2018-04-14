@@ -1,0 +1,7 @@
+# File 		: DMXSystemMon.pinpoint
+# Description	: Pinpoint file for DMXSystem Monitor
+
+System	,DMXSystem	,DMX_USER_CPU	,5	,3	,3
+System	,DMXSystem	,DMX_TOTAL_CPU	,5	,4	,3
+System	,DMXSystem	,DMX_KERNEL_CPU	,5	,3	,3
+System	,DMXSystem	,DMX_SWAP_SPACE	,5	,4	,2

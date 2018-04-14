@@ -1,0 +1,7 @@
+SOURCE.cc = ProcInfo.cc  SingleProcInstance.cc ProcInfoManager.cc javaCom.cc
+
+OTHERFILES= ProcMon.h ProcMonAttrib.h  LongArgs.h
+
+TARGET_LIB_SHARED = libprocmon.so
+
+libprocmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

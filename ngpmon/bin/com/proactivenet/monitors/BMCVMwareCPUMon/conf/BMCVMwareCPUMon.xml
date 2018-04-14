@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+
+ <ATTRSET platform="unix" attrType="config">
+	
+       <ATTRINFO attrName="Description" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/description" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Family" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/family" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Speed" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/mhz" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Model" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/model" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Vendor" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/vendor" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+   
+    </ATTRSET>
+    
+   <ATTRSET platform="windows" attrType="config">
+	
+       <ATTRINFO attrName="Description" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/description" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Family" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/family" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Speed" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+               <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/mhz" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Model" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/model" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+        <ATTRINFO attrName="Vendor" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="VSM_CPU" appInstance="" appParam="/vendor" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        
+   
+    </ATTRSET>
+	
+	<ATTRSET platform="unix" attrType="stats">
+
+							<ATTRINFO attrName="CPU_Used"  computation="asis">
+							<ATTRDEPENDSON> 
+								<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Used"/>
+							</ATTRDEPENDSON> 
+						</ATTRINFO>
+					
+						<ATTRINFO attrName="CPU_Utilization"  computation="asis">
+							<ATTRDEPENDSON> 
+								<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Utilization"/>
+							</ATTRDEPENDSON> 
+						</ATTRINFO>
+						
+						<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+							<ATTRDEPENDSON> 
+								<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Used"/>
+							</ATTRDEPENDSON> 
+				</ATTRINFO>
+
+
+	</ATTRSET>
+	
+	<ATTRSET platform="windows" attrType="stats">
+
+		
+				<ATTRINFO attrName="CPU_Used"  computation="asis">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Used"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+			
+				<ATTRINFO attrName="CPU_Utilization"  computation="asis">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Utilization"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+				
+				<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+					<ATTRDEPENDSON> 
+						<ATTRMAP appType="VSM_CPU" appInstance="" appParam="CPU_Used"/>
+					</ATTRDEPENDSON> 
+				</ATTRINFO>
+
+
+	</ATTRSET>
+
+
+</BMCDATA>
+

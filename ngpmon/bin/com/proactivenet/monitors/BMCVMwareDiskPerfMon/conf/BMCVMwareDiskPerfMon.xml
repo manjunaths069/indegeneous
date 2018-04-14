@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default" 
+		  type (parameter | variable) "parameter" 
+		  usrAttrId CDATA "10">
+]>
+<BMCDATA>
+
+	<ATTRSET platform="unix" attrType="stats">
+		
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Write_Request"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Write_Request"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	
+		<ATTRINFO attrName="Disk_IO_Read_Request"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Read_Request"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Requests_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Requests_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Write"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Write"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Read"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Read"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+	
+	<ATTRSET platform="windows" attrType="stats">
+
+		<ATTRINFO attrName="DATA_AVAIL" dataType="int" computation="availability">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Write_Request"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Write_Request"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	
+		<ATTRINFO attrName="Disk_IO_Read_Request"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Read_Request"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Requests_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Requests_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Total"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Total"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Write"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Write"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+		
+		<ATTRINFO attrName="Disk_IO_Bytes_Read"  computation="asis">
+			<ATTRDEPENDSON> 
+				<ATTRMAP appType="VSM_DISK_PERF" appInstance="" appParam="Disk_IO_Bytes_Read"/>
+			</ATTRDEPENDSON> 
+		</ATTRINFO>
+	</ATTRSET>
+	
+</BMCDATA>
+

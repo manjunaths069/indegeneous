@@ -1,0 +1,23 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+
+VMwareVMSysMon	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+VMwareVMSysMon	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+VMwareVMSysMon	CPU Usage	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+VMwareVMSysMon	Memory Usage	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+VMwareVMSysMon	Disk Usage	NORMAL	-1	above	0	50	-1	-1	0	Auto
+VMwareVMSysMon	Memory Balloon	NORMAL	-1	above	0	50	-1	-1	0	Auto
+VMwareHostSysMon	Memory Swap Used	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+VMwareVMSysMon	Network Usage	NORMAL	-1	above	0	50	-1	-1	0	Auto
+VMwareVMSysMon	NUM_VCOUNT_WEEK	NORMAL	-1	above	0	50	-1	-1	1	Auto
+VMwareVMSysMon	NUM_VCOUNT_DAY	NORMAL	-1	above	0	50	-1	-1	1	Auto

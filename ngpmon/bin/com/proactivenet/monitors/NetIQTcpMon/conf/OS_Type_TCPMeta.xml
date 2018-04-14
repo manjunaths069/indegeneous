@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="N" MoTypeId="44052" MoTypeType="PERS" EndUserReportable="N" UniqueName="OS_Type_TCP" GUIDisplayName="OS Type" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="440521" GUIDisplayable="N" UniqueName="OS_TYPE_CHOICE_TCP" GUIDisplayName="OS Type Choice" IsDefaultValueSet="Y" DisplayType="String" EndUserReportable="Y" UseAsMODisplayName="Y" DefaultValue="WINDOWS" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+<Persistent AttrId="440522" GUIDisplayable="N" UniqueName="OS_TYPE_CHOICENO_TCP" GUIDisplayName="OS Type Number" IsDefaultValueSet="Y" EndUserReportable="Y" DisplayType="Integer" DefaultValue="0" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" UseAsMODisplayName="N" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+</Attributes>
+</MetaData>

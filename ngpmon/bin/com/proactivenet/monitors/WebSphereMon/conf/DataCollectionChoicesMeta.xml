@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- DataCollectionChoices.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <BasicInfo
+      MoTypeId="40055"
+      MoTypeType="PERS"
+      UniqueName="DC"
+      GUIDisplayName="DC"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Persistent
+      AttrId="400551"
+      UseAsForcedDBKey="Y"
+      UniqueName="DC_CHOICENO"
+      GUIDisplayName="Choice Number"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="Integer"
+      GUIEditable="N"
+    />
+    <Persistent
+      AttrId="400550"
+      UseAsMODisplayName="Y"
+      UniqueName="DC_CHOICENAME"
+      GUIDisplayName="Choice Name"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="String"
+      GUIEditable="N"
+    />
+  </Attributes>
+</MetaData>

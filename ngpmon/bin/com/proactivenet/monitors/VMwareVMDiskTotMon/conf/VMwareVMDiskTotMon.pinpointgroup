@@ -1,0 +1,5 @@
+DiskUsed,VMwareVMDiskTotMon,DISK_USAGE
+DiskAvailability,VMwareVMDiskTotMon,AVAILABILITY
+VirtualSystem,VMwareVMDiskTotMon,AVAILABILITY
+VirtualSystem,VMwareVMDiskTotMon,DISK_USAGE
+

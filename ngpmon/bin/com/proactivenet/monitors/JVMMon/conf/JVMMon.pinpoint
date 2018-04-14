@@ -1,0 +1,5 @@
+# File        : JVMMon.pinpoint
+# Description : Pinpoint File for JVMMon
+# Date        : Mon Sep 12 14:26:39 IST 2005
+                        ,GenericJVM    ,STATS_ATTRIB4   ,2,3,3
+                        ,GenericJVM    ,STATS6          ,2,3,3

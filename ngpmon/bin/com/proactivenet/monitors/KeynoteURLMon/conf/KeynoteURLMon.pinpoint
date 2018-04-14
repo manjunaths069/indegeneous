@@ -1,0 +1,20 @@
+#Attribute Group     ,Monitor Name        ,AttributeName ,Rank, Above Normal, Below Normal
+Availability         ,KeynoteURLMonInfo   ,AVAILABILITY   ,5	,1	,5
+Availability         ,KeynoteURLMonInfo   ,ServerAvailability   ,5	,1	,5
+ResponseTime         ,KeynoteURLMonInfo   ,InitialConnect ,5
+ResponseTime         ,KeynoteURLMonInfo   ,MeasurementTotal ,5
+                     ,KeynoteURLMonInfo   ,FirstByte      ,5
+                     ,KeynoteURLMonInfo   ,BasePageDownload ,5
+                     ,KeynoteURLMonInfo   ,MeasurementTotalMin ,3
+                     ,KeynoteURLMonInfo   ,MeasurementTotalMax ,3
+                     ,KeynoteURLMonInfo   ,MeasurementTotalStd ,3
+                     ,KeynoteURLMonInfo   ,MeasurementError ,3
+                     ,KeynoteURLMonInfo   ,DnsLookup ,3
+                     ,KeynoteURLMonInfo   ,InitialConnectMin ,3
+                     ,KeynoteURLMonInfo   ,InitialConnectMax ,3
+                     ,KeynoteURLMonInfo   ,InitialConnectStd ,3
+                     ,KeynoteURLMonInfo   ,Redirection ,3
+                     ,KeynoteURLMonInfo   ,Content ,3
+                     ,KeynoteURLMonInfo   ,ContentError ,3
+                     ,KeynoteURLMonInfo   ,NBytes ,3
+                     ,KeynoteURLMonInfo   ,ComponentErrors ,3

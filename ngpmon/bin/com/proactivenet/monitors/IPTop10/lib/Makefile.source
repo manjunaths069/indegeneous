@@ -1,0 +1,7 @@
+SOURCE.cc = ddtop10ip.cc ddtoptenip.cc linklist.cc
+
+OTHERFILES = IPTop10.h ddtoptenip.h linklist.h
+
+TARGET_LIB_SHARED = libiptop10.so
+
+libiptop10_OBJS =  ${SOURCE.cc:%.cc=%.o}

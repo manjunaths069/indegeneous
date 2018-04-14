@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+
+<!-- Commenting all the lines since we no more need to clear baseline table data - ARS 13423-->
+<PRE_POST   Type = "Post Install">
+<!-- <SQL ShowResult = "N" Statement = "delete from  WEBLOGIC61_BL" >
+</SQL> -->
+</PRE_POST> 
+

@@ -1,0 +1,6 @@
+include $(TOP)/build/Makefile.local
+include $(TOP)/build/Makefile.MonList
+SUBDIRS = $(MONITORS) $(DETAIL_DIAGNOSTICS)
+
+
+

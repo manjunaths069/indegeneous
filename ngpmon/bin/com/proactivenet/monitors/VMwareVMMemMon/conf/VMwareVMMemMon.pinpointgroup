@@ -1,0 +1,12 @@
+SystemMem,VMwareVMMemMon,MEM_USED_PERCENT
+SystemMem,VMwareVMMemMon,MEMORY_SWAPPED         
+SystemMem,VMwareVMMemMon,MEMORY_BALLOON
+SystemMem,VMwareVMMemMon,MEMORY_ACTIVE
+SystemMem,VMwareVMMemMon,MEMORY_GRANTED
+VirtualSystem,VMwareVMMemMon,AVAILABILITY
+VirtualSystem,VMwareVMMemMon,MEM_USED_PERCENT
+VirtualSystem,VMwareVMMemMon,MEMORY_GRANTED
+VirtualSystem,VMwareVMMemMon,MEMORY_ACTIVE
+VirtualSystem,VMwareVMMemMon,MEMORY_BALLOON
+VirtualSystem,VMwareVMMemMon,MEMORY_SWAPPED
+

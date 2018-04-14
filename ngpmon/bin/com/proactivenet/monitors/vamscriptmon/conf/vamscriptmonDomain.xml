@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE APPLICATION [
+	<!ELEMENT APPLICATION (APPLICATIONINFO, APPLICATIONDOMAININFO)>
+	<!ELEMENT APPLICATIONINFO EMPTY>
+	<!ATTLIST APPLICATIONINFO
+	motypeid CDATA #REQUIRED
+	domainname CDATA #REQUIRED
+	name CDATA #REQUIRED
+	displayname CDATA #IMPLIED
+	exename CDATA #REQUIRED
+	os CDATA #REQUIRED
+	version CDATA #IMPLIED
+	oneinstanceperparent (y | n) "n"
+	allowremoteagent (y | n) "y"
+	mustrunonagent (y | n) "n"
+	isnewframework (y | n) "y"
+	hascustomizedgui (y | n) "n"
+	hasmoreinfo (y | n) "n"
+	supportdemandpoll (y | n) "y"
+		>
+	<!ELEMENT APPLICATIONDOMAININFO (UIINPUTATTRIBUTE+,INPUTATTRIBUTE+,CHOICEINPUTATTRIBUTE+,DOMAININPUTATTRIBUTE+) >
+	<!ELEMENT UIINPUTATTRIBUTE EMPTY>
+	<!ATTLIST UIINPUTATTRIBUTE
+	attrname CDATA #REQUIRED
+	attrdisplayname CDATA #IMPLIED
+	attrdatatype CDATA #REQUIRED
+	attrdisplaytype CDATA #IMPLIED
+	default CDATA #IMPLIED
+	instancename (y | n) "n"
+	isdisplayed (y | n) "y"
+	requiredoncreate (y | n) "n"
+	haslistofchoice (y | n) "n"
+	locationx CDATA #REQUIRED
+	locationy CDATA #REQUIRED
+	length CDATA #IMPLIED
+	destination CDATA #IMPLIED
+	dispseqno CDATA #REQUIRED
+	>
+	<!ELEMENT INPUTATTRIBUTE EMPTY>
+	<!ATTLIST INPUTATTRIBUTE
+	attrname CDATA #REQUIRED
+	attrdisplayname CDATA #IMPLIED
+	attrdatatype CDATA #REQUIRED
+	attrdisplaytype CDATA #IMPLIED
+	default CDATA #IMPLIED
+	instancename (y | n) "n"
+	isdisplayed (y | n) "y"
+	requiredoncreate (y | n) "n"
+	haslistofchoice (y | n) "n"
+	locationx CDATA #REQUIRED
+	locationy CDATA #REQUIRED
+	length CDATA #IMPLIED
+	dispseqno CDATA #REQUIRED
+	>
+	<!ELEMENT CHOICEINPUTATTRIBUTE (CHOICEDEPENDENT*)>
+	<!ATTLIST CHOICEINPUTATTRIBUTE
+		attrname CDATA #REQUIRED
+		attrdisplayname CDATA #IMPLIED
+		attrdatatype CDATA #REQUIRED
+		attrdisplaytype CDATA #IMPLIED
+		default CDATA #IMPLIED
+		instancename (y | n) "n"
+		isdisplayed (y | n) "y"
+		requiredoncreate (y | n) "n"
+		haslistofchoice (y | n) "n"
+		locationx CDATA #REQUIRED
+		locationy CDATA #REQUIRED
+		length CDATA #IMPLIED
+		dispseqno CDATA #REQUIRED
+	>
+	<!ELEMENT CHOICEDEPENDENT EMPTY>
+	<!ATTLIST CHOICEDEPENDENT 
+	dependentattrname CDATA #REQUIRED
+	>
+	<!ELEMENT DOMAININPUTATTRIBUTE EMPTY>
+	<!ATTLIST DOMAININPUTATTRIBUTE
+	attrname CDATA #REQUIRED
+	attrdisplayname CDATA #IMPLIED
+	attrdatatype CDATA #REQUIRED
+	attrdisplaytype CDATA #IMPLIED
+	iseditable (y | n) "y"
+	datasourcename CDATA #IMPLIED
+	default CDATA #IMPLIED
+	index CDATA #REQUIRED
+	>
+]>
+
+<APPLICATION>
+	<APPLICATIONINFO motypeid="500009" domainname= "vamscriptmon" name="vamscriptmon" displayname="Script Mon" exename="com.proactivenet.monitors.vamscriptmon.vamscriptmon" os= "63" version="1.0"/>
+                         
+	<APPLICATIONDOMAININFO>
+		<UIINPUTATTRIBUTE attrname="MONITORNAME" attrdisplayname="Monitor Name" attrdatatype="String" requiredoncreate="y" locationx="2" locationy="2" dispseqno="1"/>
+		<UIINPUTATTRIBUTE attrname="SCRIPTFILENAME" attrdisplayname="File Name Executable for the monitor"  attrdatatype="String" locationx="4"  locationy="2" dispseqno="2"/>
+
+		<UIINPUTATTRIBUTE attrname="MONITORCATEGORY" attrdisplayname="Monitor Category"  attrdatatype="String" locationx="6" locationy="2" dispseqno="3"/>
+		
+
+
+			
+		<DOMAININPUTATTRIBUTE attrname="_counter" attrdisplayname="App Parameter" attrdatatype="string" attrdisplaytype="string" iseditable="n" datasourcename="COUNTER" index="1"/>
+		<DOMAININPUTATTRIBUTE attrname="_instance" attrdisplayname="App Instance" attrdatatype="string" attrdisplaytype="string" iseditable="n" datasourcename="INSTANCE" index="2"/>
+
+	
+
+		
+		<DOMAININPUTATTRIBUTE attrname="DISPLAYNAME" attrdisplayname="Attribute Display Name" attrdatatype="string" attrdisplaytype="string" iseditable="y" datasourcename="INSTANCE" index="5"/>
+		<DOMAININPUTATTRIBUTE attrname="MEASUREAS" attrdisplayname="Measure As" attrdatatype="string" attrdisplaytype="string" iseditable="y" default="RAW" index="6"/>		
+		
+		<DOMAININPUTATTRIBUTE attrname="SCALE" attrdisplayname="Scale Factor" attrdatatype="float" attrdisplaytype="float" iseditable="y" default="1.0" index="7"/>
+		<DOMAININPUTATTRIBUTE attrname="UNIT" attrdisplayname="UOM" attrdatatype="string" attrdisplaytype="selection" iseditable="n" default="#" index="8"/>
+		<DOMAININPUTATTRIBUTE attrname="ISGRAPHDEFAULT" attrdisplayname="Is Graph Default" attrdatatype="boolean" attrdisplaytype="boolean" iseditable="y" default="false" index="9"/>
+		<DOMAININPUTATTRIBUTE attrname="ISNORMALDIST" attrdisplayname="Is Normal Distribution" attrdatatype="boolean" attrdisplaytype="boolean" iseditable="y" default="true" index="10"/>
+	</APPLICATIONDOMAININFO>
+</APPLICATION>

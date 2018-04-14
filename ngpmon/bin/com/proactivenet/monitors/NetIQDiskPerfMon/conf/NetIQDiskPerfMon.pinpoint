@@ -1,0 +1,11 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+Availability        ,NetIQDiskPerf      ,AVAILABILITY ,5,1,5
+Availability        ,NetIQDiskPerf      ,DATA_AVAIL ,3
+System              ,NetIQDiskPerf      ,DISK_Q_LEN ,3
+System              ,NetIQDiskPerf      ,DISK_BUSY ,4
+System              ,NetIQDiskPerf      ,READS ,2, 2, 2
+System              ,NetIQDiskPerf      ,WRITES ,2, 2, 2
+System              ,NetIQDiskPerf      ,READ_BYTES ,2, 2, 2
+System              ,NetIQDiskPerf      ,WRITE_BYTES ,2, 2, 2
+System              ,NetIQDiskPerf      ,TRN_WAIT_Q ,3, 4, 3
+System              ,NetIQDiskPerf      ,SRVC_TIME ,2, 4, 2

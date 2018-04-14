@@ -1,0 +1,6 @@
+System       ,X86ProcessInfo  
+ProcAvailability,X86ProcessInfo,AVAILABILITY
+ProcCpu,X86ProcessInfo,PROC_CPU
+ProcMem,X86ProcessInfo,PROC_RSSZ
+ProcMem,X86ProcessInfo,PROC_VSZ
+Process,X86ProcessInfo

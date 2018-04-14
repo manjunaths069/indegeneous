@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- NokiaIPSOFileSystemMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="31280" MoTypeType="APPS" ParentMoType="1" UniqueName="NokiaIPSOFileSystemMon" GUIDisplayName="Nokia IPSO File System Monitor"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.NokiaIPSOFileSystemMon.NokiaIPSOFileSystemMon" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="31281" MoTypeType="APPS" ParentMoType="31280" UniqueName="NokiaIPSOFileSystem" GUIDisplayName="Nokia IPSO File System"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.NokiaIPSOFileSystemMon.NokiaIPSOFileSystemMon"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="31280999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="31281996" UsrAttrId="996" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="31281006" UsrAttrId="6" UniqueName="CTXTENGINEID" GUIDisplayName="Context Engine ID" GUIInputType="CFG" GUIEditable="N" GUIInputOnCreate="N" GUIDisplayable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="8" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="31281999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="31281021" UsrAttrId="21" UniqueName="INPUTFILE" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="NokiaIPSOFileSystemMon/NokiaIPSOFileSystemMon.xml"/>
+      <AppsInput AttrId="31281995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="31281009" UsrAttrId="9" UniqueName="AUTHPROT" GUIDisplayName="Authentication Protocol" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" MoReferenceType="48016" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="31281998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="31281010" UsrAttrId="10" UniqueName="AUTHPASSWD" GUIDisplayName="Authentication Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Password"/>
+      <AppsInput AttrId="31281994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="31281004" UsrAttrId="4" UniqueName="COMMUNITY" GUIDisplayName="Community String" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="6" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Password"/>
+      <AppsInput AttrId="31281005" UsrAttrId="5" UniqueName="ENGINEID" GUIDisplayName="Engine ID" GUIInputType="CFG" GUIEditable="N" GUIInputOnCreate="N" GUIDisplayable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="31281016" UsrAttrId="16" UniqueName="DIR" GUIDisplayName="Partition / Directory" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="15" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="31281002" UsrAttrId="2" UniqueName="PORT" GUIDisplayName="SNMP Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="161"/>
+      <AppsInput AttrId="31281012" UsrAttrId="12" UniqueName="PRIVPASSWD" GUIDisplayName="Privacy Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="14" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="Password"/>
+      <AppsInput AttrId="31281026" UsrAttrId="26" UniqueName="RETRY_COUNT" GUIDisplayName="Retry Count" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="3"/>
+      <AppsInput AttrId="31281003" UsrAttrId="3" UniqueName="SNMPVERSION" GUIDisplayName="SNMP Version" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" MoReferenceType="48015" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="2"/>
+      <AppsInput AttrId="31281993" UsrAttrId="993" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="31281997" UsrAttrId="997" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="31281007" UsrAttrId="7" UniqueName="CTXTNAME" GUIDisplayName="Context Name" GUIInputType="CFG" GUIEditable="N" GUIInputOnCreate="N" GUIDisplayable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="9" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="31281011" UsrAttrId="11" UniqueName="PRIVPROT" GUIDisplayName="Privacy Protocol" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="13" IsDefaultValueSet="Y" MoReferenceType="48017" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="31281008" UsrAttrId="8" UniqueName="USRNAME" GUIDisplayName="User Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String"/>
+      <AppsInput AttrId="31281980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31281981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="2" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31281982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31281468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="16" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="31281031" UsrAttrId="31" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsConfig AttrId="31281032" UsrAttrId="32" UniqueName="SIZE" GUIDisplayName="Storage Size (MB)" DisplayType="String" ScaleFactor="1000" AttrReferenceType="Unknown"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="31281051" UsrAttrId="51" UniqueName="DATA_AVAIL" GUIDisplayName="Data Availability" TableName="IPSOFILESYS" ColumnName="DATA_AVAIL" ScaleFactor="1" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31281052" UsrAttrId="52" UniqueName="DISK_USED" GUIDisplayName="Storage Used" TableName="IPSOFILESYS" ColumnName="DISK_USED" ScaleFactor="100" AttrReferenceType="Unknown" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

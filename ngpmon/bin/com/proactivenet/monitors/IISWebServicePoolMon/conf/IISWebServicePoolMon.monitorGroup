@@ -1,0 +1,5 @@
+# File        : _iiswebserPool.monitorGroup
+# Description : MonitorGroup for aggregatemon
+# Date        : Thu Nov 27 12:18:21 IST 2003
+
+Web|_iiswebserPool

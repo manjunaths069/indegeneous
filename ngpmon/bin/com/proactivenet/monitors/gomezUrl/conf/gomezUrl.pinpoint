@@ -1,0 +1,15 @@
+#Attribute Group     ,Monitor	 ,AttributeName 		,Rank, Above Normal, Below Normal
+Availability         ,gomezUrl   ,SERVICE_AVAILABILITY   	,5	,1	,5
+Availability         ,gomezUrl   ,URL_AVAILABILITY   		,5	,1	,5
+ResponseTime         ,gomezUrl   ,RESPONSE 			,5	,5	,1
+ResponseTime         ,gomezUrl   ,CONNECT 			,5	,5	,1
+                     ,gomezUrl   ,FIRST_BYTE      		,5
+                     ,gomezUrl   ,DNS_LOOKUP 			,3
+                     ,gomezUrl   ,CONTENT 			,3
+                     ,gomezUrl   ,RESPONSE_SD 			,3
+                     ,gomezUrl   ,RESPONSE_MAX 			,3
+                     ,gomezUrl   ,RESPONSE_MIN 			,3
+                     ,gomezUrl   ,CONNECT_SD 			,3
+                     ,gomezUrl   ,CONNECT_MAX 			,3
+                     ,gomezUrl   ,CONNECT_MIN 			,3
+

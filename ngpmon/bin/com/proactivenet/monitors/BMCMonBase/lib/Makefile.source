@@ -1,0 +1,9 @@
+SOURCE.cc =PemApiWrapper.cc
+
+OTHERFILES= PemApiWrapper.h
+
+libbmcmon.so_LD_LIB=$(APPS3RDPARTY_DIR)/bmc/Solaris/lib/libpemapi.a
+
+TARGET_LIB_SHARED = libpemapiwrapper.so
+
+libbmcmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

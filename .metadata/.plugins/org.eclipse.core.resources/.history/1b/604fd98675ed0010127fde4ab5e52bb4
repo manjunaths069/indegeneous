@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+
+public class sample {
+	public static void main(String args[])
+	{
+		System.out.println("Hi welcome to the world of JAVA");
+		final ArrayList<Integer> a = new ArrayList<Integer>(); 
+		Integer o = new Integer(20);
+		a.add(o);
+		try{
+			int i=i/0;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return ;
+		}
+		finally())
+		{
+			System.out.println("Hi");
+			return ;
+		}
+	}
+	
+}
+	
+
+

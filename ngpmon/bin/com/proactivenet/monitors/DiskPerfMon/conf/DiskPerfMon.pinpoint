@@ -1,0 +1,11 @@
+#Attribute Type      ,Monitor Name        ,AttributeName       ,Rank,Above Normal, Below Normal
+System              ,DiskPerf            ,DISK_READ_COUNT     ,2, 2, 2
+System              ,DiskPerf            ,DISK_WRITE_COUNT    ,2, 2, 2
+System              ,DiskPerf            ,DISK_KBYTES_READ    ,2, 2, 2
+System              ,DiskPerf            ,DISK_KBYTES_WRITTEN ,2, 2, 2
+System              ,DiskPerf            ,DISK_TXNS_IN_WAITQUE,3, 4, 3
+System              ,DiskPerf            ,DISK_TXNSUNDONE_IN_P,2, 2, 2
+System              ,DiskPerf            ,DISK_SERVICETIME    ,5, 4, 2
+System              ,DiskPerf            ,DISK_TXNSWAIT_PERCEN,3, 4, 3
+System              ,DiskPerf            ,DISK_BUSY_PERCENT   ,5, 4, 3
+Availability        ,DiskPerf            ,AVAILABILITY        ,5, 1, 5

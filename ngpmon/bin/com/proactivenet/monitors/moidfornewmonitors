@@ -1,0 +1,413 @@
+27050 -- LOGMON
+27100 -- ATG
+27150 -- Round Trip Email
+27200 -- File Monitor
+27250 -- WebLogic Monitor
+27300 -- IIS Active Server Pages Monitor
+27350 -- NT Event log Mon
+27400 -- Performance Counter monitor
+27450 -- Appache Monitor
+27500 -- NT SQL Server
+27550 -- sysloadopt
+27600 -- Bvsn (there would be four monitors so 200 param )
+27800 -- Broadvision Interaction Cache Options
+278026 - 278099 (reserved for extension of WEb/WebTransaction Monitors)
+27900 - Netscape Webserver
+28000- Solaris Disk Performance Monitor
+28050 - TCP Monitor
+28100 - For linux System Moniotr
+28150 - For linux File System Moniotr
+28200 - For NT Tcp Monitor
+28250 - Oralce Query
+28300 - Linux Process Monitor
+28350 - HP-UX System Monitor
+28400 - HP-UX Process Monitor
+28450 - HP-UX File System Monitor
+28500 - HP-UX Disk Monitor
+28550 - HP-UX TCP Monitor
+28600 - HP-UX Traceroute monitor
+28650 - HP-UX Ping Monitor
+28700 - Solaris TCP Monitor
+32000 - NT Trace Route Monitor
+28600 - Agent StatusMon
+28800 - Linux TCP Monitor
+29000 - Apache Auto Config Monitor
+29050 - SNMP OID Monitor
+29100 - Node Ping Monitor
+29150 - Trace Route Monitor - Linux
+29200 - Linux DiskPerf Monitor
+29250 - pesistent_mo OID Monitor
+29300 - Solaris CPU Monitor
+29350 - NT CPU Monitor
+29400 - Linux CPU Monitor
+29450 - HP CPU Monitor
+29460 - IIS AutoConfig Monitor
+29600 - logtype
+29650 - IAS Exe Server Monitor
+29700 - IAS Process Monitor
+29750 - IAS AutoConfig Monitor
+29800 - CA System Monitor
+29850 - CA Process Monitor
+29900 - CA File System Monitor
+29950 - CA Persisitent MO for Target OS (with 4 OS)
+29951 - CA Persistent MO for SNMP Versions
+29952 - CA Persistent MO for System Load Duration
+30000 - WBEM System Monitor
+30040 - CA DiskPerformance Monitor
+30060 - CA Tcp Monitor
+30062 - CA Persistent MO for Target OS (with 3 OS)
+30050 - IAS Persistent MO for SNMP Versions
+30051 - WBEM Persistent MO for Protocol Choices
+30052 - WBEM Persistent MO for sysload input Choices
+30075 - BMC Persistent MO for OS Choices
+31175 - Persistent Mo for Oracle Monitors
+31200 - X86 Solaris Process Monitor.
+31202 - X86 Solaris System Monitor.
+31204 - X86 Solaris File System Monitor.
+31206 - X86 Solaris Disk Performance Monitor.
+31208 - X86 Solaris tcp Monitor.
+31210 - X86 Solaris Cpu Monitor.
+31232 - BMC System Adaptor
+31234 - BMC Process Adaptor
+31236 - BMC Disk Adaptor
+31238 - BMC Oracle Adaptor
+31240 - Adapter for Tivoli Events
+31243 - BMC Log Adaptor
+	31244 - BMC Log Adaptor[Level 1]
+31245 - BMC File System Adaptor
+	31246 - BMC File System Adaptor[Level 1]
+31247 - BMC TCP Adaptor
+	31248 - BMC TCP Adaptor[Level 1]
+31250, 31251 - Tivoli System Adapter (Windows)
+31252, 31253 - Tivoli Process Adapter (Windows)
+31254, 31255 - Tivoli FileSystem Adapter (Windows)
+31270, 31271 - Tivoli System Adapter (Unix)
+31272, 31273 - Tivoli File System Adapter (Unix)
+31274, 31275 - Tivoli Process Adapter (Unix)
+31276  - Persistent MO for Oracle TableSpace Type
+31280, 31281 - Nokia IPSO File System
+31282, 31283 - Nokia IPSO System
+31284, 31285 - Nokia IPSO Interface
+31286, 31287 - Nokia IPSO Process
+31288, 31289 - Nokia IPSO VRRP
+
+-------
+Only monitors written in the new framework should use id's > 40000
+-------
+40000 - NT Trace Route Monitor
+  40001 NT Trace Route
+40002 - Sybase ASA Monitor
+  40003 Sybase ASA Intelliscope
+40004 - iPlanet LDAP Monitor
+  40005 i-Planet LDAP
+40006 - Adaptor for Topaz Web Transaction Parent
+40007 - Adaptor for Topaz Web Transaction
+40021 - Persistent meta for Adaptor for Topaz Web Transaction
+40014 - Persistent meta for Adaptor for Topaz Web Transaction
+40008 - WebSphereMQ Queue Monitor
+	40009 - WebSphereMQ Queue Monitor Child
+	30057 - Queue Type Choices (Persistent MO)
+40010 - WebSphereMQ Queue Manager Monitor
+	40011 - WebSphereMQ Queue Manager Monitor Child
+40012 - WebSphereMQ Channel Monitor
+	40013 - WebSphereMQ Channel Monitor Child
+	30056 - Channel Type Choices (Persistent MO)
+40015 - NetIQ File System Monitor
+	40016 - NetIQ File System Monitor Child
+40017 - NetIQ Disk Performance Monitor
+	40018 - NetIQ Disk Performance Monitor Child
+40019 - NetIQ Process Monitor
+	40020 - NetIQ Process Monitor Child
+41006 - Latch Monitor
+	41007 - Latch Monitor Parent
+41008 - Library Cache Monitor
+	41009 - Library Cache Parent
+41010 - Rollback Seg Monitor
+	41011 - Rollback Seg Parent
+41012 - Dictionary Cache Monitor
+	41013 - Dictionary Cache Parent
+41014 - Keynote URL Monitor
+	41015 - Keynote URL Monitor Parent
+41016 - WebSphere Monitor
+	41017 - WebSphere Monitor Child
+	30054 - Impact Choices (Persistent MO)
+	30055 - Protocol Choices (Persistent MO)
+	40055 - Datacollection choices (Persistent MO)
+41018 -  Table Scan
+	41019 - Table Scan parent
+41020 - Redo
+	41021 - Redo parent
+41022 - Parse/Execution
+	41023 - ParseExecution
+41024 -  Session Wait envent monitor
+	41025 - Parent
+41026 - System wait event monitor
+	41026 - ystem wait event monitor
+41030 - WebSphere 3.5.5 Monitor
+	41031 - WebSphere 3.5.5 Monitor Child
+41032 - WebSphere 3.5.6 Monitor
+	41033 - WebSphere 3.5.6 Monitor Child
+41034 - Keynote DataPulse URL Monitor
+	41035 - Keynote DataPulse URL Monitor Child
+41036 - Keynote DataPulse Transaction Monitor
+	41037 - Keynote DataPulse Transaction Monitor Child
+41039 - Keynote LoadPro Monitor
+41050 - Adapter for Gomez Transaction
+	41051 - Adapter for Gomez Transaction Child
+41052 - Adapter for Gomez URL 
+	41053 - Adapter for Gomez URL Child
+41054 - Oracle Table Space Monitor
+	41055 - Oracle Table Space Monitor Child 
+41500 - AIX System Monitor 
+42000 - AIX File System Monitor
+42500 - AIX Process Monitor
+43000 - AIX CPU Monitor
+43500 - AIX Disk Monitor
+44000 - AIX TCP Monitor
+48000 - DB2 Query Monitor
+48001 - DB2 Query Monitor parent
+48002 - DB2 SQL Activity Monitor
+48003 - DB2 SQL Activity Monitor parent
+48004 - DB2 Internals Monitor
+48005 - DB2 Internals Monitor parent
+48006 - DB2 Hit Ratio Monitor
+48007 - DB2 Hit Ratio Monitor parent
+48008 - DB2 IO Monitor
+48009 - DB2 IO Monitor parent
+----------------------------------------------------
+MOTypeID's for Auto Discovery Enabled monitor types
+----------------------------------------------------
+48013 - Distributed Interface Mib Mon Parent
+48014 - Distributed Interface Mib Mon Child
+48015 - Distributed Interface Mib Persistent MO for SNMP Versions 
+48016 - Distributed Interface Mib Persistent MO for Authentication Protocol 
+48017 - Distributed Interface Mib Persistent MO for Privacy Protocol
+48018 - Distributed Cisco Local Interface Parent
+48019 - Distributed Cisco Local Interface Child 
+48020 - SNMP Agent Availability Parent
+48021 - SNMP Agent Availability Child
+48023 - Distributed F5/Big-IP Mon Parent
+48024 - BigIPInterface
+48025 - BigIPGlobalStats
+48026 - BigIPGlobalHTTPStats
+48027 - BigIPGlobalTCPStats
+48028 - BigIPGlobalUDPStats
+48029 - BigIPLocalTMPool
+48030 - BigIPLTMPoolMember
+48031 - BigIPLTMSnat
+48032 - BigIPLTMSnatPool
+48033 - BigIPLTMVirtualServer
+48034 - BigIPLTMVirtualServerAddress
+48035 - BigIPSysConnections
+48040 - Distributed HostMIB Parent
+48041 - Distributed HostMIB System
+48042 - Distributed HostMIB FileSystem
+48043 - Distributed HostMIB SW Process
+48044 - Distributed HostMIB Processor
+48045 - Distributed HostMIB Device
+48046 - Distributed RMON Parent
+48047 - Distributed RMON Child
+48048 - Distributed Router Cpu Mem Parent
+48049 - Distributed Router Cpu Child
+48050 - Distributed Router Mem Child
+--------------------------
+42700 - Proactive Robot Monitor
+42720 - Solaris Server CPU Pool
+42721 - Solaris Server CPU Pool
+42722 - AIX  Server CPU Pool Monitor
+42723 - AIX  Server CPU Pool Monitor
+42724 - Apache Webserver Pool Monitor
+42725 - Apache Webserver Pool Monitor
+42726 - HPUX  Server CPU Pool Monitor
+42727 - HPUX  Server CPU Pool Monitor
+42728 - LINUX   Server CPU Pool Monitor
+42729 - LINUX   Server CPU Pool Monitor
+42730 - IIS WebService Pool Monitor
+42731 - IIS WebService Pool Monitor
+42732 - WebLogic Server  Pool Monitor
+42733 - WebLogic Server  Pool Monitor
+42734 - WINNT/2000 Server CPU Pool Monitor
+42735 - WINNT/2000 Server CPU Pool Monitor
+42736 - WebSphere  Server  Pool Monitor
+42737 - WebSphere  Server  Pool Monitor
+42738 - Sybase ASE Monitor - Developed by PS (checked-in to PS workspace)
+42739 - Sybase ASE Monitor - Developed by PS (checked-in to PS workspace)
+42750 - Tomcat Servlet Monitor
+42751 - Tomcat Servlet Monitor
+42752 - Tomcat Web App Monitor
+42753 - Tomcat Web App Monitor
+42754 - Tomcat Connector Monitor
+42755 - Tomcat Connector Monitor
+31277 - Adapter for Load Runner
+31278 - Adapter for Load Runner
+30058 - WebMethods Connection Types Persistent MO
+30064 - PS: Nokia Project - SNMP Versions Persistent MO
+30065 - PS: Nokia Project - Authentication Protocol Persistent MO
+30066 - PS: Nokia Project - Privacy Protocol Persistent MO
+30085 - PS: Detusche Bank: Exchange Order Monitor - Transaction Type Persistent MO
+36002 - MS Exchange SMTP Monitor
+36003 - MS Exchange SMTP Monitor Child 
+42761 - MS Exchange Round-trip Email Monitor
+42762 - MS Exchange Round-trip Email Monitor child
+42763 - Oracle Application Server Monitor
+	42764 Oracle Application Server Monitor child
+	42765 Protocol Choices (Persistent MO)
+43750 - Adapter for Silk Monitor.
+43751 - Adapter for Silk Monitor.
+43752 - MySQL Query Parent
+43753 - MySQL Query 
+42766 - Generic JVM Monitor
+42767 - Generic JVM Monitor Child
+42770 - WebLogicJMX Parent 
+42771 - WebLogic JMX Monitor
+42772 - Persistent MO for WebLogic JMX Monitor
+42773 - JVM Monitor Parent
+42774 - JVM Monitor Child
+42775 - Mapped Drive Monitor Parent
+42776 - Mapped Drive Monitor Child
+
+42777 - Configuration File Monitor
+42778 - Configuration File
+42779 - Command Output Monitor
+42780 - Command Output
+
+42781 - BMC Adapter  for "VMware  for ResourcePool" 
+42782 - BMC Adapter  for "VMware  for ResourcePool"  child
+42783 - BMC Adapter  for "VMware  for Cluster" 
+42784 - BMC Adapter  for "VMware  for Cluster"  child
+42785 - BMC Adapter  for "VMware  for CPU" 
+42786 - BMC Adapter  for "VMware  for CPU"  child
+42787 - BMC Adapter  for "VMware  for CPU_Total" 
+42788 - BMC Adapter  for "VMware  for CPU_Total"  child
+42789 - BMC Adapter  for "VMware  for Virtual Machin's CPU" 
+42790 - BMC Adapter  for "VMware  for Virtual Machin's CPU"  child
+42791 - BMC Adapter  for "VMware  for Disk Performance" 
+42792 - BMC Adapter  for "VMware  for Disk Performance"  child
+42793 - BMC Adapter  for "VMware  for Host" 
+42794 - BMC Adapter  for "VMware  for Host"  child
+42795 - BMC Adapter  for "VMware  for Memory_V2" 
+42796 - BMC Adapter  for "VMware  for Memory_V2"  child
+42797 - BMC Adapter  for "VMware  for Datastore" 
+42798 - BMC Adapter  for "VMware  for Datastore"  child
+42799 - BMC Adapter  for "VMware  for Memory" 
+42800 - BMC Adapter  for "VMware  for Memory"  child
+42801 - BMC Adapter  for "VMware  for Virtual Center" 
+42802 - BMC Adapter  for "VMware  for Virtual Center"  child
+42803 - BMC Adapter  for "VMware  for Virtual Machine" 
+42804 - BMC Adapter  for "VMware  for Virtual Machine"  child
+42805 - BMC Adapter  for "VMware  for Virtual Network" 
+42806 - BMC Adapter  for "VMware  for Virtual Network"  child
+
+42808 - Adapter for BMC TM ART Transaction
+42809 - Adapter for BMC TM ART Transaction
+
+42816 - Adapter for BPM Process Monitor
+42817 - Adapter for BPM Process Monitor
+
+42821 - Adapter for BPM WebsphereMQ Monitor Parent
+42822 - Adapter for BPM WebsphereMQ Monitor Child
+
+42810 - Adapter for Auto BAC TOPAZ
+42811 - Adapter for Auto BAC TOPAZ
+48061 - Adapter for BMCAdapter AutoDiscovery and mf3
+48062 - Adapter for BMCAdapter AutoDiscovery and mf3 child
+42825 - PATROL Proxy Availability
+42826 - PATROL Proxy Availability
+42829 - BPM DataStore Availability
+42830 - BPM DataStore Availability
+-------
+The following ids are used by detailDiagnostics
+-------
+26010 - UserCommand
+26020 - SolTop10
+26030 - WinTop10
+-------
+The follwing ids are used by VAM
+-------
+500001 - Windows Performance Counters
+
+49000 - TrapReceiver Monitor
+49001 - TrapReceiver Monitor child
+500006 - SQL Vam 
+500007 - SQL Vam 
+500010 - VAM Script Monitor
+500012 - WMI Vam 
+500013 - WMI Vam Child
+500014 - Tivoli Vam
+500015 - Tivoli Vam Child
+500016 - Snmp Vam Monitor
+500020 - Resource Pool Vam
+500021 - Resource Pool Vam
+500024 - JMX Vam
+500025 - JMX Vam
+500026 - GenMonBase Vam Wizard
+500027 - GenMonBase Vam Wizard
+
+
+-------
+The follwing ids are used by HPOV Adapter
+-------
+
+42912 - HPOV File System Monitor
+42913 - HPOV File System Monitor
+42914 - HPOV CPU Monitor
+42915 - HPOV CPU Monitor
+42916 - HPOV Network Interface Monitor
+42917 - HPOV Network Interface Monitor
+42918 - HPOV Application Monitor
+42919 - HPOV Application Monitor
+42920 - HPOV Disk monitor
+42921 - HPOV Disk Monitor
+42924 - HPOV Transaction Monitor
+42925 - HPOV Transaction Monitor 
+42926 - HPOV System Monitor
+42927 - HPOV System Monitor
+
+------------------------------------------
+TM ART Adaptor (Auto Sync Version) - START
+------------------------------------------
+
+42812 - BMC TM ART Transactions
+42813 - BMC TM ART Transaction
+42814 - BMC TM ART Projects
+42815 - BMC TM ART Project
+42816 - BMC TM ART Locations
+42817 - BMC TM ART Location
+42823 - BMC TM ART Target Availability
+42824 - BMC TM ART Target Availability
+
+------------------------------------------
+TM ART Adaptor (Auto Sync Version) - END
+------------------------------------------
+
+------
+The Below MoTypeids are reserved for HPOV
+------
+42928 - 
+42929 -
+42930 -
+42931 -
+42932 -
+42933 -
+42934 -
+42935 -
+42936 -
+42937 -
+-----
+Above MotyoeIds are reserved for HPOV
+----
+
+----
+Below motypeids are used by sample adapter
+----
+60009 - Adapter MOType ID
+48990 - Canned MOType 1
+48991 - Canned MOType 1
+48992 - Canned MOType 2
+48993 - Canned MOType 2
+48994 - Canned MOType 3
+48995 - Canned MOType 3
+----
+Above motypeids are used by sample adapter
+----
+

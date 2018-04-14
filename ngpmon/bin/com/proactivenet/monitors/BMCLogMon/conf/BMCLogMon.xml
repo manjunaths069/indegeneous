@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BMCDATA [
+        <!ELEMENT BMCDATA (ATTRSET+)>
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+        	  platform (windows | unix) #REQUIRED
+		  attrType (stats | config) #REQUIRED>
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+	<!ATTLIST ATTRINFO 
+		  attrName CDATA #REQUIRED
+		  dataType (int | float | string) "float" 
+		  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff | perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability) "asis">
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+	<!ELEMENT ATTRMAP EMPTY>
+	<!ATTLIST ATTRMAP 
+		  appType     CDATA #REQUIRED 
+		  appInstance CDATA #REQUIRED 
+		  appParam    CDATA #REQUIRED 
+		  availabilityRule (default | boolean | negativeBoolen) "default"
+          type (parameter | variable) "parameter" 
+          usrAttrId CDATA "10" 
+          isMoreInfo (y | n) "n">
+]>
+<BMCDATA>
+
+
+    <ATTRSET platform="unix" attrType="config">
+        <ATTRINFO attrName="FILE_NAME" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGMON" appInstance="" appParam="/fullName" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="FILE_TYPE" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGT" appInstance="" appParam="/type" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="KM_VER" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="" appInstance="" appParam="/LOG/release" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="PATROL_VER" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="" appInstance="" appParam="/patrolVersion" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="SEARCH_STRING" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGT" appInstance="" appParam="/mon_regex" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+    </ATTRSET>
+
+    <ATTRSET platform="windows" attrType="config">
+        <ATTRINFO attrName="FILE_NAME" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGMON" appInstance="" appParam="/fullName" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="FILE_TYPE" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGT" appInstance="" appParam="/type" type="variable" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="KM_VER" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="" appInstance="" appParam="/LOG/release" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="PATROL_VER" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="" appInstance="" appParam="/patrolVersion" />
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+        <ATTRINFO attrName="SEARCH_STRING" dataType="string" computation="asis">
+            <ATTRDEPENDSON> 
+                <ATTRMAP appType="LOGT" appInstance="" appParam="/mon_regex" type="variable"/>
+            </ATTRDEPENDSON> 
+        </ATTRINFO>
+    </ATTRSET>
+
+
+    <ATTRSET platform="unix" attrType="stats">
+			<ATTRINFO attrName="BMC_NO_OF_OCCUR" dataType="int" computation="asis">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGTEMP" appInstance="" appParam="LOGSearchString" usrAttrId="15"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+ 			<ATTRINFO attrName="BMC_FILE_SZ_RT" dataType="float" computation="bytesToKb">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGGrowthRate"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+            <ATTRINFO attrName="BMC_FILE_SZ_MB" dataType="float" computation="bytesToMb">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGFileSize"/>
+                </ATTRDEPENDSON>
+            </ATTRINFO>
+			<ATTRINFO attrName="BMC_FILE_STATUS" dataType="int" computation="asis">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGStatus"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+            <ATTRINFO attrName="LOG_AVAIL" dataType="int" computation="availability">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGFileSize" availabilityRule="default"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+        </ATTRSET>
+    
+    
+        <ATTRSET platform="windows" attrType="stats">
+ 			<ATTRINFO attrName="BMC_NO_OF_OCCUR" dataType="int" computation="asis">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGTEMP" appInstance="" appParam="LOGSearchString" usrAttrId="15"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+ 			<ATTRINFO attrName="BMC_FILE_SZ_RT" dataType="float" computation="bytesToKb">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGGrowthRate"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+            <ATTRINFO attrName="BMC_FILE_SZ_MB" dataType="float" computation="bytesToMb">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGFileSize"/>
+                </ATTRDEPENDSON>
+            </ATTRINFO>
+			<ATTRINFO attrName="BMC_FILE_STATUS" dataType="int" computation="asis">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGStatus"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+            <ATTRINFO attrName="LOG_AVAIL" dataType="int" computation="availability">
+                <ATTRDEPENDSON> 
+                    <ATTRMAP appType="LOGMON" appInstance="" appParam="LOGFileSize" availabilityRule="default"/>
+                </ATTRDEPENDSON> 
+            </ATTRINFO>
+        </ATTRSET>
+
+
+
+	
+
+</BMCDATA>
+

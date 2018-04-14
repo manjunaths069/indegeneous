@@ -1,0 +1,18 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NTTCPMon	CONNECTIONS_ACTIVE	NORMAL	-1	above	0	50	30	-1	0	Auto
+NTTCPMon	CONNECTIONS_ESTABLIS	NORMAL	-1	above	0	50	10	-1	0	Auto
+NTTCPMon	SEGMENTS_RECEIVED_SE	NORMAL	-1	above	0	50	15	-1	1	Auto
+NTTCPMon	SEGMENTS_SENT_SEC	NORMAL	-1	above	0	50	10	-1	1	Auto
+NTTCPMon	TOTAL_SEGMENTS_SEC	NORMAL	-1	below	0	50	300	-1	0	Auto
+NTTCPMon	TOTAL_SEGMENTS_SEC	NORMAL	-1	above	0	50	200	-1	0	Auto

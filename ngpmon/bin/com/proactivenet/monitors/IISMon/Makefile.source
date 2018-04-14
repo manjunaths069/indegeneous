@@ -1,0 +1,2 @@
+#SOURCE.java = Logc.java IISMon.java IISASPMonData.java IISWebServiceMonData.java
+SUBDIRS = src gui

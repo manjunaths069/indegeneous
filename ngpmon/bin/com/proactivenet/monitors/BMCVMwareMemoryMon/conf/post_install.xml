@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<THRESHOLD Argument = "threshold load -s BMCwareMemoryMon/BMCVMwareMemoryMon.threshold" Version = "7.5" Build = "309"></THRESHOLD>
+</PRE_POST>

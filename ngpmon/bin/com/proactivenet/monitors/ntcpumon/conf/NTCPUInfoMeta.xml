@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- NTCPUInfoMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="29350" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="NTCPUMon" GUIDisplayName="NT CPU Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.ntcpumon.ntcpumon" IsStatic="Y" OS="Windows" Version="2.0" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="29351" MoTypeType="APPS" ParentMoType="29350" UniqueName="NTCPUInfo" GUIDisplayName="Windows CPU"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.ntcpumon.ntcpumon" OS="Windows" Version="2.0"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="29350999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="NT CPU Monitor" IsInputAttribute="Y" AttrReferenceType="Unknown"/>
+      <AppsInput AttrId="29351986" UsrAttrId="986" UniqueName="INPUTFILE" GUIDisplayName="Input XML file name " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="ntcpumon\\GenMonCPU.xml"/>
+       <!--
+       <AppsInput
+        AttrId="29351177"
+        UsrAttrId="177"
+        UniqueName="ATTR_CHOICE_FILE"
+        GUIDisplayName=" "
+        GUIEditable="N"
+        GUIInputType="CFG"
+        ScaleFactor="1"
+        GUIDisplayable="N"
+        IsDefaultValueSet="Y"
+        GUIInputOnCreate="N"
+        AttrReferenceType="Unknown"
+        GUIRequiredOnCreate="N"
+        IsInputAttribute="Y"
+        DisplayType="String"
+        DefaultValue="NTCPUMonGenMon\\GenMonCPUAttrChoice.xml"
+      />
+      -->
+	  <AppsInput AttrId="29351999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="29351003" UsrAttrId="3" UniqueName="CPU" GUIDisplayName="Processor Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="50" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="29351995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="29351994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="29351017" UsrAttrId="17" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0"/>
+      <AppsInput AttrId="29351014" UsrAttrId="14" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="30"/>
+      <AppsInput AttrId="29351998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+<AppsInput AttrId="29351980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="51" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="29351981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+<AppsInput AttrId="29351982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue="" />
+      <AppsInput AttrId="29351468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="54" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="29351993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351013" UsrAttrId="13" UniqueName="PINTERRUPT_TIME" GUIDisplayName="Interrupt Time" TableName="NTCPU" ColumnName="PINTERRUPTTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351005" UsrAttrId="5" UniqueName="PPROCESSOR_TIME" GUIDisplayName="Processor Time" TableName="NTCPU" ColumnName="PPTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351007" UsrAttrId="7" UniqueName="PPRIVILEGED_TIME" GUIDisplayName="Privileged Time" TableName="NTCPU" ColumnName="PPREVTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351012" UsrAttrId="12" UniqueName="PDPC_TIME" GUIDisplayName="DPC Time" TableName="NTCPU" ColumnName="PDPCTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351008" UsrAttrId="8" UniqueName="INTERRUPTS_PSEC" GUIDisplayName="Interrupts/sec" TableName="NTCPU" ColumnName="INTERPSEC" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351009" UsrAttrId="9" UniqueName="DPCRATE" GUIDisplayName="DPC Rate" TableName="NTCPU" ColumnName="DPCRATE" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="per sec" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351006" UsrAttrId="6" UniqueName="PUSER_TIME" GUIDisplayName="User Time" TableName="NTCPU" ColumnName="PUTIME" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351011" UsrAttrId="11" UniqueName="DPC_BYPASSES_PSEC" GUIDisplayName="DPC ByPasses/sec" TableName="NTCPU" ColumnName="DPCBPASSPSEC" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351010" UsrAttrId="10" UniqueName="DPCS_QUEUED_PSEC" GUIDisplayName="DPC s Queued/sec" TableName="NTCPU" ColumnName="DPCQUEUEPSEC" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="29351016" UsrAttrId="16" UniqueName="APC_BYPASSES_SEC" GUIDisplayName="APC ByPasses/sec" TableName="NTCPU" ColumnName="APCQUEUEPSEC" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

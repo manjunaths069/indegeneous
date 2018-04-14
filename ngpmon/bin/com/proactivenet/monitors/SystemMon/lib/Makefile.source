@@ -1,0 +1,8 @@
+SOURCE.cc = SingleCPUStat.cc  CPUStat.cc SolarisPerf.cc VMStat.cc SysStat.cc  MiscStat.cc javaCom.cc
+#SOURCE.cc = javaCom.cc VMStat.cc
+
+OTHERFILES= SystemInfo.h
+
+TARGET_LIB_SHARED = libsysmon.so
+
+libsysmon_OBJS =  ${SOURCE.cc:%.cc=%.o}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- TransactionChoiceMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <BasicInfo
+      GUIDisplayable="N"
+      MoTypeId="40021"
+      MoTypeType="PERS"
+      EndUserReportable="N"
+      UniqueName="DatabaseChoice"
+      GUIDisplayName="Database Type Choices"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Persistent
+      AttrId="400211"
+      UseAsForcedDBKey="Y"
+      UniqueName="DB_TYPENO"
+      GUIDisplayName="Database Type Choice"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="Integer"
+      GUIEditable="N"
+    />
+    <Persistent
+      AttrId="400210"
+      UseAsMODisplayName="Y"
+      UniqueName="DB_TYPENAME"
+      GUIDisplayName="Database Type"
+      EndUserReportable="Y"
+      GUIRequiredOnCreate="N"
+      DisplayType="String"
+      GUIEditable="N"
+    />
+  </Attributes>
+</MetaData>

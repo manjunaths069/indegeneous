@@ -1,0 +1,16 @@
+#Attribute Group     ,Monitor	 ,AttributeName 		,Rank, Above Normal, Below Normal
+Availability         ,gomezTxn   ,SERVICE_AVAILABILITY   	,5	,1	,5
+Availability         ,gomezTxn   ,TXN_AVAILABILITY   		,5	,1	,5
+ResponseTime         ,gomezTxn   ,RESPONSE 			,5	,5	,1
+ResponseTime         ,gomezTxn   ,CONNECT 			,5	,5	,1
+                     ,gomezTxn   ,FIRST_BYTE      		,5
+                     ,gomezTxn   ,DNS_LOOKUP 			,3
+                     ,gomezTxn   ,CONTENT 			,3
+                     ,gomezTxn   ,RESPONSE_SD 			,3
+                     ,gomezTxn   ,RESPONSE_MAX 			,3
+                     ,gomezTxn   ,RESPONSE_MIN 			,3
+                     ,gomezTxn   ,CONNECT_SD 			,3
+                     ,gomezTxn   ,CONNECT_MAX 			,3
+                     ,gomezTxn   ,CONNECT_MIN 			,3
+                     ,gomezTxn   ,SSL 				,3
+                     ,gomezTxn   ,REDIRECT 			,3

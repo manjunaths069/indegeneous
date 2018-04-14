@@ -1,0 +1,5 @@
+# File        : RmonMIB.monitorGroup
+# Description : MonitorGroup for Rmon MIB 
+# Date        : Mon Dec 11 2006
+
+Network|DistRmonMib

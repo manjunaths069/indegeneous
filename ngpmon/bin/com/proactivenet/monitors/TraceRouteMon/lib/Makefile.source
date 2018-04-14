@@ -1,0 +1,7 @@
+SOURCE.cc =TraceRoute.cc 
+
+OTHERFILES= Computation.h 
+
+TARGET_LIB_SHARED = libSolTraceRouteMon.so
+
+libSolTraceRouteMon_OBJS =  ${SOURCE.cc:%.cc=%.o}

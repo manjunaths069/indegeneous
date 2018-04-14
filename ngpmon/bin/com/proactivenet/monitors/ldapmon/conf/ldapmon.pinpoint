@@ -1,0 +1,5 @@
+ResponseTime        ,LDAPQuery           ,Response Time       ,5
+Availability        ,LDAPQuery           ,AVAILABILITY        ,5, 1, 5
+ResponseTime        ,LDAPQuery           ,Connect Time        ,5
+
+

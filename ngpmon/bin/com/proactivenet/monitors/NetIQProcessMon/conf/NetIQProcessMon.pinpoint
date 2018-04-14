@@ -1,0 +1,9 @@
+#Attribute Group     ,Monitor Name             ,AttributeName ,Rank, Above Normal, Below Normal
+Availability        ,NetIQProcess       ,AVAILABILITY ,5,1,5
+Availability        ,NetIQProcess       ,DATA_AVAIL ,3
+System              ,NetIQProcess       ,PROC_SZ ,3
+System              ,NetIQProcess       ,CPU_USAGE ,4
+System              ,NetIQProcess       ,TOT_THREADS ,1
+System              ,NetIQProcess       ,HANDLES ,1
+System              ,NetIQProcess       ,TOT_RSS ,3, 4, 2
+System              ,NetIQProcess       ,TOT_CPU ,5

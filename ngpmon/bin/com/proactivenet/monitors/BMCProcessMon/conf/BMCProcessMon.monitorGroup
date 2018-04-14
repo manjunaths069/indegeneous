@@ -1,0 +1,5 @@
+# File        : BMCProcessMon.monitorGroup
+# Description : MonitorGroup for BMC Process Monitor
+# Date        : Tue Jan 31 2003
+
+System|BMCAdapter|Adapter for BMC PATROL|BMCProcess

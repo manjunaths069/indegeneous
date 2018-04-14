@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TMWDATA [
+        <!ELEMENT TMWDATA (ATTRSET+)>
+     
+        <!ELEMENT ATTRSET (ATTRINFO+)>
+        <!ATTLIST ATTRSET
+          platform (windows2k | nt4 | windowsxp) #REQUIRED
+          attrType (stats | config)     #REQUIRED
+        >
+     
+        <!ELEMENT ATTRINFO (ATTRDEPENDSON)>
+        <!ATTLIST ATTRINFO
+          attrName CDATA #REQUIRED
+          dataType (int | float | string) "int"
+	  computation (asis | delta | rate | percent | chkPercentRange | diffPercent | diff |  perHourToPerSec | bytesToKb | bytesToMb | kbToMb | availability | complementOf100 | standardTime) "asis"
+	  	  collectData ( y | Y | n | N) "Y"	
+	  	  scaleFactor CDATA "1.0"
+	  	  availabilityRule (default | boolean | negativeBoolean) "default"
+
+        >
+      
+        <!ELEMENT ATTRDEPENDSON (ATTRMAP+)>
+        
+        <!ELEMENT ATTRMAP (ATTRIBUTE+)>
+        <!ELEMENT ATTRIBUTE (#PCDATA)>
+        <!ATTLIST ATTRIBUTE
+      	          type (class | instance | property) #REQUIRED
+        	  	  dynamicInput (y | Y | n | N) "N"
+        	  	  usrAttrID CDATA #IMPLIED          
+         >
+]>
+
+
+
+<!-- XML Definition for Tivoli Process Adapter -->
+
+
+<TMWDATA>
+    <ATTRSET platform="windows2k" attrType="stats">
+
+        <ATTRINFO attrName="PROCCPU"  dataType="int" computation="asis" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">     TMW_Process          </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  PercentProcessorTime </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="HNDCOUNT" dataType="int" computation="asis" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">    TMW_Process  </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  HandleCount </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="PROCAVAIL" dataType="int" computation="availability" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">     TMW_Process </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  WorkingSet </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+     </ATTRSET>
+     
+     <ATTRSET platform="nt4" attrType="stats">
+
+        <ATTRINFO attrName="PROCCPU"  dataType="int" computation="asis" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">     TMW_Process          </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  PercentProcessorTime </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="HNDCOUNT" dataType="int" computation="asis" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">    TMW_Process  </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  HandleCount </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+        <ATTRINFO attrName="PROCAVAIL" dataType="int" computation="availability" collectData="Y">
+            <ATTRDEPENDSON>
+				<ATTRMAP>
+					<ATTRIBUTE type="class">     TMW_Process </ATTRIBUTE>
+					<ATTRIBUTE type="instance" dynamicInput="Y" usrAttrID="7"></ATTRIBUTE>
+					<ATTRIBUTE type="property">  WorkingSet </ATTRIBUTE>
+				</ATTRMAP>
+            </ATTRDEPENDSON>
+        </ATTRINFO>
+
+     </ATTRSET>
+</TMWDATA>

@@ -1,0 +1,5 @@
+#Attribute Group	,Monitor Name		,Attribute Name		,Rank	,Above Normal	,Below Normal
+System                  ,LinuxFileSystemMonIn   ,DISK_USED_PERCENT      ,5	,4		,3
+Availability            ,LinuxFileSystemMonIn  	,AVAILABILITY           ,5	,1		,5
+System                  ,LinuxFileSystemMonIn  	,I_NODE_USED_PERCENT    ,3	,4		,1
+

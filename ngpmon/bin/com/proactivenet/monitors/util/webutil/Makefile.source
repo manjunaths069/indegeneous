@@ -1,0 +1,6 @@
+SUBDIRS = js
+SOURCE.java = WebConnection.java WebPageParser.java WebTran.java \
+				WebTranTag.java WebTranStatus.java WebTotalStatus.java \
+				WebHtmlParser.java WebSessionID.java WebContentMatch.java \
+				PageObject.java PageDetail.java WebHTMLFullParser.java \
+				HTMLUtil.java Page.java Logc.java

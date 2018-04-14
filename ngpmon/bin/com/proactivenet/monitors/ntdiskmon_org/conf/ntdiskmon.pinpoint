@@ -1,0 +1,5 @@
+System              ,NTDiskSpace         ,USED_PERCENT        ,3
+Availability        ,NTDiskSpace         ,AVAILABILITY        ,5 ,1 ,5
+System              ,NTDiskIntelli       ,DISK_QUEUE_LEN      ,3
+System              ,NTDiskIntelli       ,DISK_TIME           ,4
+System              ,NTDiskIntelli       ,DISK_TRANSFER       ,3

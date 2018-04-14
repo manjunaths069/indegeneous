@@ -1,0 +1,5 @@
+# File        : BMCTCPMon.monitorGroup
+# Description : MonitorGroup for BMC TCP Monitor
+# Date        : Wed Oct 15 2003
+
+System|BMCAdapter|Adapter for BMC PATROL|BMCTCP

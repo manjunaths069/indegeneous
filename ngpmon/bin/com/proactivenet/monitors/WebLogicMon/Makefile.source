@@ -1,0 +1,3 @@
+#SOURCE.java = WebLogicMon.java WebLogicBean.java
+SUBDIRS = util src
+

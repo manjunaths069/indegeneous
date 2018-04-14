@@ -1,0 +1,4 @@
+#Attribute Group     ,Monitor Name        ,AttributeName       ,Rank,Above Normal, Below Normal
+SystemMem           ,VMwareHostMemMon    ,MEM_USED_PERCENT    ,5
+                    ,VMwareHostMemMon    ,MEMORY_SWAP_USED    ,5
+                 

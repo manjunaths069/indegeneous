@@ -1,0 +1,36 @@
+#Attribute Group     ,Monitor Name        ,AttributeName       ,Rank,Above Normal, Below Normal
+ResponseTime        ,webtranmon          ,RESPONSE_TIME       ,5
+Availability        ,webtranmon          ,AVAILABILITY        ,5	,1	,5
+ResponseTime        ,webtranmon          ,Internal Response Ti,5
+ResponseTime        ,webtranmon          ,External Response Ti,5
+ResponseTime        ,webtranmon          ,Connect Time  ,3
+ResponseTime        ,webtranmon          ,Internal Connect Tim,3
+ResponseTime        ,webtranmon          ,External Connect Tim,3
+                    ,webtranmon          ,Total Objects Not Fo,1
+                    ,webtranmon          ,Internal Objects Not,1
+                    ,webtranmon          ,External Objects Not,1
+                    ,webtranmon          ,Total Invalid Links ,1
+                    ,webtranmon          ,Internal Invalid Lin,1
+                    ,webtranmon          ,External Invalid Lin,1
+                    ,webtranmon          ,DNS Time,4
+                    ,webtranmon          ,First Byte Time,4
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP01,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP02,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP03,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP04,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP05,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP06,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP07,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP08,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP09,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP10,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP11,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP12,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP13,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP14,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP15,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP16,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP17,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP18,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP19,5
+ResponseTime	    ,webtranmon		 ,AR_STAT_RESP20,5

@@ -1,0 +1,5 @@
+ResponseTime        ,MSSQLServerQuery    ,Response Time       ,5
+Availability        ,MSSQLServerQuery    ,AVAILABILITY        ,5 ,1 ,5
+ConnectTime        ,MSSQLServerQuery    ,Connect Time        ,3
+                    ,MSSQLServerQuery    ,Data Space Available,4
+                    ,MSSQLServerQuery    ,Log Space Available ,4

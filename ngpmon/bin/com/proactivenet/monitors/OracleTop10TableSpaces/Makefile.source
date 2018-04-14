@@ -1,0 +1,4 @@
+SOURCE.java = OracleTop10TableSpaces.java Logc.java
+SUBDIRS = util src 
+
+

@@ -1,0 +1,3 @@
+ResponseTime        ,MySQLQuery         ,Response Time       ,5
+Availability        ,MySQLQuery         ,AVAILABILITY        ,5	,1	,5
+ResponseTime        ,MySQLQuery         ,Connect Time        ,5

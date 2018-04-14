@@ -1,0 +1,8 @@
+#Attribute classification for Pinpointing
+#Attribute_Group	Rank	Above_Normal	Below_Normal
+ 	,OracleRollbackMon	,GETS	,3	,3	,3
+ 	,OracleRollbackMon	,WRITES	,3	,3	,3
+ 	,OracleRollbackMon	,EXTENTS	,3	,3	,3
+ 	,OracleRollbackMon	,WRAPS	,3	,3	,3
+ 	,OracleRollbackMon	,SHRINKS	,3	,3	,3
+ 	,OracleRollbackMon	,WAITS	,3	,3	,3

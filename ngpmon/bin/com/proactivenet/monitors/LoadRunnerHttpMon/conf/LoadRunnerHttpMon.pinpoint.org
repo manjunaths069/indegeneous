@@ -1,0 +1,46 @@
+#Attribute Group	,Monitor Name	,AttributeName	,Rank	,Above Normal	, Below Normal
+ResponseTime	,loadrunnerhttpmon	,RESPONSE_TIME	,5
+Availability	,loadrunnerhttpmon	,TOTAL_AVAILABILITY	,5	,1	,5
+
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP01	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP02	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP03	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP04	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP05	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP06	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP07	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP08	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP09	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP10	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP11	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP12	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP13	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP14	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP15	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP16	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP17	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP18	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP19	,5
+ResponseTime	,loadrunnerhttpmon	,AR_STAT_RESP20	,5
+
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL01	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL02	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL03	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL04	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL05	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL06	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL07	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL08	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL09	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL10	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL11	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL12	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL13	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL14	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL15	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL16	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL17	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL18	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL19	,5	,1	,5
+Availability	,loadrunnerhttpmon	,AR_STAT_AVAIL20	,5	,1	,5
+

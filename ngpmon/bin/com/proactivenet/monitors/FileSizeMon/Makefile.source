@@ -1,0 +1,3 @@
+#SOURCE.java = FileSizeMon.java 
+SUBDIRS = util src
+

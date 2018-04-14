@@ -1,0 +1,4 @@
+WebServer    ,IISWebServiceMonInfo
+WebServer    ,IISASPMonInfo
+
+WebServerAvailability,IISWebServiceMonInfo,AVAILABILITY

@@ -1,0 +1,5 @@
+AppServer    ,BvsnIMServer
+AppServer    ,BvsnIMCache
+AppServer    ,BvDBAccessor
+AppServer    ,BvsnIMScript
+AppServerAvailability,BvsnIMServer,AVAILABILITY

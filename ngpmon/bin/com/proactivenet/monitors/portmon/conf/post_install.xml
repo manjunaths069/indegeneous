@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="23" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "Telnet Port"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "23"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="23" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "Telnet Port"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "23"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="345" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "SubHash Port"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "345"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="345" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "SubHash Port"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "345"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="22" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "SSH"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "22"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="22" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "SSH"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "22"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="53" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "DNS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "53"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="53" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "DNS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "53"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="80" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "HTTP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "80"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="80" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "HTTP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "80"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="123" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "NTP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "123"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="123" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "NTP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "123"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="389" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "LDAP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "389"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="389" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "LDAP"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "389"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="443" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "HTTPS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "443"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="443" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "HTTPS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "443"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "delete"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="636" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "LDAPS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "636"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="10010"     moInstId="636" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "100100" AttrVal = "LDAPS"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "100101" AttrVal = "636"> </AttrInfo> 
+
+</updateMO> 
+
+<Java
+        className="com.proactivenet.apps.cmd.FPConn"
+        classpath="pronto/lib/pw_meta_cmd.jar:pronto/lib/pw_server.jar:pronto/lib/pw_util.jar:apps3rdparty/log4j/log4j.jar:apps3rdparty/jconn3.jar:sybase/asa/java/jodbc.jar:pronto/lib/pw_agentcntl.jar:apps3rdparty/jconn3.jar"
+	Version="6.5"
+	Build="411">
+</Java>
+</PRE_POST> 
+

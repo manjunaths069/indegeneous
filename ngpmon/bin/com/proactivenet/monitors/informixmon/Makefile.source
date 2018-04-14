@@ -1,0 +1,3 @@
+SUBDIRS = src
+#SOURCE.java = informixmon.java InformixSql.java TimeInformixJDBCConnector.java 
+

@@ -1,0 +1,21 @@
+# File        : mapping.ini
+# Description : Output attribute Name to attribute Id mapping
+# Syntax      :
+#  - Line in the form of  AttributeName:AttributeId
+#  - Blank lines and comment lines ignored
+#  - Comment lines must start with a # in first column.
+#  - Attribute IDs must start from 10, and cannot be more than 50
+#    i.e. Max attribute ID should be 10+50.
+#    This is beacause there are 4+5 input attributes.
+#  - No restriction of IDs being sequential, except that of readability.
+#  - White space in variable:value lines not tolerated.
+#  - Variable name cannot have embedded spaces
+# This filename should be supplied in the fourth input attribute, namely
+# 'VarNameToAttrIdMapping'. In case it is not, or an incorrect name is
+# specified, the default of "Pronto_var_1-n" will be in place.
+
+C:DISK_FILESYSTEM:8
+C:DISK_MOUNT:9
+C:DISK_SIZE:10
+
+S:DISK_USED_PERCENT:12

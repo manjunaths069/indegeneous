@@ -1,0 +1,10 @@
+#Functional Group   ,Attribute Group     ,Monitor Name        ,AttributeName       ,Rank, Above Normal, Below Normal
+System              ,ProcessInfo         ,PROC_RSSZ           ,3, 4, 2
+System              ,ProcessInfo         ,PROC_VSZ            ,3, 5, 2
+System              ,ProcessInfo         ,PROC_CPU            ,5
+Availability        ,ProcessInfo         ,AVAILABILITY        ,5,1,5
+System              ,ProcessInfo         ,PROCESS_INSTANCES   ,1, 3, 3
+System              ,ProcessInfo         ,TOTAL_THREADS       ,3, 3, 3
+System              ,ProcessInfo         ,NEW_INSTANCES       ,1, 3, 3
+System              ,ProcessInfo         ,TOTAL_FDS           ,3, 3, 3
+

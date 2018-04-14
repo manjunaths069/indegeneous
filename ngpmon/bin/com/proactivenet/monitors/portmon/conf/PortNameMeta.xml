@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo MoTypeId="10010" MoTypeType="PERS" ParentMoType="29" UniqueName="PortName" GUIDisplayName="Port Name" EndUserCreatable="Y" GUIDisplayable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" EndUserReportable="Y" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="100100" IsDefaultValueSet="Y" UniqueName="PORTNAME" GUIDisplayName="Port Name" UseAsMODisplayName="Y" EndUserReportable="Y" DisplayType="String" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" DefaultValue=""/>
+<Persistent AttrId="100101" UseAsForcedDBKey="Y" UniqueName="PORTNO" GUIDisplayName="Port Number" EndUserReportable="Y" DisplayType="Integer" GUIEditable="N" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N" IsDefaultValueSet="N" DefaultValue=""/>
+</Attributes>
+</MetaData>

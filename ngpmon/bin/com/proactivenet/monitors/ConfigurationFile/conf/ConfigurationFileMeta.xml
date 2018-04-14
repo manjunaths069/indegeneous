@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- ConfigurationFileMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="42777" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="ConfigurationFileMonitor" GUIDisplayName="Configuration File Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.ConfigurationFile.ConfigurationFile" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y" IsSchedulable="N" Version="1.0"/>
+    <BasicInfo MoTypeId="42778" MoTypeType="APPS" ParentMoType="42777" UniqueName="ConfigurationFile" GUIDisplayName="Configuration File Change"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.ConfigurationFile.ConfigurationFile" MustRunOnAgent="N" IsStatic="Y" IsNewFrameWork="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="42777999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="Configuration File"/>
+      <AppsInput AttrId="42778999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" AttrReferenceType="Unknown" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="42778052" UsrAttrId="52" UniqueName="ENCODING" GUIDisplayName="File Encoding" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" UseAsInstanceName="N" IsDefaultValueSet="Y" AttrReferenceType="ANY" IsInputAttribute="Y" DisplayType="MOReference" GUIStringLength="0" MoReferenceType="27060" IsAutoCreated="Y" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" GUIHasListOfChoice="N" DefaultValue="3" UseNormalDistribution="N"/>
+      <AppsInput AttrId="42778003" UsrAttrId="3" UniqueName="FILE_PATH" GUIDisplayName="Configuration File Name" GUIDisplaySequenceNumber="3" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" AttrReferenceType="Unknown" IsInputAttribute="Y" UseAsInstanceName="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42778998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="42778995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="42778997" UsrAttrId="997" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="42778994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="2" MoReferenceType="10000" GUIRequiredOnCreate="Y" DisplayType="MOReference"/>
+      <AppsInput AttrId="42778980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42778981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="6" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42778982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="42778468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="8" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="42778993" UsrAttrId="993" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000" UnitOfMeasurement="" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" GUIDisplaySequenceNumber="0" IsAutoCreated="Y" UseAsMODisplayName="N" GUIDisplayable="Y" UseAsInstanceName="N" DefaultValue="1.0" GUIEditable="N" GUIRequiredOnCreate="N" GUIInputOnCreate="N" IsInputAttribute="N" IsDefaultValueSet="N"/>
+      <AppsConfig AttrId="42778060" UsrAttrId="60" UniqueName="FILE_SIZE" GUIDisplayName="Total File Size" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="42778061" UsrAttrId="61" UniqueName="LAST_MODIFIED" GUIDisplayName="Last Modified" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778046" UsrAttrId="46" UniqueName="CHANGE_DETECTED" GUIDisplayName="Change Detected" TableName="CONFIGFILE" ColumnName="CHANGE_DETECTED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="Y"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778047" UsrAttrId="47" UniqueName="LINES_ADDED" GUIDisplayName="Lines Added" TableName="CONFIGFILE" ColumnName="LINES_ADDED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778048" UsrAttrId="48" UniqueName="LINES_DELETED" GUIDisplayName="Lines Deleted" TableName="CONFIGFILE" ColumnName="LINES_DELETED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778049" UsrAttrId="49" UniqueName="LINES_CHANGED" GUIDisplayName="Lines Changed" TableName="CONFIGFILE" ColumnName="LINES_CHANGED" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778050" UsrAttrId="50" UniqueName="TOTAL_LINES" GUIDisplayName="Total Lines" TableName="CONFIGFILE" ColumnName="TOTAL_LINES" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="42778051" UsrAttrId="51" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="CONFIGFILE" ColumnName="AVAILABILITY" ScaleFactor="1000" AttrReferenceType="Unknown" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

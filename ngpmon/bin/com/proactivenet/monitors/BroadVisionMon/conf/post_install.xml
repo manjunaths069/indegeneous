@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PRE_POST SYSTEM "../../../pronto/sysdata/dtd/pre_post.dtd">
+<PRE_POST   Type = "Post Install">
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="27800"     moInstId="23" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "278000" AttrVal = "Request"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "278001" AttrVal = "23"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="27800"     moInstId="345" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "278000" AttrVal = "Content"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "278001" AttrVal = "345"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="27800"     moInstId="23" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "278000" AttrVal = "Request"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "278001" AttrVal = "23"> </AttrInfo> 
+
+</updateMO> 
+
+<updateMO 	Action = "insert"> 
+
+<MoInfo	moTypeId ="27800"     moInstId="345" 
+
+parentMOTypeId = "29" parentMOInstId = "1" ></MoInfo> 
+
+  <AttrInfo	AttrID = "278000" AttrVal = "Content"> </AttrInfo> 
+
+  <AttrInfo	AttrID = "278001" AttrVal = "345"> </AttrInfo> 
+
+</updateMO> 
+
+</PRE_POST> 
+

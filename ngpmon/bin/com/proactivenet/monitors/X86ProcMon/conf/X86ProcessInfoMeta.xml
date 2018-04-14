@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- X86ProcessInfoMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo MoTypeId="31200" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="X86ProcInfo" GUIDisplayName="X86 Solaris Process Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="X86ProcMon" OS="SunOS x86" MustRunOnAgent="Y" HasMoreInfo="Y" IsStatic="Y" SupportFlashCheck="N" IsSchedulable="N"/>
+    <BasicInfo MoTypeId="31201" MoTypeType="APPS" ParentMoType="31200" UniqueName="X86ProcessInfo" GUIDisplayName="X86 Solaris Process"/>
+    <AppsInfo ClassName="X86ProcMon" OS="SunOS x86" MustRunOnAgent="Y" HasMoreInfo="Y"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="312000" UsrAttrId="1" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="X86 Process Monitor"/>
+      <AppsInput AttrId="31201001" UsrAttrId="2" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="31201029" UsrAttrId="29" UniqueName="FP_TOLERANCE_COUNT" GUIDisplayName="Fast Poll Tolerance Count" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="0"/>
+      <AppsInput AttrId="31201026" UsrAttrId="26" UniqueName="MATCH_ARGS" GUIDisplayName="Command Line Match" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="52" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="31201023" UsrAttrId="23" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="31201018" UsrAttrId="18" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="2" GUIInputOnCreate="N" MoReferenceType="10000" GUIRequiredOnCreate="N" DisplayType="MOReference"/>
+      <AppsInput AttrId="31201007" UsrAttrId="7" UniqueName="PROCESS" GUIDisplayName="Process" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="51" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N" DefaultValue="" GUIEditable="Y" GUIDisplayable="Y"/>
+      <AppsInput AttrId="31201008" UsrAttrId="8" UniqueName="USERS" GUIDisplayName="Process Owner Name/ID" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="50" UseAsInstanceName="Y" IsDefaultValueSet="Y" DisplayType="String" DefaultValue="" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N"/>
+      <AppsInput AttrId="31201028" UsrAttrId="28" UniqueName="FAST_POLL_PERIOD" GUIDisplayName="Fast Poll Period" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="20"/>
+      <AppsInput AttrId="31201019" UsrAttrId="19" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="31201980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="53" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31201981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="54" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31201982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="55" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31201468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="56" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="31201020" UsrAttrId="20" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201013" UsrAttrId="13" UniqueName="PROC_CPU" GUIDisplayName="Total Process CPU Utilization" TableName="X86SOLPROC" ColumnName="TOTALCPU" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201017" UsrAttrId="17" UniqueName="NEW_INSTANCES" GUIDisplayName="New Process Instances" TableName="X86SOLPROC" ColumnName="NEWINSTANCES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201016" UsrAttrId="16" UniqueName="TOTAL_THREADS" GUIDisplayName="Total Threads" TableName="X86SOLPROC" ColumnName="TOTALTHR" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201012" UsrAttrId="12" UniqueName="PROC_VSZ" GUIDisplayName="Max Virtual Size of Process Instances" TableName="X86SOLPROC" ColumnName="PROCMAXVSZ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201032" UsrAttrId="32" UniqueName="PROC_TOTVSZ" GUIDisplayName="Total Virtual Size of Process Instances" TableName="X86SOLPROC" ColumnName="PROCTOTVSZ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201015" UsrAttrId="15" UniqueName="PROCESS_INSTANCES" GUIDisplayName="Process Instances" TableName="X86SOLPROC" ColumnName="INSTANCES" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201014" UsrAttrId="14" UniqueName="AVAILABILITY" GUIDisplayName="Availability" TableName="X86SOLPROC" ColumnName="AVAILABILITY" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201011" UsrAttrId="11" UniqueName="PROC_RSSZ" GUIDisplayName="Max Resident Size of Process Instances" TableName="X86SOLPROC" ColumnName="PROCRSSZ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201031" UsrAttrId="31" UniqueName="PROC_TOTRSSZ" GUIDisplayName="Total Resident Size of Process Instances" TableName="X86SOLPROC" ColumnName="PROCTOTRSSZ" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31201027" UsrAttrId="27" UniqueName="TOTAL_FDS" GUIDisplayName="Total File Descriptors" TableName="X86SOLPROC" ColumnName="TOTALFDS" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

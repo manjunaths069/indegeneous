@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+
+<!-- GenMonBaseMeta.xml -->
+
+
+
+<MetaData>
+
+  <ManagedObject>
+
+      <ParentBasicInfo
+
+      MoTypeId="500028"
+
+      MoTypeType="APPS"
+
+      ParentMoType="1"
+
+      EndUserReportable="N"
+
+      UniqueName="PMOMWizard"
+
+      GUIDisplayName="MOM Adapter Wizard Parent"
+
+      OneInstancePerParent="Y"
+
+      />
+
+      <ParentAppsInfo
+
+      ClassName="com.proactivenet.monitors.MOMPollManager.Wizard"
+
+      Version="1.0" 
+
+      OS="Any" 
+
+      GUIMonitorGroup="OTHER" 
+
+      IsSchedulable="N" 
+
+      MustRunOnAgent="N" 
+
+      IsStatic="Y" 
+
+      IsNewFrameWork="Y" 
+
+      HasArrayAttribute="N" 
+
+      IsGroupResourcePool="N" 
+
+      HasMoreInfo="N" 
+
+      SupportFlashCheck="N"
+
+      />
+
+
+
+      <BasicInfo
+
+      HasCustomizedGUI="Y"
+
+      MoTypeId="500029"
+
+      MoTypeType="APPS"
+
+      ParentMoType="500028"
+
+      UniqueName="MOMWizard"
+
+      GUIDisplayName="MOM Adapter Wizard"
+
+      />
+
+     <AppsInfo
+
+      ClassName="com.proactivenet.monitors.MOMPollManager.Wizard"
+
+      Version="" 
+
+      OS="Any" 
+
+      GUIMonitorGroup="OTHER" 
+
+      IsSchedulable="Y" 
+
+      MustRunOnAgent="N" 
+
+      IsStatic="N" 
+
+      IsNewFrameWork="N" 
+
+      HasArrayAttribute="N" 
+
+      IsGroupResourcePool="N" 
+
+      HasMoreInfo="N" 
+
+      SupportFlashCheck="Y"
+
+     />
+
+  </ManagedObject>
+
+
+
+  <Attributes>
+
+    <Application>
+
+	<ParentAppsInput
+
+        AttrId="500028999"
+
+        UsrAttrId="999"
+
+        UniqueName="Instance_Name"
+
+        GUIDisplayName="Instance Name"
+
+        GUIInputType="CFG"
+
+        ScaleFactor="1000"
+
+        IsDefaultValueSet="Y"
+
+        DisplayType="String"
+
+        UseAsMODisplayName="Y"
+
+        DefaultValue="MOM Adapter Monitor"
+
+        />
+
+	<AppsInput
+
+        AttrId="500029004"
+
+        UsrAttrId="4"
+
+        UniqueName="PerformanceObject"
+
+        GUIDisplayName="Performance Object"
+
+        GUIInputType="CFG"
+
+        ScaleFactor="1000"
+
+        GUIDisplaySequenceNumber="52"
+
+        UseAsInstanceName="Y"
+
+        IsDefaultValueSet="Y"
+
+        GUIRequiredOnCreate="N"
+
+        DisplayType="String"
+
+        GUIHasListOfChoice="Y"
+
+        />
+
+	<AppsInput
+
+        AttrId="500029005"
+
+        UsrAttrId="5"
+
+        UniqueName="PerformanceInstance"
+
+        GUIDisplayName="Performance Instance"
+
+        GUIInputType="CFG"
+
+        ScaleFactor="1000"
+
+        GUIDisplaySequenceNumber="53"
+
+        UseAsInstanceName="Y"
+
+        IsDefaultValueSet="Y"
+
+        GUIRequiredOnCreate="N"
+
+        DisplayType="String"
+
+        GUIHasListOfChoice="Y"
+
+        />
+
+	<AppsInput
+
+        AttrId="500029006"
+
+        UsrAttrId="6"
+
+        UniqueName="PerformanceCounter"
+
+        GUIDisplayName="Performance Counter"
+
+        GUIInputType="CFG"
+
+        ScaleFactor="1000"
+
+        GUIDisplaySequenceNumber="54"
+
+        UseAsInstanceName="Y"
+
+        IsDefaultValueSet="Y"
+
+        GUIRequiredOnCreate="N"
+
+        DisplayType="String"
+
+        GUIHasListOfChoice="Y"
+
+        />
+
+        
+
+    </Application>
+
+  </Attributes>
+
+</MetaData>
+
+
+
+
+

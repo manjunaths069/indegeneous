@@ -1,0 +1,10 @@
+System       ,NTDiskSpace 
+
+DiskUsed,NTDiskSpace,USED_PERCENT
+
+DiskAvailability,NTDiskSpace,AVAILABILITY
+
+System       ,NTDiskIntelli 
+
+DiskPerformance,NTDiskIntelli
+

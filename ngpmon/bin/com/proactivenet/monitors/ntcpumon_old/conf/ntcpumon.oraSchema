@@ -1,0 +1,136 @@
+#!/bin/csh -f 
+source /usr/pronto/bin/.tmcsh
+cd $DB
+
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+SELECT * FROM TAB B WHERE B.TNAME = 'NTCPU_STATS';
+EOF
+
+if ( $status == 101 ) then
+
+#Schema for Monitor = CPU ,moTypeId = 29351
+
+echo Creating table NTCPU_STATS
+/usr/pronto/bin/sqli<< EOF 
+CREATE TABLE NTCPU_STATS (
+ITEMID numeric(12),
+TIMERECORDED numeric(12),
+PPTIME numeric(12),
+PPREVTIME numeric(12),
+DPCRATE numeric(12),
+DPCBPASSPSEC numeric(12),
+PINTERRUPTTIME numeric(12),
+PUTIME numeric(12),
+INTERPSEC numeric(12),
+DPCQUEUEPSEC numeric(12),
+PDPCTIME numeric(12),
+APCQUEUEPSEC numeric(12)
+);
+create unique index NTCPU_STATS_U2 on NTCPU_STATS (ITEMID,TIMERECORDED);
+create        index NTCPU_STATS_N3 on NTCPU_STATS (TIMERECORDED);
+
+
+CREATE TABLE NTCPU_RT (
+ITEMID numeric(12), 
+FROMTIME numeric(12), 
+TOTIME numeric(12), 
+PPTIME_HIGH numeric(12), 
+PPTIME_AVG  numeric(12), 
+PPTIME_LOW  numeric(12), 
+PPREVTIME_HIGH numeric(12), 
+PPREVTIME_AVG  numeric(12), 
+PPREVTIME_LOW  numeric(12), 
+DPCRATE_HIGH numeric(12), 
+DPCRATE_AVG  numeric(12), 
+DPCRATE_LOW  numeric(12), 
+DPCBPASSPSEC_HIGH numeric(12), 
+DPCBPASSPSEC_AVG  numeric(12), 
+DPCBPASSPSEC_LOW  numeric(12), 
+PINTERRUPTTIME_HIGH numeric(12), 
+PINTERRUPTTIME_AVG  numeric(12), 
+PINTERRUPTTIME_LOW  numeric(12), 
+PUTIME_HIGH numeric(12), 
+PUTIME_AVG  numeric(12), 
+PUTIME_LOW  numeric(12), 
+INTERPSEC_HIGH numeric(12), 
+INTERPSEC_AVG  numeric(12), 
+INTERPSEC_LOW  numeric(12), 
+DPCQUEUEPSEC_HIGH numeric(12), 
+DPCQUEUEPSEC_AVG  numeric(12), 
+DPCQUEUEPSEC_LOW  numeric(12), 
+PDPCTIME_HIGH numeric(12), 
+PDPCTIME_AVG  numeric(12), 
+PDPCTIME_LOW  numeric(12), 
+APCQUEUEPSEC_HIGH numeric(12), 
+APCQUEUEPSEC_AVG  numeric(12), 
+APCQUEUEPSEC_LOW  numeric(12), 
+NUMPOINTS numeric(12), 
+NUMSECS   numeric(12) 
+);
+create unique index NTCPU_RT_U2 on NTCPU_RT (ITEMID,FROMTIME);
+create        index NTCPU_RT_N3 on NTCPU_RT (FROMTIME,TOTIME);
+
+CREATE TABLE NTCPU_BL (
+ITEMID   numeric(12),
+TIMESLOT numeric(12),
+PPTIME_HIGH numeric(12),
+PPTIME_AVG  numeric(12),
+PPTIME_LOW  numeric(12),
+PPREVTIME_HIGH numeric(12),
+PPREVTIME_AVG  numeric(12),
+PPREVTIME_LOW  numeric(12),
+DPCRATE_HIGH numeric(12),
+DPCRATE_AVG  numeric(12),
+DPCRATE_LOW  numeric(12),
+DPCBPASSPSEC_HIGH numeric(12),
+DPCBPASSPSEC_AVG  numeric(12),
+DPCBPASSPSEC_LOW  numeric(12),
+PINTERRUPTTIME_HIGH numeric(12),
+PINTERRUPTTIME_AVG  numeric(12),
+PINTERRUPTTIME_LOW  numeric(12),
+PUTIME_HIGH numeric(12),
+PUTIME_AVG  numeric(12),
+PUTIME_LOW  numeric(12),
+INTERPSEC_HIGH numeric(12),
+INTERPSEC_AVG  numeric(12),
+INTERPSEC_LOW  numeric(12),
+DPCQUEUEPSEC_HIGH numeric(12),
+DPCQUEUEPSEC_AVG  numeric(12),
+DPCQUEUEPSEC_LOW  numeric(12),
+PDPCTIME_HIGH numeric(12),
+PDPCTIME_AVG  numeric(12),
+PDPCTIME_LOW  numeric(12),
+APCQUEUEPSEC_HIGH numeric(12),
+APCQUEUEPSEC_AVG  numeric(12),
+APCQUEUEPSEC_LOW  numeric(12),
+NUMPOINTS numeric(12),
+NUMWEEKS numeric(12),
+STARTTIME numeric(12),
+DURATION numeric(12)
+);
+create unique index NTCPU_BL_U2 on NTCPU_BL (ITEMID, STARTTIME, DURATION);
+
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NTCPU_STATS', 'TIMERECORDED', 24);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NTCPU_RT', 'FROMTIME', 2160);
+INSERT INTO PRUNE_CNTL (TABLENAME, TIMECOLUMN, DELTAHOURS) VALUES ('NTCPU_BL', 'STARTTIME', 8760);
+EOF
+else
+# Handle upgrade of monitor schema like addition of new attribute, here
+
+#Update schema with STARTTIME and DURATION columns
+echo Begin upgrading
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+SELECT * FROM SYSCOLUMN A, SYSTABLE B WHERE A.TABLE_ID = B.TABLE_ID AND B.TABLE_NAME = 'NTCPU_BL' AND A.COLUMN_NAME = 'STARTTIME';
+EOF
+if ( $status == 101 ) then
+/usr/pronto/bin/sqli -c << EOF > /dev/null
+ALTER TABLE NTCPU_BL ADD STARTTIME int;
+ALTER TABLE NTCPU_BL ADD DURATION int;
+EOF
+endif
+echo End upgrading
+
+
+
+endif
+

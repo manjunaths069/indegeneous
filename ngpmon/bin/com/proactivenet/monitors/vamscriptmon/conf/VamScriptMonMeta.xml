@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- VamScriptMonMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+
+
+<ParentBasicInfo
+      MoTypeId="500010"
+      MoTypeType="APPS"
+      ParentMoType="1"
+      EndUserReportable="N"
+      UniqueName="PVamScriptMon"
+      GUIDisplayName="VamScriptMon Info"
+      OneInstancePerParent="Y"
+    />
+<ParentAppsInfo
+      ClassName="com.proactivenet.monitors.vamscriptmon.vamscriptmon"
+      MustRunOnAgent="Y"
+      OS="SunOS:Windows"
+      IsStatic="Y"
+      IsNewFrameWork="Y"
+      IsSchedulable="N"
+    />
+
+<BasicInfo
+      HasCustomizedGUI="Y"
+      MoTypeId="500011"
+      MoTypeType="APPS"
+      ParentMoType="500010"
+      UniqueName="VamScriptMon"
+      GUIDisplayName="VAM Script Monitor"
+    />
+    <AppsInfo
+      ClassName="com.proactivenet.monitors.vamscriptmon.vamscriptmon"
+      HasMoreInfo="N"
+      OS="SunOS:Windows"
+    />
+  </ManagedObject>
+
+  <Attributes>
+    <Application>
+     <ParentAppsInput
+        AttrId="500010999"
+        UsrAttrId="999"
+        UniqueName="Instance Name"
+        GUIDisplayName="Instance Name"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        IsDefaultValueSet="Y"
+        DisplayType="String"
+        UseAsMODisplayName="Y"
+        DefaultValue="VAM Script Monitor"
+      />
+      <AppsInput
+        AttrId="500011004"
+        UsrAttrId="4"
+        UniqueName="TEST"
+        GUIDisplayName="Test"
+        GUIInputType="CFG"
+        ScaleFactor="1000"
+        GUIDisplaySequenceNumber="52"
+        UseAsInstanceName="Y"
+        IsDefaultValueSet="Y"
+        GUIRequiredOnCreate="N"
+        DisplayType="String"
+      />
+
+
+    </Application>
+  </Attributes>
+</MetaData>

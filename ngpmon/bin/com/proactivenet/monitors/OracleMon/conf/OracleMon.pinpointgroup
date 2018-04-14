@@ -1,0 +1,6 @@
+Database     ,OracleMon
+Database     ,OrclQryNew
+DatabaseRespTime,OrclQryNew,Response Time
+DatabaseRespTime,OrclQryNew,AVAILABILITY
+DatabaseConnTime,OrclQryNew,Connect Time
+DatabaseAvailability,OrclQryNew,AVAILABILITY

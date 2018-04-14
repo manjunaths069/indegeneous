@@ -1,0 +1,5 @@
+# File        : _hpuxsrvcpupool.monitorGroup
+# Description : MonitorGroup for aggregatemon
+# Date        : Thu Nov 27 14:04:10 IST 2003
+
+System|HPUX|HPUX|_hpuxsrvcpupool

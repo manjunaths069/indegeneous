@@ -1,0 +1,22 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NetIQTcp	CONN_ESTB	Normal	-1	above	0.0	50.0	10.0	-1	0	Auto
+NetIQTcp	CONN_FAIL	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+NetIQTcp	CONN_ACT	Normal	-1	above	0.0	50.0	30.0	-1	0	Auto
+NetIQTcp	CONN_PASS	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+NetIQTcp	CONN_RSET	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+NetIQTcp	SEG_RECV	Normal	-1	above	0.0	50.0	15.0	-1	1	Auto
+NetIQTcp	SEG_R_TRN	Normal	-1	above	0.0	50.0	-1	-1	0	Auto
+NetIQTcp	SEG_SENT	Normal	-1	above	0.0	50.0	10.0	-1	1	Auto
+NetIQTcp	TOT_SEG	Normal	-1	above	0.0	50.0	200.0	-1	0	Auto
+NetIQTcp	TOT_SEG	Normal	-1	below	0.0	50.0	300.0	-1	0	Auto

@@ -1,0 +1,19 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+Topaz	AVAILABILITY	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+Topaz	AVAILABILITY	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+Topaz	DB_AVAILABILITY	Normal	-1	above	0.0	0.0	-1	-1	1	Auto
+Topaz	DB_AVAILABILITY	Normal	-1	below	0.0	50.0	-1	-1	0	Auto
+Topaz	FST_BUFF_TIME	Normal	-1	above	0.0	50.0	400.0	-1	0	Auto
+Topaz	CONNECT_TIME	Normal	-1	above	0.0	50.0	10.0	-1	1	Auto
+Topaz	TOT_RESP_TIME	Normal	-1	above	0.0	50.0	20.0	-1	1	Auto

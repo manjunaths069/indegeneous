@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE MetaData SYSTEM "../../../sysdata/dtd/MetaFile.dtd">
+<MetaData>
+  <ManagedObject>
+<BasicInfo GUIDisplayable="N" MoTypeId="27800" MoTypeType="PERS" EndUserReportable="N" UniqueName="BVCacheOpts" GUIDisplayName="BVCacheOpts" EndUserCreatable="Y" EndUserDeletable="Y" IsAutoCreated="N" OneInstancePerParent="N" HasCustomizedGUI="N"/>
+</ManagedObject>
+
+  <Attributes>
+<Persistent AttrId="278000" IsDefaultValueSet="Y" UniqueName="BV_CACHE_OPTS" GUIDisplayName="Port Name" UseAsMODisplayName="Y" EndUserReportable="Y" DisplayType="String" DefaultValue="Request" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" GUIEditable="Y" UseAsForcedDBKey="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+<Persistent AttrId="278001" GUIEditable="N" UniqueName="BV_CACHE_OPTS_NO" GUIDisplayName="Port Number" UseAsForcedDBKey="Y" IsDefaultValueSet="Y" DisplayType="Integer" EndUserReportable="Y" DefaultValue="7" GUIStringLength="0" MoReferenceType="0" AttrReferenceType="ANY" UpperLimit="0" LowerLimit="0" GUIRequiredOnCreate="Y" UseAsMODisplayName="N" GUIDisplayable="Y" GUIInputOnCreate="Y" HasLowerLimit="N" HasUpperLimit="N" IsArrayOfObjects="N"/>
+</Attributes>
+</MetaData>

@@ -1,0 +1,3 @@
+AppAvailability    ,JBossJMX,AVAILABILITY
+AppServer    ,JBossJMX
+AppServerAvailability    ,JBossJMX,AVAILABILITY

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MetaData SYSTEM "../../../pronto/sysdata/dtd/MetaFile.dtd">
+<!-- BMCLOGMeta.xml -->
+
+<MetaData>
+  <ManagedObject>
+    <ParentBasicInfo HasCustomizedGUI="Y" MoTypeId="31243" MoTypeType="APPS" ParentMoType="1" EndUserReportable="N" UniqueName="BMCLogMon" GUIDisplayName="BMC Log Monitor" OneInstancePerParent="Y"/>
+    <ParentAppsInfo ClassName="com.proactivenet.monitors.BMCLogMon.BMCLogMon" HasMoreInfo="N" OS="Windows" IsStatic="Y" IsSchedulable="N"/>
+    <BasicInfo HasCustomizedGUI="Y" MoTypeId="31244" MoTypeType="APPS" ParentMoType="31243" UniqueName="BMCLOG" GUIDisplayName="Adapter for BMC PATROL LOG (Deprecated)"/>
+    <AppsInfo ClassName="com.proactivenet.monitors.BMCLogMon.BMCLogMon" OS="Windows"/>
+  </ManagedObject>
+  <Attributes>
+    <Application>
+      <ParentAppsInput AttrId="31243999" UsrAttrId="999" UniqueName="Instance Name" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="String" UseAsMODisplayName="Y" DefaultValue="BMC LOG"/>
+      <AppsInput AttrId="31244995" UsrAttrId="995" UniqueName="COLLECTDATA" GUIDisplayName="Collect Data" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Boolean" DefaultValue="1"/>
+      <AppsInput AttrId="31244011" UsrAttrId="15" UniqueName="LOGTEMP" GUIDisplayName="LOGTEMP Instance" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="9" UseAsInstanceName="Y" DisplayType="String" GUIHasListOfChoice="Y" GUIRequiredOnCreate="N"/>
+      <AppsInput AttrId="31244005" UsrAttrId="5" UniqueName="PORT" GUIDisplayName="Port" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="5" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="3181"/>
+      <AppsInput AttrId="31244006" UsrAttrId="6" UniqueName="USER_NAME" GUIDisplayName="User Name" GUIDisplaySequenceNumber="6" GUIInputType="CFG" DisplayType="String" ScaleFactor="1000"/>
+      <AppsInput AttrId="31244996" UsrAttrId="996" UniqueName="CFGPOLLTIMEOUT" GUIDisplayName="Configuration Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="31244997" UsrAttrId="997" UniqueName="CFGPOLLPERIOD" GUIDisplayName="Configuration Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="86400"/>
+      <AppsInput AttrId="31244999" UsrAttrId="999" UniqueName="INSTANCE_NAME" GUIDisplayName="Instance Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="1" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="String" UseAsMODisplayName="Y"/>
+      <AppsInput AttrId="31244004" UsrAttrId="4" UniqueName="OPERATING_SYS" GUIDisplayName="Target OS" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="4" IsDefaultValueSet="Y" MoReferenceType="30078" DisplayType="MOReference" DefaultValue="1"/>
+      <AppsInput AttrId="31244021" UsrAttrId="21" UniqueName="STSPOLLTIMEOUT" GUIDisplayName="Statistics Poll Timeout" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="120"/>
+      <AppsInput AttrId="31244998" UsrAttrId="998" UniqueName="STSPOLLPERIOD" GUIDisplayName="Statistics Poll Interval" GUIInputType="CTL" ScaleFactor="1000" IsDefaultValueSet="Y" DisplayType="Integer" DefaultValue="300"/>
+      <AppsInput AttrId="31244020" UsrAttrId="20" UniqueName="TARGETIP" GUIDisplayName="Target IP/Host Name" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" IsDefaultValueSet="Y" DisplayType="IPAddress" DefaultValue="0" GUIDisplayable="N" GUIInputOnCreate="N" GUIEditable="N" IsInputAttribute="Y"/>
+      <AppsInput AttrId="31244055" UsrAttrId="55" UniqueName="DNSIP" GUIDisplayName="Target Device" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="3" UseAsInstanceName="Y" IsDefaultValueSet="Y" IsInputAttribute="Y" DisplayType="String" DefaultValue="0.0.0.0"/>
+      <AppsInput AttrId="31244010" UsrAttrId="10" UniqueName="LOGMON" GUIDisplayName="LOGMON Instance" GUIInputType="CFG" ScaleFactor="1000" GUIDisplaySequenceNumber="8" UseAsInstanceName="Y" DisplayType="String" GUIHasListOfChoice="Y"/>
+      <AppsInput AttrId="31244007" UsrAttrId="7" UniqueName="PASSWORD" GUIDisplayName="Password" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" GUIDisplaySequenceNumber="7" IsDefaultValueSet="Y" GUIRequiredOnCreate="N" DisplayType="Password"/>
+      <AppsInput AttrId="31244008" UsrAttrId="8" UniqueName="INPUTFILE" GUIDisplayName=" " GUIEditable="N" GUIInputType="CFG" ScaleFactor="1000" GUIDisplayable="N" IsDefaultValueSet="Y" GUIInputOnCreate="N" GUIRequiredOnCreate="N" DisplayType="String" DefaultValue="BMCLogMon/BMCLogMon.xml"/>
+      <AppsInput AttrId="31244980" UsrAttrId="980" UniqueName="CI_TOKEN_ID" GUIDisplayName="CI Token ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="10" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31244981" UsrAttrId="981" UniqueName="CI_ID" GUIDisplayName="CI ID" GUIInputType="CFG" GUIEditable="N" ScaleFactor="1000" GUIDisplaySequenceNumber="11" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31244982" UsrAttrId="982" UniqueName="CI_ALIAS" GUIDisplayName="CI Alias" GUIInputType="CFG" GUIEditable="Y" GUIStringLength="255" ScaleFactor="1000" GUIDisplaySequenceNumber="12" IsDefaultValueSet="Y" AttrReferenceType="ANY" GUIRequiredOnCreate="N" IsInputAttribute="Y" DisplayType="String" DefaultValue=""/>
+      <AppsInput AttrId="31244468" UsrAttrId="468" UniqueName="TENANT_ID" GUIDisplayName="Tenant ID" MoReferenceType="0" AttrReferenceType="Unknown" DefaultValue="" ScaleFactor="0" GUIStringLength="255" GUIDisplaySequenceNumber="13" GUIDisplayable="N" DisplayType="String" UseAsMODisplayName="N" GUIInputType="CFG" IsInputAttribute="Y" IsAutoCreated="Y" GUIRequiredOnCreate="N" GUIEditable="N" GUIInputOnCreate="Y" IsDefaultValueSet="N" UseAsInstanceName="N" GUIHasListOfChoice="N" UseNormalDistribution="N"/>
+      <AppsConfig AttrId="31244034" UsrAttrId="34" UniqueName="KM_VER" GUIDisplayName="KM Version" DisplayType="String" ScaleFactor="1000" GUIDisplayable="N"/>
+      <AppsConfig AttrId="31244035" UsrAttrId="35" UniqueName="PATROL_VER" GUIDisplayName="PATROL Version" DisplayType="String" ScaleFactor="1000" GUIDisplayable="N"/>
+      <AppsConfig AttrId="31244032" UsrAttrId="32" UniqueName="FILE_TYPE" GUIDisplayName="Log File Type" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="31244033" UsrAttrId="33" UniqueName="FILE_MAP" GUIDisplayName="Log File Status Map" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="31244036" UsrAttrId="36" UniqueName="SEARCH_STRING" GUIDisplayName="Search String" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="31244031" UsrAttrId="31" UniqueName="FILE_NAME" GUIDisplayName="Log File Path" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="31244030" UsrAttrId="30" UniqueName="PW_MON_VER" GUIDisplayName="Monitor Version" DisplayType="String" ScaleFactor="1000"/>
+      <AppsConfig AttrId="31244994" UsrAttrId="994" UniqueName="SRCIP" GUIDisplayName="Source Agent" GUIEditable="Y" ScaleFactor="1000" GUIDisplaySequenceNumber="2" GUIInputOnCreate="Y" MoReferenceType="10000" GUIRequiredOnCreate="Y" DisplayType="MOReference"/>
+      <AppsStats>
+        <CoreAppsStats AttrId="31244051" UsrAttrId="51" UniqueName="BMC_NO_OF_OCCUR" GUIDisplayName="Occurrences" TableName="BMC_LOG" ColumnName="BMC_OCCUR" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31244053" UsrAttrId="53" UniqueName="BMC_FILE_SZ_MB" GUIDisplayName="File Size" TableName="BMC_LOG" ColumnName="BMC_SZ_MB" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="MB" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31244052" UsrAttrId="52" UniqueName="BMC_FILE_SZ_RT" GUIDisplayName="File Size Change" TableName="BMC_LOG" ColumnName="BMC_SZ_RT" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="KB/min" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31244056" UsrAttrId="56" UniqueName="BMC_FILE_STATUS" GUIDisplayName="Log File Status" TableName="BMC_LOG" ColumnName="BMC_FL_ST" ScaleFactor="1000" DisplayType="Integer" UnitOfMeasurement="#" GUIGraphedByDefault="N"/>
+      </AppsStats>
+      <AppsStats>
+        <CoreAppsStats AttrId="31244054" UsrAttrId="54" UniqueName="LOG_AVAIL" GUIDisplayName="LOG Availability" TableName="BMC_LOG" ColumnName="LOG_AVAIL" ScaleFactor="1000" UseNormalDistribution="N" DisplayType="Integer" UnitOfMeasurement="%" GUIGraphedByDefault="N"/>
+      </AppsStats>
+    </Application>
+  </Attributes>
+</MetaData>

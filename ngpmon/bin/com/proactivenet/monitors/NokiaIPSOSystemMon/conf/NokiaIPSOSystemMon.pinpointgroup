@@ -1,0 +1,6 @@
+System       ,NokiaIPSOSystem
+SystemMem,NokiaIPSOSystem,MEM_USED
+SystemMem,NokiaIPSOSystem,SWAP_USED
+DiskPerformance,NokiaIPSOSystem,SWAP_USED
+ProcTotal,NokiaIPSOSystem,PROCESSES
+SystemInfo,NokiaIPSOSystem

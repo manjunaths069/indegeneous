@@ -1,0 +1,25 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+# File        : BMCSystemMon.sigthreshold
+# Description : Signature Threshold File for BMCSystemMon
+# Date        : Wed Feb 12 2003
+#MonitorType	Attribute	Severity	Duration(min)	Above/Below	BaselineThreshold	Sensitivity	Padding	IsPaddingMultiplier	SuppressFlag
+BMCSystem	TOT_CPU	Normal	-1	above	0.0	50.0	5.0	-1	0	Auto
+BMCSystem	TOT_CPU	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto
+BMCSystem	USR_CPU	Normal	-1	above	0.0	0.0	0.0	-1	1	Auto
+BMCSystem	USR_CPU	Normal	-1	below	0.0	0.0	0.0	-1	1	Auto
+BMCSystem	KERNEL_CPU	Normal	-1	above	0.0	50.0	3.0	-1	1	Auto
+#BMCSystem	SYS_LOAD	Normal	10	above	0.0	50.0	2.0	-1	0
+#BMCSystem	SYS_LOAD	Normal	10	below	0.0	50.0	2.0	-1	0
+BMCSystem	SWAP_USED	Normal	-1	above	0.0	50.0	5.0	-1	0	Auto
+BMCSystem	MEM_AVAIL	Normal	-1	below	0.0	50.0	10.0	-1	0	Auto

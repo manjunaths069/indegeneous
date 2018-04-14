@@ -1,0 +1,5 @@
+# File        : BPM_DataStore_Availability.monitorGroup
+# Description : MonitorGroup for PATROL
+# Date        : Wed Feb 11 14:31:24 GMT+03:30 2009
+
+System|PortalDataStoreAvailability

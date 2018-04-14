@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+
+public class sample {
+	public static void main(String args[])
+	{
+		System.out.println("Hi welcome to the world of JAVA");
+		final ArrayList<int> a = new ArrayList<int>(); 
+		Integer o = new Integer();
+		a.add(o);
+		try{
+			int i=i/0;
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
+	}
+	
+
+}

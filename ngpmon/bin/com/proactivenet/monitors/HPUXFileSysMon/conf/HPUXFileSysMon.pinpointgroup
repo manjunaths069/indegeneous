@@ -1,0 +1,4 @@
+System       ,HPUXFileSystem
+DiskUsed,HPUXFileSystem,PERCENT_DISK_USED
+DiskUsed,HPUXFileSystem,PERCENT_INODES_USED
+DiskAvailability,HPUXFileSystem,AVAILABILITY

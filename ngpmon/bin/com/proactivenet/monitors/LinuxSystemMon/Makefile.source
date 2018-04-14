@@ -1,0 +1,2 @@
+#SOURCE.java = LinuxSystemMon.java
+SUBDIRS = src gui

@@ -1,0 +1,33 @@
+#
+#       NOTE: the format of this file is tab separated columns.
+#       Do not use spaces or extra tabs between columns.
+#       The column names and order is:
+#       Monitor, Attribute, Severity, SamplingWindow, Above/Below,
+#       Threshold, Sensitivity, AbsoluteDeviation, PercentDeviation,
+#       Suppressed, BaselineType
+#       Monitor and Attribute names can contain spaces (just don't 
+#       put spaces before or after the name unless the name contains
+#       the spaces). Monitor and Attribute names can be either the 
+#       unique name or the display name as long as they are unique.
+#
+NTDiskSpace	AVAILABILITY	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NTDiskSpace	AVAILABILITY	NORMAL	-1	below	0	50	-1	-1	0	Auto
+NTDiskSpace	USED_PERCENT	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_TRANSFER	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_TRANSFER	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_READS_SEC	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_READS_SEC	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_WRITES_SEC	NORMAL	-1	below	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_WRITES_SEC	NORMAL	-1	above	0	0	-1	-1	1	Auto
+NTDiskIntelli	DISK_TIME	NORMAL	-1	below	0	50	20	-1	0	Auto
+NTDiskIntelli	DISK_TIME	NORMAL	-1	above	0	50	10	-1	0	Auto
+NTDiskIntelli	DISK_READ_TIME	NORMAL	-1	below	0	50	10	-1	1	Auto
+NTDiskIntelli	DISK_READ_TIME	NORMAL	-1	above	0	50	8	-1	1	Auto
+NTDiskIntelli	DISK_WRITE_TIME	NORMAL	-1	below	0	50	10	-1	1	Auto
+NTDiskIntelli	DISK_WRITE_TIME	NORMAL	-1	above	0	50	8	-1	1	Auto
+NTDiskIntelli	DISK_QUEUE_LEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NTDiskIntelli	DISK_QUEUE_LEN	NORMAL	-1	above	0	50	8	-1	0	Auto
+NTDiskIntelli	DISK_READ_QUEUE_LEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NTDiskIntelli	DISK_READ_QUEUE_LEN	NORMAL	-1	above	0	50	-1	-1	1	Auto
+NTDiskIntelli	DISK_WRITE_QUEUE_LEN	NORMAL	-1	below	0	50	-1	-1	1	Auto
+NTDiskIntelli	DISK_WRITE_QUEUE_LEN	NORMAL	-1	above	0	50	-1	-1	1	Auto
